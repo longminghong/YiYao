@@ -1,0 +1,394 @@
+﻿<UserControl x:Class="YiYao.HealthIndex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080">
+    <UserControl.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="29,387.290669849108"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="29,387.290669849108"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="-31.0227210640783,417.285621040677"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="29,237.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="29,237.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="-31.0227210640783,267.494951191569"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="29,87.7093301508922"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="29,87.7093301508922"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="-31.0227210640783,117.704281342461"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="89.2093301508922,45.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="89.2093301508922,45.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="29.1866090868139,75.4949511915685"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.2" Value="-110,-105.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="239,45.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="239,45.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="178.977278935922,75.4949511915685"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="425,235.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="425,235.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="656,464.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="425,385.290669849108"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="425,385.290669849108"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="275.701321785885,223.369482395103"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="623,471.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="394.790669849108,422.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="394.790669849108,422.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.6" Value="234,630.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="73,720.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="245,422.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.6" Value="245,422.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="84,512.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="95.2093301508922,422.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="95.2093301508922,422.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.6" Value="252.910567618212,272.918357764724"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="91.910567618212,362.918357764724"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="288.829313921229,45.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.8" Value="288.829313921229,45.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="228.806592857151,75.4949511915685"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.2" Value="221.207202634384,101.94479183915"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="326.089438274506,49.9496630732637"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="363.460774521454,-57.9531133664773"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="353.628663753052,61.402776439741"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="391,-46.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="408.874423796845,84.3785842848703"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="446.245760043793,-23.5241921548707"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="425,135.538644072121"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="425,135.538644072121"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="585,248.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="813.033240075394,431.189918771886"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="jiantou_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="425,235.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="425,235.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.4" Value="656,464.5"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="jiantou_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="89.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-12"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="jiantou_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="jiantou_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0.803"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="jiantou_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0.803"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="jiantou_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0.217"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="jiantou_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0.25"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-80"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="43.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-93.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-8.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-38"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-87"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="74"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="-69"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="canvas7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="93.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="canvas8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="46"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="canvas8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="79.5"/>
+            </DoubleAnimationUsingKeyFrames>
+
+
+
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Canvas x:Name="root">
+        <Canvas x:Name="leftPart" ></Canvas>
+        <Canvas x:Name="rightPart"></Canvas>
+        <Canvas Height="673" Canvas.Left="611" Canvas.Top="197" Width="673" >
+            <Canvas Height="481" Canvas.Left="89" Canvas.Top="83.5" Width="472" >
+                <Image x:Name="jiantou_png" Height="481" Source="/Images/HealthIndex/jiantou.png" Stretch="Fill" Width="472" RenderTransformOrigin="0.5,0.5">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="514.22,236.5">
+                                <BezierSegment Point3="243,507.72" Point2="392.790669849108,507.72" Point1="514.22,386.290669849108"/>
+                                <BezierSegment Point3="-28.22,236.5" Point2="-28.22,386.290669849108" Point1="93.2093301508922,507.72"/>
+                                <BezierSegment Point3="243,-34.72" Point2="93.2093301508922,-34.72" Point1="-28.22,86.7093301508922"/>
+                                <BezierSegment Point3="379.646229768192,2.16689650251574" Point2="339.520092445578,-21.2823325642101" Point1="292.829313921229,-34.72"/>
+                                <BezierSegment Point3="514.22,236.5" Point2="514.22,136.538644072121" Point1="460.142282779427,49.2078157629893"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </Canvas>
+        <local:QuanButton x:Name="canvas2"  Source="/Images/HealthIndex/xueya.png" TitleSource="/Images/HealthIndex/xueyazi.png"  RenderTransformOrigin="0.5,0.5" Canvas.Left="980" Canvas.Top="77.5" Click="onXYClick">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/xueyazi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="101" Height="18" Margin="0,0,0,-35" ></Image>
+        </local:QuanButton>
+
+
+        <local:QuanButton x:Name="canvas3" Source="/Images/HealthIndex/xuetang.png" TitleSource="/Images/HealthIndex/xuetangzi.png" Click="onXTClick" Canvas.Left="1222.5" Canvas.Top="274.5">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/xuetangzi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="101" Height="18" Margin="0,0,0,-35" ></Image>
+
+        </local:QuanButton>
+
+        <local:QuanButton x:Name="canvas4" Source="/Images/HealthIndex/xuezhi.png" TitleSource="/Images/HealthIndex/xuzhizi.png"  RenderTransformOrigin="0.5,0.5" Canvas.Left="1248" Canvas.Top="631.5" Click="onXZClick">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/xuzhizi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="101" Height="18" Margin="0,0,0,-35" ></Image>
+
+        </local:QuanButton>
+
+
+        <local:QuanButton x:Name="canvas5" Source="/Images/HealthIndex/xinlv.png" TitleSource="/Images/HealthIndex/xinlvzi.png" RenderTransformOrigin="0.5,0.5" Canvas.Left="1001" Canvas.Top="852.167" Click="onXLClick">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/xinlvzi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="101" Height="18" Margin="0,0,0,-35" ></Image>
+
+        </local:QuanButton>
+
+        <local:QuanButton  x:Name="canvas6" Source="/Images/HealthIndex/lici.png" TitleSource="/Images/HealthIndex/licizi.png" RenderTransformOrigin="0.5,0.5" Canvas.Left="630.667" Canvas.Top="787" Click="onLiCiClick">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/licizi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="122" Height="16" Margin="0,0,0,-35" ></Image>
+
+        </local:QuanButton>
+
+        <local:QuanButton x:Name="canvas7" Source="/Images/HealthIndex/manxing.png" TitleSource="/Images/HealthIndex/manxingzi.png" Click="onMBClick" RenderTransformOrigin="0.5,0.5" Canvas.Left="490.667" Canvas.Top="475.479" d:LayoutOverrides="Height">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/manxingzi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="82" Height="18" Margin="0,0,0,-35" ></Image>
+
+        </local:QuanButton>
+
+        <local:QuanButton  x:Name="canvas8" Source="/Images/HealthIndex/shangci.png" TitleSource="/Images/HealthIndex/shangcizi.png" RenderTransformOrigin="0.5,0.5" Canvas.Left="655.333" Canvas.Top="136.833" Click="onShangCiClick">
+            <local:QuanButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:QuanButton.RenderTransform>
+            <Image  Source="/Images/HealthIndex/shangcizi.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="75" Height="42" Margin="0,0,0,-45" ></Image>
+
+        </local:QuanButton>
+        <Button x:Name="centerBtn" Focusable="False" Width="200" Height="200" Canvas.Left="852" Canvas.Top="399" Opacity="0.01" Click="centerBtn_Click"></Button>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,1102 @@
+﻿<UserControl x:Class="YiYao.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080">
+    <UserControl.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="jia_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="jia_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-359.905"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-359.905"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="-719.213"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-719.213"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-1080.101"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xintiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shoubiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:11.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:16.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:17.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:20" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:21.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:22.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:25" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:26.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:27.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:30" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:31.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:32.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:35" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:36.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:37.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:40" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:41.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:42.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:45" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:46.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:47.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="shoubiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:11.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:16.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:17.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:20" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:21.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:22.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:24" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:25" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:26.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:27.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:29" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:30" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:31.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:32.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:34" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:35" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:36.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:37.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:39" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:40" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:41.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:42.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:44" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:45" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:46.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:47.5" Value="-180.015"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:49" Value="0.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="shouji_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.219"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="180.345"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-23.233"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="180.345"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:16" Value="-23.233"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:20" Value="180.345"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:24" Value="-23.233"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:28" Value="180.345"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:32" Value="-23.233"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:36" Value="180.345"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:40" Value="-23.233"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:44" Value="180.345"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:48" Value="-23.233"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="guangyun2_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-207"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="-207"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="guangyun2_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-76.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="-76.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="guanyun1_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.7" Value="207.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="-213.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.3" Value="33.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.7" Value="207.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="guanyun1_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="-58.666"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="guanyun1_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="guanyun1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.7" Value="1.422"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.3" Value="1.124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.7" Value="1.422"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="guangyun2_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12.7" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.7" Value="0.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="han_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-10"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="han_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-54.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-54.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ying_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-38.009"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-38"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ying_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-33.579"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-33.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="shi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-23.643"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-23.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="shi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-22.946"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-23"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="yong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-21"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-21"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="yong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-32.541"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-32.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="m_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-22.741"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-22.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="m_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-20.141"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-20.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="t_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-15.686"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-15.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="t_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-17.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-17.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="m2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-36.31"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-36.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="m2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-17.373"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-17.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="fu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="82.738"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="82.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="fu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-60.726"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-60.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="wu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-29.184"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-29.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="wu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-34.621"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-34.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="xi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-8.593"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-8.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="xi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-49.323"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-49.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="tong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-15.384"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-15.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="tong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-22.753"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-22.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="han_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="han_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="han_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="ying_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="2.701"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="ying_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="2.701"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ying_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ying_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="shi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="2.645"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="shi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="2.645"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="shi_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shi_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="yong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="3.132"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="yong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="2.782"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="yong_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="m_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="3.238"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="m_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="3.238"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="m_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="t_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="3.188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="t_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="3.188"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="t_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="t_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="m2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="3.23"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="m2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="3.23"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="m2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="m2_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="fu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="2.783"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="fu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="2.783"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="fu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="fu_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="wu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="2.708"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="wu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="2.708"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="wu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="wu_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.9" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="xi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="2.716"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="xi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="2.716"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xi_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="tong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="2.621"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="tong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="2.621"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="tong_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="tong_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_1342_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-99.285"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-100"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_1342_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-67.346"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-31"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="_1342_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1.562"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="_1342_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1.562"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_1342_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="_1342_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="shukaye_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="40.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="zi_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="41"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="shuaka_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="57"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="-60"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="shuaka_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="7.981"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="-21"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="shukaye_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shukaye_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="shuaka_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.9" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shuaka_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="shuaka_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="1.368"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="shuaka_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="1.368"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="0.99"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="tiao_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-136.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="-136.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-133.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-133.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-133.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-133.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="-133.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:16" Value="-133.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="tiao_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="31.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="39"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="39"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:11" Value="39"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:12" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13" Value="39"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="39"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:16" Value="-58.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="tiao_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="tiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="_1234_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.943"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.001"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="_1234_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.943"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.001"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_1234_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-9.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2.417"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_1234_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-14.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.609"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="shoubiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-35.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="shoubiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-2.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="shoubiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.955"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="shoubiao_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.955"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="jia_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="4.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="jia_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-3.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="jia_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.952"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="jia_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.952"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="shouji_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="4.652"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="shouji_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-2.662"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="shouji_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.962"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="shouji_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.962"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_1234_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="701.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.3" Value="972.625"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="1078.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="1246.91"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="1528.743"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="32.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="33"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="34"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="37"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.3" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="0.3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="_1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.3" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="-180"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="_1_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="shibei_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="-360"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="shibei_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="-144.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="jiantou3_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.2" Value="363.347"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="362.337"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="jiantou3_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.2" Value="204.653"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="206.005"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="jiantou2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="-15.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-16.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="jiantou2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-21.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="jiantou1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="-17.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="jiantou1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="-34.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="shibei_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:7.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="jiantou3_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:8.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="jiantou2_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:8.7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="jiantou1_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:9.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shibei_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="jiantou3_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="jiantou2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="jiantou1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="_4_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:7" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="jiantou3_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.2" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-180"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="jiantou2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:8.7" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-180"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="jiantou1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:9.3" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:10.6" Value="-180"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="_4_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="696"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="1000.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1209"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="1537.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="_4_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7" Value="36"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.4" Value="33"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="36"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="_4_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:7.9" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:8.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+
+        <Image x:Name="首页分层_png" Source="/Images/Login/首页分层.png" Stretch="Fill"/>
+
+        <Image x:Name="bg_png" Source="/Images/Login/bg.png" Stretch="Fill"/>
+        <Image x:Name="guanyun1_png" Height="85" Margin="732.667,330,784.333,0" Source="/Images/Login/guanyun1.png" Stretch="Fill" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="guangyun2_png" HorizontalAlignment="Right" Height="85" Margin="0,354,536,0" Source="/Images/Login/guangyun2.png" Stretch="Fill" VerticalAlignment="Top" Width="403" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="_1234_png" Source="/Images/Login/1234.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="jia_png" HorizontalAlignment="Left" Margin="676,286.333,0,0" Source="/Images/Login/jia.png" Stretch="Fill" Width="104" Height="104" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="shouji_png" HorizontalAlignment="Left" Height="70" Margin="798.25,173.25,0,0" Source="/Images/Login/shouji.png" Stretch="Fill" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="shoubiao_png" HorizontalAlignment="Right" Height="67" Margin="0,305,472,0" Source="/Images/Login/shoubiao.png" Stretch="Fill" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="xintiao_png" HorizontalAlignment="Right" Height="44" Margin="0,318.833,661.167,0" Source="/Images/Login/xintiao.png" Stretch="Fill" VerticalAlignment="Top" Width="52"/>
+        <Image x:Name="shukaye_png" Height="187" Margin="772.833,0,800.167,142.833" Source="/Images/Login/shukaye.png" Stretch="Fill" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="zi_png" Height="66" Margin="865,0,892,208.5" Source="/Images/Login/zi.png" Stretch="Fill" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="shuaka_png" HorizontalAlignment="Right" Height="136" Margin="0,0,573,115" Source="/Images/Login/shuaka.png" Stretch="Fill" VerticalAlignment="Bottom" Width="212" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="tiao_png" Height="4" Margin="957,0,618,230" Source="/Images/Login/tiao.png" Stretch="Fill" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="han_png" HorizontalAlignment="Left" Height="51" Margin="614,0,0,449" Source="/Images/Login/han.png" Stretch="Fill" VerticalAlignment="Bottom" Width="54" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="ying_png" HorizontalAlignment="Left" Height="50" Margin="715,0,0,470.5" Source="/Images/Login/ying.png" Stretch="Fill" VerticalAlignment="Bottom" Width="55" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="shi_png" HorizontalAlignment="Left" Height="51" Margin="773.5,0,0,480" Source="/Images/Login/shi.png" Stretch="Fill" VerticalAlignment="Bottom" Width="56" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="yong_png" HorizontalAlignment="Left" Height="48" Margin="848,0,0,471" Source="/Images/Login/yong.png" Stretch="Fill" VerticalAlignment="Bottom" Width="48" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="m_png" Height="42" Margin="922,0,953,486.5" Source="/Images/Login/m.png" Stretch="Fill" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="t_png" HorizontalAlignment="Right" Height="42" Margin="0,0,911.333,489.333" Source="/Images/Login/t.png" Stretch="Fill" VerticalAlignment="Bottom" Width="36" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="m2_png" HorizontalAlignment="Right" Height="42" Margin="0,0,831,489.667" Source="/Images/Login/m2.png" Stretch="Fill" VerticalAlignment="Bottom" Width="45" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="fu_png" HorizontalAlignment="Right" Height="49" Margin="0,0,876.333,443" Source="/Images/Login/fu.png" Stretch="Fill" VerticalAlignment="Bottom" Width="55" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="wu_png" HorizontalAlignment="Right" Height="50" Margin="0,0,692,468.667" Source="/Images/Login/wu.png" Stretch="Fill" VerticalAlignment="Bottom" Width="54" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="xi_png" HorizontalAlignment="Right" Height="50" Margin="0,0,638,454.667" Source="/Images/Login/xi.png" Stretch="Fill" VerticalAlignment="Bottom" Width="52" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="tong_png" HorizontalAlignment="Right" Height="51" Margin="0,0,558,479.667" Source="/Images/Login/tong.png" Stretch="Fill" VerticalAlignment="Bottom" Width="56" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="_1342_png" Height="22" Margin="902,0,671,430" Source="/Images/Login/1342.png" Stretch="Fill" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="_1_png" HorizontalAlignment="Left" Height="26" Margin="405,0,0,235" Source="/Images/Login/1.png" Stretch="Fill" VerticalAlignment="Bottom" Width="146" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="_4_png" HorizontalAlignment="Left" Height="26" Margin="405,0,0,235" Source="/Images/Login/4.png" Stretch="Fill" VerticalAlignment="Bottom" Width="117" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="shibei_png" HorizontalAlignment="Right" Height="26" Margin="0,0,-242,55" Source="/Images/Login/shibei.png" Stretch="Fill" VerticalAlignment="Bottom" Width="158" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="jiantou3_png" HorizontalAlignment="Right" Height="18" Margin="0,0,70.166,196.668" Source="/Images/Login/jiantou3.png" Stretch="Fill" VerticalAlignment="Bottom" Width="9" RenderTransformOrigin="-20.242,-5.351">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="jiantou2_png" HorizontalAlignment="Right" Height="34" Margin="0,0,49.333,175.334" Source="/Images/Login/jiantou2.png" Stretch="Fill" VerticalAlignment="Bottom" Width="18" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="jiantou1_png" HorizontalAlignment="Right" Height="76" Margin="0,0,32.666,140.334" Source="/Images/Login/jiantou1.png" Stretch="Fill" VerticalAlignment="Bottom" Width="40" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+    </Grid>
+</UserControl>

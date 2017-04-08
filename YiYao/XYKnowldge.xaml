@@ -1,0 +1,83 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="YiYao.XYKnowldge"
+             mc:Ignorable="d" 
+             Width="1920" Height="1080">
+    <UserControl.Resources>
+        <Style x:Key="KnowldgeButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Width" Value="260" />
+            <Setter Property="Height" Value="60" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,30" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image Source="Images/Know/buttonbase.png" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="Storyboard1">
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="buttons">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="-23,394"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="buttons">
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="287,392"/>
+            </PointAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Canvas>
+        <StackPanel x:Name="buttons" Orientation="Vertical" Canvas.Left="1425" Canvas.Top="322">
+            <StackPanel.Clip>
+                <PathGeometry>
+                    <PathFigure IsClosed="True" StartPoint="-18,-28">
+                        <LineSegment Point="296,-28"/>
+                        <LineSegment Point="297,-6"/>
+                        <LineSegment Point="-15,-4"/>
+                    </PathFigure>
+                </PathGeometry>
+            </StackPanel.Clip>
+            <Button Style="{DynamicResource KnowldgeButtonStyle}" Canvas.Left="330" Canvas.Top="153" Content="高血压的危险因子" />
+            <Button Style="{DynamicResource KnowldgeButtonStyle}" Canvas.Left="330" Canvas.Top="153" Content="防止血压剧烈波动"/>
+            <Button Style="{DynamicResource KnowldgeButtonStyle}" Canvas.Left="330" Canvas.Top="153" Content="高血压患者的生活保健1"/>
+            <Button Style="{DynamicResource KnowldgeButtonStyle}" Canvas.Left="330" Canvas.Top="153" Content="量血压时可以注意..."/>
+        </StackPanel>
+        <Canvas x:Name="pop" Visibility="Collapsed" Opacity="0" Width="947" Height="531" Canvas.Top="370" Canvas.Left="915" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Image x:Name="k1" Source="/Images/Know/knowldge1.png" Width="947" Height="531"  >
+            </Image>
+            <Button Canvas.Left="874.1"  Click="Button_Click" IsManipulationEnabled="True">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <TextBlock Foreground="White" Text="X" FontSize="40" Background="#11000000" Padding="10,10,50,50"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Canvas>
+    </Canvas>
+</UserControl>
+ 

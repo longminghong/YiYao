@@ -1,0 +1,516 @@
+﻿<UserControl x:Class="YiYao.MyPrescription"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080">
+    <UserControl.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="yuan1_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yuan1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xian1_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="yuan2_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xian2_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xian1_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yuan2_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xian2_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.4035896001828,-22"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="962.167175522862,-22.9745640986351"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="15.332,-22"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="987.832,-23"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="987.832,18.166666666667"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.7" Value="987.832,-23"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="15.332,15.1622772712642"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="987.832,14.1622772712642"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="986.165333333333,978.999999999999"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.7" Value="985.602833333333,978.499999999999"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="15.332,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="987.832,15"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="986.623666666667,1001"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.7" Value="-12.168,985.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="15.0571331904144,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="980.233627099401,15.0075305975229"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="979.025293766068,984.650280174049"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.7" Value="-3.25184122305261,971.335661809574"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.9" Value="-4.66800000000015,27"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.6400585446255,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="968.704084151426,15.0189573001473"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="967.495750818093,959.852290633481"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.6355765947697,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="968.580185866372,15.019080093294"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="967.371852533039,959.852413426628"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[9].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3554526786644,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.836486377325,15.0267547211325"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="959.628153043992,959.860088054466"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[10].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3554526786579,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.836486377145,15.0267547211327"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[11].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3554526785328,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.836486373688,15.0267547211361"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[12].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3554526763349,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.836486312928,15.0267547211963"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[13].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3554525940936,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.836484039464,15.0267547234495"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[14].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3554496084174,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.836401503922,15.0267548052489"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[15].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.355294678199,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.832118638432,15.0267590499124"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[16].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.3470153418095,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="960.603246024266,15.0269858810463"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[17].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="13.9212404377382,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="948.833194566515,15.0386509469113"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[18].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="13.2701252361467,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="930.833872966355,15.0564897195576"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.669381479688,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="969.514682548086,15.0181539320634"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="968.306349214753,961.585902768972"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.7" Value="9.32608997236076,951.354179240155"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.9" Value="5.90993119541327,28.0185174305811"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="14.6402364067924,16"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.3" Value="968.709000943931,15.0189524272112"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.5" Value="967.500667610598,959.852285760545"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.7" Value="10.271500943931,949.852285760545"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.9" Value="19.832,949.833333333335"/>
+            </PointAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yaohe3_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+         
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xian3_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="shiping_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shiping_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xian4_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="shuomingshu_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shuomingshu_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="zi1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="-1.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="zi1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="-6.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi1_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi1_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.2" Value="-5.5,-5.33400000000006"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.5" Value="250,-5.33400000000006"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi1_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.2" Value="-5.5,27.6659999999999"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.5" Value="250,27.6659999999999"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi2_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.4" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi2_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-10.5,-3.16700000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.7" Value="194,-3.16700000000003"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi2_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-10.5,24.833"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.7" Value="194,24.833"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi1_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi3_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi3_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi3_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.6" Value="-3.5,-6.16700000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.9" Value="365,-8.66700000000003"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi3_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.6" Value="-3.5,19.833"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.9" Value="365,17.333"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi4_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:4.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi4_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi4_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.8" Value="-7,-5.16700000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.1" Value="243.5,-5.16700000000003"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi4_png">
+                <EasingPointKeyFrame KeyTime="0:0:4.8" Value="-7,17.833"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.1" Value="243.5,17.833"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi5_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:5" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi5_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi5_png">
+                <EasingPointKeyFrame KeyTime="0:0:5" Value="-5.5,-1.66700000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.3" Value="182,-1.66700000000003"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi5_png">
+                <EasingPointKeyFrame KeyTime="0:0:5" Value="-5.5,17.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.3" Value="182,17.333"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi6_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:5.2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi6_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi6_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.2" Value="0,-1.16700000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.5" Value="203,-1.16700000000003"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi6_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.2" Value="0,19.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.5" Value="203,19.333"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi7_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:5.4" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi7_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi7_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.4" Value="-3.83300000000003,-1.66700000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.7" Value="342.667,-2.16700000000006"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi7_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.4" Value="-3.83300000000003,18.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.7" Value="342.667,17.833"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi8_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:5.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi8_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:5.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi8_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.6" Value="-3.166,-2.33399999999995"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.9" Value="361.334,-2.33399999999995"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi8_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.6" Value="-3.166,18.6660000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.9" Value="361.334,18.6660000000001"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi9_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:5.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi9_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:5.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi9_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.8" Value="-3.33300000000003,-2.33299999999997"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="358.167,-3.83299999999997"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi9_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.8" Value="-3.33300000000003,20.167"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="358.167,18.667"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi10_png">
+                <DiscreteObjectKeyFrame KeyTime="0:0:6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi10_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="zi10_png">
+                <EasingPointKeyFrame KeyTime="0:0:6" Value="-4.33300000000003,-1.83299999999997"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.3" Value="317.667,-1.83299999999997"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="zi10_png">
+                <EasingPointKeyFrame KeyTime="0:0:6" Value="-4.33300000000003,18.667"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.3" Value="317.667,18.667"/>
+            </PointAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+
+        <Image x:Name="yuan1_png" HorizontalAlignment="Left" Height="29" Margin="588.5,371,0,0" Source="yuan1.png" Stretch="Fill" VerticalAlignment="Top" Width="29" Opacity="0"/>
+        <Image x:Name="xian1_png" Margin="606.833,71.333,0,0" Source="xian1.png" Stretch="Fill" HorizontalAlignment="Left" Height="309" VerticalAlignment="Top" Width="284"/>
+        <Image x:Name="yuan2_png" Height="48" Margin="877.333,40,0,0" Source="yuan2.png" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Width="48"/>
+        <local:CardSequence x:Name="yaohe3_png" Opacity="0"  Height="163" Gap="18" Margin="954.499,507.332,102.167,409.668" />
+    
+        <Image x:Name="xian3_png" Height="72" Source="xian3.png" Stretch="Fill" Width="152" HorizontalAlignment="Right" Margin="0,429.332,426.168,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+        <Image x:Name="xian4_png" Height="40" Source="xian4.png" Stretch="Fill" Width="90" HorizontalAlignment="Right" Margin="0,0,488.168,410.668" VerticalAlignment="Bottom" Visibility="Collapsed"/>
+        <Image x:Name="shuomingshu_png" Height="269" Source="shuomingshu.png" Stretch="Fill" Width="420" HorizontalAlignment="Right" Margin="0,0,307.168,136.668" VerticalAlignment="Bottom" Visibility="Hidden"/>
+
+        <Image  Height="312" Source="shiping.png" Stretch="Fill" Width="551" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Image x:Name="shiping_png"  Source="shiping.png" Height="312" Width="551" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Canvas Margin="899.168,55.5,42.832,54.5">
+            <Image x:Name="xian2_png" Source="xian2.png" Stretch="Fill" Height="970" Width="978">
+                <Image.Clip>
+                    <PathGeometry>
+                        <PathFigure IsClosed="True" StartPoint="-21.168,-22">
+                            <LineSegment Point="14.4035896001828,-22"/>
+                            <LineSegment Point="15.332,-22"/>
+                            <LineSegment Point="15.332,15.1622772712642"/>
+                            <LineSegment Point="15.332,16"/>
+                            <LineSegment Point="15.0571331904144,16"/>
+                            <LineSegment Point="14.669381479688,16"/>
+                            <LineSegment Point="14.6402364067924,16"/>
+                            <LineSegment Point="14.6400585446255,16"/>
+                            <LineSegment Point="14.6355765947697,16"/>
+                            <LineSegment Point="14.3554526786644,16"/>
+                            <LineSegment Point="14.3554526786579,16"/>
+                            <LineSegment Point="14.3554526785328,16"/>
+                            <LineSegment Point="14.3554526763349,16"/>
+                            <LineSegment Point="14.3554525940936,16"/>
+                            <LineSegment Point="14.3554496084174,16"/>
+                            <LineSegment Point="14.355294678199,16"/>
+                            <LineSegment Point="14.3470153418095,16"/>
+                            <LineSegment Point="13.9212404377382,16"/>
+                            <LineSegment Point="13.2701252361467,16"/>
+                            <LineSegment Point="-21.168,16"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Image.Clip>
+            </Image>
+            <Canvas Height="18" Canvas.Left="343.165" Canvas.Top="647.667" Width="238">
+                <Image x:Name="zi1_png" Height="18" Source="zi1.png" Stretch="Fill" Width="238" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-29.5,-5.33400000000006">
+                                <LineSegment Point="-5.5,-5.33400000000006"/>
+                                <LineSegment Point="-5.5,27.6659999999999"/>
+                                <LineSegment Point="-29.5,27.6659999999999"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="342.832" Canvas.Top="665.167" Width="181">
+                <Image x:Name="zi2_png" Height="18" Source="zi2.png" Stretch="Fill" Width="181" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-20.5,-3.16700000000003">
+                                <LineSegment Point="-10.5,-3.16700000000003"/>
+                                <LineSegment Point="-10.5,24.833"/>
+                                <LineSegment Point="-20.5,24.833"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="342.832" Canvas.Top="688.167" Width="349">
+                <Image x:Name="zi3_png" Height="18" Source="zi3.png" Stretch="Fill" Width="349" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-14.5,-6.16700000000003">
+                                <LineSegment Point="-3.5,-6.16700000000003"/>
+                                <LineSegment Point="-3.5,19.833"/>
+                                <LineSegment Point="-14.5,19.833"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="342.832" Canvas.Top="712.167" Width="227">
+                <Image x:Name="zi4_png" Height="18" Source="zi4.png" Stretch="Fill" Width="227" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-19,-5.16700000000003">
+                                <LineSegment Point="-7,-5.16700000000003"/>
+                                <LineSegment Point="-7,17.833"/>
+                                <LineSegment Point="-19,17.833"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="342.832" Canvas.Top="737.167" Width="167">
+                <Image x:Name="zi5_png" Height="18" Source="zi5.png" Stretch="Fill" Width="167" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-15.5,-1.66700000000003">
+                                <LineSegment Point="-5.5,-1.66700000000003"/>
+                                <LineSegment Point="-5.5,17.333"/>
+                                <LineSegment Point="-15.5,17.333"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="17" Canvas.Left="342.832" Canvas.Top="762.167" Width="157">
+                <Image x:Name="zi6_png" Height="17" Source="zi6.png" Stretch="Fill" Width="157" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-11.5,-1.16700000000003">
+                                <LineSegment Point="0,-1.16700000000003"/>
+                                <LineSegment Point="0,19.333"/>
+                                <LineSegment Point="-11.5,19.333"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="343.165" Canvas.Top="784.167" Width="337">
+                <Image x:Name="zi7_png" Height="18" Source="zi7.png" Stretch="Fill" Width="337" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-19.833,-1.66700000000003">
+                                <LineSegment Point="-3.83300000000003,-1.66700000000003"/>
+                                <LineSegment Point="-3.83300000000003,18.333"/>
+                                <LineSegment Point="-19.833,18.333"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="342.498" Canvas.Top="807.834" Width="356">
+                <Image x:Name="zi8_png" Height="18" Source="zi8.png" Stretch="Fill" Width="356" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-12.666,-2.33399999999995">
+                                <LineSegment Point="-3.166,-2.33399999999995"/>
+                                <LineSegment Point="-3.166,18.6660000000001"/>
+                                <LineSegment Point="-12.666,18.6660000000001"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="343.165" Canvas.Top="833.333" Width="354">
+                <Image x:Name="zi9_png" Height="18" Source="zi9.png" Stretch="Fill" Width="354" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-13.333,-2.33299999999997">
+                                <LineSegment Point="-3.33300000000003,-2.33299999999997"/>
+                                <LineSegment Point="-3.33300000000003,20.167"/>
+                                <LineSegment Point="-13.333,20.167"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+            </Canvas>
+            <Canvas Height="18" Canvas.Left="343.165" Canvas.Top="856.333" Width="311">
+                <Image x:Name="zi10_png" Height="18" Source="zi10.png" Stretch="Fill" Width="311" Visibility="Hidden">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-11.333,-1.83299999999997">
+                                <LineSegment Point="-4.33300000000003,-1.83299999999997"/>
+                                <LineSegment Point="-4.33300000000003,18.667"/>
+                                <LineSegment Point="-11.333,18.667"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+
+            </Canvas>
+
+        </Canvas>
+
+    </Grid>
+</UserControl>

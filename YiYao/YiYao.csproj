@@ -1,0 +1,1711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B78AFEED-47C9-4E21-AF8E-C3CB94A2F0A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YiYao</RootNamespace>
+    <AssemblyName>YiYao</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Unity.6.3.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.1\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFVisifire.Charts, Version=3.6.3.0, Culture=neutral, PublicKeyToken=99d724542e4db593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\WPFVisifire.Charts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppData.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="CardSequenceControl\CardSequence.xaml.cs">
+      <DependentUpon>CardSequence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CardSequenceControl\CardSequenceItem.xaml.cs">
+      <DependentUpon>CardSequenceItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomChart2.cs" />
+    <Compile Include="Controls\CustomChart.cs" />
+    <Compile Include="Controls\DrugPanel.cs" />
+    <Compile Include="Controls\FluidProgressBar.xaml.cs">
+      <DependentUpon>FluidProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageButton.xaml.cs">
+      <DependentUpon>ImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\BoolToVisibilityValueConverter.cs" />
+    <Compile Include="Converter\OppositeBooleanToVisibilityConverter.cs" />
+    <Compile Include="HealthPop\HealthIndexBase.cs" />
+    <Compile Include="HealthPop\HealthIndexRight.xaml.cs">
+      <DependentUpon>HealthIndexRight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\HealthIndexLeft.xaml.cs">
+      <DependentUpon>HealthIndexLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\LiCiHealthIndex.xaml.cs">
+      <DependentUpon>LiCiHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\ShangCiHealthIndex.xaml.cs">
+      <DependentUpon>ShangCiHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\XYHealthIndex.xaml.cs">
+      <DependentUpon>XYHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\XLHealthIndex.xaml.cs">
+      <DependentUpon>XLHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\XZHealthIndex.xaml.cs">
+      <DependentUpon>XZHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\XTHealthIndex.xaml.cs">
+      <DependentUpon>XTHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthPop\MBHealthIndex.xaml.cs">
+      <DependentUpon>MBHealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuanButton.xaml.cs">
+      <DependentUpon>QuanButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CircelButton.xaml.cs">
+      <DependentUpon>CircelButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images\Register\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSuccess.xaml.cs">
+      <DependentUpon>LoginSuccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScanDrug.xaml.cs">
+      <DependentUpon>ScanDrug.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyPrescription\MyPrescription.xaml.cs">
+      <DependentUpon>MyPrescription.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Know.xaml.cs">
+      <DependentUpon>Know.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HealthIndex.xaml.cs">
+      <DependentUpon>HealthIndex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Risk.xaml.cs">
+      <DependentUpon>Risk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterSuccess.xaml.cs">
+      <DependentUpon>RegisterSuccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\GVar.cs" />
+    <Compile Include="Util\ReverseBoolToVisibilityConverter.cs" />
+    <Compile Include="Util\YesOrNoConverter.cs" />
+    <Compile Include="XYKnowldge.xaml.cs">
+      <DependentUpon>XYKnowldge.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CardSequenceControl\CardSequence.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CardSequenceControl\CardSequenceItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FluidProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ImageButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\HealthIndexRight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\HealthIndexLeft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HealthPop\LiCiHealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\ShangCiHealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\XYHealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\XLHealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\XZHealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\XTHealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthPop\MBHealthIndex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuanButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CircelButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Images\Register\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoginSuccess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScanDrug.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MyPrescription\MyPrescription.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Know.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HealthIndex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Risk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Register.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RegisterSuccess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="XYKnowldge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NavigationManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Font\张海山锐线体简.TTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-BOLD_0.OTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-EXTRALIGHT_0.OTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-HEAVY_0.OTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-LIGHT_0.OTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-MEDIUM_0.OTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-NORMAL_0.OTF" />
+    <Resource Include="Font\SOURCEHANSANSCN-REGULAR_0.OTF" />
+    <Resource Include="Font\迷你简菱心.TTF" />
+    <None Include="MyPrescription\App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\1234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\1342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\fu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\guanyun1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\han.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\jia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\jiantou1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\jiantou2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\jiantou3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\m2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\shi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\shibei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\shoubiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\shouji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\shuaka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\shukaye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\tiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\tong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\wu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\xi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\xintiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\ying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\yong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\zi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Login\首页分层.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circle_button_2.png" />
+    <Resource Include="Images\circle_button_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\ditu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\guangxiao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\guanxiao2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\jianpan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\kuang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\quan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\quan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xian3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xianduan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xianduan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xianduan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xianduan4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xianduan5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xinxi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xinxi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xinxi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xinxi4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xinxi5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\xinxi6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\yuan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\yuan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\zhaopian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\zhuce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\zi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\zi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\键盘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\医药界面 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\3登录.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\bg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\bg3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\ditu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\guangxiao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\guanxiao2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\huiyuanshenfen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\huiyuanshenfen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\jianpan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\kuang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\quan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\quan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xian3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xianduan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xianduan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xianduan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xianduan4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xianduan5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xinxi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xinxi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xinxi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xinxi4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xinxi5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\xinxi6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\yuan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\yuan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\zhaopian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\zhuce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\zhucechenggong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\zi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\zi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\键盘.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\医药界面 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\guangyun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\huiyuanming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\quan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\quan13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\zhaopian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\按钮2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\3登录.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\4该吃什么药医药界面  拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\guangyun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\shiping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\shuoming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\shuomingshu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\xian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\xian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\xian3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\xian4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yaohe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yaohe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yaohe3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yaohe4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yaohe5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yuan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\yuan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\zi9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\3登录.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\4该吃什么药医药界面  拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\6您想了解的疾病在这里医药界面 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\danao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\dian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\guangyun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\quanshenxueguan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\renti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\shenzang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\shiping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\xian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\xian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\xian3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\xinzang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\yuan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\yuan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\3登录.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\7健康指标医药界面2 12拷贝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\7健康指标医药界面2 拷贝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\baobiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\caiji.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\guangyun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\jiantou.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\lici.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\licizi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\manxing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\manxingzi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\mian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\quan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\quan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shangci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shangcizi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shansheng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shuju1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shuju2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shuju3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xian9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xianduan6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xianduan7 - 副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xianduan7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xinlv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xinlvzi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xuetang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xuetangzi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xueya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xueyazi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xuezhi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xuzhizi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\zi8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\6您想了解的疾病在这里医药界面 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\8会员基本信息医药界面 拷贝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\kuang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\xian10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\xinxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\yuan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\yuan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\baocun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\biaoge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\bitian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\fengxian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\gou.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\guangyun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\guangyun2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\shuju.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\tuijianyaopin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\xian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\xian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yaohe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yaohe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yaohe3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yaohe4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yaohe5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yuan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\yuan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\zi9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circeltext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Dashboard\b1.png" />
+    <Resource Include="Images\Dashboard\b2.png" />
+    <Resource Include="Images\Dashboard\b3.png" />
+    <Resource Include="Images\Dashboard\b4.png" />
+    <Resource Include="Images\Dashboard\b5.png" />
+    <Resource Include="Images\Dashboard\b6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circle_pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDCardReader\CardReader.csproj">
+      <Project>{336f869e-86ea-420a-8a9c-a942cfe3835d}</Project>
+      <Name>CardReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MTM.SDK\MTM.SDK\MTM.SDK.csproj">
+      <Project>{943ff35c-6924-4a11-bb8a-787fc53b6d0e}</Project>
+      <Name>MTM.SDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebService\WebService.csproj">
+      <Project>{9c8a2ca3-78d3-4ba1-831d-bd593bce470d}</Project>
+      <Name>WebService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RegisterSuccess\welcomeback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VideoPlayer\fullscreen.png" />
+    <Resource Include="VideoPlayer\pause.png" />
+    <Resource Include="VideoPlayer\play.png" />
+    <Resource Include="VideoPlayer\volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Video\珍视明护眼旗舰店.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\1233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\5我的心梗的风险医药界面 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\9我的药怎么用医药界面 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\chenggong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\chiyao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\di1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\di2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\di3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\di4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\fangzhi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\guangyun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\guangyun3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\guangyun4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\guangyun5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\jiantou1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\jiantou2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\jiantou3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\jinshi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\kuang1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\kuang2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\kuang3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\kuang4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\quan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\quan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\quan12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\quan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\quan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\quan4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\saomiaozi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\shibei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\tiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\tubiao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\xian1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\xian2 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\xian3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\xian4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\yaogui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\zhaopian2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\按钮1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\按钮3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\按钮4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\按钮5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\结构 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\结构 拷贝.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\药盒.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CardSequenceControl\b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CardSequenceControl\b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CardSequenceControl\yao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\licixian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\shangcixian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xzxian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xzbaobiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xybaobiao.png" />
+    <Resource Include="Images\HealthIndex\xyxian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\xlbaobiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile\profilehint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\healthhint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HealthIndex\mbxian.png" />
+    <Resource Include="Images\HealthIndex\scxian.png" />
+    <Resource Include="Images\HealthIndex\xlxian.png" />
+    <Resource Include="Images\HealthIndex\xtxian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HealthPop\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\buttonbase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\knowldge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Know\szxian.png" />
+    <Resource Include="Images\Know\xgxian.png" />
+    <Resource Include="Images\Know\xzxian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\yao2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\yao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\yao2 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libs\WPFVisifire.Charts.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\risk_hint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\viewreport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\required_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\xueya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\xueyabg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Risk\shangsheng.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,93 @@
+﻿<local:HealthIndexBase x:Class="YiYao.LiCiHealthIndex"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             mc:Ignorable="d" 
+            Width="538" Height="221">
+    <UserControl.Resources>
+        <Storyboard x:Key="sb">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zi0_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="zi0_png">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="canvas">
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="492.681150225469,-0.999899880547645"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="canvas">
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="492.667,23"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="canvas">
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="-1.98584977502658,-4.49989988054764"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="canvas1">
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="-2.66633333333345,-4.83300000000003"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="457.667,1.66699999999997"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="canvas1">
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="-2.66633333333361,25.1669999999999"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="460.667,31.667"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="canvas1">
+                <EasingPointKeyFrame KeyTime="0:0:1.2" Value="-5.833,22.167"/>
+            </PointAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="xianstoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xian">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Canvas>
+        <Canvas Height="516" Canvas.Left="-39" Canvas.Top="-295" Width="577" RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.8" ScaleY="0.8"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Canvas.RenderTransform>
+
+            <local:HealthIndexLeft x:Name="dialogFrame" d:LayoutOverrides="Width, Height" Canvas.Left="39" Canvas.Top="295"/>
+            <Canvas Width="538" Height="221" d:LayoutOverrides="Width, Height">
+
+                <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="19" Margin="58.333,334.5,0,0" VerticalAlignment="Top" Width="486">
+                    <Canvas.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-2.00000000049518,0">
+                                <LineSegment Point="-0.500000021127557,0"/>
+                                <LineSegment Point="-0.500000021127557,22.8599993896485"/>
+                                <LineSegment Point="-2.00000000049518,22.8599993896485"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Canvas.Clip>
+                    <TextBlock Foreground="#ededed" FontSize="18" ><Run x:Name="text1" Text="" /></TextBlock>
+                </Canvas>
+
+                <Canvas x:Name="canvas1" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="4.5" Canvas.Left="58.333" Canvas.Top="369.833">
+                    <Canvas.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="-10.3329999999999,-4.83300000000003">
+                                <LineSegment Point="-0.832999999999998,-4.83300000000003"/>
+                                <LineSegment Point="-1.33299999999999,25.167"/>
+                                <LineSegment Point="-10.333,24.667"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Canvas.Clip>
+                    <TextBlock Foreground="#ededed" FontSize="18" ><Run x:Name="text2" Text="" /></TextBlock>
+                </Canvas>
+
+            </Canvas>
+            <TextBlock x:Name="zi0_png" Opacity="0" FontSize="17" Foreground="White" Canvas.Left="73.5" Canvas.Top="257.733"><Run Text="历次用药记录:"/></TextBlock>
+        </Canvas>
+        <Image x:Name="xian" Opacity="1" Source="/Images/HealthIndex/licixian.png" Height="24"  Stretch="Fill" Width="166" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="447.835" Canvas.Top="165.667"/>
+
+
+    </Canvas>
+</local:HealthIndexBase>

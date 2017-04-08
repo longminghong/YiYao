@@ -1,0 +1,174 @@
+﻿<UserControl x:Class="YiYao.HealthIndexLeft"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             mc:Ignorable="d" 
+             Width="538" Height="221">
+    <UserControl.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="mian_png_Copy">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="499.333,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="498.333,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="498.333,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="497.333,158.833000000001"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="504.466823743595,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="503.466823743595,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="506.564820830247,187.110662053928"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="507.258919793539,3.27572078711996"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="507.937430630147,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="506.937430630147,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="512.129759458684,183.580217117608"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="514.115377968759,2.81786713342462"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="511.103841145747,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="510.103841145747,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="517.206934940594,180.359213317257"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="520.370872173508,2.40014404606365"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="58.6663333333333,9.833"/>
+            </PointAnimationUsingKeyFrames>
+
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="512.209342945413,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="511.209342945413,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="518.97954989523,179.234651141735"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="522.554878342979,2.25430268324467"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="53.48202817022,7.59286813939551"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="512.911835727809,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="511.911835727809,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="520.105960735969,178.520046414815"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="523.942708350335,2.16162756974765"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="50.1876536518537,6.16937297713845"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="12.9996666666667,57.1663333333334"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="513.970381430967,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="512.970381430967,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="521.803284018619,177.443249923671"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="526.033949040367,2.02198080662031"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="45.2235514170733,4.0243905300111"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="8.03556443188629,55.0213508862061"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="8.6663333333333,215.166333333333"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="514.347555288573,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="513.347555288573,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="522.408062790297,177.05957306852"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="526.779085802897,1.97222281488339"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="43.4547760265961,3.26010486745922"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="6.26678904140909,54.2570652236542"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="6.76643370745491,216.702422392554"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.7" Value="511.388251391556,218.482477598322"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[9].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="518.369834913984,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="517.369834913984,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="528.857580120698,172.967943794395"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="534.725417070646,1.44159071425139"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="24.5920975254731,-4.89043522561865"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="-12.5958894597139,46.1065251305763"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[10].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="519.62914565969,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="518.62914565969,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="530.876819764675,171.686920794453"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="537.213284968043,1.27545837921411"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="18.6864977309701,-7.44223760595944"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[11].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="522.618807048351,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="521.618807048351,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="535.670587163735,168.64571351978"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="543.119597304613,0.881052606721044"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="4.66633333333353,-13.5003333333333"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[12].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="523.626674226253,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="522.626674226253,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="537.28665005244,167.620469321569"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="545.110718563042,0.748091518091196"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="543.332999999999,-8.16699999999999"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[13].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="524.878095406305,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="523.878095406305,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="539.293239185972,166.347471914275"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="547.583000000003,0.583000000000022"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[14].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="528.333,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="527.333,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="544.833,162.833"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="553.402644847426,162.466340362081"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[15].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="527.833,252.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="536.402644847426,251.966340362081"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="516.244492883935,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="515.244492883935,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="525.449704106999,175.129929652548"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="530.526635931378,1.72197268939839"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="34.5589937015783,-0.583751692733674"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="-2.62899328360872,50.4132086634613"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="-2.78881768409525,224.427944794233"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.7" Value="501.833000000006,226.208000000001"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(LineSegment.Point)" Storyboard.TargetName="xianduan7___副本_png">
+                <EasingPointKeyFrame KeyTime="0" Value="517.080575791765,217.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.1" Value="516.080575791765,192.332999999998"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.2" Value="526.790319804037,174.279431522169"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.3" Value="532.178383788725,1.61167393570617"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.4" Value="30.6381417073379,-2.27794699888695"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.5" Value="-6.54984527784914,48.719013357308"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.6" Value="-7.00033333333334,227.833"/>
+            </PointAnimationUsingKeyFrames>
+
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Image x:Name="mian_png_Copy"  Source="/Images/HealthIndex/mian.png" Stretch="Fill" Width="538" Height="221" VerticalAlignment="Top"/>
+
+        <Canvas HorizontalAlignment="Left" Height="221"  VerticalAlignment="Top" Width="538">
+            <Image x:Name="xianduan7___副本_png" Height="221" Source="/Images/HealthIndex/xianduan7 - 副本.png" Stretch="Fill" Width="538" >
+                <Image.Clip>
+                    <PathGeometry>
+                        <PathFigure IsClosed="True" StartPoint="498.833,220.833">
+                            <LineSegment Point="503.966823743595,220.833"/>
+                            <LineSegment Point="507.437430630147,220.833"/>
+                            <LineSegment Point="510.603841145747,220.833"/>
+                            <LineSegment Point="511.709342945413,220.833"/>
+                            <LineSegment Point="512.411835727809,220.833"/>
+                            <LineSegment Point="513.470381430967,220.833"/>
+                            <LineSegment Point="513.847555288573,220.833"/>
+                            <LineSegment Point="515.744492883935,220.833"/>
+                            <LineSegment Point="516.580575791765,220.833"/>
+                            <LineSegment Point="517.869834913984,220.833"/>
+                            <LineSegment Point="519.12914565969,220.833"/>
+                            <LineSegment Point="522.118807048351,220.833"/>
+                            <LineSegment Point="523.126674226253,220.833"/>
+                            <LineSegment Point="524.378095406305,220.833"/>
+                            <LineSegment Point="527.833,220.833"/>
+                            <LineSegment Point="527.833,252.333"/>
+                            <LineSegment Point="498.833,252.333"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Image.Clip>
+            </Image>
+        </Canvas>
+
+    </Grid>
+</UserControl>

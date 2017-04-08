@@ -1,0 +1,475 @@
+﻿<UserControl x:Class="YiYao.Risk"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YiYao"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080">
+    <UserControl.Resources>
+        <Storyboard  x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xian1_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yuan2_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xian2_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="biaoge_png">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="23.1666666666667,-2.7019763651183"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="996.25,-7"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="1039.75,955.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="1040.00129324918,996.930787112691"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="20.6669999999999,-6.77176039119805"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.6" Value="1047.25,-36.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="1000.25,-23.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="997.25,-34.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="23.0543508860502,-1.91550469427585"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="987.197956347688,-5.78160840408986"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="1000.65980392157,957.594117647059"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="-32.0833333333333,995.500000000002"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="23.0016971226561,-1.54680589660604"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="982.954348173618,-5.21042506315417"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="982.334276341719,958.575842338837"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="-15.367121281741,980.286980696568"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="-12.75,32.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[9].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="22.8448630255744,-0.448602476749466"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="970.314369310793,-3.50910273081924"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="927.75,961.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="937.749681120363,953.362292238956"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[10].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="21.3119074989163,10.285651318753"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="970.62100130039,15.5020806241873"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="953.249999999999,13.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[11].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="20.6669999999999,14.8015036364538"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="970.75,23.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="20.6669999999999,14.8015036364538"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[12].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="20.6669999999999,16.3690400320208"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="212.681788014317,12.4077253033931"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="20.6669999999999,16.3690400320208"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="22.9248070976774,-1.00839690292603"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="976.757428571456,-4.3763289127366"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="955.573600892598,960.009449952183"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="9.04347882252,958.071485376913"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.1" Value="18.5833333333333,25.833333333333"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(LineSegment.Point)" Storyboard.TargetName="xian2_png">
+                <EasingPointKeyFrame KeyTime="0:0:1.3" Value="22.9089850017539,-0.897605434898208"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="975.482253327296,-4.20469222377735"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.7" Value="950.066905140434,960.304451510334"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.9" Value="14.0665862608007,953.500077082621"/>
+            </PointAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="formCanvas">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="formCanvas">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="formCanvas">
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="1076,113"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.9" Value="1082,847"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="formCanvas">
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="1704,112.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:2.9" Value="1707.5,843"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard  x:Key="Storyboard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="formCanvas">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="formCanvas">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="reportCanvas">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="reportCanvas">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="reportCanvas">
+                <EasingPointKeyFrame KeyTime="0" Value="820,192"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="812,180"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="824,1044"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="reportCanvas">
+                <EasingPointKeyFrame KeyTime="0" Value="1824,196"/>
+                <EasingPointKeyFrame KeyTime="0:0:0.8" Value="1824,192"/>
+                <EasingPointKeyFrame KeyTime="0:0:1.5" Value="1824,1048"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="viewport">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="reportCanvas">
+                <EasingPointKeyFrame KeyTime="0" Value="816,144"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="reportCanvas">
+                <EasingPointKeyFrame KeyTime="0" Value="1824,156"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="biaoge_png">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="790"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="695"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <local:YesOrNoConverter x:Key="yesOrNo" />
+    </UserControl.Resources>
+    <Grid>
+        <Canvas Margin="677.93,40,46.5,57.5">
+            <Image x:Name="xian1_png" Source="/Images/Risk/xian1.png" Stretch="Fill" Height="304.244" RenderTransformOrigin="0.5,0.5" Width="279.474" Canvas.Top="75.211">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-19.611"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="yuan1_png" Height="29" Source="/Images/Risk/yuan1.png" Stretch="Fill" Width="29" Canvas.Left="44.07" Canvas.Top="402.5"/>
+            <Image x:Name="yuan2_png" Height="48" Source="/Images/Risk/yuan2.png" Stretch="Fill" Width="48" Canvas.Left="201.57"/>
+            <Canvas Height="970" Canvas.Left="217.57" Canvas.Top="12.5" Width="978">
+                <Image x:Name="xian2_png" Source="/Images/Risk/xian2.png" Stretch="Fill" Height="970" Width="978" Canvas.Left="3.25">
+                    <Image.Clip>
+                        <PathGeometry>
+                            <PathFigure IsClosed="True" StartPoint="0.33299999999997,-20.667">
+                                <LineSegment Point="20.6669999999999,-20.667"/>
+                                <LineSegment Point="20.6669999999999,-17"/>
+                                <LineSegment Point="20.6669999999999,-11"/>
+                                <LineSegment Point="20.6669999999999,-6.77176039119805"/>
+                                <LineSegment Point="20.6669999999999,-1.868643031785"/>
+                                <LineSegment Point="20.6669999999999,-1.11961494695953"/>
+                                <LineSegment Point="20.6669999999999,-0.768469744233735"/>
+                                <LineSegment Point="20.6669999999999,-0.255694176670115"/>
+                                <LineSegment Point="20.6669999999999,-0.150177443914831"/>
+                                <LineSegment Point="20.6669999999999,0.277448671928437"/>
+                                <LineSegment Point="20.6669999999999,10.5006491514361"/>
+                                <LineSegment Point="20.6669999999999,14.8015036364538"/>
+                                <LineSegment Point="20.6669999999999,16.3690400320208"/>
+                                <LineSegment Point="20.6669999999999,17.9265281173594"/>
+                                <LineSegment Point="20.6669999999999,19.5"/>
+                                <LineSegment Point="20.6669999999999,19.5126849894292"/>
+                                <LineSegment Point="20.6669999999999,22.5"/>
+                                <LineSegment Point="20.6669999999999,29"/>
+                                <LineSegment Point="0.33299999999997,29"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Image.Clip>
+                </Image>
+
+            </Canvas>
+
+        </Canvas>
+
+        <Canvas>
+            <Image x:Name="biaoge_png" Source="/Images/Risk/biaoge.png" Stretch="Fill" Width="589" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Canvas.Left="1119" Canvas.Top="90" Height="790">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <Canvas x:Name="formCanvas" Visibility="Hidden">
+                <Canvas.Resources>
+                    <Style  TargetType="{x:Type RadioButton}">
+                        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+                        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type RadioButton}">
+                                    <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border x:Name="radioButtonBorder" BorderBrush="White" BorderThickness="{TemplateBinding BorderThickness}" Background="Transparent"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,1,2,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                            <Grid x:Name="markGrid" Margin="2" Width="10" Height="10">
+                                                <TextBlock x:Name="optionMark" FontFamily="Wingdings 2" Visibility="Collapsed" >P</TextBlock>
+                                            </Grid>
+                                        </Border>
+                                        <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsChecked" Value="true">
+                                            <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
+                                            <Setter Property="Background" TargetName="radioButtonBorder" Value="#FFCC8721" />
+                                            <Setter Property="Visibility" TargetName="optionMark" Value="Visible" />
+                                        </Trigger>
+                                        <Trigger Property="IsChecked" Value="{x:Null}">
+                                            <Setter Property="Opacity" TargetName="optionMark" Value="0.56"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                    <Style  TargetType="{x:Type TextBox}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="BorderBrush" Value="White"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                        <Setter Property="AllowDrop" Value="true"/>
+                        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+                        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+                        <Setter Property="TextAlignment" Value="Center" />
+                    </Style>
+                </Canvas.Resources>
+                <Canvas.Clip>
+                    <PathGeometry>
+                        <PathFigure IsClosed="True" StartPoint="1077,90">
+                            <LineSegment Point="1707.5,93.5"/>
+                            <LineSegment Point="1707.5,843"/>
+                            <LineSegment Point="1077,847"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Canvas.Clip>
+
+                <StackPanel Canvas.Left="1170" Canvas.Top="207" Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock ><Run Text="吸烟情况" Foreground="White" FontSize="16"/></TextBlock>
+                        <RadioButton IsChecked="{Binding smoking, Converter={StaticResource yesOrNo},ConverterParameter=no}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="50,0,0,0" >未知</RadioButton>
+                        <RadioButton IsChecked="{Binding smoking, Converter={StaticResource yesOrNo},ConverterParameter=yes}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="60,0,0,0">是</RadioButton>
+                        <RadioButton IsChecked="{Binding smoking, Converter={StaticResource yesOrNo},ConverterParameter=no}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="75,0,0,0">否</RadioButton>
+                        <Image Source="/Images/Risk/required_star.png" Width="13" Height="13" Margin="20,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <TextBlock ><Run Text="饮酒情况" Foreground="White" FontSize="16"/></TextBlock>
+                        <RadioButton IsChecked="{Binding drinking, Converter={StaticResource yesOrNo},ConverterParameter=no}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="50,0,0,0" Content="未知" />
+                        <RadioButton IsChecked="{Binding drinking, Converter={StaticResource yesOrNo},ConverterParameter=no}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="60,0,0,0" Content="是"/>
+                        <RadioButton IsChecked="{Binding drinking, Converter={StaticResource yesOrNo},ConverterParameter=no}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="75,0,0,0" Content="否"/>
+                        <Image Source="/Images/Risk/required_star.png" Width="13" Height="13" Margin="20,0,0,0"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <TextBlock ><Run Text="钦食偏好" Foreground="White" FontSize="16"/></TextBlock>
+                        <RadioButton IsChecked="{Binding eatingpreference, Converter={StaticResource yesOrNo},ConverterParameter=1}"  FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="50,0,0,0" Content="高盐" />
+                        <RadioButton IsChecked="{Binding eatingpreference, Converter={StaticResource yesOrNo},ConverterParameter=2}" FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="60,0,0,0" Content="低盐"/>
+                        <Image Source="/Images/Risk/required_star.png" Width="13" Height="13" Margin="20,0,0,0"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <TextBlock ><Run Text="血压测量" Foreground="White" FontSize="16"/></TextBlock>
+                        <TextBlock Foreground="White" FontSize="16" Margin="50,0,0,0">高压</TextBlock>
+                        <TextBox Width="77" Margin="5,0,0,0" Text="{Binding nowsystolicpressure}"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmHg</TextBlock>
+                        <TextBlock Foreground="White" FontSize="16" Margin="40,0,0,0">低压</TextBlock>
+                        <TextBox Width="77" Margin="5,0,0,0" Text="{Binding nowdiastolicpressure}"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmHg</TextBlock>
+                        <Image Source="/Images/Risk/required_star.png" Width="13" Height="13" Margin="20,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="-50,20,0,0">
+                        <TextBlock ><Run Text="过去血压最高值" Foreground="White" FontSize="16"/></TextBlock>
+                        <TextBlock Foreground="White" FontSize="16" Margin="50,0,0,0">高压</TextBlock>
+                        <TextBox Width="77" Margin="5,0,0,0" Text="{Binding agosystolicpressure}"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmHg</TextBlock>
+                        <TextBlock Foreground="White" FontSize="16" Margin="40,0,0,0">低压</TextBlock>
+                        <TextBox Width="77" Margin="5,0,0,0" Text="{Binding agodiastolicpressure}"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmHg</TextBlock>
+                        <Image Source="/Images/Risk/required_star.png" Width="13" Height="13" Margin="20,0,0,0"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                        <TextBlock Foreground="White" FontSize="16" Margin="30,0,0,0">身高</TextBlock>
+                        <TextBox  Text="{Binding height}" Width="77" Margin="5,0,0,0"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">cm</TextBlock>
+                        <TextBlock Foreground="White" FontSize="16" Margin="30,0,0,0">体重</TextBlock>
+                        <TextBox   Text="{Binding weight}" Width="77" Margin="5,0,0,0"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">kg</TextBlock>
+                        <TextBlock Foreground="White" FontSize="16" Margin="30,0,0,0">腹围</TextBlock>
+                        <TextBox Text="{Binding waist}" Width="77" Margin="5,0,0,0"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">cm</TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                        <TextBlock Foreground="White" FontSize="16" Margin="0,0,0,0">餐前血糖</TextBlock>
+                        <TextBox Text="{Binding fastsugar}" Width="77" Margin="5,0,0,0"></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="30,0,0,0">餐后血糖</TextBlock>
+                        <TextBox Text="{Binding randomsugar}" Width="77" Margin="5,0,0,0" ></TextBox>
+                        <TextBlock Foreground="White" FontSize="16" Margin="30,0,0,0">糖化血红蛋白</TextBlock>
+                        <TextBox Text="{Binding HbA1c}" Width="77" Margin="5,0,0,0"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="0,40,0,0" >
+                        <TextBlock Foreground="White" FontSize="16" Margin="0,0,0,0">血脂测量</TextBlock>
+                        <StackPanel Orientation="Horizontal" Margin="80,0,0,0">
+                            <TextBlock Foreground="White" FontSize="16" Margin="0,0,0,0">总胆固醇</TextBlock>
+                            <TextBox Text="{Binding cholesterol}" Width="60" Margin="5,0,0,0"></TextBox>
+                            <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmlol/L</TextBlock>
+                            <TextBlock Foreground="White" FontSize="16" Margin="10,0,0,0">低密度脂蛋白</TextBlock>
+                            <TextBox Text="{Binding ldl}" Width="60" Margin="5,0,0,0"></TextBox>
+                            <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmlol/L</TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="80,10,0,0">
+                            <TextBlock Foreground="White" FontSize="16" Margin="0,0,0,0">甘油三脂</TextBlock>
+                            <TextBox Text="{Binding triglyceride}" Width="60" Margin="5,0,0,0"></TextBox>
+                            <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmlol/L</TextBlock>
+                            <TextBlock Foreground="White" FontSize="16" Margin="10,0,0,0">高密度脂蛋白</TextBlock>
+                            <TextBox Text="{Binding hdl}" Width="60" Margin="5,0,0,0"></TextBox>
+                            <TextBlock Foreground="White" FontSize="16" Margin="5,0,0,0">mmlol/L</TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Height="94">
+                            <TextBlock Foreground="White" FontSize="16"  ><Run Text="家族史"/></TextBlock>
+                            <TextBox Margin="50,0,0,0" TextWrapping="Wrap" Width="357" Height="94" IsEnabled="False"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                            <TextBlock ><Run Text="疾病状态" Foreground="White" FontSize="16"/></TextBlock>
+                            <RadioButton FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="50,0,0,0"  >糖尿病</RadioButton>
+                            <RadioButton FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="30,0,0,0">冠心病</RadioButton>
+                            <RadioButton FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="30,0,0,0">高血压情心脏病</RadioButton>
+                            <RadioButton FontSize="16" Foreground="White" Padding="0,0,0,0" VerticalContentAlignment="Bottom" Margin="30,0,0,0">无</RadioButton>
+
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="baocun_png" Canvas.Left="1366.167"  Canvas.Top="791" Height="43" Width="150" Click="baocun_png_Click" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Image  Height="43"  Source="/Images/Risk/baocun.png" Stretch="Fill"  Width="150"/>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.8" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <local:FluidProgressBar x:Name="progressBar" Width="309" Height="26.48" Foreground="White" DotRadiusX="5" DotRadiusY="5" Canvas.Left="1296" Canvas.Top="759.52" Visibility="Collapsed" />
+
+            </Canvas>
+
+            <Canvas x:Name="reportCanvas" Visibility="Hidden">
+                <Canvas.Clip>
+                    <PathGeometry>
+                        <PathFigure IsClosed="True" StartPoint="1027,143">
+                            <LineSegment Point="1710,146"/>
+                            <LineSegment Point="1718,881"/>
+                            <LineSegment Point="1021,881"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Canvas.Clip>
+                <Image Source="/Images/Risk/risk_hint.png" Width="1920" Height="1080" Visibility="Collapsed"/>
+
+
+                <TextBlock FontSize="20" Foreground="White" Canvas.Left="1149" Canvas.Top="154.1" FontWeight="Bold">病人基本信息</TextBlock>
+                <StackPanel Orientation="Horizontal" Canvas.Left="1149" Canvas.Top="194.5">
+                    <TextBlock FontSize="20" Foreground="White" Height="23"   Width="180" ><Run Text="姓名："/><Run x:Name="nameText" Text="柳青" /></TextBlock>
+                    <TextBlock FontSize="20" Foreground="White"  Height="23"   Width="180"  ><Run Text="性别："/><Run x:Name="sexText" Text="女" /></TextBlock>
+                    <TextBlock FontSize="20" Foreground="White"  Height="23"   Width="180" ><Run Text="年龄："/><Run x:Name="ageText" Text="57" /></TextBlock>
+                </StackPanel>
+                <TextBlock FontSize="20" Foreground="White" Canvas.Left="1149" Canvas.Top="244.1" FontWeight="Bold">血压信息</TextBlock>
+                <StackPanel Orientation="Horizontal" Canvas.Left="1149" Canvas.Top="278.5">
+                    <TextBlock FontSize="14" Foreground="White" Height="23"   Width="180" ><Run Text="血压："/><Run x:Name="pressureText" Text="180/80" /></TextBlock>
+                    <TextBlock FontSize="14" Foreground="DarkGray"  Height="23"   Width="180"  ><Run Text="测量时间："/><Run x:Name="timeText" Text="2016.9.31" /></TextBlock>
+                    <TextBlock FontSize="16" Foreground="#FF1393AB"  Height="23"   Width="180" Margin="20,0,0,0"><Run Text="本次测量结果："/><Run x:Name="testResult" Text="偏高" /></TextBlock>
+                </StackPanel>
+                <StackPanel Canvas.Left="1126" Canvas.Top="300" Orientation="Horizontal">
+                    <Canvas Width="544" Height="221" >
+                        <Image Source="/Images/Risk/xueyabg.png" Width="544" Height="221" Visibility="Visible" />
+                        <local:CustomChart2  x:Name="chart" Width="386" Height="152" DotWidth="8"  Visibility="Visible" Canvas.Left="53" Canvas.Top="34"/>
+                        <Image Width="25" Height="33" Source="/Images/Risk/shangsheng.png" Canvas.Left="452" Canvas.Top="76.667"  Visibility="Collapsed"/>
+                        <TextBlock Canvas.Left="477.998" Canvas.Top="90.664" Foreground="White" Visibility="Collapsed">上升趋势</TextBlock>
+                    </Canvas>
+                    <StackPanel>
+                        <Rectangle Fill="#ee7680" Width="15" Height="45"></Rectangle>
+                        <Rectangle Fill="#477d71" Width="15" Height="45"></Rectangle>
+                        <Rectangle Fill="#8a6445" Width="15" Height="45"></Rectangle>
+                        <Polygon x:Name="healthPointer" Points="0 5 5 0 5 10 "  Fill="White" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-45,0,0"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"  Margin="25,4,0,0">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <TextBlock FontSize="18" Foreground="White" Margin="0,0,0,0"><Run Text="高危"/></TextBlock>
+                        <TextBlock FontSize="18" Foreground="White" Margin="10,0,0,0"><Run Text="中危"/></TextBlock>
+                        <TextBlock FontSize="18" Foreground="White" Margin="10,0,0,0"><Run Text="低危"/></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <Image x:Name="tip" Source="/Images/Risk/tip.png" Width="162" Height="105" Canvas.Left="1087.5" Canvas.Top="461" Visibility="Hidden"/>
+
+                <StackPanel Orientation="Horizontal" Canvas.Left="1149" Canvas.Top="530">
+                    <TextBlock FontSize="18" Foreground="White" Height="23"    FontWeight="Bold"><Run Text="风险评估结果："/></TextBlock>
+                    <TextBlock FontSize="14" Foreground="#FFB5B5B6" Height="23"   Width="180" Margin="25,0,0,0"><Run Text="血压偏高"/></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Canvas.Left="1149" Canvas.Top="585" Height="223">
+                    <TextBlock FontSize="18" Foreground="White" Height="23"    FontWeight="Bold"><Run Text="报告建议："/></TextBlock>
+                    <ScrollViewer x:Name="scrollviewer" MaxHeight="115" VerticalScrollBarVisibility="Hidden"  HorizontalScrollBarVisibility="Disabled"  PanningMode="VerticalFirst" >
+                        <TextBlock FontSize="14" Foreground="#FFB5B5B6"    Width="521" Margin="0,10,0,0" TextWrapping="Wrap"><Run x:Name="healthTipText" Text="按时复查"/></TextBlock>
+                    </ScrollViewer>
+                </StackPanel>
+                <!--<StackPanel Orientation="Vertical" Canvas.Left="1548" Canvas.Top="704.297" Width="141">
+                    <TextBlock FontSize="18" Foreground="#FFB5B5B6" Height="23"   ><Run Text="医师  李瑞"/></TextBlock>
+                    <TextBlock FontSize="14" Foreground="#FFB5B5B6" Height="23"   Width="180" Margin="0,10,0,0"><Run Text="2016年9月31日"/></TextBlock>
+                </StackPanel>-->
+                <Canvas x:Name="recommandDrugs" Height="220.333" Width="1808" Canvas.Left="66" Canvas.Top="742.297"  >
+                    <TextBlock Canvas.Left="896" FontSize="30" Canvas.Top="49.233" Foreground="White" Text="推荐药品" FontWeight="Bold"/>
+
+                    <Image x:Name="yaohe3_png" Height="118" Source="/Images/Risk/yaohe3.png" Stretch="Fill" Width="158" Canvas.Left="1248.167" Canvas.Top="102.333"/>
+                    <Image x:Name="yaohe2_png" Height="117" Source="/Images/Risk/yaohe2.png" Stretch="Fill" Width="158" Canvas.Left="1073.167" Canvas.Top="103.333"/>
+                    <Image x:Name="yaohe1_png" Height="117" Source="/Images/Risk/yaohe1.png" Stretch="Fill" Canvas.Left="896" Canvas.Top="102.333" Width="158"/>
+                    <Image x:Name="yaohe4_png" Height="114" Source="/Images/Risk/yaohe4.png" Stretch="Fill" Width="158" Canvas.Left="1425.167" Canvas.Top="103.333"/>
+                    <Image x:Name="yaohe5_png" Height="114" Source="/Images/Risk/yaohe5.png" Stretch="Fill" Width="158" Canvas.Left="1603.167" Canvas.Top="103.333"/>
+
+                </Canvas>
+            </Canvas>
+            <TextBlock x:Name="textBlock" Canvas.Left="1300" FontSize="30" Canvas.Top="107" Foreground="White" Text="风险评估报告"/>
+            <Button x:Name="viewport"  Width="112" Height="32" Canvas.Left="1726" Canvas.Top="91" Click="zi23_png_Click"  Opacity="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Image   Source="/Images/Risk/viewreport.png" Stretch="Fill" Width="112" Height="32" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Canvas>
+
+    </Grid>
+</UserControl>
