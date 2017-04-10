@@ -1,4 +1,5 @@
 ﻿using CardReader;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,6 +16,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WebService.Event;
 using YiYao.Util;
 
 namespace YiYao
@@ -24,10 +26,12 @@ namespace YiYao
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private IEventAggregator mEventAggregator;
+        public MainWindow(IEventAggregator eventAggregator)
         {
 
             InitializeComponent();
+            mEventAggregator = eventAggregator;
             ImageSourceConverter imageConveter = new ImageSourceConverter();
             AppData.CurrentIDCard = new IDCard
             {
@@ -41,11 +45,17 @@ namespace YiYao
                 HeadImage = (BitmapSource)imageConveter.ConvertFrom("屈乐.bmp")
             };
             this.Loaded += MainWindow_Loaded;
+            mEventAggregator.GetEvent<WebErrorEvent>().Subscribe(OnWebError);
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            root.GoToPage(typeof(Dashboard));
+            root.GoToPage(typeof(Login));
+        }
+
+        private void OnWebError(string message)
+        {
+            ShowMessage(message);
         }
 
         private void ShowMessage(string message)

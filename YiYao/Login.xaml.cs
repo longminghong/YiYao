@@ -64,16 +64,18 @@ namespace YiYao
             var member = await healthDataService.GetMemberInfoBySsnAsync(AppData.CurrentIDCard.IDNumber);
             if(member != null)
             {
-                AppData.CurrentIDCard.Name = member.data.name;
-                var address = member.data.address;
-              //  AppData.CurrentIDCard.Address = address.province + address.city + address.district;
-                AppData.CurrentIDCard.BirthDay = member.data.birthday;
-                AppData.CurrentIDCard.Sex = member.data.gender;
-                (Parent as NavigationManager).GoToPage(typeof(LoginSuccess));
-            }
-            else
-            {
-                (Parent as NavigationManager).GoToPage(typeof(Register));
+                if(member.error.code == 0)
+                {
+                    AppData.CurrentIDCard.Name = member.data.name;
+                    var address = member.data.address;
+                    AppData.CurrentIDCard.BirthDay = member.data.birthday;
+                    AppData.CurrentIDCard.Sex = member.data.gender;
+                    (Parent as NavigationManager).GoToPage(typeof(LoginSuccess));
+                }
+                else
+                {
+                    (Parent as NavigationManager).GoToPage(typeof(Register));
+                }
             }
             mIsChecking = false;
         }

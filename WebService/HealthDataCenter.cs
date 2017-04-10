@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebService.Event;
 
 namespace WebService
 {
@@ -36,11 +37,10 @@ namespace WebService
             if (mCachedMemberInfo != null)
                 return mCachedMemberInfo;
             var data = await mSdk.GetMemberInfoBySsnAsync(ssn);
-            if(data != null && data.error.code != 0)
+            if(Check(data))
             {
-                return null;
+                mCachedMemberInfo = data;
             }
-            mCachedMemberInfo = data;
             return data;
         }
 
@@ -51,11 +51,7 @@ namespace WebService
             if (mCachedMemberInfo == null)
                 return null;
             var data = await mSdk.GetHealthDataAsync(mCachedMemberInfo.data.mid);
-            if(data == null)
-            {
-                return null;
-            }
-            if(data.error.code == 0)
+            if(Check(data))
             {
                 mHealthData = data;
             }
@@ -64,20 +60,30 @@ namespace WebService
 
         public async Task<DataResult<HealthData>> InquiredHealthDataAsync(InquiredForm form)
         {
-            if (mHealthData != null)
-                return mHealthData;
             if (mCachedMemberInfo == null)
                 return null;
             form.mid = mCachedMemberInfo.data.mid;
             form.uid = mCachedMemberInfo.data.uid;
             var data = await mSdk.InquiredHealthDataAsync(form);
-            if (data != null && data.error.code == 0)
-            {
-                mHealthData = data;
-            }
+            Check(data);
             return data;
         }
 
+        private bool Check<T>(DataResult<T> data)
+        {
+            if (data == null)
+            {
+                mEventAggregator.GetEvent<WebErrorEvent>().Publish("网络错误");
+                return false;
+            }
+            if (data.error.code != 0)
+            {
+                mEventAggregator.GetEvent<WebErrorEvent>().Publish(data.error.message);
+                return false;
+            }
+            return true;
+
+        }
         
     }
 }

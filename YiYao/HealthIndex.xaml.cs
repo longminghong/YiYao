@@ -35,12 +35,6 @@ namespace YiYao
              {
                  mInitlized = false;
                  FindStoryboard();
-                 Window.GetWindow(this).KeyDown += (ss, ee) =>
-                 {
-                     //var mb = leftPart.Children[0];
-                     //Canvas.SetLeft(mb, GVar.x);
-                     //Canvas.SetTop(mb, GVar.y);
-                 };
                  mHealthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
                 var data = await mHealthDataService.GetHealthDataAsync();
              };
