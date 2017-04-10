@@ -1,6 +1,7 @@
 ﻿using CardReader;
 using MTM.SDK;
 using MTM.SDK.Contract;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,20 +10,22 @@ using System.Threading.Tasks;
 
 namespace WebService
 {
-    public class HealthDataCenter
+    public class HealthDataService
     {
         private MTMWebClient mSdk;
         private DataResult<MemberInfo> mCachedMemberInfo;
         private DataResult<HealthData> mHealthData;
         private IDCard mIDCard;
+        private IEventAggregator mEventAggregator;
 
         public void SetIDCard(IDCard idCard)
         {
             mIDCard = idCard;
         }
 
-        public HealthDataCenter()
+        public HealthDataService(EventAggregator eventAggregator)
         {
+            mEventAggregator = eventAggregator;
             var appid = "Bk_ByrUY";
             var appkey = "c96b1296fdfc415024bebfcd2264b486";
             mSdk = new MTMWebClient(appid, appkey);

@@ -1,6 +1,8 @@
 ﻿using Microsoft.Practices.Unity;
+using Prism.Modularity;
 using Prism.Unity;
 using System.Windows;
+using WebService;
 
 namespace YiYao
 {
@@ -14,6 +16,12 @@ namespace YiYao
         protected override void InitializeShell()
         {
             Application.Current.MainWindow.Show();
+        }
+
+        protected override void ConfigureModuleCatalog()
+        {
+            var catalog = (ModuleCatalog)ModuleCatalog;
+            catalog.AddModule(typeof(WebServiceModule));
         }
 
     }

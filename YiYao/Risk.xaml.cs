@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json.Linq;
+using Microsoft.Practices.ServiceLocation;
+using WebService;
 
 namespace YiYao
 {
@@ -85,7 +87,9 @@ namespace YiYao
             
             progressBar.Visibility = Visibility.Visible;
             baocun_png.IsEnabled = false;
-            var healthData =  await App.Instance.HealthDataCenter.InquiredHealthDataAsync(form);
+            var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
+
+            var healthData =  await healthDataService.InquiredHealthDataAsync(form);
             progressBar.Visibility = Visibility.Collapsed;
             baocun_png.IsEnabled = true;
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.ServiceLocation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WebService;
 
 namespace YiYao
 {
@@ -21,6 +23,7 @@ namespace YiYao
     /// </summary>
     public partial class MBHealthIndex : HealthIndexBase
     {
+        HealthDataService mHealthDataService;
         public MBHealthIndex()
         {
             InitializeComponent();
@@ -32,7 +35,8 @@ namespace YiYao
 
         public async void LoadData()
         {
-            var data = await App.Instance.HealthDataCenter.GetHealthDataAsync();
+            var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
+            var data = await healthDataService.GetHealthDataAsync();
             if (data != null)
             {
                 var historyDrugrecord = data.data.historydrugrecord;

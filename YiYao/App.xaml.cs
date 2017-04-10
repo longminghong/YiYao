@@ -19,20 +19,8 @@ namespace YiYao
             base.OnStartup(e);
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
-            _instace = this;
-            HealthDataCenter = new HealthDataCenter();
         }
 
-        public HealthDataCenter HealthDataCenter { get; set; }
 
-        public static App Instance
-        {
-            get
-            {
-                return _instace;
-            }
-        }
-
-        private static App _instace;
     }
 }

@@ -59,10 +59,9 @@ namespace YiYao
             if (mIsChecking)
                 return;
             mIsChecking = true;
-            var effectAggregator = ServiceLocator.Current.GetInstance<EventAggregator>();
-            var container = ServiceLocator.Current.GetInstance<IUnityContainer>();
-            var dataCenter = ServiceLocator.Current.GetInstance<HealthDataCenter>();
-            var member = await App.Instance.HealthDataCenter.GetMemberInfoBySsnAsync(AppData.CurrentIDCard.IDNumber);
+            var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
+
+            var member = await healthDataService.GetMemberInfoBySsnAsync(AppData.CurrentIDCard.IDNumber);
             if(member != null)
             {
                 AppData.CurrentIDCard.Name = member.data.name;
