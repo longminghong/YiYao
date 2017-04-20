@@ -221,7 +221,6 @@
     <Compile Include="Util\GVar.cs" />
     <Compile Include="Util\ReverseBoolToVisibilityConverter.cs" />
     <Compile Include="Util\YesOrNoConverter.cs" />
-    <Compile Include="WebSocketSingleton.cs" />
     <Compile Include="XYKnowldge.xaml.cs">
       <DependentUpon>XYKnowldge.xaml</DependentUpon>
     </Compile>
