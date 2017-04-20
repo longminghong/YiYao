@@ -114,6 +114,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="A5.xaml.cs">
+      <DependentUpon>A5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="A6.xaml.cs">
+      <DependentUpon>A6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="A7.xaml.cs">
+      <DependentUpon>A7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="A4.xaml.cs">
+      <DependentUpon>A4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="A3.xaml.cs">
+      <DependentUpon>A3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppData.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CardSequenceControl\CardSequence.xaml.cs">
@@ -206,9 +221,30 @@
     <Compile Include="Util\GVar.cs" />
     <Compile Include="Util\ReverseBoolToVisibilityConverter.cs" />
     <Compile Include="Util\YesOrNoConverter.cs" />
+    <Compile Include="WebSocketSingleton.cs" />
     <Compile Include="XYKnowldge.xaml.cs">
       <DependentUpon>XYKnowldge.xaml</DependentUpon>
     </Compile>
+    <Page Include="A5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="A6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="A7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="A4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="A3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CardSequenceControl\CardSequence.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1699,6 +1735,42 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Risk\shangsheng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="head2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="身份.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A4-bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A4-top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="QR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="02[1].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1 拷贝 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1 拷贝 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1 拷贝 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1 拷贝 8-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

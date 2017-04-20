@@ -1,0 +1,71 @@
+﻿<Page x:Class="YiYao.A7"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:YiYao"
+      mc:Ignorable="d" 
+       d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080"
+      Title="A7">
+
+    <Grid>
+
+        <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Image x:Name="bg1_jpg" Source="/Images/RegisterSuccess/bg1.jpg" Stretch="Fill"/>
+        <Image x:Name="bg2_png" Source="/Images/RegisterSuccess/bg2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="bg3_png" Margin="-54,151.375,54,-151.375" Source="/Images/RegisterSuccess/bg3.png" Stretch="Fill" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <!-- 点阵地图-->
+        <Image x:Name="ditu_png" Margin="1184,831.975,1,-87.975" Source="/Images/RegisterSuccess/ditu.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.3">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="534.2,151.375,537.8,797.625" Source="A4-top.png" Stretch="None"/>
+
+        <Image Margin="592,868.8,629,164.2" Source="A4-bottom.png" Stretch="Fill"/>
+        <!--  -->
+        <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="705,146.375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36"><Run Text="心血管"/><Run Text="风险评估"/></TextBlock>
+        <Image Margin="592,348,1159,587" Source="1 拷贝 7.png" Stretch="Fill" VerticalAlignment="Center"/>
+        <Image Margin="864.6,348,886.4,587" Source="1 拷贝 5.png" Stretch="Fill" VerticalAlignment="Center"/>
+        <Image Margin="1122,348,629,587" Source="1 拷贝 6.png" Stretch="Fill" VerticalAlignment="Center"/>
+        <Image Margin="592,561.6,1159,373.4" Source="1 拷贝 8-2.png" Stretch="Fill"/>
+        <!--  -->
+
+        <!-- 这里放其他的详细内容 -->
+
+
+    </Grid>
+</Page>

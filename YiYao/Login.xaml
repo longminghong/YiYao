@@ -1097,6 +1097,11 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
+        <Button x:Name="PC_Register" Height="100" Width="249.2" HorizontalAlignment="Right" Foreground="#FFF4ADAD" Margin="0,490" FontSize="24" >
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+            药师PC注册用户展示
+        </Button>
     </Grid>
 </UserControl>
