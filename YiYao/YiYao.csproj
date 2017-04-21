@@ -129,6 +129,9 @@
     <Compile Include="A3.xaml.cs">
       <DependentUpon>A3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="A8.xaml.cs">
+      <DependentUpon>A8.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppData.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CardSequenceControl\CardSequence.xaml.cs">
@@ -176,6 +179,7 @@
     <Compile Include="HealthPop\MBHealthIndex.xaml.cs">
       <DependentUpon>MBHealthIndex.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MTMControl.cs" />
     <Compile Include="QuanButton.xaml.cs">
       <DependentUpon>QuanButton.xaml</DependentUpon>
     </Compile>
@@ -187,6 +191,9 @@
     </Compile>
     <Compile Include="LoginSuccess.xaml.cs">
       <DependentUpon>LoginSuccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RecomMed.xaml.cs">
+      <DependentUpon>RecomMed.xaml</DependentUpon>
     </Compile>
     <Compile Include="ScanDrug.xaml.cs">
       <DependentUpon>ScanDrug.xaml</DependentUpon>
@@ -218,6 +225,9 @@
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShoppingCar.xaml.cs">
+      <DependentUpon>ShoppingCar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\GVar.cs" />
     <Compile Include="Util\ReverseBoolToVisibilityConverter.cs" />
     <Compile Include="Util\YesOrNoConverter.cs" />
@@ -241,6 +251,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="A3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="A8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -312,6 +326,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="RecomMed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ScanDrug.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -363,6 +381,10 @@
     <Page Include="Dashboard.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ShoppingCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="XYKnowldge.xaml">
       <SubType>Designer</SubType>
@@ -1770,6 +1792,66 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="1 拷贝 8-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="人体-红色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="风险等级.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="椭圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="圆角矩形-外框.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="可控风险-背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="用药情况.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="不良饮食.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="肥胖.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="喝酒.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="吸烟.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="心率.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="线条.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="血脂曲线图.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="血压曲线图.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="药物背景-圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="药物文字背景.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

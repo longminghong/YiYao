@@ -97,7 +97,7 @@
     <Compile Include="HealthDataCenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebServiceModule.cs" />
-    <Compile Include="WebSocketSingleton.cs" />
+    <Compile Include="WebSocket\WebSocketSingleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

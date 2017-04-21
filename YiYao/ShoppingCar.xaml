@@ -1,15 +1,14 @@
-﻿<UserControl x:Class="YiYao.A7"
+﻿<UserControl x:Class="YiYao.ShoppingCar"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YiYao"
       mc:Ignorable="d" 
-       d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080"
+      d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080"
       >
 
     <Grid>
-
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -32,7 +31,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="bg3_png" Margin="-54,151.375,54,-151.375" Source="/Images/RegisterSuccess/bg3.png" Stretch="Fill" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="bg3_png" Margin="-10,-10,10,10" Source="/Images/RegisterSuccess/bg3.png" Stretch="Fill" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,16 +41,15 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <!-- 点阵地图-->
-        <Image Margin="534.2,151.375,537.8,797.625" Source="A4-top.png" Stretch="None"/>
-
-        <Image Margin="592,868.8,629,164.2" Source="A4-bottom.png" Stretch="Fill"/>
-        <!--  -->
-        <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="705,146.375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36"><Run Text="心血管"/><Run Text="风险评估"/></TextBlock>
-        <Image Margin="592,348,1159,587" Source="1 拷贝 7.png" Stretch="Fill" VerticalAlignment="Center"/>
-        <Image Margin="864.6,348,886.4,587" Source="1 拷贝 5.png" Stretch="Fill" VerticalAlignment="Center"/>
-        <Image Margin="1122,348,629,587" Source="1 拷贝 6.png" Stretch="Fill" VerticalAlignment="Center"/>
-        <Image Margin="592,561.6,1159,373.4" Source="1 拷贝 8-2.png" Stretch="Fill"/>
+        <Image Margin="352.8,151.2,1219.2,583.8" Source="药物背景-圆.png" Stretch="Fill"/>
+        <Image Margin="600.4,198,913.6,735" Source="药物文字背景.png" Stretch="Fill"/>
+        <Image Margin="1044,151.2,528,583.8" Source="药物背景-圆.png" Stretch="Fill"/>
+        <Image Margin="1291.6,198,222.4,735" Source="药物文字背景.png" Stretch="Fill"/>
+        <Image Margin="1044,518.4,528,216.6" Source="药物背景-圆.png" Stretch="Fill"/>
+        <Image Margin="1291.6,565.2,222.4,367.8" Source="药物文字背景.png" Stretch="Fill"/>
+        <Image Margin="352.8,518.4,1219.2,216.6" Source="药物背景-圆.png" Stretch="Fill"/>
+        <Image Margin="600.4,565.2,913.6,367.8" Source="药物文字背景.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="90.6,114.637,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36" Text="购物车"/>
         <Image x:Name="jiantou1_png" HorizontalAlignment="Right" Height="76" Margin="0,0,55,484" Source="Images/Login/jiantou1.png" Stretch="Fill" VerticalAlignment="Bottom" Width="40" RenderTransformOrigin="0.5,0.5" MouseDown="jiantou1_png_MouseDown">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -62,10 +60,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <!--  -->
-
-        <!-- 这里放其他的详细内容 -->
-
-
+        <!-- 点阵地图-->
     </Grid>
 </UserControl>

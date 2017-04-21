@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WebService.Event;
 using YiYao.Util;
+using WebService;
 
 namespace YiYao
 {
@@ -27,9 +28,13 @@ namespace YiYao
     public partial class MainWindow : Window
     {
         private IEventAggregator mEventAggregator;
+
+        WebSocketSingleton websocketInstance;
+
         public MainWindow(IEventAggregator eventAggregator)
         {
-
+            websocketInstance = WebSocketSingleton.GetInstance();
+            websocketInstance.start();
             InitializeComponent();
             mEventAggregator = eventAggregator;
             ImageSourceConverter imageConveter = new ImageSourceConverter();

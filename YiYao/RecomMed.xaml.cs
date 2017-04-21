@@ -16,14 +16,22 @@ using System.Windows.Shapes;
 namespace YiYao
 {
     /// <summary>
-    /// A6.xaml 的交互逻辑
+    /// RecomMed.xaml 的交互逻辑
     /// </summary>
-    public partial class A6 : UserControl, INavigable
+    public partial class RecomMed : UserControl, INavigable
     {
-        public A6()
+
+        int demoImageCount = 5;
+
+        public RecomMed()
         {
             InitializeComponent();
+
+            this.add_west_chinese_images();
+            this.add_west_HCP_images();
+            this.add_west_med_images();
         }
+
         public void Start(object args)
         {
 
@@ -34,9 +42,29 @@ namespace YiYao
 
         }
 
+        private void add_west_med_images() {
+            
+        }
+
+        private void add_west_chinese_images()
+        {
+            for (int i = 0; i < 5; i++)
+            { 
+                Image med_image = new Image();
+
+                
+            }
+        }
+
+        private void add_west_HCP_images()
+        {
+
+        }
+
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            (Parent as NavigationManager).GoToPage(typeof(A7));
+            (Parent as NavigationManager).GoToPage(typeof(ShoppingCar));
         }
+
     }
 }

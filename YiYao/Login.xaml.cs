@@ -97,5 +97,9 @@ namespace YiYao
             CheckMemberAsync();
         }
 
+        private void PC_Register_Click(object sender, RoutedEventArgs e)
+        {
+            (Parent as NavigationManager).GoToPage(typeof(A3));
+        }
     }
 }

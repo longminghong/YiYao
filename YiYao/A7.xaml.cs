@@ -18,11 +18,26 @@ namespace YiYao
     /// <summary>
     /// A7.xaml 的交互逻辑
     /// </summary>
-    public partial class A7 : Page
+    public partial class A7 : UserControl, INavigable
     {
         public A7()
         {
             InitializeComponent();
+        }
+
+        public void Start(object args)
+        {
+
+        }
+
+        public void Stop()
+        {
+
+        }
+
+        private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            (Parent as NavigationManager).GoToPage(typeof(A8));
         }
     }
 }

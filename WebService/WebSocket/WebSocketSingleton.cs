@@ -8,7 +8,7 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace WebService
 {
-    class WebSocketSingleton
+    public class WebSocketSingleton
     {
         private static WebSocketSingleton instance;
         private static object _lock = new object();
@@ -43,11 +43,12 @@ namespace WebService
         // 接受消息后的操作
         static void client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
-            Console.WriteLine("Received = " + Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic);
+            //Console.WriteLine("Received = " + Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic);
             byte[] messageContent = e.Message;
-
             string str = System.Text.Encoding.Default.GetString(messageContent);
             Console.WriteLine("Received = " + Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic);
+
+
         }
         // 发布消息后的操作
         static void client_MqttMsgPublished(object sender, MqttMsgPublishedEventArgs e)
@@ -65,8 +66,10 @@ namespace WebService
             Console.WriteLine("connect closed");
         }
 
-        public void start() {
-
+        public void start()
+        {
+            Console.WriteLine("web socket run.");
+            
             string enpoint = "mqf-bym08ztgwf.mqtt.aliyuncs.com";
             int port = 80;
             string user = "LTAIyNRr5QPLury7";
@@ -94,5 +97,4 @@ namespace WebService
         }
 
     }
-
 }
