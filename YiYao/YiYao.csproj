@@ -156,6 +156,7 @@
     <Compile Include="DTO\MTMIssueCollectDTO.cs" />
     <Compile Include="DTO\MTMMedCollectDTO.cs" />
     <Compile Include="DTO\MTMRecMedDTO.cs" />
+    <Compile Include="DTO\MTMRegistDecEngine.cs" />
     <Compile Include="DTO\MTMResultDTO.cs" />
     <Compile Include="DTO\MTMShopCarDTO.cs" />
     <Compile Include="HealthPop\HealthIndexBase.cs" />
