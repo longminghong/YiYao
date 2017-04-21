@@ -151,6 +151,13 @@
     </Compile>
     <Compile Include="Converter\BoolToVisibilityValueConverter.cs" />
     <Compile Include="Converter\OppositeBooleanToVisibilityConverter.cs" />
+    <Compile Include="DTO\MTMCustInfo.cs" />
+    <Compile Include="DTO\MTMHealthCollectDTO.cs" />
+    <Compile Include="DTO\MTMIssueCollectDTO.cs" />
+    <Compile Include="DTO\MTMMedCollectDTO.cs" />
+    <Compile Include="DTO\MTMRecMedDTO.cs" />
+    <Compile Include="DTO\MTMResultDTO.cs" />
+    <Compile Include="DTO\MTMShopCarDTO.cs" />
     <Compile Include="HealthPop\HealthIndexBase.cs" />
     <Compile Include="HealthPop\HealthIndexRight.xaml.cs">
       <DependentUpon>HealthIndexRight.xaml</DependentUpon>
