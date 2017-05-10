@@ -5147,7 +5147,7 @@
                 </Image.Clip>
             </Image>
         </Canvas>
-        <local:DrugPanel x:Name="RightTop" Margin="1146,140.667,213,439.333">
+        <!--<local:DrugPanel x:Name="RightTop" Margin="1146,140.667,213,439.333">
             <Image x:Name="kuang1_png" Source="/Images/ScanDrug/kuang1.png" Stretch="Fill" Height="500" Width="561">
                 <Image.Clip>
                     <PathGeometry>
@@ -5178,11 +5178,11 @@
             <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Foreground="White" FontSize="29.333" Height="81.333" Canvas.Left="65.333" Canvas.Top="114.666" Width="414.333"><Run Text="胃肠道不适包括恶心、呕吐、胃"/><LineBreak/><Run Text="肠道和腹部疼痛；"/></TextBlock>
             <TextBlock x:Name="textBlock1_Copy" TextWrapping="Wrap" Foreground="White" FontSize="29.333" Text="该药会使出血的风险增加，因此你需要留意自己是否有出血的表现。如果出现的话，请及时告诉您的医生，他们会帮助您进行分析判断，并决定是否要调整治疗方案。 " Height="271.333" Canvas.Left="65.333" Canvas.Top="205.374" Width="414.333"/>
             <Image x:Name="tubiao1_png" Source="/Images/ScanDrug/tubiao1.png" Stretch="Fill" RenderTransformOrigin="-0.02,-0.065" Height="107" Canvas.Left="195.5" Canvas.Top="7.666" Width="101"/>
-        </local:DrugPanel>
+        </local:DrugPanel>-->
         <Canvas HorizontalAlignment="Right" Margin="0,530.167,213,-32.374" Width="709.333">
             <Image x:Name="quan2_png" Source="/Images/ScanDrug/quan2.png" Stretch="Fill" Width="118" Height="145"/>
             <Image x:Name="xian2__png" Height="278.283" Source="/Images/ScanDrug/xian2 .png" Stretch="Fill" Width="613" Canvas.Top="125.5"/>
-            <local:DrugPanel x:Name="RightBottom" Height="459.707" Canvas.Left="148.333" Canvas.Top="122.5" Width="561">
+            <!--<local:DrugPanel x:Name="RightBottom" Height="459.707" Canvas.Left="148.333" Canvas.Top="122.5" Width="561">
                 <Image x:Name="di2_png" Height="236" Source="/Images/ScanDrug/di2.png" Stretch="Fill" Width="561"/>
                 <Canvas Height="459.707" Width="561" d:IsHidden="True">
                     <Canvas Height="236" Width="561">
@@ -5218,12 +5218,12 @@
 
                 </Canvas>
 
-            </local:DrugPanel>
+            </local:DrugPanel>-->
 
         </Canvas>
         <Image x:Name="quan12_png" HorizontalAlignment="Left" Height="120" Margin="782,0,0,405.833" Source="/Images/ScanDrug/quan12.png" Stretch="Fill" VerticalAlignment="Bottom" Width="117" Opacity="0"/>
         <Image x:Name="xian3_png" Height="279.19" Margin="285,0,0,145.143" Source="/Images/ScanDrug/xian3.png" Stretch="Fill" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="615" Opacity="0"/>
-        <local:DrugPanel x:Name="LeftBottom" Margin="184.5,513.667,1174.5,93.542">
+        <!--<local:DrugPanel x:Name="LeftBottom" Margin="184.5,513.667,1174.5,93.542">
             <Canvas HorizontalAlignment="Left" Width="561" Height="377">
                 <Image x:Name="kuang3_png" Source="/Images/ScanDrug/kuang3.png" Stretch="Fill" Width="561" Height="377">
                     <Image.Clip>
@@ -5255,10 +5255,10 @@
 
             </Canvas>
             <Image x:Name="yaogui_png" HorizontalAlignment="Left" Source="/Images/ScanDrug/jinshi.png" Stretch="Fill" Width="96" Height="75" Opacity="0" Canvas.Left="195" Canvas.Top="16"/>
-        </local:DrugPanel>
+        </local:DrugPanel>-->
         <Image x:Name="quan4_png" Height="136" Margin="777.334,354.168,0,0" Source="/Images/ScanDrug/quan4.png" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Width="131" Opacity="0"/>
         <Image x:Name="xian4_png" Height="278.434" Margin="295.001,97.397,0,0" Source="/Images/ScanDrug/xian4.png" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Width="613.333" Opacity="0"/>
-        <local:DrugPanel x:Name="LeftTop" Margin="184.5,140.667,1174.5,653.833">
+        <!--<local:DrugPanel x:Name="LeftTop" Margin="184.5,140.667,1174.5,653.833">
             <Canvas HorizontalAlignment="Left" Height="281" VerticalAlignment="Top" Width="561">
                 <Image x:Name="kuang4_png" Source="/Images/ScanDrug/kuang4.png" Stretch="Fill" Height="281" Width="561">
                     <Image.Clip>
@@ -5288,7 +5288,7 @@
 
             </Canvas>
 
-        </local:DrugPanel>
+        </local:DrugPanel>-->
 
     </Grid>
 </UserControl>

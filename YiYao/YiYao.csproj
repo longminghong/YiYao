@@ -36,7 +36,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
     </Reference>
@@ -57,6 +56,10 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="MTM.SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MTM.SDK.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -114,22 +117,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="A5.xaml.cs">
-      <DependentUpon>A5.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="A6.xaml.cs">
-      <DependentUpon>A6.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="A7.xaml.cs">
+    <Compile Include="V2.0\A7.xaml.cs">
       <DependentUpon>A7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="A4.xaml.cs">
+    <Compile Include="V2.0\A6.xaml.cs">
+      <DependentUpon>A6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="V2.0\A5.xaml.cs">
+      <DependentUpon>A5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="V2.0\A4.xaml.cs">
       <DependentUpon>A4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="A3.xaml.cs">
+    <Compile Include="V2.0\A3.xaml.cs">
       <DependentUpon>A3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="A8.xaml.cs">
+    <Compile Include="V2.0\A8.xaml.cs">
       <DependentUpon>A8.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppData.cs" />
@@ -155,6 +158,8 @@
     <Compile Include="DTO\MTMHealthCollectDTO.cs" />
     <Compile Include="DTO\MTMIssueCollectDTO.cs" />
     <Compile Include="DTO\MTMMedCollectDTO.cs" />
+    <Compile Include="DTO\MTMMedPlanDTO.cs" />
+    <Compile Include="DTO\MTMQRDTO.cs" />
     <Compile Include="DTO\MTMRecMedDTO.cs" />
     <Compile Include="DTO\MTMRegistDecEngine.cs" />
     <Compile Include="DTO\MTMResultDTO.cs" />
@@ -187,6 +192,9 @@
     <Compile Include="HealthPop\MBHealthIndex.xaml.cs">
       <DependentUpon>MBHealthIndex.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainUserControl.xaml.cs">
+      <DependentUpon>MainUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MTMControl.cs" />
     <Compile Include="QuanButton.xaml.cs">
       <DependentUpon>QuanButton.xaml</DependentUpon>
@@ -212,7 +220,7 @@
     <Compile Include="Know.xaml.cs">
       <DependentUpon>Know.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HealthIndex.xaml.cs">
+    <Compile Include="V2.0\HealthIndex.xaml.cs">
       <DependentUpon>HealthIndex.xaml</DependentUpon>
     </Compile>
     <Compile Include="Profile.xaml.cs">
@@ -233,7 +241,10 @@
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingCar.xaml.cs">
+    <Compile Include="yongyaojieguo.xaml.cs">
+      <DependentUpon>yongyaojieguo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="V2.0\ShoppingCar.xaml.cs">
       <DependentUpon>ShoppingCar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Util\GVar.cs" />
@@ -242,27 +253,27 @@
     <Compile Include="XYKnowldge.xaml.cs">
       <DependentUpon>XYKnowldge.xaml</DependentUpon>
     </Compile>
-    <Page Include="A5.xaml">
+    <Page Include="V2.0\A7.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="A6.xaml">
+    <Page Include="V2.0\A6.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="A7.xaml">
+    <Page Include="V2.0\A5.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="A4.xaml">
+    <Page Include="V2.0\A4.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="A3.xaml">
+    <Page Include="V2.0\A3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="A8.xaml">
+    <Page Include="V2.0\A8.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -318,6 +329,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MainUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="QuanButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -362,7 +377,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="HealthIndex.xaml">
+    <Page Include="V2.0\HealthIndex.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -390,7 +405,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ShoppingCar.xaml">
+    <Page Include="yongyaojieguo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="V2.0\ShoppingCar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -427,6 +446,7 @@
     <Resource Include="Font\SOURCEHANSANSCN-NORMAL_0.OTF" />
     <Resource Include="Font\SOURCEHANSANSCN-REGULAR_0.OTF" />
     <Resource Include="Font\迷你简菱心.TTF" />
+    <None Include="Design\projectGuides.guides" />
     <None Include="MyPrescription\App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -1496,10 +1516,6 @@
       <Project>{336f869e-86ea-420a-8a9c-a942cfe3835d}</Project>
       <Name>CardReader</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MTM.SDK\MTM.SDK\MTM.SDK.csproj">
-      <Project>{943ff35c-6924-4a11-bb8a-787fc53b6d0e}</Project>
-      <Name>MTM.SDK</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WebService\WebService.csproj">
       <Project>{9c8a2ca3-78d3-4ba1-831d-bd593bce470d}</Project>
       <Name>WebService</Name>
@@ -1778,10 +1794,10 @@
     <Resource Include="ID.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="A4-bottom.png" />
+    <Resource Include="V2.0\A4-bottom.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="A4-top.png" />
+    <Resource Include="V2.0\A4-top.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="QR.png" />
@@ -1860,6 +1876,60 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="药物文字背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="用药底框.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="会员信息注册成功，欢迎扫码注册使用公众账号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="liujiao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="line2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="top9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="round_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="说明书.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="round3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="round2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="round1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="round..png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="图层 41.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

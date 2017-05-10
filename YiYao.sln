@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Blend for Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiYao", "YiYao\YiYao.csproj", "{B78AFEED-47C9-4E21-AF8E-C3CB94A2F0A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{9C8A2CA3-78D3-4BA1-831D-BD593BCE470D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardReader", "IDCardReader\CardReader.csproj", "{336F869E-86EA-420A-8A9C-A942CFE3835D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTM.SDK", "MTM.SDK\MTM.SDK\MTM.SDK.csproj", "{943FF35C-6924-4A11-BB8A-787FC53B6D0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,18 +55,6 @@ Global
 		{336F869E-86EA-420A-8A9C-A942CFE3835D}.Release|x64.Build.0 = Release|Any CPU
 		{336F869E-86EA-420A-8A9C-A942CFE3835D}.Release|x86.ActiveCfg = Release|Any CPU
 		{336F869E-86EA-420A-8A9C-A942CFE3835D}.Release|x86.Build.0 = Release|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Debug|x64.Build.0 = Debug|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Debug|x86.Build.0 = Debug|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Release|x64.ActiveCfg = Release|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Release|x64.Build.0 = Release|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Release|x86.ActiveCfg = Release|Any CPU
-		{943FF35C-6924-4A11-BB8A-787FC53B6D0E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

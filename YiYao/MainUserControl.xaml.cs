@@ -16,27 +16,13 @@ using System.Windows.Shapes;
 namespace YiYao
 {
     /// <summary>
-    /// A6.xaml 的交互逻辑
+    /// MainUserControl.xaml 的交互逻辑
     /// </summary>
-    public partial class A6 : UserControl, INavigable
+    public partial class MainUserControl : UserControl
     {
-        public A6()
+        public MainUserControl()
         {
             InitializeComponent();
-        }
-        public void Start(object args)
-        {
-
-        }
-
-        public void Stop()
-        {
-
-        }
-
-        private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            (Parent as NavigationManager).GoToPage(typeof(A7));
         }
     }
 }

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace YiYao
 {
     /// <summary>
-    /// A7.xaml 的交互逻辑
+    /// A6.xaml 的交互逻辑
     /// </summary>
-    public partial class A7 : UserControl, INavigable
+    public partial class A6 : UserControl, INavigable
     {
-        public A7()
+        public A6()
         {
             InitializeComponent();
         }
@@ -37,7 +37,8 @@ namespace YiYao
 
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            (Parent as NavigationManager).GoToPage(typeof(A8));
+            (Parent as NavigationManager).GoToPage(typeof(A6));
         }
+
     }
 }

@@ -11,7 +11,7 @@ namespace YiYao.DTO
     }
 
 
-    public class Rootobject
+    public class Rootobject11
     {
         public Westdrugs westdrugs { get; set; }
         public Chineseherb[] chineseherb { get; set; }

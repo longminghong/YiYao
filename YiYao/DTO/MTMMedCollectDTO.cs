@@ -11,7 +11,7 @@ namespace YiYao.DTO
     }
 
 
-    public class Rootobject
+    public class Rootobject1
     {
         public string isallergy { get; set; }
         public Allergicdrug[] allergicdrug { get; set; }

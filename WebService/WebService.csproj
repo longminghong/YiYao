@@ -49,6 +49,9 @@
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="MTM.SDK">
+      <HintPath>..\YiYao\bin\Debug\MTM.SDK.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
     </Reference>
@@ -107,10 +110,6 @@
     <ProjectReference Include="..\IDCardReader\CardReader.csproj">
       <Project>{336F869E-86EA-420A-8A9C-A942CFE3835D}</Project>
       <Name>CardReader</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MTM.SDK\MTM.SDK\MTM.SDK.csproj">
-      <Project>{943ff35c-6924-4a11-bb8a-787fc53b6d0e}</Project>
-      <Name>MTM.SDK</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
