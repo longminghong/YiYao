@@ -353,13 +353,19 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:8.9" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        
+        <local:DrugTypeConverter x:Key="drugTypeeConverter"></local:DrugTypeConverter>
+        <local:DrugTimeCoverter x:Key="drugTimeConverter"></local:DrugTimeCoverter>
+        <local:DrugUsedCoverter x:Key="drugUsedCoverter"></local:DrugUsedCoverter>
+        <local:DrugRegularCovert x:Key="drugRegularCovert"></local:DrugRegularCovert>
+        <local:DrugAllergicdrugCovert x:Key="drugAllergicdrugCovert"></local:DrugAllergicdrugCovert>
     </UserControl.Resources>
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard x:Name="A6Storyboard1_BeginStoryboard" Storyboard="{StaticResource A6Storyboard1}"/>
         </EventTrigger>
     </UserControl.Triggers>
-
+    
     <Grid>
 
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
@@ -374,7 +380,8 @@
         </Image>
 
         <Image x:Name="bg1_jpg" Source="/Images/RegisterSuccess/bg1.jpg" Stretch="Fill"/>
-        <Image x:Name="bg2_png" Source="/Images/RegisterSuccess/bg2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="bg2_png" Source="/Images/RegisterSuccess/bg2.png" Stretch="Fill" 
+               RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -384,7 +391,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="bg3_png" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/bg3.png" Stretch="Fill" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="bg3_png" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/bg3.png"
+               Stretch="Fill" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -395,7 +403,9 @@
             </Image.RenderTransform>
         </Image>
         <!-- 点阵地图-->
-        <Image x:Name="ditu_png" Margin="592,282.375,593,461.625" Source="/Images/RegisterSuccess/ditu.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.3">
+        <Image x:Name="ditu_png" Margin="592,282.375,593,461.625" 
+               Source="/Images/RegisterSuccess/ditu.png" Stretch="Fill"
+               RenderTransformOrigin="0.5,0.5" Opacity="0.3">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -405,7 +415,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image" Margin="639.673,291.187,545.327,452.813" Source="dit.png" Stretch="Fill"/>
+        <Image x:Name="image" Margin="639.673,291.187,545.327,452.813" Source="dit.png"
+               Stretch="Fill"/>
         <Canvas Margin="534.2,153.012,565.8,843.988">
             <Image x:Name="image1" Source="top9.png" Stretch="Fill" Height="83" Width="820">
                 <Image.Clip>
@@ -419,7 +430,9 @@
                 </Image.Clip>
             </Image>
         </Canvas>
-        <Image x:Name="guangxiao1_png" Height="7" Margin="888.5,233.5,839.5,0" Source="Images/RegisterSuccess/guangxiao1.png" Stretch="Fill" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="guangxiao1_png" Height="7" Margin="888.5,233.5,839.5,0"
+               Source="Images/RegisterSuccess/guangxiao1.png" Stretch="Fill" 
+               VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -429,7 +442,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="image3" Margin="1274.2,282.375,446.8,727.625" Source="liujiao.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image3" Margin="1274.2,282.375,446.8,727.625" Source="liujiao.png" 
+               Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -452,7 +466,8 @@
                 </Image.Clip>
             </Image>
         </Canvas>
-        <Image x:Name="image4" Margin="1300.5,948.3,528.5,105.7" Source="line.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image4" Margin="1300.5,948.3,528.5,105.7" Source="line.png"
+               Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -463,7 +478,10 @@
             </Image.RenderTransform>
         </Image>
         <Canvas Margin="705,146.375,831,888">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="45.625" TextWrapping="Wrap" Text="用药信息数据采集" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36" FontFamily="/YiYao;component/Font/#ZHSRXT-GBK">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="45.625" 
+                       TextWrapping="Wrap" Text="用药信息数据采集" VerticalAlignment="Top"
+                       Width="384" Foreground="#FF42918A" FontSize="36"
+                       FontFamily="/YiYao;component/Font/#ZHSRXT-GBK">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-37.5,-11.875">
@@ -478,7 +496,9 @@
         </Canvas>
         <Canvas Margin="705,245.812,831,788.563">
 
-            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="45.625" TextWrapping="Wrap" Text="过敏数据" VerticalAlignment="Top" Width="384" Foreground="#FF94E9FF" FontSize="36">
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="45.625" 
+                       TextWrapping="Wrap" Text="过敏数据" VerticalAlignment="Top" 
+                       Width="384" Foreground="#FF94E9FF" FontSize="36">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-44.5,-4.30000000000001">
@@ -491,7 +511,9 @@
             </TextBlock>
         </Canvas>
         <Canvas Margin="705,305.437,538,730.2">
-            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="677" Foreground="White" FontSize="24" Text="是否会药物过敏：头孢">
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="44.363"
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="677" 
+                       Foreground="White" FontSize="24" Text="是否会药物过敏：头孢">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-47.5,0.5">
@@ -503,7 +525,9 @@
                 </TextBlock.Clip></TextBlock>
         </Canvas>
         <Canvas Margin="705,354.8,533,680.837">
-            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="682" Foreground="White" FontSize="24" Text="是否已服用降压药；是">
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="44.363"
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="682"
+                       Foreground="White" FontSize="24" Text="是否已服用降压药；是">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-52,0.5">
@@ -515,7 +539,9 @@
                 </TextBlock.Clip></TextBlock>
         </Canvas>
         <Canvas Margin="705,404.163,831,630.212">
-            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="45.625" TextWrapping="Wrap" Text="历史最高血压" VerticalAlignment="Top" Width="384" Foreground="#FF94E9FF" FontSize="36">
+            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="45.625"
+                       TextWrapping="Wrap" Text="历史最高血压" VerticalAlignment="Top"
+                       Width="384" Foreground="#FF94E9FF" FontSize="36">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-10,-6.16300000000001">
@@ -528,7 +554,9 @@
             </TextBlock>
         </Canvas>
         <Canvas Margin="705,460.788,646,574.849">
-            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="155.667" Foreground="White" FontSize="24">
+            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="44.363" 
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="155.667" 
+                       Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-16.5,0.5">
@@ -540,7 +568,9 @@
                 </TextBlock.Clip><Run Text="收缩压：133"/><LineBreak/><Run/></TextBlock>
         </Canvas>
         <Canvas Margin="705,514.387,831,519.988">
-            <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="45.625" TextWrapping="Wrap" Text="服用的药物清单" VerticalAlignment="Top" Width="384" Foreground="#FF94E9FF" FontSize="36">
+            <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="45.625"
+                       TextWrapping="Wrap" Text="服用的药物清单" VerticalAlignment="Top"
+                       Width="384" Foreground="#FF94E9FF" FontSize="36">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-19,0.5">
@@ -553,7 +583,9 @@
             </TextBlock>
         </Canvas>
         <Canvas Margin="705,577.012,424,458.625">
-            <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="791" Foreground="White" FontSize="24">
+            <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="44.363" 
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="791" 
+                       Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-19,0.5">
@@ -562,11 +594,15 @@
                             <LineSegment Point="-19,40.8630000000001"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Text="药物名称：倍他乐克      "/><Run Text="   "/><Run Text="药物类型：降压，降脂"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                </TextBlock.Clip><Run Text="药物名称：倍他乐克      "/>
+                <Run Text="   "/><Run Text="药物类型：降压，降脂"/>
+                <LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         </Canvas>
         <Canvas Margin="705,627.187,831,407.188"/>
         <Canvas Margin="705,686.812,446,348.825">
-            <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="769" Foreground="White" FontSize="24" Canvas.Top="-57">
+            <TextBlock x:Name="textBlock9" HorizontalAlignment="Left"
+                       Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" 
+                       Width="769" Foreground="White" FontSize="24" Canvas.Top="-57">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-23.5,0.5">
@@ -575,10 +611,15 @@
                             <LineSegment Point="-23.5,43.8629999999999"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Text="是否规律服药 "/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                </TextBlock.Clip><Run Text="是否规律服药 "/><LineBreak/><Run/>
+                <LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         </Canvas>
         <Canvas Margin="705,736.175,1059.33,290.462">
-            <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" Text="服药时间：晨起早餐前，午餐后，晚饭后，睡前" VerticalAlignment="Top" Width="570" Foreground="White" FontSize="24" Canvas.Top="-52.373">
+            <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" 
+                       Height="44.363" TextWrapping="Wrap" 
+                       Text="服药时间：晨起早餐前，午餐后，晚饭后，睡前" 
+                       VerticalAlignment="Top" Width="570" Foreground="White" 
+                       FontSize="24" Canvas.Top="-52.373">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-20.5,0.5">
@@ -595,7 +636,10 @@
         <!--  -->
         <!--  -->
         <!--  -->
-        <Image x:Name="jiantou1_png" HorizontalAlignment="Right" Height="76" Margin="0,0,55,484" Source="Images/Login/jiantou1.png" Stretch="Fill" VerticalAlignment="Bottom" Width="40" RenderTransformOrigin="0.5,0.5" MouseDown="jiantou1_png_MouseDown">
+        <Image x:Name="jiantou1_png" HorizontalAlignment="Right" Height="76"
+               Margin="0,0,55,484" Source="Images/Login/jiantou1.png" Stretch="Fill" 
+               VerticalAlignment="Bottom" Width="40" RenderTransformOrigin="0.5,0.5"
+               MouseDown="jiantou1_png_MouseDown">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -606,7 +650,9 @@
             </Image.RenderTransform>
         </Image>
         <Canvas Margin="705,728.101,1119,307.536">
-            <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" Text="预计时长" VerticalAlignment="Top" Width="auto" Foreground="White" FontSize="24">
+            <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Height="44.363"
+                       TextWrapping="Wrap" Text="预计时长" VerticalAlignment="Top" 
+                       Width="auto" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-7.5,-0.5">
@@ -619,7 +665,9 @@
             </TextBlock>
         </Canvas>
         <Canvas Margin="825,759.574,928.633,276.063">
-            <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" Text="2017年1月开始" VerticalAlignment="Top" Width="auto" Foreground="White" FontSize="24">
+            <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Height="44.363" 
+                       TextWrapping="Wrap" Text="2017年1月开始" VerticalAlignment="Top"
+                       Width="auto" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-9.5,0">
@@ -632,7 +680,9 @@
             </TextBlock>
         </Canvas>
         <Canvas Margin="825,808.937,928.633,226.7">
-            <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" Text="2017年9月结束" VerticalAlignment="Top" Width="auto" Foreground="White" FontSize="24">
+            <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Height="44.363"
+                       TextWrapping="Wrap" Text="2017年9月结束" VerticalAlignment="Top" 
+                       Width="auto" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-7.5,-1.5">
@@ -646,7 +696,8 @@
 
         </Canvas>
         <Canvas Margin="984.666,460.788,789.334,585.879">
-            <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="33.333" TextWrapping="Wrap" VerticalAlignment="Top" Width="146">
+            <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="33.333" 
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="146">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-8.83300000000008,0.5">
@@ -655,11 +706,13 @@
                             <LineSegment Point="-8.83300000000008,32.833"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="舒张压：100"/></TextBlock>
+                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="舒张压：100"/>
+            </TextBlock>
 
         </Canvas>
         <Canvas Margin="983.5,629.812,629,413.188">
-            <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="307.5">
+            <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="37"
+                       TextWrapping="Wrap" VerticalAlignment="Top" Width="307.5">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-15,-6.31200000000001">
@@ -668,7 +721,8 @@
                             <LineSegment Point="-15,36.5"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="用法用量：1天3次  一次 5片"/></TextBlock>
+                </TextBlock.Clip><Run Foreground="White" FontSize="24" 
+                    Text="用法用量：1天3次  一次 5片"/></TextBlock>
 
         </Canvas>
 
