@@ -671,7 +671,7 @@
         </Image>
         <Canvas x:Name="canvas6" HorizontalAlignment="Left" Height="28" Margin="730.5,282.375,0,0" VerticalAlignment="Top" Width="168"/>
         <Canvas x:Name="canvas5" HorizontalAlignment="Left" Height="23" Margin="730.5,349.333,0,0" VerticalAlignment="Top" Width="296">
-            <TextBlock x:Name="xinxi2_png" FontSize="20" Foreground="White" Width="132" Height="23"   Canvas.Top="-2" FontStretch="Condensed"  Text="姓名：李大礼      "  >
+            <TextBlock x:Name="xinxi2_png" FontSize="20" Foreground="White" Width="200" Height="23"   Canvas.Top="-2" FontStretch="Condensed"  Text="姓名：李大礼      "  >
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-29.5,-6.83300000000003">
@@ -719,8 +719,9 @@
             </Image>
 
         </Canvas>
-        <Canvas x:Name="canvas3" Height="23" Margin="730.5,463,913.5,0" VerticalAlignment="Top">
-            <TextBlock x:Name="xinxi4_png" FontSize="20" Foreground="White" Width="276" Height="23"   Canvas.Top="-2" FontStretch="Condensed"  Text="联系方式(座机)：031-88112211031-88112211"  >
+        <Canvas x:Name="canvas3" Height="23" Margin="730.5,463,313.5,0" VerticalAlignment="Top">
+            <TextBlock x:Name="xinxi4_png" FontSize="20" Foreground="White" Width="900" Height="23"  
+                       Canvas.Top="-2" FontStretch="Condensed"  Text="联系方式(座机)：031-88112211031-88112211"  >
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-22.5,-10.5">
@@ -769,8 +770,9 @@
             </Image>
 
         </Canvas>
-        <Canvas x:Name="canvas1" Height="23" Margin="726,0,774,476" VerticalAlignment="Bottom">
-            <TextBlock x:Name="xinxi6_png" FontSize="20" Foreground="White" Width="567" Height="26" FontStretch="Condensed"  Text="邮件：subway@126.com"  >
+        <Canvas x:Name="canvas1" Height="23" Margin="726,0,100,476" VerticalAlignment="Bottom">
+            <TextBlock x:Name="xinxi6_png" FontSize="20" Foreground="White" Width="1084" Height="26"
+                       FontStretch="Condensed"  Text="邮件：subway@126.com"  >
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-64,-22.5">
@@ -869,7 +871,7 @@
             </TextBlock>
         </Canvas>
         <Canvas x:Name="canvas14" Margin="729,803.5,853,247.5">
-            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" Width="338" Foreground="White" FontSize="20" Text="住址信息：无锡市新区震泽路18号">
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" Width="838" Foreground="White" FontSize="20" Text="住址信息：无锡市新区震泽路18号">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-36.5,-12.333">
