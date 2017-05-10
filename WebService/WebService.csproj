@@ -52,6 +52,9 @@
     <Reference Include="MTM.SDK">
       <HintPath>..\YiYao\bin\Debug\MTM.SDK.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
     </Reference>
@@ -100,6 +103,18 @@
     <Compile Include="HealthDataCenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebServiceModule.cs" />
+    <Compile Include="WebSocket\MTMCustInfo.cs" />
+    <Compile Include="WebSocket\MTMDisDTO.cs" />
+    <Compile Include="WebSocket\MTMHealthCollectDTO.cs" />
+    <Compile Include="WebSocket\MTMIssueCollectDTO.cs" />
+    <Compile Include="WebSocket\MTMMedCollectDTO.cs" />
+    <Compile Include="WebSocket\MTMMedPlanDTO.cs" />
+    <Compile Include="WebSocket\MTMQRDTO.cs" />
+    <Compile Include="WebSocket\MTMRecMedDTO.cs" />
+    <Compile Include="WebSocket\MTMRegistDecEngine.cs" />
+    <Compile Include="WebSocket\MTMResultDTO.cs" />
+    <Compile Include="WebSocket\MTMShopCarDTO.cs" />
+    <Compile Include="WebSocket\MTMWebServerDataResult.cs" />
     <Compile Include="WebSocket\WebSocketSingleton.cs" />
   </ItemGroup>
   <ItemGroup>

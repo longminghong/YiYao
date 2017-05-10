@@ -219,16 +219,25 @@ namespace YiYao
 
         public void Start(object args)
         {
-            var card = AppData.CurrentIDCard;
-            //nameText.Text = card.Name;
-            //sexText.Text = card.Sex;
-            //nationalityText.Text = card.Nationality;
-            //birthdayText.Text = card.BirthDay;
-            //addressText.Text = card.Address;
-            //idNumberText.Text = card.IDNumber;
-            string sex = card.Sex == "男" ? "先生" : "女士";
-            huiyuanming_png.Text = $"会员：{card.Name}{sex}";
-            headImage.Source = card.HeadImage;
+            try
+            {
+                var card = AppData.CurrentIDCard;
+                //nameText.Text = card.Name;
+                //sexText.Text = card.Sex;
+                //nationalityText.Text = card.Nationality;
+                //birthdayText.Text = card.BirthDay;
+                //addressText.Text = card.Address;
+                //idNumberText.Text = card.IDNumber;
+                string sex = card.Sex == "男" ? "先生" : "女士";
+                huiyuanming_png.Text = $"会员：{card.Name}{sex}";
+                headImage.Source = card.HeadImage;
+            }
+            catch (Exception)
+            {
+
+                Console.Error.WriteLine("DAshboard.xaml error happen.");
+            }
+            
         }
 
         public void Stop()

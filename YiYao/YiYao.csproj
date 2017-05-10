@@ -117,6 +117,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Events\WebSocketEvent.cs" />
     <Compile Include="V2.0\A7.xaml.cs">
       <DependentUpon>A7.xaml</DependentUpon>
     </Compile>
@@ -240,6 +241,9 @@
     </Compile>
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="V2.0\MedPlan.xaml.cs">
+      <DependentUpon>MedPlan.xaml</DependentUpon>
     </Compile>
     <Compile Include="yongyaojieguo.xaml.cs">
       <DependentUpon>yongyaojieguo.xaml</DependentUpon>
@@ -402,6 +406,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="V2.0\MedPlan.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

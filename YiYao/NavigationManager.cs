@@ -25,7 +25,7 @@ namespace YiYao
 
         public void GoToUI(UIElement newUI, object args = null)
         {
-            if(mCurUI != null)
+            if (mCurUI != null)
             {
                 mPreUI = mCurUI;
                 Children.Remove(mPreUI);
@@ -39,26 +39,22 @@ namespace YiYao
 
         public void GoToPage(Type type)
         {
-            var ui =(UIElement) Activator.CreateInstance(type);
+            var ui = (UIElement)Activator.CreateInstance(type);
             GoToUI(ui);
         }
 
-        public bool SimulateImageClick(FrameworkElement control, MouseButtonEventHandler handler)
+        public void GoToPageWithArgs(Type type, object obj)
         {
-            if (control == null || handler == null) return false;
-            int status = 0;
-            control.MouseEnter += delegate { if (status == 0) status = -1; };
-            control.MouseLeave += delegate { status = 0; };
-            control.MouseLeftButtonDown += delegate { status = 1; };
-            control.MouseLeftButtonUp += delegate (object sender, MouseButtonEventArgs e) {
-                if (status > 0)
-                    handler(sender, e);
-                status = 0;
-            };
-            return true;
+
+            var currentType = (mCurUI as UIElement).GetType();
+            if (currentType != type)
+            {
+                var ui = (UIElement)Activator.CreateInstance(type);
+                GoToUI(ui, obj);
+            }
         }
     }
-    
+
     public interface INavigable
     {
         void Start(object args);

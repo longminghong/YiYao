@@ -26,7 +26,7 @@ namespace WebService
 
     public class WebSocketSingleton
     {
-        public delegate void SocketPageCommandHandleEvent(MEMBERType sender, object obj);
+        public delegate void SocketPageCommandHandleEvent(MEMBERType sender,object obj);
         public SocketPageCommandHandleEvent pageCommandHandle;
 
         private static WebSocketSingleton instance;
@@ -95,17 +95,27 @@ namespace WebService
                     JToken jTypeToken = jObject.GetValue("type");
                     JToken jDataToken = jObject.GetValue("data");
 
-                    Console.WriteLine("json finish" + jTypeToken.ToString());
+                    JObject jDataObject = JObject.Parse(jDataToken.ToString());
 
-                    MEMBERType pageType;
+                    JToken jOperateToken = jDataObject.GetValue("operatetype");
 
-                    pageType = deserializeDataType(jTypeToken.ToString());
+                    if (String.Equals("open", jOperateToken.ToString()))
+                    {
+                        Console.WriteLine("json finish" + jTypeToken.ToString());
 
-                    Console.WriteLine(jDataToken.ToString());
-                    object obj;
-                    obj = invokeDataReciveCallBack(pageType, jDataToken.ToString());
+                        MEMBERType pageType;
 
-                    pageCommandHandle.Invoke(pageType, obj);
+                        pageType = deserializeDataType(jTypeToken.ToString());
+
+                        Console.WriteLine(jDataToken.ToString());
+                        object obj;
+                        obj = invokeDataReciveCallBack(pageType, jDataToken.ToString());
+
+                        pageCommandHandle.Invoke(pageType, obj);
+                    }
+                    else {
+                        // 关闭操作
+                    }
                 }
             }
             catch (Exception ex)
@@ -161,8 +171,7 @@ namespace WebService
             client.Subscribe(topic, qosLevels); // sub 的qos=1
         }
 
-        static MEMBERType deserializeDataType(String responseType)
-        {
+        static MEMBERType deserializeDataType(String responseType) {
 
             MEMBERType memberType;
             memberType = MEMBERType.MEMERROR;
@@ -209,8 +218,7 @@ namespace WebService
             return memberType;
         }
 
-        static object invokeDataReciveCallBack(MEMBERType pageType, String jsonContent)
-        {
+        static object invokeDataReciveCallBack(MEMBERType pageType,String jsonContent) {
 
             object obj = null;
             switch (pageType)
@@ -276,7 +284,7 @@ namespace WebService
 
                         MTMMedPlanDTO info = JsonConvert.DeserializeObject<MTMMedPlanDTO>(jsonContent, s_settings);
                         obj = info;
-                    }
+                    } 
                     break;
                 default:
                     //

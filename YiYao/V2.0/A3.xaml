@@ -770,7 +770,7 @@
 
         </Canvas>
         <Canvas x:Name="canvas1" Height="23" Margin="726,0,774,476" VerticalAlignment="Bottom">
-            <TextBlock x:Name="xinxi6_png" FontSize="20" Foreground="White" Width="567" Height="21" FontStretch="Condensed"  Text="邮件：subway@126.com"  >
+            <TextBlock x:Name="xinxi6_png" FontSize="20" Foreground="White" Width="567" Height="26" FontStretch="Condensed"  Text="邮件：subway@126.com"  >
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-64,-22.5">
