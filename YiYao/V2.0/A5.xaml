@@ -551,7 +551,7 @@
             </TextBlock>
         </Canvas>
         <Canvas Margin="705,305.437,538,730.2">
-            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Text="饮食偏好：高盐" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-47.5,0.5">
@@ -560,7 +560,13 @@
                             <LineSegment Point="-47.5,43.863"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Text="饮食偏好：高盐"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+                </TextBlock.Clip>
+                <!--<Run Text="饮食偏好：高盐"/>
+                <LineBreak/>
+                <Run/>
+                <LineBreak/>
+                <Run/>-->
+            </TextBlock>
         </Canvas>
         <Canvas Margin="705,354.8,533,680.837">
             <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="136.667" Foreground="White" FontSize="24">
@@ -678,7 +684,7 @@
             </Image.RenderTransform>
         </Image>
         <Canvas Margin="986,305,838.5,742">
-            <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="112.833">
+            <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Height="44.363"  Text="抽烟：是" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-9.5,0.5">
@@ -687,11 +693,12 @@
                             <LineSegment Point="-9.5,32.5"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="抽烟：是"/></TextBlock>
+                </TextBlock.Clip>
+            </TextBlock>
 
         </Canvas>
         <Canvas x:Name="canvas" Margin="1245,306,579,747">
-            <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="96">
+            <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Height="44.363"  Text="酗酒：是" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-6.5,0.5">
@@ -700,11 +707,12 @@
                             <LineSegment Point="-6.5,31.5"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="酗酒：是"/></TextBlock>
+                </TextBlock.Clip>
+            </TextBlock>
 
         </Canvas>
         <Canvas Margin="986,354.8,797.5,695.2">
-            <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="136.5">
+            <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="44.363"  Text="体重：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-5.5,0.5">
@@ -713,11 +721,11 @@
                             <LineSegment Point="-5.5,33.7"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="体重：208"/></TextBlock>
+                </TextBlock.Clip></TextBlock>
 
         </Canvas>
         <Canvas Margin="1245,354.8,542.5,692.7">
-            <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="32.5" TextWrapping="Wrap" VerticalAlignment="Top" Width="132.5">
+            <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="44.363"  Text="腹围：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-7.5,0.5">
@@ -726,11 +734,12 @@
                             <LineSegment Point="-7.5,32"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="腹围：166"/></TextBlock>
+                </TextBlock.Clip>
+            </TextBlock>
 
         </Canvas>
         <Canvas Margin="986,460.788,778,583.712">
-            <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Height="35.5" TextWrapping="Wrap" VerticalAlignment="Top" Width="156">
+            <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Height="44.363"  Text="舒张压：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-6,0.5">
@@ -739,11 +748,12 @@
                             <LineSegment Point="-6,39.212"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="舒张压：100"/></TextBlock>
+                </TextBlock.Clip>
+            </TextBlock>
 
         </Canvas>
         <Canvas Margin="986,577.012,767,469.988">
-            <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Foreground="White">
+            <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Height="44.363"  Text="随机血糖：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-6.5,0.5">
@@ -752,11 +762,12 @@
                             <LineSegment Point="-6.5,35.4880000000001"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run FontSize="24" Text="随机血糖：9.2               "/></TextBlock>
+                </TextBlock.Clip>
+            </TextBlock>
 
         </Canvas>
         <Canvas Margin="1247,577.012,469.667,464.322">
-            <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Height="38.666" TextWrapping="Wrap" VerticalAlignment="Top" Width="203.333">
+            <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Height="44.363"  Text="糖化血红蛋白：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-11.1669999999999,0.5">
@@ -765,11 +776,11 @@
                             <LineSegment Point="-11.1669999999999,38.1659999999999"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="狡猾血红蛋白：6.6"/></TextBlock>
+                </TextBlock.Clip></TextBlock>
 
         </Canvas>
         <Canvas Margin="986,686.812,770.333,363.188">
-            <TextBlock x:Name="textBlock18" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="163.667">
+            <TextBlock x:Name="textBlock18" HorizontalAlignment="Left" Height="44.363"  Text="甘油三脂：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-6.83299999999997,0.5">
@@ -778,11 +789,12 @@
                             <LineSegment Point="-6.83299999999997,29.5"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="甘油三脂：8.2"/></TextBlock>
+                </TextBlock.Clip>
+            </TextBlock>
 
         </Canvas>
         <Canvas Margin="1245,686.812,519.667,363.188">
-            <TextBlock x:Name="textBlock19" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="155.333">
+            <TextBlock x:Name="textBlock19" HorizontalAlignment="Left" Height="44.363"  Text="LDL-C：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-10.5,0.5">
@@ -791,7 +803,8 @@
                             <LineSegment Point="-10.5,36.688"/>
                         </PathFigure>
                     </PathGeometry>
-                </TextBlock.Clip><Run Foreground="White" FontSize="24" Text="LDL-C：4.4"/></TextBlock>
+                </TextBlock.Clip> 
+            </TextBlock>
 
         </Canvas>
 
