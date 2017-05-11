@@ -25,6 +25,8 @@ namespace YiYao
 
             resultValue += sourceData.dosage;
 
+            resultValue += "  mg";
+
             return resultValue;
         }
 
