@@ -60,7 +60,7 @@
                 <DataTemplate>
                     <Grid Background="Transparent" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Background="Transparent" Foreground="White" TextAlignment="Center" Text="{Binding}" Width="60" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
-                        <Image Source="药物背景-圆.png"/>
+                        <Image Source="/YiYao;component/药物背景-圆.png"  />
                     </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

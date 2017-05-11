@@ -226,10 +226,10 @@ namespace YiYao
             //diseDictionary.Add(高血压的危险因子,["高血压的危險因子_20170118-2.jpg"]);
 
             diseDictionary.Add("E14.408+", "糖尿病性周围神经病");
-            diseDictionary.Add("E14.503", "糖尿病性周围血管病变");
+            //diseDictionary.Add("E14.503", "糖尿病性周围血管病变");//已经存在
             diseDictionary.Add("E14.606", "糖尿病性足病");
-            diseDictionary.Add("E14.304+", "糖尿病性视网膜病变");
-            diseDictionary.Add("E14.551", "糖尿病性冠心病");
+            //diseDictionary.Add("E14.304+", "糖尿病性视网膜病变");//已经存在
+            //diseDictionary.Add("E14.551", "糖尿病性冠心病");//已经存在
             diseDictionary.Add("E14.203", "糖尿病肾病");
 
             diseDictionary.Add("I10.X02", "高血压");
