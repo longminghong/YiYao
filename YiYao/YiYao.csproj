@@ -117,7 +117,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DrugTimeCoverter.cs" />
+    <Compile Include="DrugTypeConverter.cs" />
+    <Compile Include="DrugUsedCoverter.cs" />
     <Compile Include="Events\WebSocketEvent.cs" />
+    <Compile Include="MedItemsControlDataSource\MedItemsControlDataSource.xaml.cs">
+      <DependentUpon>MedItemsControlDataSource.xaml</DependentUpon>
+    </Compile>
     <Compile Include="V2.0\A7.xaml.cs">
       <DependentUpon>A7.xaml</DependentUpon>
     </Compile>
@@ -242,6 +248,7 @@
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="V2.0\HTTP.cs" />
     <Compile Include="V2.0\MedPlan.xaml.cs">
       <DependentUpon>MedPlan.xaml</DependentUpon>
     </Compile>
@@ -257,6 +264,10 @@
     <Compile Include="XYKnowldge.xaml.cs">
       <DependentUpon>XYKnowldge.xaml</DependentUpon>
     </Compile>
+    <Page Include="MedItemsControlDataSource\MedItemsControlDataSource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="V2.0\A7.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -455,6 +466,9 @@
     <Resource Include="Font\SOURCEHANSANSCN-REGULAR_0.OTF" />
     <Resource Include="Font\迷你简菱心.TTF" />
     <None Include="Design\projectGuides.guides" />
+    <None Include="MedItemsControlDataSource\MedItemsControlDataSource.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="MyPrescription\App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

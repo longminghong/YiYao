@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+   *********  请勿修改此文件   *********
+   此文件由设计工具再生成。更改
+   此文件可能会导致错误。
+-->
+<xs:schema xmlns:blend="http://schemas.microsoft.com/expression/blend/2008" xmlns:tns="Expression.Blend.SampleData.MedItemsControlDataSource" targetNamespace="Expression.Blend.SampleData.MedItemsControlDataSource" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MedItemsControlDataSource" type="tns:MedItemsControlDataSource" />
+  <xs:complexType name="MedItemsControlDataSource">
+    <xs:sequence>
+      <xs:element name="Collection" type="tns:ItemCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ItemCollection">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Item" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Item">
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute blend:Format="Lorem ipsum" blend:FormatParameters="4,8" name="drugstype" type="xs:string" />
+    <xs:attribute name="regular" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

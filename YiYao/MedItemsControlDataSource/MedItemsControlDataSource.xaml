@@ -1,0 +1,19 @@
+﻿<!--
+   *********  请勿修改此文件   *********
+   此文件由设计工具再生成。更改
+   此文件可能会导致错误。
+-->
+<MedItemsControlDataSource:MedItemsControlDataSource xmlns:MedItemsControlDataSource="clr-namespace:Expression.Blend.SampleData.MedItemsControlDataSource">
+	<MedItemsControlDataSource:MedItemsControlDataSource.Collection>
+		<MedItemsControlDataSource:Item name="Aliquam class aenean" drugstype="Class aenean cras maecenas" regular="Cras aliquam nam integer"/>
+		<MedItemsControlDataSource:Item name="Nam sed" drugstype="Aliquam nam sed praesent" regular="Quisque class"/>
+		<MedItemsControlDataSource:Item name="Curae integer dis" drugstype="Integer duis dis" regular="Aenean maecenas"/>
+		<MedItemsControlDataSource:Item name="Cras est maecenas praesent" drugstype="Mauris nullam curae" regular="Sed curae duis"/>
+		<MedItemsControlDataSource:Item name="Accumsan mauris" drugstype="Quisque donec" regular="Mauris praesent nullam aptent"/>
+		<MedItemsControlDataSource:Item name="Donec nullam" drugstype="Est hac vivamus aptent" regular="Donec vivamus"/>
+		<MedItemsControlDataSource:Item name="Aptent quisque auctor hac" drugstype="Nunc auctor leo" regular="Accumsan aliquam"/>
+		<MedItemsControlDataSource:Item name="Duis etiam congue fusce" drugstype="Congue cursus" regular="Dis aliquet blandit"/>
+		<MedItemsControlDataSource:Item name="Bibendum vivamus aliquam" drugstype="Accumsan etiam" regular="Bibendum dictumst est"/>
+		<MedItemsControlDataSource:Item name="Cursus nunc" drugstype="Aliquam mus nec" regular="Eleifend auctor congue"/>
+	</MedItemsControlDataSource:MedItemsControlDataSource.Collection>
+</MedItemsControlDataSource:MedItemsControlDataSource>
