@@ -29,20 +29,20 @@ namespace YiYao
         {
             InitializeComponent();
 
-            //scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
-            //{   
-            //    e.Handled = true;
-            //};
+            scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
         }
         public void Start(object args)
         {
             if (null != args)
-            {   
+            {
                 //customInfo = (MTMCustInfo)args;
                 // to do 数据绑定
                 medCollectDTO = (MTMMedCollectDTO)args;
 
-                //mycontrol.ItemsSource = medCollectDTO.drugs;
+                mycontrol.ItemsSource = medCollectDTO.drugs;
 
                 EventAggregator eventAggragator = ServiceLocator.Current.GetInstance<EventAggregator>();
                 eventAggragator.GetEvent<WebSocketEvent>().Subscribe(OnWebSocketEvent);
@@ -57,32 +57,34 @@ namespace YiYao
         private void OnWebSocketEvent(object data)
         {
             Console.WriteLine("data A6 ======== OK ");
-            return;
-            //medCollectDTO = (MTMMedCollectDTO)data;
 
-            //String value = "收缩压：";
-            //value += medCollectDTO.systolicpressure;
-            //systolicpressure.Text = value;
+            medCollectDTO = (MTMMedCollectDTO)data;
 
-            //String diastolicpressureString = "舒张压：";
-            //diastolicpressureString += medCollectDTO.diastolicpressure;
-            //diastolicpressure.Text = diastolicpressureString;
+            String value = "收缩压：";
+            value += medCollectDTO.systolicpressure;
+            systolicpressure.Text = value;
 
-            //if (medCollectDTO.allergicdrug.Count() > 0) {
+            String diastolicpressureString = "舒张压：";
+            diastolicpressureString += medCollectDTO.diastolicpressure;
+            diastolicpressure.Text = diastolicpressureString;
 
-            //    String resultValue = "";
+            if (medCollectDTO.allergicdrug.Count() > 0)
+            {
 
-            //    foreach (Allergicdrug item in medCollectDTO.allergicdrug) {
+                String resultValue = "";
 
-            //        resultValue += item.drugname;
-            //        resultValue += "  ;";
-            //    }
-            //    isallergy.Text = resultValue;
+                foreach (Allergicdrug item in medCollectDTO.allergicdrug)
+                {
 
-            //}
+                    resultValue += item.drugname;
+                    resultValue += "  ;";
+                }
+                isallergy.Text = resultValue;
 
-            //mycontrol.ItemsSource = medCollectDTO.drugs;
-            //mycontrol.Items.Refresh();
+            }
+
+            mycontrol.ItemsSource = medCollectDTO.drugs;
+            mycontrol.Items.Refresh();
 
         }
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
