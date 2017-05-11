@@ -73,7 +73,9 @@
         <!--  -->
         <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="705,245.812,0,0" TextWrapping="Wrap" Text="过敏数据" VerticalAlignment="Top" Width="384" Foreground="#FF94E9FF" FontSize="36"/>
 
-        <TextBlock x:Name="isallergy" Text="{Binding allergicdrug,Converter={StaticResource drugTypeeConverter}}"  HorizontalAlignment="Left" Height="99" Margin="705,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="638" Foreground="White" FontSize="24">
+        <!--<TextBlock x:Name="isallergy" Text="{Binding allergicdrug,Converter={StaticResource drugTypeeConverter}}"  HorizontalAlignment="Left" Height="99" Margin="705,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="638" Foreground="White" FontSize="24">-->
+        <TextBlock x:Name="isallergy" Text=""  HorizontalAlignment="Left" Height="99" Margin="705,305,0,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="638" Foreground="White" FontSize="24">
             <!--<Run Text="药物过敏："/>-->
             <!--<Run Text="{Binding allergicdrug,Converter={StaticResource drugAllergicdrugCovert}}"/>-->
         </TextBlock>
