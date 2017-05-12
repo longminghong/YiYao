@@ -8,11 +8,8 @@ namespace WebService
 {
     public class MTMQRDTO
     {
-        public string wechatid { get; set; }
+        public string operatetype { get; set; }
+
+        public string src { get; set; }
     }
-
-
-
-
-
 }
