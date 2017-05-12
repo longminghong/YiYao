@@ -18,6 +18,9 @@ using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using YiYao.Events;
 using System.Windows.Media.Animation;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace YiYao
 {
@@ -43,6 +46,8 @@ namespace YiYao
 
                 var loadingAnimation = FindResource("A3Storyboard1") as Storyboard;
                 loadingAnimation.Begin();
+
+                postDataWithWebClient();
             };
             this.Unloaded += (s, e) =>
             {
@@ -51,42 +56,13 @@ namespace YiYao
         }
 
         private async void CardReader_CardRead(object sender, EventArgs e)
-        {   
-            AppData.CurrentIDCard = cardReader.CurrentCard;
+        {
             /*
              * 这里调用rest接口，发送数据给服务器*
              */
-            PostUserSSN();
+            postDataWithWebClient();
         }
 
-        private async void PostUserSSN()
-        {
-            if (mIsChecking)
-                return;
-            mIsChecking = true;
-            
-            var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
-
-            var member = await healthDataService.GetMemberInfoBySsnAsync(AppData.CurrentIDCard.IDNumber);
-
-            if (member != null)
-            {
-                if (member.error.code == 0)
-                {
-                    AppData.CurrentIDCard.Name = member.data.name;
-                    var address = member.data.address;
-                    AppData.CurrentIDCard.BirthDay = member.data.birthday;
-                    AppData.CurrentIDCard.Sex = member.data.gender;
-                    (Parent as NavigationManager).GoToPage(typeof(LoginSuccess));
-                }
-                else
-                {
-                    (Parent as NavigationManager).GoToPage(typeof(Register));
-                }
-            }
-            
-            mIsChecking = false;
-        }
 
         public void Start(object args)
         {
@@ -120,12 +96,6 @@ namespace YiYao
             {
                 customInfo = data as MTMCustInfo;
 
-                //if (String.Equals("close", customInfo.operatetype))
-                //{
-
-                //    (Parent as NavigationManager).GoToPage(typeof(Dashboard));
-                //}
-
                 xinxi2_png.Text = "姓名: " + customInfo.name;
 
                 textBlock6.Text = "性别: " + customInfo.gender;
@@ -142,24 +112,6 @@ namespace YiYao
                 textBlock4.Text = "开卡时间 ：" + customInfo.carddate;
                 textBlock2.Text = "地址 ：" + customInfo.province + customInfo.city + customInfo.district + customInfo.detailaddress;
 
-
-
-                //    xinxi2_png.Text = "姓名: " + customInfo.name + "               性别：" + customInfo.gender;
-
-                //    //input_textblock_userinfo_genderr.Text = "性别: " + customInfo.gender;
-
-                //    xinxi3_png.Text = "生日：" + customInfo.birthday;
-
-                //    if ("phone" == customInfo.pattern)
-                //        xinxi4_png.Text = "联系方式（手机）：" + customInfo.phone;
-                //    else
-                //        xinxi4_png.Text = "联系方式（座机）：" + customInfo.phonezone + customInfo.phonenumber + customInfo.extension;
-                //    xinxi5_png.Text = "身份证 ：" + customInfo.ssn;
-                //    xinxi6_png.Text = "邮件 ：" + customInfo.email;
-
-                //    textBlock3.Text = "会员卡号 ：" + customInfo.cardno;
-                //    textBlock4.Text = "开卡时间 ：" + customInfo.carddate;
-                //    textBlock2.Text = "地址 ：" + customInfo.province + customInfo.city + customInfo.district + customInfo.detailaddress;
             }
         }
 
@@ -167,5 +119,127 @@ namespace YiYao
         {
             (Parent as NavigationManager).GoToPage(typeof(A4));
         }
+
+        private void postData()
+        {
+
+            string requestUrl = "http://test.o4bs.com/api/members/identitycard";
+            //WebRequest request = WebRequest.Create("http://test.o4bs.com/api/members/identitycard");
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(requestUrl);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            //request.Headers.Add("Content-Type", "application/json");
+            request.Headers.Add("appkey", "097e8751c3c183edf602f867a5326559");
+            request.Headers.Add("appid", "SyccthZn");
+            request.Timeout = 20000;
+
+            //IDCard c = cardReader.CurrentCard;
+            IDCard c = new IDCard();
+
+            c.Name = "MTM22";
+            c.Sex = "男";
+            c.IDNumber = "450981000000000022";
+            c.Address = "南京仙鹤门";
+            c.BirthDay = "2000-01-01";
+            MCard card = new MCard(c);
+
+            JObject carJson = JObject.FromObject(card);
+
+            Console.WriteLine(carJson.ToString());
+
+            string postData = carJson.ToString();
+
+            byte[] btBodys = Encoding.UTF8.GetBytes(postData);
+            request.ContentLength = btBodys.Length;
+            request.GetRequestStream().Write(btBodys, 0, btBodys.Length);
+
+            HttpWebResponse httpWebResponse = (HttpWebResponse)request.GetResponse();
+            StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream());
+            string responseContent = streamReader.ReadToEnd();
+
+            httpWebResponse.Close();
+            streamReader.Close();
+            request.Abort();
+            httpWebResponse.Close();
+
+
+            MessageBox.Show(postData);
+        }
+
+        private void postDataWithWebClient()
+        {
+            WebClient wc = new WebClient();
+            string requestUrl = "http://test.o4bs.com/api/members/identitycard";
+            // 采取POST方式必须加的Header
+            
+            IDCard c = new IDCard();
+
+            c.Name = "MTM22";
+            c.Sex = "男";
+            c.IDNumber = "450981000000000022";
+            c.Address = "北京市中关村大街道200";
+            c.BirthDay = "2000-01-01";
+            MCard card = new MCard(c);
+
+            JObject carJson = JObject.FromObject(card);
+            string paramStr = carJson.ToString();
+
+            byte[] postData = Encoding.UTF8.GetBytes(paramStr);
+            
+            wc.Headers.Add("Content-Type", "application/json");
+            wc.Headers.Add("appkey", "097e8751c3c183edf602f867a5326559");
+            wc.Headers.Add("appid", "SyccthZn");
+
+            byte[] responseData = wc.UploadData(requestUrl, "POST", postData); // 得到返回字符流
+            String resultValue = Encoding.UTF8.GetString(responseData);// 解码                
+
+            Console.WriteLine(resultValue);
+        }
+
+        public class MCard
+        {
+            public string sid { get; set; }
+            public string idnumber { get; set; }
+            public string name { get; set; }
+            public string gender { get; set; }
+            public string dateofbirth { get; set; }
+            public string other { get; set; }
+            public Address address { get; set; }
+            public MCard(IDCard iCard)
+            {
+                this.sid = "Vk7Tc-PJx";
+                this.name = iCard.Name;
+                this.gender = iCard.Sex;
+
+                this.dateofbirth = iCard.BirthDay;
+                this.other = iCard.Address;
+                this.idnumber = iCard.IDNumber;
+
+                this.address = new Address
+                {
+                    province = "",
+                    city = "",
+                    district = "",
+                    other = ""
+                };
+            }
+
+
+
+            public class Address
+            {
+                public string province { get; set; }
+                public string city { get; set; }
+                public string district { get; set; }
+                public string other { get; set; }
+            }
+
+
+        }
+
     }
 }
+
+
