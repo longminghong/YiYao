@@ -42,6 +42,21 @@ namespace YiYao
             mEventAggregator = eventAggregator;
             ImageSourceConverter imageConveter = new ImageSourceConverter();
             NavigationManager manager = new NavigationManager();
+
+            Uri riskImageUri = null;
+            
+            String riskImagePath = "pack://application:,,,/屈乐.bmp";
+            bool imageExist;
+            imageExist = System.IO.File.Exists(riskImagePath);
+
+            riskImageUri = new Uri(riskImagePath);
+
+            BitmapImage bi3 = new BitmapImage();
+            bi3.BeginInit();
+            bi3.UriSource = riskImageUri; 
+            bi3.EndInit();
+             
+
             try
             {
                 AppData.CurrentIDCard = new IDCard
@@ -53,7 +68,7 @@ namespace YiYao
                     BirthDay = "19891014",
                     IDNumber = "120103196007222159",
                     Phone = "15895326302",
-                    HeadImage = (BitmapSource)imageConveter.ConvertFrom("屈乐.bmp")
+                    HeadImage = bi3//(BitmapSource)imageConveter.ConvertFrom("屈乐.bmp")
                 };
             }
             catch (Exception)

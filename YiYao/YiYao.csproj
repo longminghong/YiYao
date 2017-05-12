@@ -215,7 +215,7 @@
     <Compile Include="LoginSuccess.xaml.cs">
       <DependentUpon>LoginSuccess.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RecomMed.xaml.cs">
+    <Compile Include="V2.0\RecomMed.xaml.cs">
       <DependentUpon>RecomMed.xaml</DependentUpon>
     </Compile>
     <Compile Include="ScanDrug.xaml.cs">
@@ -364,7 +364,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="RecomMed.xaml">
+    <Page Include="V2.0\RecomMed.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1952,6 +1952,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="图层 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="人体红色.png" />
+    <Resource Include="人体绿色.png" />
+    <Resource Include="人体黄色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="屈乐.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
