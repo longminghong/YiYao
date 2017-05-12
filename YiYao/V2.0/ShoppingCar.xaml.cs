@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WebService;
+using Microsoft.Practices.ServiceLocation;
+using Prism.Events;
+using YiYao.Events;
 
 namespace YiYao
 {
@@ -20,20 +24,39 @@ namespace YiYao
     /// </summary>
     public partial class ShoppingCar : UserControl, INavigable
     {
+
+        MTMShopCarDTO reciveDTO;
         public ShoppingCar()
         {
             InitializeComponent();
         }
         public void Start(object args)
         {
+            if (null != args)
+            {
 
+                //customInfo = (MTMCustInfo)args;
+                // to do 数据绑定
+                reciveDTO = (MTMShopCarDTO)args;
+
+                mycontrol.ItemsSource = reciveDTO.buydrugs;
+
+                EventAggregator eventAggragator = ServiceLocator.Current.GetInstance<EventAggregator>();
+                eventAggragator.GetEvent<WebSocketEvent>().Subscribe(OnWebSocketEvent);
+            }
         }
 
         public void Stop()
         {
-
+            EventAggregator eventAggragator = ServiceLocator.Current.GetInstance<EventAggregator>();
+            eventAggragator.GetEvent<WebSocketEvent>().Unsubscribe(OnWebSocketEvent);
         }
+        private void OnWebSocketEvent(object data)
+        {
+            Console.WriteLine("data shopping card ======== OK ");
 
+            reciveDTO = (MTMShopCarDTO)data;
+        }
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
             (Parent as NavigationManager).GoToPage(typeof(Login));
