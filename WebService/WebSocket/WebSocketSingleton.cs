@@ -268,7 +268,8 @@ namespace WebService
                 case MEMBERType.MEMBRECOMM:
                     {//推荐用药数据
                         //pageType = typeof(RecomMed);
-
+                        MTMRecMedDTO info = JsonConvert.DeserializeObject<MTMRecMedDTO>(jsonContent, s_settings);
+                        obj = info;
                     }
                     break;
                 case MEMBERType.MEMBCART:
