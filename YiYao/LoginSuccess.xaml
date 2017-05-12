@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080">
     <UserControl.Resources>
-        <!--<Storyboard x:Key="Storyboard1">
+        <Storyboard x:Key="Storyboard1">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="bg2_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1.5"/>
             </DoubleAnimationUsingKeyFrames>
@@ -421,7 +421,7 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="zhaopian_png">
                 <EasingDoubleKeyFrame KeyTime="0:0:9" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-        </Storyboard>-->
+        </Storyboard>
     </UserControl.Resources>
     <Grid>
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
