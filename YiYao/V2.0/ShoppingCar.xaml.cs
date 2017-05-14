@@ -16,6 +16,8 @@ using WebService;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using YiYao.Events;
+using System.Windows.Media.Animation;
+using System.Globalization;
 
 namespace YiYao
 {
@@ -34,8 +36,6 @@ namespace YiYao
         {
             if (null != args)
             {
-
-                //customInfo = (MTMCustInfo)args;
                 // to do 数据绑定
                 reciveDTO = (MTMShopCarDTO)args;
 
@@ -56,10 +56,117 @@ namespace YiYao
             Console.WriteLine("data shopping card ======== OK ");
 
             reciveDTO = (MTMShopCarDTO)data;
+
+            mycontrol.ItemsSource = reciveDTO.buydrugs;
         }
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
             (Parent as NavigationManager).GoToPage(typeof(Login));
+        }
+
+        private void mycontrol_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void med_image_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void med_detail_bg_image_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+
+    public class ShopCarMedNameConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string resultValue = "药品名: ";
+            if (null != value)
+            {
+                resultValue += value;
+            }
+            return resultValue;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ShopCarMedSpecificationConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string resultValue = "规格: ";
+            if (null != value)
+            {
+                resultValue += value;
+            }
+            return resultValue;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ShopCarMedNumberConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string resultValue = "购买数量: ";
+            if (null != value)
+            {
+                resultValue += value;
+            }
+            return resultValue += "   (盒)";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ShopCarMedPriceConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string resultValue = "单价: ";
+            if (null != value)
+            {
+                resultValue += value;
+            }
+            return resultValue += "   (元)";
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class ShopCarMedTotalPriceConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            int take_number = (int)values[0];
+            string priceString = (string)values[1];
+            double price = System.Convert.ToDouble(priceString.Trim());
+            //double price = (double)new System.Data.DataTable().Compute(priceString, "");
+            string resultValue = (take_number * price).ToString();
+            return resultValue += "  (元)";
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

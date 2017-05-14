@@ -4,10 +4,20 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YiYao"
-      mc:Ignorable="d" 
+             mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080"
       >
+    <UserControl.Resources>
+        <local:ShopCarMedNameConverter x:Key="ShopCarMedNameConverter"></local:ShopCarMedNameConverter>
+        <local:ShopCarMedSpecificationConverter x:Key="ShopCarMedSpecificationConverter"></local:ShopCarMedSpecificationConverter>
 
+        <local:ShopCarMedNumberConverter x:Key="ShopCarMedNumberConverter"></local:ShopCarMedNumberConverter>
+        <local:ShopCarMedPriceConverter x:Key="ShopCarMedPriceConverter"></local:ShopCarMedPriceConverter>
+
+        <local:ShopCarMedTotalPriceConverter x:Key="ShopCarMedTotalPriceConverter"></local:ShopCarMedTotalPriceConverter>
+        
+
+    </UserControl.Resources>
     <Grid>
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
@@ -41,19 +51,8 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
-
-        <!--<Image Margin="352.8,151.2,1219.2,583.8" Source="药物背景-圆.png" Stretch="Fill"/>
-        <Image Margin="600.4,198,913.6,735" Source="药物文字背景.png" Stretch="Fill"/>
-        <Image Margin="1044,151.2,528,583.8" Source="药物背景-圆.png" Stretch="Fill"/>
-        <Image Margin="1291.6,198,222.4,735" Source="药物文字背景.png" Stretch="Fill"/>
-        <Image Margin="1044,518.4,528,216.6" Source="药物背景-圆.png" Stretch="Fill"/>
-        <Image Margin="1291.6,565.2,222.4,367.8" Source="药物文字背景.png" Stretch="Fill"/>
-        <Image Margin="352.8,518.4,1219.2,216.6" Source="药物背景-圆.png" Stretch="Fill"/>
-        <Image Margin="600.4,565.2,913.6,367.8" Source="药物文字背景.png" Stretch="Fill"/>-->
-
-
-        <ItemsControl x:Name="mycontrol" Height="600" Margin="560,240,380,240" > 
+        
+        <ItemsControl Loaded="mycontrol_Loaded" x:Name="mycontrol" Height="600" Margin="560,240,380,240" > 
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel />
@@ -61,18 +60,90 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Grid Background="Transparent" Width="450" Height="180" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <Image HorizontalAlignment="Left" Width="180" Height="180" Source="/YiYao;component/药物背景-圆.png" Margin="0,15"/>
-                        <Image HorizontalAlignment="Right" Stretch="Fill" Width="329.9"  Source="/YiYao;component/药物文字背景.png" Margin="0,15,10,32.4" />
-                        <Image HorizontalAlignment="Left" Width="65.8" Height="Auto" Source="1.png" Margin="54.3,76.2,0,54.45" />
-                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,30.3,0,0" TextWrapping="Wrap" Text="{Binding _class}" VerticalAlignment="Top" Width="100"/>
+                    <DataTemplate.Resources>
+                        <Storyboard x:Key="MedBG_Storyboard">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <ExponentialEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image" RepeatBehavior="Forever">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <ExponentialEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="360"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="med_image">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <ExponentialEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                                <DiscreteDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="med_detail_bg_image_Storyboard">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="med_detail_bg_image">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </DataTemplate.Resources>
 
+                    <DataTemplate.Triggers>
+                        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                            <BeginStoryboard x:Name="MedBG_Storyboard" Storyboard="{StaticResource MedBG_Storyboard}"/>
+                            <BeginStoryboard x:Name="med_detail_bg_image_Storyboard" Storyboard="{StaticResource med_detail_bg_image_Storyboard}"/>
+                        </EventTrigger>
+                    </DataTemplate.Triggers>
+
+                    <Grid Background="Transparent" Width="450" Height="180" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Image x:Name="image" HorizontalAlignment="Left" Width="180" Height="180" Source="/YiYao;component/药物背景-圆.png" Margin="0,15" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="med_detail_bg_image" Loaded="med_detail_bg_image_Loaded" HorizontalAlignment="Right" Stretch="Fill" Width="329.9"  Source="/YiYao;component/药物文字背景.png" Margin="0,15,10,32.4" Clip="{x:Null}" >
+
+                        </Image>
+                        <Image x:Name="med_image" Loaded="med_image_Loaded" HorizontalAlignment="Left" Width="65.8" Height="Auto" Source="1.png" Margin="54.3,76.2,0,54.45" >
+
+                        </Image>
+                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,30.3,0,0" TextWrapping="Wrap" 
+                                   Text="{Binding Path = name,Converter={StaticResource ShopCarMedNameConverter} }" 
+                                   VerticalAlignment="Top" Width="100"/>
+                        
                         <!--<TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="305,30.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"><Run Text="小"/><Run Text="类："/></TextBlock>-->
 
-                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="{Binding name}"><LineBreak/><Run/><Run Text="："/></TextBlock>
-                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,70.8,0,0" TextWrapping="Wrap" Text="{Binding common_name}" VerticalAlignment="Top" Width="100"/>
-                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,90.6,0,0" TextWrapping="Wrap" Text="{Binding specification}" VerticalAlignment="Top" Width="100"/>
-                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="305,90.6,0,0" TextWrapping="Wrap" Text="{Binding retail_price}" VerticalAlignment="Top" Width="100"/>
+                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" 
+                                   Text="{Binding Path=specification,Converter={StaticResource ShopCarMedSpecificationConverter}}"></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,70.8,0,0" TextWrapping="Wrap"
+                                   Text="{Binding Path=number,Converter={StaticResource ShopCarMedNumberConverter} }" VerticalAlignment="Top" Width="100"/>
+                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,90.6,0,0" TextWrapping="Wrap" 
+                                   Text="{Binding Path=retail_price,Converter={StaticResource ShopCarMedPriceConverter}}" VerticalAlignment="Top" Width="100"/>
+                        <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="305,90.6,0,0" TextWrapping="Wrap"
+                                   VerticalAlignment="Top" Width="100">
+                            <TextBlock.Text>
+                                <MultiBinding Converter="{StaticResource ShopCarMedTotalPriceConverter}"
+                                              ConverterParameter="FormatLastFirst">
+
+                                    <Binding Path="number"/>
+
+                                    <Binding Path="retail_price"/>
+
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
                         <!--<TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,112.463,0,0" TextWrapping="Wrap" Text="总价：" VerticalAlignment="Top" Width="100"/>-->
 
                     </Grid>
