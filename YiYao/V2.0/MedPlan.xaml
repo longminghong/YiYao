@@ -61,31 +61,60 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
+                    <DataTemplate.Resources>
+                        <Storyboard x:Key="ItemTemplateStoryboard">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image" RepeatBehavior="Forever">
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="360"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="medBG">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="med">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0.3"/>
+                                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </DataTemplate.Resources>
                     <Grid Background="Transparent" Width="450" Height="237.2" HorizontalAlignment="Left" VerticalAlignment="Center">
                         <!--<Image HorizontalAlignment="Left" Width="180" Height="180" Source="药物背景-圆.png" Margin="-21.6,100.173,0,-42.973"/>
                         <Image HorizontalAlignment="Right" Stretch="Fill" Width="329.9"   Source="药物文字背景.png" Margin="0,15,10,48.6" />-->
-                        <Image HorizontalAlignment="Left" Width="180" Height="180"  Margin="-21.6,100.173,0,-42.973" Source="/YiYao;component/药物背景-圆.png"/>
-                        <Image HorizontalAlignment="Right" Stretch="Fill" Width="329.9"    Margin="0,15,10,48.6" Source="/YiYao;component/药物文字背景.png" />
+                        <Image x:Name="image" HorizontalAlignment="Left" Width="180" Height="180"  Margin="-22,100,0,-53.8" Source="/YiYao;component/药物背景-圆.png" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="medBG" HorizontalAlignment="Right" Stretch="Fill" Width="329.9"    Margin="0,15,10,48.6" Source="/YiYao;component/药物文字背景.png" />
 
-                        <Image HorizontalAlignment="Left" Width="65.8" Height="Auto" Source="1.png" Margin="32.7,137.773,0,-7.123" />
+                        <Image x:Name="med" HorizontalAlignment="Left" Width="65.8" Height="Auto" Source="1.png" Margin="32.7,137.773,0,-7.123" />
                         <!--<TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,30.3,0,0" TextWrapping="Wrap" Text="{Binding _class}" VerticalAlignment="Top" Width="100"/>-->
 
                         <!--<TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="305,30.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"><Run Text="小"/><Run Text="类："/></TextBlock>-->
                         
                         <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,34.773,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Text="{Binding name}"><LineBreak/><Run/><Run Text="："/></TextBlock>
-                        <Canvas Margin="185,55,111,165.2">
-                            
+                        <Canvas x:Name="通用名" Margin="185,55,111,165.2">
+
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="通用名：" VerticalAlignment="Top" Width="55"/>
 
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="{Binding common_name}" VerticalAlignment="Top" Width="100" Canvas.Left="54"/>
                         </Canvas>
-                        <Canvas Margin="185,74,119,144.2">
+                        <Canvas x:Name="规格" Margin="185,74,119,144.2">
 
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="规格：" VerticalAlignment="Top" Width="46"/>
 
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="{Binding specification}" VerticalAlignment="Top" Width="100" Canvas.Left="46" Canvas.Top="2"/>
                         </Canvas>
-                        <Canvas Margin="185,100,66,120.2">
+                        <Canvas x:Name="用法用量" Margin="185,100,66,120.2">
 
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="用法：" VerticalAlignment="Top" Width="45"/>
 
@@ -96,14 +125,14 @@
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="每次：" VerticalAlignment="Top" Width="53" Canvas.Left="141"/>
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="{Binding dosage}" VerticalAlignment="Top" Width="18" Canvas.Left="185"/>
                         </Canvas>
-                        <Canvas Margin="185,122,29,98.2">
+                        <Canvas x:Name="用药提醒" Margin="185,122,29,98.2">
 
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="{Binding start}" VerticalAlignment="Top" Width="85" Canvas.Left="64"/>
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="{Binding end}" VerticalAlignment="Top" Width="85" Canvas.Left="155"/>
 
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="用药提醒：" VerticalAlignment="Top" Width="68"/>
                         </Canvas>
-                        <Canvas Margin="185,144,120,76.2">
+                        <Canvas x:Name="复购提醒" Margin="185,144,120,76.2">
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" Text="{Binding date}" VerticalAlignment="Top" Width="85" Canvas.Left="64"/>
                             <TextBlock HorizontalAlignment="Left" Foreground="White" Height="17" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"><Run Text="复购"/><Run Text=""/><Run Text="提醒："/></TextBlock>
                         </Canvas>

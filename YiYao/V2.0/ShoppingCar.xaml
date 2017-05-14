@@ -15,7 +15,7 @@
         <local:ShopCarMedPriceConverter x:Key="ShopCarMedPriceConverter"></local:ShopCarMedPriceConverter>
 
         <local:ShopCarMedTotalPriceConverter x:Key="ShopCarMedTotalPriceConverter"></local:ShopCarMedTotalPriceConverter>
-        
+
     </UserControl.Resources>
     <Grid>
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
@@ -50,7 +50,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        
+
         <ItemsControl Loaded="mycontrol_Loaded" x:Name="mycontrol" Height="600" Margin="560,240,380,240" > 
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -70,7 +70,7 @@
                                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
                             </DoubleAnimationUsingKeyFrames>
                             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image" RepeatBehavior="Forever">
-                                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0">
                                     <EasingDoubleKeyFrame.EasingFunction>
                                         <ExponentialEase EasingMode="EaseOut"/>
                                     </EasingDoubleKeyFrame.EasingFunction>
@@ -121,7 +121,7 @@
                         <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,30.3,0,0" TextWrapping="Wrap" 
                                    Text="{Binding Path = name,Converter={StaticResource ShopCarMedNameConverter} }" 
                                    VerticalAlignment="Top" Width="100"/>
-                        
+
                         <!--<TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="305,30.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"><Run Text="小"/><Run Text="类："/></TextBlock>-->
 
                         <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="185,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" 
@@ -136,7 +136,7 @@
                                 <MultiBinding Converter="{StaticResource ShopCarMedTotalPriceConverter}">
 
                                     <Binding Path="number"/>
-                                    
+
                                     <Binding Path="retail_price"/>
 
                                 </MultiBinding>
