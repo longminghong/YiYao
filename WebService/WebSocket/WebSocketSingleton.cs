@@ -110,8 +110,14 @@ namespace WebService
                         Console.WriteLine(jDataToken.ToString());
                         object obj;
                         obj = invokeDataReciveCallBack(pageType, jDataToken.ToString());
+                        if (null == obj)
+                        {
 
-                        pageCommandHandle.Invoke(pageType, obj);
+                        }
+                        else {
+                            pageCommandHandle.Invoke(pageType, obj);
+                        }
+                        
                     }
                     else {
                         // 关闭操作
@@ -132,12 +138,13 @@ namespace WebService
         // 关闭连接后的操作
         void client_ConnectionClosed(object sender, EventArgs e)
         {
-            Console.WriteLine("connect closed");
+            Console.WriteLine("client_ConnectionClosed"+ e);
+            start();
         }
         // 取消sub后的操作
         void client_MqttMsgUnsubscribed(object sender, MqttMsgUnsubscribedEventArgs e)
         {
-            Console.WriteLine("connect closed");
+            Console.WriteLine("client_MqttMsgUnsubscribed" + e);
         }
         const String radisTopic = "MTM_WEB_TEST/Vk7Tc-PJx";
         const String oldTopic = "MTM_WEB_TEST/pypub";
@@ -156,11 +163,17 @@ namespace WebService
 
             MqttClient client = new MqttClient(enpoint);
             //client.ProtocolVersion = MqttProtocolVersion.Version_3_1;
+            /**
             byte code = client.Connect(clientid,
                                         user,
                                         pwd,
                                         true, // cleanSession
-                                        60); // keepAlivePeriod
+                                        1); // keepAlivePeriod
+    */
+            byte code = client.Connect(clientid,
+                                        user,
+                                        pwd);
+
             Console.WriteLine(code);
             Console.WriteLine(client.IsConnected);
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
@@ -262,7 +275,15 @@ namespace WebService
                     {//会员评估结果数据
                         //pageType = typeof(A8);
                         MTMIssueCollectDTO info = JsonConvert.DeserializeObject<MTMIssueCollectDTO>(jsonContent, s_settings);
-                        obj = info;
+                        if (0 == info.risklevel)
+                        {
+                            obj = null;
+                        }
+                        else
+                        {
+                            obj = info;
+                        }
+                        
                     }
                     break;
                 case MEMBERType.MEMBRECOMM:
