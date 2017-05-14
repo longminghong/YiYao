@@ -79,12 +79,32 @@ namespace YiYao
             qrDTO = (MTMQRDTO)data;
             Uri qrImagePath = new Uri(qrDTO.src);
             BitmapImage qrImageSource = new BitmapImage(qrImagePath);
-            image1.Source = qrImageSource;
+            imageQR.Source = qrImageSource;
         }
 
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
             (Parent as NavigationManager).GoToPage(typeof(A5));
+        }
+
+        private void imageQR_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Storyboard qrStoryboard;
+
+                qrStoryboard = this.Resources["QRStoryboard"] as Storyboard;
+                if (null != qrStoryboard)
+                {
+                    qrStoryboard.Begin();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+           
+
         }
     }
 }

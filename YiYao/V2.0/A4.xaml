@@ -7,28 +7,52 @@
       mc:Ignorable="d" 
        d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080"
       >
- 
+    <UserControl.Resources>
+        <Storyboard x:Key="A4Storyboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imageQRBG">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="QRStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="imageQR">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource A4Storyboard}"/>
+            <BeginStoryboard Storyboard="{StaticResource QRStoryboard}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+
     <Grid>
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-             
+
         </Image>
 
         <Image x:Name="bg1_jpg" Source="/Images/RegisterSuccess/bg1.jpg" Stretch="Fill"/>
         <Image x:Name="bg2_png" Source="/Images/RegisterSuccess/bg2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-             
+
         </Image>
         <Image x:Name="bg3_png" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/bg3.png" Stretch="Fill" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
-             
+
         </Image>
         <!-- 点阵地图-->
         <Image x:Name="ditu_png" Margin="592,282.375,593,461.625" Source="/Images/RegisterSuccess/ditu.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Opacity="0.3">
-             
+
         </Image>
-        <Image x:Name="image2" Margin="732,254.4,671,382.6" Source="/YiYao;component/QR.png" Stretch="Fill"/>
-        <Image x:Name="image1" Margin="880.8,345.6,819.2,515.4" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-             
+        <Image x:Name="imageQRBG" Margin="732,254.4,671,382.6" Source="/YiYao;component/QR.png" Stretch="Fill"/>
+        <Image x:Name="imageQR" Margin="880.8,345.6,819.2,515.4" Stretch="Fill" Loaded="imageQR_Loaded" RenderTransformOrigin="0.5,0.5">
+
         </Image>
-         <Canvas Margin="515.5,767.9,439.734,257.6">
+        <Canvas Margin="515.5,767.9,439.734,257.6">
             <Image x:Name="image" Source="/YiYao;component/会员信息注册成功，欢迎扫码注册使用公众账号.png" 
                    Stretch="Fill" Height="54.5" Width="964.766">
             </Image>
