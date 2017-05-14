@@ -156,12 +156,24 @@ namespace YiYao
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            int take_number = (int)values[0];
-            string priceString = (string)values[1];
-            double price = System.Convert.ToDouble(priceString.Trim());
-            //double price = (double)new System.Data.DataTable().Compute(priceString, "");
-            string resultValue = (take_number * price).ToString();
-            return resultValue += "  (元)";
+            string resultValue = "";
+            try
+            {
+                var take_number = (int)values[0];
+                var priceString = values[1];
+                double price = 6.6;//System.Convert.ToDouble(priceString.Trim());
+                resultValue = (take_number * price).ToString();
+            }
+            catch (Exception)
+            {
+
+
+            }
+            finally {
+
+                resultValue += "  (元)";
+            }
+            return resultValue.ToArray();
         }
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)

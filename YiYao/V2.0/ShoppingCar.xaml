@@ -16,7 +16,6 @@
 
         <local:ShopCarMedTotalPriceConverter x:Key="ShopCarMedTotalPriceConverter"></local:ShopCarMedTotalPriceConverter>
         
-
     </UserControl.Resources>
     <Grid>
         <Image x:Name="医药界面_拷贝_jpg" Margin="10,0,-10,0" Source="/Images/RegisterSuccess/医药界面 拷贝.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
@@ -134,11 +133,10 @@
                         <TextBlock HorizontalAlignment="Left" Foreground="White" Height="16.8" Margin="305,90.6,0,0" TextWrapping="Wrap"
                                    VerticalAlignment="Top" Width="100">
                             <TextBlock.Text>
-                                <MultiBinding Converter="{StaticResource ShopCarMedTotalPriceConverter}"
-                                              ConverterParameter="FormatLastFirst">
+                                <MultiBinding Converter="{StaticResource ShopCarMedTotalPriceConverter}">
 
                                     <Binding Path="number"/>
-
+                                    
                                     <Binding Path="retail_price"/>
 
                                 </MultiBinding>
