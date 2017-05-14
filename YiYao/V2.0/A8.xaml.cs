@@ -16,6 +16,7 @@ using WebService;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using YiYao.Events;
+using System.Windows.Media.Animation;
 
 namespace YiYao
 {
@@ -187,6 +188,16 @@ namespace YiYao
         private void show_controllable_risk(string riskDetail)
         {
 
+        }
+
+        private void image_risk_Loaded(object sender, RoutedEventArgs e)
+        {
+            Storyboard riskStoryboard;
+            riskStoryboard = this.Resources["risk_image_show_Storyboard"] as Storyboard;
+            if (null != riskStoryboard)
+            {
+                riskStoryboard.Begin();
+            }
         }
     }
 }
