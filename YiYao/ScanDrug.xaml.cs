@@ -199,7 +199,7 @@ namespace YiYao
                 {
                     DrugID = "6951283550390",
                     DrugName = "辛伐他汀片",
-                    DrugImageSource = "",
+                    DrugImageSource = "5.高血脂的健康饮食习惯.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于临睡前用适量水送服。",
                                 DrugUnwell = "-	常见不良反应包括便秘、恶心、腹痛、头痛、上呼吸道感染等；\n-   如果出现肌痛、肌无力等肌肉症状，建议您就诊咨询，医生会抽血检查肌酸激酶进行评估，必要时会停药更换其它药物。",
@@ -212,7 +212,7 @@ namespace YiYao
                 {
                     DrugID = "6951283550420",
                     DrugName = "辛伐他汀片",
-                    DrugImageSource = "",
+                    DrugImageSource = "5.高血脂的健康饮食习惯.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于临睡前用适量水送服。",
                                 DrugUnwell = "-	常见不良反应包括便秘、恶心、腹痛、头痛、上呼吸道感染等；\n-   如果出现肌痛、肌无力等肌肉症状，建议您就诊咨询，医生会抽血检查肌酸激酶进行评估，必要时会停药更换其它药物。",
@@ -225,20 +225,19 @@ namespace YiYao
                 {
                     DrugID = "6923878310122",
                     DrugName = "非洛地平缓释片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于早晨用适量水送服，注意整片吞下，不要掰开、研碎或咀嚼服用。",
                                 DrugUnwell = "-	可能的不良反应包括头痛、面部潮红、心慌、下肢水肿等；\n-   水肿常常发生于脚踝，如果您不能耐受，请就诊咨询，医生会给您调整治疗方案；",
                                 DrugNotice = "-	服药期间请不要吃葡萄柚（也称为西柚），因为它可能会影响药效；\n-   一些药物可能会影响该药的效果，如果您正在服用其它药物，请告知您的医生；\n-   服药期间需要定期监测血压评估血压控制情况，医生会根据情况调整药物或剂量，家庭自测血压的方法请点击下方相关阅读。",
                                 DrugStoreAdv = "-	请将药品放在原包装中储存，放置于阳光直射不到的干燥的地方，例如抽屉、储物柜；\n-   为避免孩子误服，请将药品储存在孩子接触不到的地方。",
                      },
-
                 },
                 new DrugInfo
                 {
                     DrugID = "6923878310139",
                     DrugName = "非洛地平缓释片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于早晨用适量水送服，注意整片吞下，不要掰开、研碎或咀嚼服用。",
                                 DrugUnwell = "-	可能的不良反应包括头痛、面部潮红、心慌、下肢水肿等；\n-   水肿常常发生于脚踝，如果您不能耐受，请就诊咨询，医生会给您调整治疗方案；",
@@ -251,7 +250,7 @@ namespace YiYao
                 {
                     DrugID = "6902182330101",
                     DrugName = "福辛普利钠片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请用适量水送服，用药时间不受食物影响。",
                                 DrugUnwell = "-	可能的不良反应包括干咳、头晕、头痛、高血钾等，如果您的咳嗽无法忍受，请告诉医生以便更换其他降压药物。",
@@ -264,7 +263,7 @@ namespace YiYao
                 {
                     DrugID = "6931837200094",
                     DrugName = "富马酸比索洛尔片",
-                    DrugImageSource = "",
+                    DrugImageSource = "8.如何在家测量心率.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于早晨用适量水送服。",
                                 DrugUnwell = "-	可能的不良反应有疲乏、头晕、肢体冷感、心动过缓等。",
@@ -277,7 +276,7 @@ namespace YiYao
                 {
                     DrugID = "6939901400067",
                     DrugName = "替米沙坦片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	可能的不良反应包括头晕、头痛、高血钾等。",
@@ -290,7 +289,7 @@ namespace YiYao
                 {
                     DrugID = "6950641900143",
                     DrugName = "厄贝沙坦片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	可能的不良反应包括头晕、头痛、高血钾等。",
@@ -303,7 +302,7 @@ namespace YiYao
                 {
                     DrugID = "6958703500515",
                     DrugName = "氨氯地平阿托伐他汀钙片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	可能的不良反应包括头痛、鼻咽炎、恶心、呕吐、肌痛、关节痛、下肢水肿等；\n-   水肿常常发生于脚踝，如果您不能耐受，请就诊咨询，医生会给您调整治疗方案；\n-   如果出现肌痛、肌无力等肌肉症状，建议您就诊咨询，医生会抽血检查肌酸激酶进行评估，必要时（若超过正常上限10倍）会停药更换其它药物。",
@@ -316,7 +315,7 @@ namespace YiYao
                 {
                     DrugID = "6950641900129",
                     DrugName = "厄贝沙坦氢氯噻嗪片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	常见不良反应包括眩晕、疲劳、恶心、呕吐、肾功能异常等。",
@@ -329,7 +328,7 @@ namespace YiYao
                 {
                     DrugID = "",
                     DrugName = "瑞舒伐他汀钙片",
-                    DrugImageSource = "",
+                    DrugImageSource = "5.高血脂的健康饮食习惯.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	常见不良反应有腹痛、恶心、肌痛、头痛、虚弱；\n-   如果出现肌痛、肌无力等肌肉症状，建议您就诊咨询，医生会抽血检查肌酸激酶进行评估，必要时（若超过正常上限5倍）会停药更换其它药物。",
@@ -342,7 +341,7 @@ namespace YiYao
                 {
                     DrugID = "6924147654015",
                     DrugName = "硝苯地平控释片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请每天固定同一时间（如早晨）用适量水吞服，不要掰开、研碎或咀嚼服用，服药时间不受食物影响；\n-   如果您在大便中发现药片类似物，请不要担心，药物成分已被吸收，那只是不被吸收的药壳。",
                                 DrugUnwell = "-	  可能的不良反应有：头痛、面部潮红、心慌、下肢水肿等；\n-     水肿常发生于脚踝，如果您不能耐受，请就诊咨询，医生会给您调整治疗方案；",
@@ -355,7 +354,7 @@ namespace YiYao
                 {
                     DrugID = "6935014100078",
                     DrugName = "格列喹酮片",
-                    DrugImageSource = "",
+                    DrugImageSource = "7.低血糖反应及处理ver.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于饭前半小时用适量水送服，为避免发生低血糖，服药后请不要忘记吃饭；\n-   如果漏服药物，下一次用药维持原剂量，注意不要加倍。",
                                 DrugUnwell = "-	极少数人有皮肤过敏反应、胃肠道反应、轻度低血糖反应及血液系统方面改变的报道； \n-   低血糖是多数降糖药物常见的不良反应，尤其是两种或以上降糖药物联用时更容易出现。低血糖的识别和处理请点击下方相关阅读。",
@@ -400,26 +399,24 @@ namespace YiYao
                                 DrugNotice = "-	请注意控制饮食，并适当进行锻炼；\n-   为评估降糖效果，您需定期监测血糖和/或糖化血红蛋白，必要时可能会调整剂量和药物品种；\n-   为确保用药安全，用药期间请您定期就诊，医生会抽血检查肝功能； \n-   该药可引起或加重一些糖尿病患者的心衰，如果您伴有心衰或用药期间出现体重快速增加、呼吸困难或水肿症状，请您及时就诊咨询。",
                                 DrugStoreAdv = "-	请将药品放在原包装中储存，放置于阳光直射不到的干燥的地方，例如抽屉、储物柜；\n-   为避免孩子误服，请将药品储存在孩子接触不到的地方。",
                      },
-
                 },
                 new DrugInfo
                 {
                     DrugID = "",
                     DrugName = "格列齐特缓释片",
-                    DrugImageSource = "",
+                    DrugImageSource = "7.低血糖反应及处理ver.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	 请于早餐时用适量水吞服，不要掰开、研碎或咀嚼服用；\n-   如果漏服药物，下一次用药维持原剂量，注意不要加倍。",
                                 DrugUnwell = "-	可能发生的不良反应包括低血糖、腹痛、腹泻、恶心、呕吐、便秘；\n-   低血糖是多数降糖药物常见的不良反应，尤其是两种或以上降糖药物联用时更容易出现。低血糖的识别和处理请点击下方相关阅读。",
                                 DrugNotice = "-	请注意控制饮食，并适当进行锻炼；\n-   为评估降糖效果，您需定期监测血糖和/或糖化血红蛋白，必要时可能会调整剂量和药物品种；\n-   如果您对磺酰脲或磺胺类药物过敏，请告知医生或药师，可能会为您调整药物；\n-   为确保用药安全，轻中度肾功能不全者需定期就诊，医生会抽血检查肾功能。",
                                 DrugStoreAdv = "-	请将药品放在原包装中储存，放置于阳光直射不到的干燥的地方，例如抽屉、储物柜；\n-   为避免孩子误服，请将药品储存在孩子接触不到的地方。",
                      },
-
                 },
                 new DrugInfo
                 {
                     DrugID = "6947544900059",
                     DrugName = "盐酸二甲双胍缓释胶囊",
-                    DrugImageSource = "",
+                    DrugImageSource = "7.低血糖反应及处理ver.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请餐时或餐后用适量水吞服，不要打开、研碎或咀嚼服用；\n-   如果漏服药物，下一次用药维持原剂量不要加倍。",
                                 DrugUnwell = "-	常见不良反应有恶心、呕吐、腹泻、消化不良、乏力及头痛；\n-   低血糖是多数降糖药物常见的不良反应，尤其是两种或以上降糖药物联用时更容易出现。低血糖的识别和处理请点击下方相关阅读。",
@@ -513,7 +510,6 @@ namespace YiYao
         {
             if (state == Scan)
             {
-
                 var drug = drugInfo.FirstOrDefault(d => d.DrugID == drugId);
                 selectedDrug = (DrugInfo)drug;
                 if (drug != null)
@@ -527,11 +523,8 @@ namespace YiYao
                         String uriString;
 
                         uriString = "pack://application:,,,/Images/ScanDrug/";
-                        uriString += drug.DrugImageSource;
-
-                        //readingImageString = "pack://application:,,,/Images/ScanDrug/r";
-                        //readingImageString += drug.DrugImageSource;
-
+                        uriString += drug.DrugID;
+                        uriString += ".png";
 
                         bitmap.UriSource = new Uri(uriString, UriKind.Absolute);
                         bitmap.EndInit();
@@ -612,7 +605,7 @@ namespace YiYao
 
                 bitmap.BeginInit();
 
-                readingImageString = "pack://application:,,,/Images/ScanDrug/r";
+                readingImageString = "pack://application:,,,/Images/ScanDrug/";
                 readingImageString += selectedDrug.DrugImageSource;
 
                 bitmap.UriSource = new Uri(readingImageString, UriKind.Absolute);

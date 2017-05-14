@@ -2034,6 +2034,12 @@
     <Resource Include="Images\Reading\9.高血脂与心脏的关系%28二%29 .png" />
     <Resource Include="Images\Reading\list.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="相关阅读.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="箭头.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
