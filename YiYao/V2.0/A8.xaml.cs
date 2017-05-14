@@ -135,5 +135,58 @@ namespace YiYao
         {
             (Parent as NavigationManager).GoToPage(typeof(Dashboard));
         }
+
+        private void threehight_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (null!=reciveDTO&&null!= reciveDTO.controllable_risk)
+            {
+                show_controllable_risk(reciveDTO.controllable_risk.threehight);
+            }
+        }
+
+        private void smoking_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (null != reciveDTO && null != reciveDTO.controllable_risk)
+            {
+                show_controllable_risk(reciveDTO.controllable_risk.smoking);
+            }
+        }
+
+        private void drinking_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (null != reciveDTO && null != reciveDTO.controllable_risk)
+            {
+                show_controllable_risk(reciveDTO.controllable_risk.drinking);
+            }
+        }
+
+        private void fat_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (null != reciveDTO && null != reciveDTO.controllable_risk)
+            {
+                show_controllable_risk(reciveDTO.controllable_risk.fat);
+            }
+        }
+
+        private void eat_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (null != reciveDTO && null != reciveDTO.controllable_risk)
+            {
+                show_controllable_risk(reciveDTO.controllable_risk.eat);
+            }
+        }
+
+        private void usedrug_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (null != reciveDTO && null != reciveDTO.controllable_risk)
+            {
+                show_controllable_risk(reciveDTO.controllable_risk.usedrug);
+            }
+        }
+
+        private void show_controllable_risk(string riskDetail)
+        {
+
+        }
     }
 }

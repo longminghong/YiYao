@@ -79,12 +79,12 @@
         <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="109.4,126.812,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="可控风险" FontWeight="Bold" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="109.4,336.837,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="测量数据" FontWeight="Bold" Grid.Column="1"/>
         <Image Margin="109.4,168.375,181.8,765.625" Source="/YiYao;component/可控风险-背景.png" Stretch="Fill" Grid.Column="1"/>
-        <Image Margin="465.6,213.4,443.6,807.6" Source="/YiYao;component/用药情况.png" Stretch="Fill" Grid.Column="1"/>
-        <Image Margin="347.2,217.4,561,805.6" Source="/YiYao;component/不良饮食.png" Stretch="Fill" Grid.Column="1"/>
-        <Image Margin="692.4,211.4,256.8,807.6" Source="/YiYao;component/肥胖.png" Stretch="Fill" Grid.Column="1"/>
-        <Image Margin="593.2,211.4,357,807.6" Source="/YiYao;component/喝酒.png" Stretch="Fill" Grid.Column="1"/>
-        <Image Margin="275.2,0,676,805.6" Source="/YiYao;component/吸烟.png" Stretch="Fill" Height="60" VerticalAlignment="Bottom" Grid.Column="1"/>
-        <Image Margin="189,214.4,760.2,807.6" Source="/YiYao;component/心率.png" Stretch="Fill" Grid.Column="1"/>
+        <Image MouseDown="usedrug_MouseDown_1" Margin="465.6,213.4,443.6,807.6" Source="/YiYao;component/用药情况.png" Stretch="Fill" Grid.Column="1"/>
+        <Image MouseDown="eat_MouseDown_1" Margin="347.2,217.4,561,805.6" Source="/YiYao;component/不良饮食.png" Stretch="Fill" Grid.Column="1"/>
+        <Image MouseDown="fat_MouseDown_1" Margin="692.4,211.4,256.8,807.6" Source="/YiYao;component/肥胖.png" Stretch="Fill" Grid.Column="1"/>
+        <Image MouseDown="drinking_MouseDown_1" Margin="593.2,211.4,357,807.6" Source="/YiYao;component/喝酒.png" Stretch="Fill" Grid.Column="1"/>
+        <Image MouseDown="smoking_MouseDown_1" Margin="275.2,0,676,805.6" Source="/YiYao;component/吸烟.png" Stretch="Fill" Height="60" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <Image MouseDown="threehight_MouseDown_1" Margin="189,214.4,760.2,807.6" Source="/YiYao;component/心率.png" Stretch="Fill" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="189,421.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146.2" Foreground="#FFF3FAFA" FontSize="20" Text="身高（cm）：" Grid.Column="1"/>
         <!--  -->
         <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="504.2,421.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Foreground="#FFF3FAFA" FontSize="20" Grid.Column="1"><Run Text="体重"/><Run Text="（kg）："/></TextBlock>
