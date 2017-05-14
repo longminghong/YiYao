@@ -124,6 +124,7 @@
     <Compile Include="MedItemsControlDataSource\MedItemsControlDataSource.xaml.cs">
       <DependentUpon>MedItemsControlDataSource.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\ReadingImageNameConverter.cs" />
     <Compile Include="V2.0\A7.xaml.cs">
       <DependentUpon>A7.xaml</DependentUpon>
     </Compile>
@@ -252,6 +253,7 @@
     <Compile Include="V2.0\MedPlan.xaml.cs">
       <DependentUpon>MedPlan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShoppingCarCoverter.cs" />
     <Compile Include="yongyaojieguo.xaml.cs">
       <DependentUpon>yongyaojieguo.xaml</DependentUpon>
     </Compile>
@@ -1963,6 +1965,74 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="屈乐.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Reading\1.「高血脂症」和「血管硬化」有什么相关呢.png" />
+    <Resource Include="Images\Reading\10.高血脂与心脏的关系%28一%29 .png" />
+    <Resource Include="Images\Reading\11.高血脂症日常生活照顾原则 .png" />
+    <Resource Include="Images\Reading\12.高血脂症-生活饮食原则.png" />
+    <Resource Include="Images\Reading\13.降低胆固醇的生活饮食原则.png" />
+    <Resource Include="Images\Reading\14.降低甘油三酯的饮食原则.png" />
+    <Resource Include="Images\Reading\15.降血脂要先保肝.png" />
+    <Resource Include="Images\Reading\16.哪些原因会造成高血脂 .png" />
+    <Resource Include="Images\Reading\17.脑中风的预防 .png" />
+    <Resource Include="Images\Reading\18.让您远离高血脂-饮食控制.png" />
+    <Resource Include="Images\Reading\19.如何降血液内脂肪.png" />
+    <Resource Include="Images\Reading\2.高血脂档案.png" />
+    <Resource Include="Images\Reading\20.什么是高血脂.png" />
+    <Resource Include="Images\Reading\21.远离高血脂的方式.png" />
+    <Resource Include="Images\Reading\22.血脂异常能运动吗 什么运动好.png" />
+    <Resource Include="Images\Reading\23.防止血压剧烈波动.png" />
+    <Resource Include="Images\Reading\24.高血压患者如何吃的健康.png" />
+    <Resource Include="Images\Reading\25.高血压是无声杀手.png" />
+    <Resource Include="Images\Reading\26.哪些运动适合高血压.png" />
+    <Resource Include="Images\Reading\27.高血压饮食原则.png" />
+    <Resource Include="Images\Reading\28.高血压的危險因子.png" />
+    <Resource Include="Images\Reading\29.高血压患者的生活保健1.png" />
+    <Resource Include="Images\Reading\3.高血脂的饮食禁忌.png" />
+    <Resource Include="Images\Reading\30.高血压患者的生活保健2.png" />
+    <Resource Include="Images\Reading\31.高血压患者的生活保健3.png" />
+    <Resource Include="Images\Reading\32各类食物含钠量的比较1.png" />
+    <Resource Include="Images\Reading\33.各类食物含钠量的比较2.png" />
+    <Resource Include="Images\Reading\34.关心您的血糖 请多吃蔬菜水果.png" />
+    <Resource Include="Images\Reading\35.减盐烹调技巧.png" />
+    <Resource Include="Images\Reading\36.量血壓時可以注意以下6個小技巧.png" />
+    <Resource Include="Images\Reading\37.慢性肾病的十大高危群.png" />
+    <Resource Include="Images\Reading\38.慢性肾脏病饮食篇：清淡烹调.png" />
+    <Resource Include="Images\Reading\39.慢性肾脏病饮食篇_适当减盐.png" />
+    <Resource Include="Images\Reading\4.高血脂的运动养身.png" />
+    <Resource Include="Images\Reading\40.您知道脑中风吗.png" />
+    <Resource Include="Images\Reading\41.如何测得准确的高血压.png" />
+    <Resource Include="Images\Reading\42.如何服用降压药物 .png" />
+    <Resource Include="Images\Reading\43.如何让血压保持平稳 .png" />
+    <Resource Include="Images\Reading\44.肾脏的健康宝典.png" />
+    <Resource Include="Images\Reading\45.试试以下的活动帮助你放松心情 .png" />
+    <Resource Include="Images\Reading\46.糖尿病发生原因.png" />
+    <Resource Include="Images\Reading\47.血糖的控制.png" />
+    <Resource Include="Images\Reading\48.糖尿病食物金字塔.png" />
+    <Resource Include="Images\Reading\49.糖尿病症状.png" />
+    <Resource Include="Images\Reading\5.高血脂会造成哪些危险.png" />
+    <Resource Include="Images\Reading\50.自我血糖监测步骤.png" />
+    <Resource Include="Images\Reading\51.预防第二型糖尿病.png" />
+    <Resource Include="Images\Reading\52.什么是冠心病（一）.png" />
+    <Resource Include="Images\Reading\53.你以后得心脑血管病的风险大不大.png" />
+    <Resource Include="Images\Reading\54.冠心病的高危人群.png" />
+    <Resource Include="Images\Reading\55.容易引发冠心病的行为与环境.png" />
+    <Resource Include="Images\Reading\56.冠心病发作.png" />
+    <Resource Include="Images\Reading\57.健康就是这样被您吃掉的.png" />
+    <Resource Include="Images\Reading\58.冠心病的活动金字塔.png" />
+    <Resource Include="Images\Reading\59.气温骤降，慢性病患者如何照护自己 .png" />
+    <Resource Include="Images\Reading\6.高血脂如何产生.png" />
+    <Resource Include="Images\Reading\60.气温骤降，慢性病患者防护心血管疾病并发症.png" />
+    <Resource Include="Images\Reading\61.气温骤降时注意心脏病发作症状.png" />
+    <Resource Include="Images\Reading\62. 均衡的饮食 冠心病的饮食原则1.png" />
+    <Resource Include="Images\Reading\63.控制“钠”摄取量 冠心病的饮食原则2  .png" />
+    <Resource Include="Images\Reading\64.胆固醇摄取量冠心病的饮食原则3.png" />
+    <Resource Include="Images\Reading\65.采取『低盐饮食』烹调方法冠心病的饮食原则4.png" />
+    <Resource Include="Images\Reading\7.高血脂症-生活运动原则.png" />
+    <Resource Include="Images\Reading\8.高血脂饮食宜忌.png" />
+    <Resource Include="Images\Reading\9.高血脂与心脏的关系%28二%29 .png" />
+    <Resource Include="Images\Reading\list.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
