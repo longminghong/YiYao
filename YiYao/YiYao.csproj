@@ -2040,6 +2040,32 @@
   <ItemGroup>
     <Resource Include="箭头.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\1出血的表现 副本.JPG" />
+    <Resource Include="Images\ScanDrug\2-1体位性低血压的预防和应对 副本.jpg" />
+    <Resource Include="Images\ScanDrug\2.体位性低血压的预防和应对.jpg" />
+    <Resource Include="Images\ScanDrug\3.维生素D是补钙的好帮手.jpg" />
+    <Resource Include="Images\ScanDrug\4-1家庭自测血压注意事项 副本.jpg" />
+    <Resource Include="Images\ScanDrug\4.家庭自测血压注意事项.jpg" />
+    <Resource Include="Images\ScanDrug\5.高血脂的健康饮食习惯.jpg" />
+    <Resource Include="Images\ScanDrug\6-1低血糖反应及处理ver.JPG" />
+    <Resource Include="Images\ScanDrug\6.低血糖反应及处理ver.jpg" />
+    <Resource Include="Images\ScanDrug\7-1低血糖反应及处理ver.jpg" />
+    <Resource Include="Images\ScanDrug\7.低血糖反应及处理ver.jpg" />
+    <Resource Include="Images\ScanDrug\8.如何在家测量心率.jpg" />
+    <Resource Include="Images\ScanDrug\关注药物过敏反应.jpg" />
+    <Resource Include="Images\ScanDrug\关注血钾1.jpg" />
+    <Resource Include="Images\ScanDrug\关注血钾2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\6924147659034.png" />
+    <Resource Include="Images\ScanDrug\6950641900181.png" />
+    <Resource Include="Images\ScanDrug\6958703500010.png" />
+    <Resource Include="Images\ScanDrug\6958703500096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\default_med.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

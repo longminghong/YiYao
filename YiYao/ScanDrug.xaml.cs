@@ -41,7 +41,7 @@ namespace YiYao
                 {
                     DrugID = "6958703500010",
                     DrugName = "苯磺酸氨氯地平片",
-                    DrugImageSource = "6958703500010.png",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	常见的不良反应有水肿、面部潮红、心悸、嗜睡、头晕、腹痛；\n水肿常常发生于脚踝，如果您不能耐受请就诊咨询，医生会给您调整治疗方案。",
@@ -54,7 +54,7 @@ namespace YiYao
                 {
                     DrugID = "6958703500096",
                     DrugName = "阿托伐他汀钙片",
-                    DrugImageSource = "6958703500096.png",
+                    DrugImageSource = "5.高血脂的健康饮食习惯.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	常见不良反应有腹泻、关节痛、肌痛、尿道感染、四肢疼痛，同时该药可能会引起转氨酶升高，用药前建议您抽血检测，用药时如果出现相关症状建议您就诊咨询；\n-   如果出现肌痛、肌无力等肌肉症状，建议您就诊咨询，医生会抽血检查肌酸激酶进行评估，必要时（若超过正常上限10倍）会停药更换其它药物。",
@@ -66,7 +66,7 @@ namespace YiYao
                 {
                     DrugID = "6950641900181",
                     DrugName = "硫酸氢氯吡格雷片",
-                    DrugImageSource = "6950641900181.png",
+                    DrugImageSource = "1出血的表现 副本.JPG",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "请于饭前用适量水送服，请注意整片吞下，不要掰开、研碎或咀嚼服用。",
                                 DrugUnwell = "胃肠道不适包括恶心、呕吐、胃肠道和腹部疼痛；\n该药会使出血的风险增加，因此你需要留意自己是否有出血的表现。如果出现的话，请及时告诉您的医生，他们会帮助您进行分析判断，并决定是否要调整治疗方案。",
@@ -78,7 +78,7 @@ namespace YiYao
                 {
                     DrugID = "6924147659034",
                     DrugName = "阿司匹林肠溶片",
-                    DrugImageSource = "6924147659034.png",
+                    DrugImageSource = "1出血的表现 副本.JPG",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于饭前用适量水送服，注意整片吞下，不要掰开、研碎或咀嚼服用。",
                                 DrugUnwell = "-	胃肠道不适包括恶心、呕吐、胃肠道和腹部疼痛；-   该药会使出血的风险增加，因此您需要留意自己是否有出血的表现（如鼻出血、眼底出血等，详情请点击下方相关阅读）。如果有，请及时告诉您的医生，他们会帮助您进行分析判断，并决定是否要调整治疗方案。 ",
@@ -90,7 +90,7 @@ namespace YiYao
                 {
                     DrugID = "6958703500157",
                     DrugName = "甲磺酸多沙唑嗪缓释片",
-                    DrugImageSource = "",
+                    DrugImageSource = "2.体位性低血压的预防和应对.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请在睡前用适量水送服，注意整片吞下，不要掰开、研碎或咀嚼服用；\n-   如果您在大便中发现药片类似物，请不要担心，药物成分已被吸收，那只是不被吸收的药壳",
                                 DrugUnwell = "-	常见不良反应包括眩晕、乏力、腹痛、恶心、背痛、体位性低血压等，如果频繁出现或不能耐受，请就医咨询；如何预防体位性低血压，请点击下方相关阅读。",
@@ -102,7 +102,7 @@ namespace YiYao
                 {
                     DrugID = "",
                     DrugName = "钙尔奇D",
-                    DrugImageSource = "",
+                    DrugImageSource = "3.维生素D是补钙的好帮手.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请用适量水送服，如果药片太大难以吞咽，可酌情掰开服用；\n-   尽管服用时间无特殊要求，通常建议晚饭后服用。",
                                 DrugUnwell = "-	可能发生的不良反应包括打饱嗝、腹胀、腹痛、便秘、腹泻、恶心和呕吐等胃肠不适。",
@@ -114,7 +114,7 @@ namespace YiYao
                 {
                     DrugID = "6958703500010",
                     DrugName = "苯磺酸氨氯地平片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	常见的不良反应有水肿、面部潮红、心悸、嗜睡、头晕、腹痛；\n-   水肿常常发生于脚踝，如果您不能耐受请就诊咨询，医生会给您调整治疗方案。",
@@ -126,7 +126,7 @@ namespace YiYao
                 {
                     DrugID = "6951283550307",
                     DrugName = "氯沙坦片",
-                    DrugImageSource = "",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请固定在每天的同一时间用适量水送服，服药时间不受食物影响。",
                                 DrugUnwell = "-	可能的不良反应包括头晕、头痛、高血钾等；",
@@ -150,7 +150,7 @@ namespace YiYao
                 {
                     DrugID = "6924147651014",
                     DrugName = "阿卡波糖片",
-                    DrugImageSource = "",
+                    DrugImageSource = "6.低血糖反应及处理ver.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请餐前即刻用适量水吞服，或与前几口主食一起咀嚼服用；\n-   如果漏服药物，下一次用药维持原剂量，注意不要加倍。",
                                 DrugUnwell = "-	常见不良反应包括胃肠胀气和肠鸣音，偶有腹泻和腹胀；\n-   低血糖是多数降糖药物常见的不良反应，尤其是两种或以上降糖药物联用时更容易出现。低血糖的识别和处理请点击下方相关阅读。",
@@ -162,7 +162,7 @@ namespace YiYao
                 {
                     DrugID = "6902182392109",
                     DrugName = "盐酸二甲双胍片",
-                    DrugImageSource = "",
+                    DrugImageSource = "7.低血糖反应及处理ver.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请在餐时用适量水送服；\n-   如果漏服药物，下一次用药维持原剂量不要加倍。",
                                 DrugUnwell = "-	常见不良反应有恶心、呕吐、腹泻、消化不良、乏力及头痛；\n-   低血糖是多数降糖药物常见的不良反应，尤其是两种或以上降糖药物联用时更容易出现。低血糖的识别和处理请点击下方相关阅读。",
@@ -174,7 +174,7 @@ namespace YiYao
                 {
                     DrugID = "6902182393106",
                     DrugName = "盐酸二甲双胍片",
-                    DrugImageSource = "",
+                    DrugImageSource = "7.低血糖反应及处理ver.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请在餐时用适量水送服；\n-   如果漏服药物，下一次用药维持原剂量不要加倍。",
                                 DrugUnwell = "-	常见不良反应有恶心、呕吐、腹泻、消化不良、乏力及头痛；\n-   低血糖是多数降糖药物常见的不良反应，尤其是两种或以上降糖药物联用时更容易出现。低血糖的识别和处理请点击下方相关阅读。",
@@ -186,7 +186,7 @@ namespace YiYao
                 {
                     DrugID = "6923878310320",
                     DrugName = "琥珀酸美托洛尔缓释片",
-                    DrugImageSource = "",
+                    DrugImageSource = "8.如何在家测量心率.jpg",
                     DrugProperties = new DrugProperty {
                                 DrugUseWay = "-	请于早晨用半杯液体送服，白开水、牛奶等均可；\n-   需要服用半片时，可将药片掰开，但注意不要咀嚼或压碎。",
                                 DrugUnwell = "-	可能的不良反应有疲乏、头晕、肢体冷感、心动过缓等；",
@@ -510,45 +510,54 @@ namespace YiYao
         {
             if (state == Scan)
             {
+                //MessageBox.Show("scanDrug drugID : " + drugId);
+
                 var drug = drugInfo.FirstOrDefault(d => d.DrugID == drugId);
                 selectedDrug = (DrugInfo)drug;
                 if (drug != null)
                 {
                     try
                     {
-                        BitmapImage bitmap = new BitmapImage();
-
-                        bitmap.BeginInit();
+                        
 
                         String uriString;
 
                         uriString = "pack://application:,,,/Images/ScanDrug/";
-                        uriString += drug.DrugID;
+                        uriString += selectedDrug.DrugID;
                         uriString += ".png";
+
+                        if (!System.IO.File.Exists(uriString))
+                        {
+                            uriString = "pack://application:,,,/Images/ScanDrug/default_med.png";
+                        }
+
+                        BitmapImage bitmap = new BitmapImage();
+
+                        bitmap.BeginInit();
 
                         bitmap.UriSource = new Uri(uriString, UriKind.Absolute);
                         bitmap.EndInit();
-                        // small icon
+
                         yao.Source = bitmap;
 
-                        textBlock1.Text = drug.DrugProperties.DrugUnwell;
+                        textBlock1.Text = selectedDrug.DrugProperties.DrugUnwell;
                         textBlock1_Copy.Text = "";
 
 
-                        textBlock7.Text = drug.DrugProperties.DrugUseWay;
+                        textBlock7.Text = selectedDrug.DrugProperties.DrugUseWay;
 
-                        textBlock5.Text = drug.DrugProperties.DrugNotice;
+                        textBlock5.Text = selectedDrug.DrugProperties.DrugNotice;
                         textBlock1_Copy2.Text = "";
 
-                        textBlock4.Text = drug.DrugProperties.DrugStoreAdv;
+                        textBlock4.Text = selectedDrug.DrugProperties.DrugStoreAdv;
 
                         scan2.Stop();
                         scan3.Begin();
                         state++;
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
-
+                        //MessageBox.Show("ScanDrug.xaml DoWork Error "+ e);
                     }
                 }
             }
