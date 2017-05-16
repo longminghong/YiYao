@@ -1,8 +1,10 @@
 ﻿using Microsoft.Practices.ServiceLocation;
+using Newtonsoft.Json.Linq;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -75,7 +77,7 @@ namespace YiYao
                 else
                     foodString += "饮食偏好：未知 ";
                 textBlock2.Text = foodString;
-                
+
 
                 String smoking = "";
                 if (String.Equals("no", healthDTO.smoking))
@@ -85,7 +87,7 @@ namespace YiYao
                 else
                     smoking += "抽烟：未知";
                 textBlock11.Text = smoking;
-                
+
 
                 String drink = "";
                 if (String.Equals("no", healthDTO.drinking))
@@ -111,51 +113,14 @@ namespace YiYao
                 textBlock18.Text = "甘油三脂:" + healthDTO.triglyceride;
                 textBlock9.Text = "总胆固醇:" + healthDTO.cholesterol;
                 textBlock19.Text = "LDL-C:" + healthDTO.ldl;
-                
-                //    textBlock9.Text = liveblood;
+                textBlock10.Text = "HDL-C :" + healthDTO.hdl;
 
-                //    textBlock10.Text = "HDL-C:" + healthDTO.hdl;
-                //===========================================
-
-                //if (1 == healthDTO.eatingpreference)
-                //    eatingpreference.Text = "饮食偏好：高盐";
-                //else if (0 == healthDTO.eatingpreference)
-                //    eatingpreference.Text = "饮食偏好：低盐";
-                //else
-                //    eatingpreference.Text = "饮食偏好：未知";
-
-                //if (String.Equals("no", healthDTO.smoking))
-                //    smoking.Text = "是否抽烟：否";
-                //else if (String.Equals("yes", healthDTO.smoking))
-                //    smoking.Text = "是否抽烟：是";
-                //else
-                //    smoking.Text = "是否抽烟：未知";
-
-                //if (String.Equals("no", healthDTO.drinking))
-                //    drinking.Text = "是否酗酒:否";
-                //else if (String.Equals("yes", healthDTO.drinking))
-                //    drinking.Text = "是否酗酒:是";
-                //else
-                //    drinking.Text = "是否酗酒:未知";
-                //height.Text = "身高(cm):"+healthDTO.height;
-                //weight.Text = "体重(KG):"+healthDTO.weight;
-                //waist.Text = "腹围(cm):"+healthDTO.waist;
-                //heartrate.Text = "心率(次/分):" + healthDTO.heartrate;
-                //systolicpressure.Text = "收缩压(mmol/L):" + healthDTO.systolicpressure;
-                //diastolicpressure.Text = "舒张压(mmol/L):" + healthDTO.diastolicpressure;
-                //fastsugar.Text = "空腹血糖(mmol/L):" + healthDTO.fastsugar;
-                //randomsugar.Text = "随机血糖(mmol/L):" + healthDTO.randomsugar;
-                //HbA1c.Text = "糖化血红蛋白(mmol/L):" + healthDTO.HbA1c;
-                //cholesterol.Text = "总胆固醇:" + healthDTO.cholesterol;
-                //triglyceride.Text = "甘油三脂:" + healthDTO.triglyceride;
-                //ldl.Text = "LDL-C:" + healthDTO.ldl;
-                //hdl.Text = "HDL-C:" + healthDTO.hdl;
             }
         }
-        private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            //(Parent as NavigationManager).GoToPage(typeof(A6));
-        }
 
+        private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e) {
+
+
+        }
     }
 }
