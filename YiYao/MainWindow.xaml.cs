@@ -37,6 +37,7 @@ namespace YiYao
             websocketInstance = WebSocketSingleton.GetInstance();
             websocketInstance.start();
             websocketInstance.pageCommandHandle += new WebSocketSingleton.SocketPageCommandHandleEvent(webSocketPageCommandEvents);
+            websocketInstance.connectCloseHandle += new WebSocketSingleton.SocketConnectCloseHandleEvent(webSocketConnectClose);
 
             InitializeComponent();
             mEventAggregator = eventAggregator;
@@ -78,6 +79,16 @@ namespace YiYao
             
             this.Loaded += MainWindow_Loaded;
             mEventAggregator.GetEvent<WebErrorEvent>().Subscribe(OnWebError);
+        }
+
+        void webSocketConnectClose()
+        {
+            MessageBoxResult result;
+            result = MessageBox.Show("Server Connect Close....");
+            if (result == MessageBoxResult.OK)
+            {
+                websocketInstance.start();
+            }
         }
 
         void webSocketPageCommandEvents(MEMBERType sender, object deSerDataObject)
@@ -134,6 +145,17 @@ namespace YiYao
                         pageType = typeof(MedPlan);
                     }
                     break;
+                case MEMBERType.MEMBEDIT:
+                    { // 修改用户基本信息
+                        pageType = typeof(UserInfoEdit);
+                    }
+                    break;
+                case MEMBERType.MEMBEDITDISEASE:
+                    { // 修改用户基本信息
+                        pageType = typeof(A7);
+                    }
+                    break;
+                    
                 default:
                     //
                     break;

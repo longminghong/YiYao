@@ -14,29 +14,22 @@ namespace WebService
         public int risklevel { get; set; }
         public Icd10 icd10 { get; set; }
         public Code_Correspondence code_correspondence { get; set; }
+        public Chinadisease chinadisease { get; set; }
         public Controllable_Risk controllable_risk { get; set; }
         public Measuredata measuredata { get; set; }
         public Chart_Data chart_data { get; set; }
-        public object[] nowdrugs { get; set; }
+        public Nowdrug[] nowdrugs { get; set; }
+        public string operatetype { get; set; }
     }
-
-
-    public class Rootobject
-    {
-        
-    }
-
+ 
     public class Icd10
     {
-        public string[] _1 { get; set; }
         public string[] _2 { get; set; }
         public string[] _6 { get; set; }
         public string[] _7 { get; set; }
-        public string[] _8 { get; set; }
         public string[] _9 { get; set; }
         public string[] _10 { get; set; }
         public string[] _12 { get; set; }
-        public string[] _13 { get; set; }
         public string[] _15 { get; set; }
     }
 
@@ -268,6 +261,16 @@ namespace WebService
         public string[] 预防二型糖尿病 { get; set; }
     }
 
+    public class Chinadisease
+    {
+        public string[] brain { get; set; }
+        public object[] eye { get; set; }
+        public string[] heart { get; set; }
+        public string[] blood { get; set; }
+        public string[] pancreas { get; set; }
+        public string[] kidney { get; set; }
+    }
+
     public class Controllable_Risk
     {
         public string smoking { get; set; }
@@ -318,5 +321,51 @@ namespace WebService
         public int[] ldlcy { get; set; }
         public int[] hdlcy { get; set; }
     }
+
+    public class Nowdrug
+    {
+        public string did { get; set; }
+        public string mid { get; set; }
+        public string sid { get; set; }
+        public string start { get; set; }
+        public string end { get; set; }
+        public string creator { get; set; }
+        public long timestamp { get; set; }
+        public string from { get; set; }
+        public string instructions { get; set; }
+        public string regular { get; set; }
+        public Time time { get; set; }
+        public string period { get; set; }
+        public string commonname { get; set; }
+        public string name { get; set; }
+        public string drug_code { get; set; }
+        public string[] drugstype { get; set; }
+        public int __v { get; set; }
+        public Allergic allergic { get; set; }
+        public Method method { get; set; }
+    }
+
+    public class Time
+    {
+        public string _1 { get; set; }
+        public string _2 { get; set; }
+        public string _4 { get; set; }
+        public string _5 { get; set; }
+    }
+
+    public class Allergic
+    {
+        public string behavior { get; set; }
+        public string whether { get; set; }
+    }
+
+    public class Method
+    {
+        public int time { get; set; }
+        public int dosage { get; set; }
+        public string unit { get; set; }
+        public int day { get; set; }
+    }
+
 
 }

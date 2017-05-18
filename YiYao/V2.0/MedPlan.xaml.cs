@@ -28,6 +28,11 @@ namespace YiYao
         public MedPlan()
         {
             InitializeComponent();
+
+            scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
         }
         public void Start(object args)
         {
@@ -55,6 +60,8 @@ namespace YiYao
             Console.WriteLine("data shopping card ======== OK ");
 
             reciveDTO = (MTMMedPlanDTO)data;
+
+            mycontrol.ItemsSource = reciveDTO.plandrugs;
         }
          
     }

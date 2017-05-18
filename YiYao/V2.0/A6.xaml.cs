@@ -16,6 +16,8 @@ using WebService;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using YiYao.Events;
+using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace YiYao
 {
@@ -25,10 +27,16 @@ namespace YiYao
     public partial class A6 : UserControl, INavigable
     {
         MTMMedCollectDTO medCollectDTO;
+
+        string drugId = "";
         public A6()
         {
             InitializeComponent();
-
+            this.Loaded += (s, e) =>
+            {
+                Window.GetWindow(this).TextInput += ScanDrug_TextInput;
+                
+            };
             scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
             {
                 e.Handled = true;
@@ -86,10 +94,88 @@ namespace YiYao
             mycontrol.ItemsSource = medCollectDTO.drugs;
             mycontrol.Items.Refresh();
 
+            //drugId = "6924147659034";
+            //DoWork();
         }
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
             (Parent as NavigationManager).GoToPage(typeof(A7));
         }
+ 
+        private void ScanDrug_TextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (e.Text == "\r")
+            {
+                DoWork();
+            }
+            else
+            {
+                drugId += e.Text;
+            }
+        }
+
+
+        private void DoWork()
+        {
+
+            if (drugId != null)
+            {
+                try
+                {
+                    DrugBarCode code = new DrugBarCode();
+                    string barcode = drugId;
+                    code.sid = "Vk7Tc-PJx";
+                    code.barcode = barcode;
+
+                    postDataWithWebClient(code);
+                }
+                catch (Exception)
+                {
+
+                }
+                finally {
+
+                    drugId = string.Empty;
+                }
+            }
+
+            
+        }
+        private void postDataWithWebClient(DrugBarCode code)
+        {
+            try
+            {
+                //MessageBox.Show("A6.xaml postDataWithWebClient---"+code.barcode);
+                WebClient wc = new WebClient();
+                string requestUrl = "http://test.o4bs.com/api/members/drugbarcode";
+                // 采取POST方式必须加的Header
+                
+                JObject carJson = JObject.FromObject(code);
+                string paramStr = carJson.ToString();
+
+                byte[] postData = Encoding.UTF8.GetBytes(paramStr);
+
+                wc.Headers.Add("Content-Type", "application/json");
+                wc.Headers.Add("appkey", "097e8751c3c183edf602f867a5326559");
+                wc.Headers.Add("appid", "SyccthZn");
+
+                byte[] responseData = wc.UploadData(requestUrl, "POST", postData); // 得到返回字符流
+                String resultValue = Encoding.UTF8.GetString(responseData);// 解码
+
+                Console.WriteLine(resultValue);
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show("A6.xaml postDataWithWebClient Error happen"+e);
+            }
+            
+        }
+        
+    }
+    public class DrugBarCode
+    {
+
+        public string sid;
+        public string barcode;
     }
 }

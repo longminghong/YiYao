@@ -37,6 +37,10 @@ namespace YiYao
             diseDictionary = new Dictionary<string, string>();
             initData();
             disDataList = new List<String>();
+            scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
         }
 
         public void Start(object args)
@@ -62,7 +66,10 @@ namespace YiYao
             disDataList.Clear();
 
             diseDTO = (MTMDisDTO)data;
-
+            if (null == diseDTO.diseasedata)
+            {
+                return;
+            }
             foreach (String diskey in diseDTO.diseasedata.disease1)
             {
                 if (diseDictionary.ContainsKey(diskey))

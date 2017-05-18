@@ -125,6 +125,9 @@
       <DependentUpon>MedItemsControlDataSource.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\ReadingImageNameConverter.cs" />
+    <Compile Include="V2.0\UserInfoEdit.xaml.cs">
+      <DependentUpon>UserInfoEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="V2.0\A7.xaml.cs">
       <DependentUpon>A7.xaml</DependentUpon>
     </Compile>
@@ -269,6 +272,10 @@
     <Page Include="MedItemsControlDataSource\MedItemsControlDataSource.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="V2.0\UserInfoEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="V2.0\A7.xaml">
       <Generator>MSBuild:Compile</Generator>

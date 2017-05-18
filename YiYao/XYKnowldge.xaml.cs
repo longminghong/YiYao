@@ -108,8 +108,7 @@ namespace YiYao
                 Uri imageURI = new Uri(imagePath, UriKind.Absolute);
                 BitmapImage bitmap = new BitmapImage(imageURI);
                 popimage.Source = bitmap;
-
-
+                
                 Storyboard show = new Storyboard();
 
                 DoubleAnimation d1 = new DoubleAnimation(1, TimeSpan.FromMilliseconds(300));

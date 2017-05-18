@@ -18,6 +18,8 @@ public enum MEMBERType
     MEMBCART = 8,//药品购物车
     MEMBPLAN = 9,//会员用药计划
     MEMBCLOSE = 10,
+    MEMBEDIT = 11,
+    MEMBEDITDISEASE = 12,
     MEMERROR = 999,
 }
 
@@ -27,7 +29,10 @@ namespace WebService
     public class WebSocketSingleton
     {
         public delegate void SocketPageCommandHandleEvent(MEMBERType sender,object obj);
+        public delegate void SocketConnectCloseHandleEvent();
+
         public SocketPageCommandHandleEvent pageCommandHandle;
+        public SocketConnectCloseHandleEvent connectCloseHandle;
 
         private static WebSocketSingleton instance;
         private static object _lock = new object();
@@ -35,6 +40,11 @@ namespace WebService
         private WebSocketSingleton()
         {
 
+        }
+
+        public void SetConnectCloseHandleCallback(SocketConnectCloseHandleEvent callback) {
+
+            connectCloseHandle = callback;
         }
 
         public void SetCallback(SocketPageCommandHandleEvent callback)
@@ -78,12 +88,12 @@ namespace WebService
         {
             string responseContent = null;
 
-            //Console.WriteLine("Received = " + Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic);
+  
             byte[] messageContent = e.Message;
-            //responseContent = System.Text.Encoding.Default.GetString(messageContent);
+      
             responseContent = Encoding.UTF8.GetString(e.Message);
             Console.WriteLine("Received = " + Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic);
-            //DataResult < MemberInfo >
+    
             try
             {
                 if (!string.IsNullOrWhiteSpace(responseContent))
@@ -115,7 +125,7 @@ namespace WebService
 
                         }
                         else {
-                            pageCommandHandle.Invoke(pageType, obj);
+                            pageCommandHandle?.Invoke(pageType, obj);
                         }
                         
                     }
@@ -128,7 +138,6 @@ namespace WebService
             {
                 Console.WriteLine("webSocket:" + ex.InnerException);
             }
-
         }
         // 发布消息后的操作
         void client_MqttMsgPublished(object sender, MqttMsgPublishedEventArgs e)
@@ -139,7 +148,7 @@ namespace WebService
         void client_ConnectionClosed(object sender, EventArgs e)
         {
             Console.WriteLine("client_ConnectionClosed"+ e);
-            start();
+            connectCloseHandle?.Invoke();
         }
         // 取消sub后的操作
         void client_MqttMsgUnsubscribed(object sender, MqttMsgUnsubscribedEventArgs e)
@@ -162,18 +171,13 @@ namespace WebService
             byte[] qosLevels = new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE }; // qos=1
 
             MqttClient client = new MqttClient(enpoint);
-            //client.ProtocolVersion = MqttProtocolVersion.Version_3_1;
-            /**
+            
             byte code = client.Connect(clientid,
                                         user,
                                         pwd,
                                         true, // cleanSession
-                                        1); // keepAlivePeriod
-    */
-            byte code = client.Connect(clientid,
-                                        user,
-                                        pwd);
-
+                                        240); // keepAlivePeriod
+            
             Console.WriteLine(code);
             Console.WriteLine(client.IsConnected);
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;
@@ -225,8 +229,15 @@ namespace WebService
                 else if (responseType.Equals("MEMBER-PLAN"))
                 {
                     memberType = MEMBERType.MEMBPLAN;
+                }else if (responseType.Equals("MEMBER-EDITBASIC"))
+                {
+                    memberType = MEMBERType.MEMBEDIT;
                 }
-
+                else if (responseType.Equals("MEMBER-EDITDISEASE"))
+                {
+                    memberType = MEMBERType.MEMBEDITDISEASE;
+                }
+                
             }
             return memberType;
         }
@@ -252,7 +263,7 @@ namespace WebService
                     break;
                 case MEMBERType.MEMBDRUG:
                     {//新建会员时，采集用药信息
-                        //pageType = typeof(A6);
+                         
                         MTMMedCollectDTO info = JsonConvert.DeserializeObject<MTMMedCollectDTO>(jsonContent, s_settings);
                         obj = info;
                     }
@@ -306,8 +317,23 @@ namespace WebService
 
                         MTMMedPlanDTO info = JsonConvert.DeserializeObject<MTMMedPlanDTO>(jsonContent, s_settings);
                         obj = info;
-                    } 
+                    }
                     break;
+                case MEMBERType.MEMBEDIT:
+                    {//会员用药计划
+
+                        MTMCustInfo info = JsonConvert.DeserializeObject<MTMCustInfo>(jsonContent, s_settings);
+                        obj = info;
+                    }
+                    break;
+                case MEMBERType.MEMBEDITDISEASE:
+                    {//老会员 疾病信息随访
+
+                        MTMDisDTO info = JsonConvert.DeserializeObject<MTMDisDTO>(jsonContent, s_settings);
+                        obj = info;
+                    }
+                    break;
+                    
                 default:
                     //
                     break;

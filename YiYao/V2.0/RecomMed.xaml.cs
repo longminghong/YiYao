@@ -16,6 +16,7 @@ using WebService;
 using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using YiYao.Events;
+ 
 
 namespace YiYao
 {
@@ -26,7 +27,7 @@ namespace YiYao
     {
 
         int demoImageCount = 5;
-
+        WebService.MTMRecMedDTO  dto;
         public RecomMed()
         {
             InitializeComponent();
@@ -34,24 +35,24 @@ namespace YiYao
             this.add_west_chinese_images();
             this.add_west_HCP_images();
             this.add_west_med_images();
-            xiyao.ManipulationBoundaryFeedback += (s, e) =>
+            
+            xiyaoScrollView.ManipulationBoundaryFeedback += (s, e) =>
             {
                 e.Handled = true;
             };
-            zhongyao.ManipulationBoundaryFeedback += (s, e) =>
+            zhongyaoScrollView.ManipulationBoundaryFeedback += (s, e) =>
             {
                 e.Handled = true;
             };
-            baojian.ManipulationBoundaryFeedback += (s, e) =>
+            baojianpinScrollView.ManipulationBoundaryFeedback += (s, e) =>
             {
                 e.Handled = true;
             };
-            baojian.ItemsSource = new string[] { "1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png" };
-            zhongyao.ItemsSource = new string[] { "1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png" };
-            xiyao.ItemsSource = new string[] { "1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png" };
+            //baojian.ItemsSource = new string[] { "1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png" };
+            //zhongyao.ItemsSource = new string[] { "1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png" };
+            //xiyao.ItemsSource = new string[] { "1.png", "2.png", "3.png", "4.png", "1.png", "2.png", "3.png" };
         }
-
-
+        
         public void Start(object args)
         {
             if (null != args)
@@ -72,7 +73,69 @@ namespace YiYao
         }
         private void OnWebSocketEvent(object data)
         {
-            Console.WriteLine("data ======== OK ");
+            try
+            {
+                dto = (WebService.MTMRecMedDTO)data;
+
+                Console.WriteLine("data ======== OK ");
+
+                if (true)
+                {
+                    if (null != dto.healthproduct)
+                    {
+                        baojianpinItemControl.ItemsSource = dto.healthproduct;
+                    }
+                    if (null != dto.chineseherb)
+                    {
+                        zhongyaoItemControl.ItemsSource = dto.chineseherb;
+                    }
+                    if (null!= dto.westdrugs)
+                    {
+                        List<string> westDrug = new List<string>();
+
+                        if (dto.westdrugs.firstdrugs.Count()>0)
+                        {
+                            foreach (WebService.Firstdrug item in dto.westdrugs.firstdrugs)
+                            {
+                                if (!String.IsNullOrEmpty(item.name))
+                                {
+                                    westDrug.Add(item.name);
+                                }
+                                else if (!String.IsNullOrEmpty(item.common_name))
+                                {
+                                    westDrug.Add(item.common_name);
+                                }
+                            }
+                        }
+
+                        if (dto.westdrugs.seconddrugs.Count() > 0)
+                        {
+                            foreach (WebService.Seconddrug item in dto.westdrugs.seconddrugs)
+                            {
+                                if (!String.IsNullOrEmpty(item.name))
+                                {
+                                    westDrug.Add(item.name);
+                                }
+                                else if (!String.IsNullOrEmpty(item.common_name))
+                                {
+                                    westDrug.Add(item.common_name);
+                                }
+                            }
+                        }
+
+                        if (westDrug.Count()>0)
+                        {   
+                            xiyaoItemControl.ItemsSource = westDrug;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
         private void add_west_med_images()
         {

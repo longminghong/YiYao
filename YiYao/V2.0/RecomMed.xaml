@@ -57,8 +57,11 @@
         <Border x:Name="listview_med_Copy" Height="150" Margin="528,535.963,544,394.037" BorderBrush="White" BorderThickness="1"  Background="{x:Null}"/>
 
         <Border x:Name="listview_med_Copy1" Height="150" Margin="528,788.763,544,141.237" BorderBrush="White" BorderThickness="1"   Background="{x:Null}"/>
-        <ScrollViewer  Height="84" Width="813" Margin="552,319,555,677" PanningMode="HorizontalOnly" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" >
-            <ItemsControl x:Name="xiyao"  >
+
+        <ScrollViewer x:Name="xiyaoScrollView"  Background="Transparent" Margin="552,290,555,0" VerticalAlignment="Top"
+                      PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" VerticalScrollBarVisibility="Hidden" Height="150">
+            
+            <ItemsControl x:Name="xiyaoItemControl" Height="115" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
@@ -66,14 +69,20 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding }" Width="158" Height="84" Margin="0,0,10,0"/>
+                        <Grid Width="180" MaxHeight="150" HorizontalAlignment="Left" VerticalAlignment="Top" Height="106">
+                            <TextBlock TextAlignment="Center" Text="{Binding}" FontSize="16" Foreground="White"
+                                         MaxWidth="150" Height="30" Margin="10,85,20,1"></TextBlock>
+                            <Image  Width="150" MaxHeight="80" Margin="10,0,20,30" Source="/YiYao;component/Images/ScanDrug/6950641900181.png"/>
+                        </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
 
-        <ScrollViewer  Height="84" Width="813" Margin="552,569,555,427" PanningMode="HorizontalOnly" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" >
-            <ItemsControl x:Name="zhongyao" >
+        <ScrollViewer x:Name="zhongyaoScrollView" Background="Transparent"   Height="147"  Margin="552,539,555,394" VerticalAlignment="Center"
+                      PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
+
+            <ItemsControl x:Name="zhongyaoItemControl" Height="117" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
@@ -81,14 +90,21 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding }" Width="158" Height="84" Margin="0,0,10,0"/>
+                        <Grid  Background="Transparent" Width="180" MaxHeight="150" HorizontalAlignment="Left" VerticalAlignment="Top" Height="106">
+                            <TextBlock Background="Transparent" TextAlignment="Center" Text="{Binding name}" FontSize="16" Foreground="White"
+                                         MaxWidth="150" Height="30" Margin="10,85,20,1"></TextBlock>
+                            <Image  Width="150" MaxHeight="80" Margin="10,0,20,30" Source="/YiYao;component/Images/ScanDrug/6950641900181.png"/>
+                        </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
 
-        <ScrollViewer  Height="84" Width="813" Margin="552,825,555,171" PanningMode="HorizontalOnly" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" >
-            <ItemsControl x:Name="baojian"  >
+
+        <ScrollViewer x:Name="baojianpinScrollView" Background="Transparent"   Height="147"  Margin="552,792,555,141" VerticalAlignment="Center"
+                      PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
+
+            <ItemsControl x:Name="baojianpinItemControl" Height="117">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
@@ -96,7 +112,11 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding }" Width="158" Height="84" Margin="0,0,10,0"/>
+                        <Grid  Background="Transparent" Width="180" MaxHeight="150" HorizontalAlignment="Left" VerticalAlignment="Top" Height="106">
+                            <TextBlock Background="Transparent" TextAlignment="Center" Text="{Binding formula}" FontSize="16" Foreground="White"
+                                         MaxWidth="150" Height="30" Margin="10,85,20,1"></TextBlock>
+                            <Image  Width="150" MaxHeight="80" Margin="10,0,20,30" Source="/YiYao;component/Images/ScanDrug/6950641900181.png"/>
+                        </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Prism.Events;
 using YiYao.Events;
 using System.Windows.Media.Animation;
+using System.Globalization;
 
 namespace YiYao
 {
@@ -28,13 +29,18 @@ namespace YiYao
         MTMIssueCollectDTO reciveDTO;
 
         public A8()
-        {
+        {   
             InitializeComponent();
-            baojian.ItemsSource = new string[] { "/YiYao;component/1.png", "/YiYao;component/2.png", "/YiYao;component/3.png", "/YiYao;component/4.png", "/YiYao;component/1.png" };
+           // baojian.ItemsSource = new string[] { "/YiYao;component/1.png", "/YiYao;component/2.png", "/YiYao;component/3.png", "/YiYao;component/4.png", "/YiYao;component/1.png" };
             baojian.ManipulationBoundaryFeedback += (s, e) =>
             {
                 e.Handled = true;
             };
+            yaoscrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
+            
 
             yaoscrollviewer.ManipulationBoundaryFeedback += Yaoscrollviewer_ManipulationBoundaryFeedback;
 
@@ -119,6 +125,58 @@ namespace YiYao
                 textblock_weigh.Text = reciveDTO.measuredata.weight.ToString();
                 textblock_bmi.Text = reciveDTO.measuredata.BMI;
                 textblock_waist.Text = reciveDTO.measuredata.waist.ToString();
+
+                List<string> chinaDiseaseData = new List<string>();
+                
+                if (reciveDTO.chinadisease.brain.Count()>0)
+                {
+                    foreach (string item in reciveDTO.chinadisease.brain)
+                    {
+                        chinaDiseaseData.Add(item);
+                    }
+                }
+                if (reciveDTO.chinadisease.eye.Count() > 0)
+                {
+                    foreach (string item in reciveDTO.chinadisease.eye)
+                    {
+                        chinaDiseaseData.Add(item);
+                    }
+                }
+                if (reciveDTO.chinadisease.heart.Count() > 0)
+                {
+                    foreach (string item in reciveDTO.chinadisease.heart)
+                    {
+                        chinaDiseaseData.Add(item);
+                    }
+                }
+                if (reciveDTO.chinadisease.blood.Count() > 0)
+                {
+                    foreach (string item in reciveDTO.chinadisease.blood)
+                    {
+                        chinaDiseaseData.Add(item);
+                    }
+                }
+                if (reciveDTO.chinadisease.pancreas.Count() > 0)
+                {
+                    foreach (string item in reciveDTO.chinadisease.pancreas)
+                    {
+                        chinaDiseaseData.Add(item);
+                    }
+                }
+                if (reciveDTO.chinadisease.kidney.Count() > 0)
+                {
+                    foreach (string item in reciveDTO.chinadisease.kidney)
+                    {
+                        chinaDiseaseData.Add(item);
+                    }
+                }
+                
+                issueControl.ItemsSource = chinaDiseaseData;
+
+                if (null != reciveDTO.nowdrugs)
+                {
+                    baojian.ItemsSource = reciveDTO.nowdrugs;
+                }
             }
             catch (Exception)
             {
@@ -198,6 +256,61 @@ namespace YiYao
             {
                 riskStoryboard.Begin();
             }
+        }
+    }
+
+    public class NowDrugNameConverter :  IMultiValueConverter
+    {   
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            string resultValue = "-";
+            try
+            {
+                if (values.Count()>=2)
+                {
+                    string drug_name = "";
+                    string drug_common_name = "";
+
+                    if (null != values[0])
+                    {
+                        drug_name = (string)values[0];
+                    }
+                     
+                    if (null!=values[1])
+                    {
+                        drug_common_name = (string)values[1];
+                    }
+                    
+                    if (!String.IsNullOrEmpty(drug_name.Trim()))
+                    {
+                        resultValue = drug_name.Trim();
+                    }
+                    else if (!String.IsNullOrEmpty(drug_common_name.Trim()))
+                    {
+
+                        resultValue = drug_common_name.Trim();
+                    }
+                    else {
+
+                        resultValue = "-";
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+
+            }
+            finally
+            {
+                
+            }
+            return resultValue;
+        }
+
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

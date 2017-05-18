@@ -25,14 +25,12 @@ using Newtonsoft.Json.Linq;
 namespace YiYao
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// UserInfoEdit.xaml 的交互逻辑
     /// </summary>
-    public partial class A3 : UserControl, INavigable
+    public partial class UserInfoEdit : UserControl, INavigable
     {
-        private bool mIsChecking;
-
         private MTMCustInfo customInfo;
-        public A3()
+        public UserInfoEdit()
         {
             InitializeComponent();
 
@@ -46,12 +44,8 @@ namespace YiYao
             this.Unloaded += (s, e) =>
             {
                 
-                
             };
         }
-
-        
-
 
         public void Start(object args)
         {
@@ -84,7 +78,7 @@ namespace YiYao
         private void OnWebSocketEvent(object data)
         {
             Console.WriteLine("data ======== OK ");
-            
+
             if (null != data)
             {
                 customInfo = data as MTMCustInfo;
@@ -196,10 +190,11 @@ namespace YiYao
             catch (Exception e)
             {
             }
-            finally {
-                mIsChecking = false;
+            finally
+            {
+               
             }
-            
+
         }
 
         public class MCard
@@ -222,14 +217,14 @@ namespace YiYao
                 this.gender = iCard.Sex;
 
                 string birth = "";
-                birth += iCard.BirthDay.Substring(0,4); 
+                birth += iCard.BirthDay.Substring(0, 4);
                 birth += "-";
 
                 birth += iCard.BirthDay.Substring(4, 2);
                 birth += "-";
 
                 birth += iCard.BirthDay.Substring(6, 2);
-                
+
                 this.dateofbirth = birth;
 
                 this.other = iCard.Address;
@@ -243,8 +238,6 @@ namespace YiYao
                 };
             }
 
-
-
             public class Address
             {
                 public string province { get; set; }
@@ -255,8 +248,5 @@ namespace YiYao
 
 
         }
-
     }
 }
-
-

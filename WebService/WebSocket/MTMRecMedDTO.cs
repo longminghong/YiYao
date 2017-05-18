@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebService
 {
-    class MTMRecMedDTO
+    public class MTMRecMedDTO
     {
         public Westdrugs westdrugs { get; set; }
         public Chineseherb[] chineseherb { get; set; }
@@ -84,6 +84,7 @@ namespace WebService
         public bool whetherRepeat { get; set; }
         public string type { get; set; }
     }
+
 
 
 }

@@ -31,6 +31,11 @@ namespace YiYao
         public ShoppingCar()
         {
             InitializeComponent();
+
+            scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
         }
         public void Start(object args)
         {
@@ -124,8 +129,10 @@ namespace YiYao
             if (null != value)
             {
                 resultValue += value;
+
+                resultValue += "   (盒)";
             }
-            return resultValue += "   (盒)";
+            return resultValue;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -156,24 +163,26 @@ namespace YiYao
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            string resultValue = "";
+            string resultValue = "总价：";
             try
             {
-                var take_number = (int)values[0];
-                var priceString = values[1];
-                double price = 6.6;//System.Convert.ToDouble(priceString.Trim());
-                resultValue = (take_number * price).ToString();
+                if (null != values[0] && null!=values[1])
+                {
+                    var take_number = (int)values[0];
+                    String priceString = (String)values[1];
+                    double price = System.Convert.ToDouble(priceString.Trim());
+                    resultValue += (take_number * price).ToString();
+                }
             }
             catch (Exception)
             {
-
 
             }
             finally {
 
                 resultValue += "  (元)";
             }
-            return resultValue.ToArray();
+            return resultValue;
         }
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)

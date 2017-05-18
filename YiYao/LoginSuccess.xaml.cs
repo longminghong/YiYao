@@ -30,7 +30,11 @@ namespace YiYao
                 var loadingAnimation = FindResource("Storyboard1") as Storyboard;
                  loadingAnimation.Completed += (ss, ee) =>
                   {
-                      (Parent as NavigationManager).GoToPage(typeof(Dashboard));
+                      if (null != Parent)
+                      {
+                          (Parent as NavigationManager).GoToPage(typeof(Dashboard));
+                      }
+                      
                   };
                  loadingAnimation.Begin();
              };

@@ -64,7 +64,7 @@
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock当前用药">
                 <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="可控风险BG">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
@@ -97,9 +97,14 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="Canvas测量数据内容">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
+
+
+        <local:NowDrugNameConverter x:Key="NowDrugNameConverter"/>
+        
     </UserControl.Resources>
     <UserControl.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
@@ -169,27 +174,31 @@
             <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Canvas.Left="49.841" Canvas.Top="0.657"><Run Text="风险"/><Run Text="等级"/><Run Text="："/></TextBlock>
             <TextBlock x:Name="textblock_risk" HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFE83737" FontSize="22"  FontWeight="Bold" Canvas.Left="172.441" Canvas.Top="0.657"/>
         </Canvas>
-        <Canvas Margin="664.2,421.2,84,614.8">
 
-            <Image Source="/YiYao;component/椭圆.png" Stretch="Fill" Height="44" Width="45.2"/>
-            <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="左心房肥大" Canvas.Left="67.2" Canvas.Top="7.437"/>
-        </Canvas>
-        <Canvas Margin="664.2,462.763,84,573.237">
-            <Image Source="/YiYao;component/椭圆.png" Stretch="Fill" Height="44" Width="45.2"/>
-            <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="高血压" Canvas.Left="67.2" Canvas.Top="7.437"/>
-        </Canvas>
-        <Canvas Margin="664.2,504.326,84,531.674">
-            <Image Source="/YiYao;component/椭圆.png" Stretch="Fill" Height="44" Width="45.2"/>
-            <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="高血脂" Canvas.Left="67.2" Canvas.Top="7.437"/>
-        </Canvas>
-        <Canvas Margin="664.2,545.889,84,490.111">
-            <Image Source="/YiYao;component/椭圆.png" Stretch="Fill" Height="44" Width="45.2"/>
-            <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="慢性糖尿病" Canvas.Left="67.2" Canvas.Top="7.437"/>
-        </Canvas>
-        <Canvas Margin="664.2,589.889,84,446.111">
-            <Image Source="/YiYao;component/椭圆.png" Stretch="Fill" Height="44" Width="45.2"/>
-            <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="心率衰竭" Canvas.Left="67.2" Canvas.Top="7.437"/>
-        </Canvas>
+        <ItemsControl x:Name="issueControl" Margin="619,408,28.8,65">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent" Width="500" Height="60
+                          " HorizontalAlignment="Left" VerticalAlignment="Center">
+
+                        <Image Source="/YiYao;component/椭圆.png" Stretch="Fill" Margin="10,6,395,10" Height="44" Width="45.2"/>
+                        <TextBlock HorizontalAlignment="Left"  
+                               TextWrapping="Wrap" VerticalAlignment="Top" 
+                               MaxWidth="400" Foreground="#FFF3FAFA" FontSize="22" Text="{Binding}" Margin="75,10,0,0" />
+                    </Grid>
+
+
+
+                    <!--<Image Source="{Binding}" Width="158" Height="84" Margin="0,0,10,0"/>-->
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        
         <Image x:Name="image" Margin="65.6,84,148.6,65" Source="/YiYao;component/圆角矩形-外框.png" Stretch="Fill" Grid.Column="1"/>
         <TextBlock x:Name="textBlock可控风险" HorizontalAlignment="Left" Height="36.563" Margin="109.4,126.812,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="可控风险" FontWeight="Bold" Grid.Column="1"/>
         <TextBlock x:Name="textBlock测量数据" HorizontalAlignment="Left" Height="36.563" Margin="109.4,336.837,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="测量数据" FontWeight="Bold" Grid.Column="1"/>
@@ -208,8 +217,11 @@
         <Image Margin="109.4,572.526,575.4,372.374" Source="/YiYao;component/血压曲线图.png" Stretch="Fill" Grid.Column="1"/>
         <TextBlock x:Name="textBlock当前用药" HorizontalAlignment="Left" Height="36.563" Margin="109.4,748.037,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" FontWeight="Bold" Text="当前用药" Grid.Column="1"/>
 
-        <ScrollViewer x:Name="yaoscrollviewer" Height="84" Margin="120.2,832,198,164" PanningMode="Both" HorizontalScrollBarVisibility="Hidden" Grid.Column="1" VerticalScrollBarVisibility="Hidden" >
-            <ItemsControl x:Name="baojian" Width="622" >
+        <ScrollViewer Background="Transparent" x:Name="yaoscrollviewer" Height="200" Margin="106,865,200,80" VerticalAlignment="Top"
+                      PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" Grid.Column="1" VerticalScrollBarVisibility="Hidden">
+            
+            <ItemsControl x:Name="baojian" Height="180">
+                
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
@@ -217,14 +229,27 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Image Source="{Binding}" Width="158" Height="84" Margin="0,0,10,0"/>
+                        <Grid  Background="Transparent" Width="180" MaxHeight="150" HorizontalAlignment="Left" VerticalAlignment="Top" Height="120">
+                            <TextBlock Background="Transparent" TextAlignment="Center" FontSize="16" Foreground="White"  
+                                         MaxWidth="150" Height="30" Margin="10,85,20,1">
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource NowDrugNameConverter}">
+
+                                        <Binding Path="name"/>
+
+                                        <Binding Path="commonname"/>
+
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <Image  Width="150" MaxHeight="80" Margin="10,0,20,30" Source="/YiYao;component/Images/ScanDrug/6950641900181.png"/>
+                        </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
+        
         <Canvas x:Name="canvas" Margin="44.8,862.637,722,180.8">
-
-
             <Ellipse Fill="#FFF90000" HorizontalAlignment="Left" Height="30" Stroke="Black" VerticalAlignment="Top" Width="30" Canvas.Top="0.563"/>
             <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="高危" Canvas.Left="48.6"/>
         </Canvas>
@@ -232,7 +257,7 @@
             <Ellipse Fill="#FFF3DC4F" HorizontalAlignment="Left" Height="30" Stroke="Black" VerticalAlignment="Top" Width="30" Canvas.Top="0.563"/>
             <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="中危" Canvas.Left="48.6"/>
         </Canvas>
-        <Canvas x:Name="canvas2" Margin="44.8,957.837,722,85.6" d:IsHidden="True">
+        <Canvas x:Name="canvas2" Margin="44.8,957.837,722,85.6">
             <Ellipse Fill="#FF1FEE47" HorizontalAlignment="Left" Height="30" Stroke="Black" VerticalAlignment="Top" Width="30" Canvas.Top="0.563"/>
             <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Text="健康" Canvas.Left="48.6"/>
 

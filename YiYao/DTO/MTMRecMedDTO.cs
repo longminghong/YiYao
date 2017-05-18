@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YiYao.DTO
+namespace YiYao
 {
-    class MTMRecMedDTO
-    {
-    }
-
-
-    public class Rootobject11
+    public class MTMRecMedDTO
     {
         public Westdrugs westdrugs { get; set; }
         public Chineseherb[] chineseherb { get; set; }
         public Healthproduct[] healthproduct { get; set; }
+        public string westpage { get; set; }
+        public string chinesepage { get; set; }
+        public string healthpage { get; set; }
+        public string operatetype { get; set; }
     }
 
     public class Westdrugs
@@ -81,9 +80,11 @@ namespace YiYao.DTO
         public string formula { get; set; }
         public string dose { get; set; }
         public string remarks { get; set; }
-        public string[] reason { get; set; }
+        public object reason { get; set; }
         public bool whetherRepeat { get; set; }
         public string type { get; set; }
     }
+
+
 
 }

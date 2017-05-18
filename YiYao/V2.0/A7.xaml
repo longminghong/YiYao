@@ -49,23 +49,31 @@
 
         <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="705,146.375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36"><Run Text="心血管"/><Run Text="风险评估"/></TextBlock>
 
-        <ItemsControl x:Name="mycontrol" Width="800" Height="600" > 
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
+        <ScrollViewer x:Name="scrollviewer" Margin="452,282,413,216" MaxHeight="520" 
+                      PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" >
+                
+            <ItemsControl x:Name="mycontrol" MaxWidth="1000"  >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
 
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Grid Background="Transparent" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock Background="Transparent" Foreground="White" TextAlignment="Center" Text="{Binding}" Width="60" Height="20"  HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
-                        <Image Source="/YiYao;component/药物背景-圆.png"  />
-                    </Grid>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        </ItemsControl>
+                            <Image Source="/YiYao;component/药物背景-圆.png"  />
+
+                            <TextBlock Background="Transparent" MaxWidth="110" Foreground="White" FontSize="16" TextAlignment="Center"
+                                   Text="{Binding}" TextWrapping="Wrap"  HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" Margin="73,90,71,93" Width="106" ></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>
+        </ScrollViewer>
 
         <Image x:Name="jiantou1_png" Visibility="Hidden" HorizontalAlignment="Right" Height="76" Margin="0,0,55,484" Source="Images/Login/jiantou1.png" Stretch="Fill" VerticalAlignment="Bottom" Width="40" RenderTransformOrigin="0.5,0.5" MouseDown="jiantou1_png_MouseDown">
             <Image.RenderTransform>

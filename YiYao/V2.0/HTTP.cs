@@ -14,6 +14,7 @@ namespace YiYao
     {
         String ssn;
         String store_id;
+        const String server_host = "http://test.o4bs.com/api/members/identitycard";
         private void HttpPost(String SSNNumber,String Store_ID)
         {   
             if (SSNNumber== null)
@@ -25,12 +26,14 @@ namespace YiYao
                 ssn = SSNNumber;
                 store_id = Store_ID;
             }
-            Uri uri = new Uri("http://localhost:3881/Financial.ashx");
+            Uri uri = new Uri(server_host);
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(uri);
             request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentType = "application/json";
+            request.Headers.Add("appkey","097e8751c3c183edf602f867a5326559");
+            request.Headers.Add("appid", "SyccthZn");
 
-            // 
+            
 
             request.BeginGetRequestStream(new AsyncCallback(RequestProceed), request);
         }
