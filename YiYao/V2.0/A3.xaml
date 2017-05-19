@@ -242,11 +242,11 @@
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi4_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-4,-12"/>
-                <EasingPointKeyFrame KeyTime="0:0:4.9" Value="293,-12"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.9" Value="400,-12"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xinxi4_png">
-                <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-4,35"/>
-                <EasingPointKeyFrame KeyTime="0:0:4.9" Value="293,35"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-4,50"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.9" Value="400,50"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi5_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.7" Value="-6.00000000000003,-14.4999999999999"/>
@@ -719,8 +719,8 @@
             </Image>
 
         </Canvas>
-        <Canvas x:Name="canvas3" Height="23" Margin="730.5,463,313.5,0" VerticalAlignment="Top">
-            <TextBlock x:Name="xinxi4_png" FontSize="20" Foreground="White" Width="900" Height="23"  
+        <Canvas x:Name="canvas3" Height="23" Margin="730.5,463,313.5,0" VerticalAlignment="Top" Background="Transparent">
+            <TextBlock x:Name="xinxi4_png" FontSize="20" Foreground="White" Width="900" Height="23"  Background="Transparent"
                        Canvas.Top="-2" FontStretch="Condensed"  Text="联系方式(座机)：031-88112211031-88112211"  >
                 <TextBlock.Clip>
                     <PathGeometry>
