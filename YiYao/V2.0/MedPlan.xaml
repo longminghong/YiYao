@@ -91,15 +91,15 @@
                             </Canvas>
                             <Canvas x:Name="用药提醒" Margin="185,130,29,98.2">
 
-                                <TextBlock HorizontalAlignment="Left" Foreground="White" Height="20" Margin="0" TextWrapping="Wrap" Text="{Binding start}" FontSize="16" 
+                                <TextBlock HorizontalAlignment="Left" Foreground="White" Height="50" Margin="0" TextWrapping="Wrap" FontSize="16" 
                                            VerticalAlignment="Top" Width="132" Canvas.Left="93" Canvas.Top="10">
                                     <Run Text="{Binding start}"/>
-                                    <!--<LineBreak/>-->
-                                    <Run Text="至"/>
+                                    <LineBreak/>
+                                    <Run Text="       至"/>
                                 </TextBlock>
-
+                                
                                 <TextBlock HorizontalAlignment="Left" Foreground="White" Height="20" Margin="0" TextWrapping="Wrap" Text="{Binding end}" FontSize="16"  
-                                           VerticalAlignment="Top" Width="132" Canvas.Left="93" Canvas.Top="40"/>
+                                           VerticalAlignment="Top" Width="132" Canvas.Left="93" Canvas.Top="50"/>
                         
                                 <TextBlock HorizontalAlignment="Left" Foreground="White" Height="20" Margin="0" TextWrapping="Wrap" Text="用药提醒：" FontSize="16"  
                                            VerticalAlignment="Top" Width="80" Canvas.Top="10"/>
