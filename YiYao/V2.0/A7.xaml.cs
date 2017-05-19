@@ -70,6 +70,7 @@ namespace YiYao
             {
                 return;
             }
+
             foreach (String diskey in diseDTO.diseasedata.disease1)
             {
                 if (diseDictionary.ContainsKey(diskey))
@@ -160,6 +161,14 @@ namespace YiYao
                 }
             }
             foreach (String diskey in diseDTO.diseasedata.disease13)
+            {
+                if (diseDictionary.ContainsKey(diskey))
+                {
+                    String value = diseDictionary[diskey];
+                    disDataList.Add(value);
+                }
+            }
+            foreach (String diskey in diseDTO.diseasedata.disease15)
             {
                 if (diseDictionary.ContainsKey(diskey))
                 {
