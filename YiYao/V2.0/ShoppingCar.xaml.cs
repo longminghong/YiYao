@@ -180,8 +180,10 @@ namespace YiYao
             }
             finally {
 
-                resultValue += "  (元)";
+                
             }
+            resultValue += "  (元)";
+
             return resultValue;
         }
 
