@@ -171,13 +171,16 @@ namespace WebService
             byte[] qosLevels = new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE }; // qos=1
 
             MqttClient client = new MqttClient(enpoint);
-            
-            byte code = client.Connect(clientid,
-                                        user,
-                                        pwd,
-                                        true, // cleanSession
-                                        240); // keepAlivePeriod
-            
+
+            //byte code = client.Connect(clientid,
+            //                            user,
+            //                            pwd,
+            //                            true, // cleanSession
+            //                            240); // keepAlivePeriod
+
+            byte code = client.Connect(
+                clientid, user, pwd);
+
             Console.WriteLine(code);
             Console.WriteLine(client.IsConnected);
             client.MqttMsgPublishReceived += client_MqttMsgPublishReceived;

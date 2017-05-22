@@ -77,9 +77,18 @@ namespace YiYao
         private void setDataAndRefresh(object data) {
 
             qrDTO = (MTMQRDTO)data;
-            Uri qrImagePath = new Uri(qrDTO.src);
-            BitmapImage qrImageSource = new BitmapImage(qrImagePath);
-            imageQR.Source = qrImageSource;
+            try
+            {
+                Uri qrImagePath = new Uri(qrDTO.src);
+                BitmapImage qrImageSource = new BitmapImage(qrImagePath);
+                imageQR.Source = qrImageSource;
+            }
+            catch (Exception)
+            {
+
+           
+            }
+            
         }
 
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)

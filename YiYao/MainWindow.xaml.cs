@@ -32,6 +32,8 @@ namespace YiYao
 
         WebSocketSingleton websocketInstance;
 
+        MessageBox box;
+
         public MainWindow(IEventAggregator eventAggregator)
         {
             websocketInstance = WebSocketSingleton.GetInstance();

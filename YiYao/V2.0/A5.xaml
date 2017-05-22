@@ -305,7 +305,7 @@
                 <EasingPointKeyFrame KeyTime="0:0:4.2" Value="108.666666666667,0.333333333333333"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="textBlock11">
-                <EasingPointKeyFrame KeyTime="0:0:3.9" Value="-5.5,32.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:3.9" Value="-5.5,45"/>
                 <EasingPointKeyFrame KeyTime="0:0:4.2" Value="108.666666666667,33"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="textBlock12">
@@ -314,7 +314,7 @@
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="textBlock12">
                 <EasingPointKeyFrame KeyTime="0:0:4.2" Value="-0.5,31.5"/>
-                <EasingPointKeyFrame KeyTime="0:0:4.5" Value="98.5,29"/>
+                <EasingPointKeyFrame KeyTime="0:0:4.5" Value="98.5,40"/>
             </PointAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock12">
                 <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
