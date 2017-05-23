@@ -11,11 +11,12 @@ using System.Windows.Media.Imaging;
 
 namespace CardReader
 {
-    public class IDCardReader
+    public class IDCardReader : IDisposable
     {
         public event EventHandler CardRead;
         public IDCard CurrentCard;
         private SynchronizationContext mThreadContext;
+        private bool mReading;
 
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_StartFindIDCard(int iPort, byte[] pucManaInfo, int iIfOpen);
@@ -93,13 +94,16 @@ namespace CardReader
 
         public void Start()
         {
+            mReading = true;
             Task.Factory.StartNew(() =>
             {
                 IDCard card = null;
-                while (card == null)
+                while (card == null && mReading)
                 {
                     card = Read();
                 }
+                if (card == null)
+                    return;
                 CurrentCard = card;
                 mThreadContext.Post(delegate
                 {
@@ -109,6 +113,11 @@ namespace CardReader
                     }
                 }, null);
             });
+        }
+
+        public void Dispose()
+        {
+            mReading = false;
         }
 
         static Dictionary<string, string> nationalityDic = new Dictionary<string, string>
