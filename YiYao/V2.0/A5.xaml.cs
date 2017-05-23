@@ -35,12 +35,12 @@ namespace YiYao
 
             this.Loaded += (s, e) =>
             {
-                var loadingAnimation = FindResource("A5Storyboard1") as Storyboard;
-                loadingAnimation.Completed += (ss, ee) =>
-                {
+                //var loadingAnimation = FindResource("A5Storyboard1") as Storyboard;
+                //loadingAnimation.Completed += (ss, ee) =>
+                //{
 
-                };
-                loadingAnimation.Begin();
+                //};
+                //loadingAnimation.Begin();
             };
         }
 
@@ -113,7 +113,9 @@ namespace YiYao
                 textBlock18.Text = "甘油三脂:" + healthDTO.triglyceride;
                 textBlock9.Text = "总胆固醇:" + healthDTO.cholesterol;
                 textBlock19.Text = "LDL-C:" + healthDTO.ldl;
-                textBlock10.Text = "HDL-C :" + healthDTO.hdl;
+                textBlock10.Text = "HDL-C:" + healthDTO.hdl;
+
+                heartbeat.Text = "心率:" + healthDTO.heartrate;
 
             }
         }
