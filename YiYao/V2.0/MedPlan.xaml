@@ -44,11 +44,11 @@
         </Image>
 
 
-        <ScrollViewer Background="Transparent" x:Name="scrollviewer" Margin="154,273,104,0" MaxHeight="600" MaxWidth="1900" Width="1662"
+        <ScrollViewer Background="Transparent" x:Name="scrollviewer" Margin="154,165,104,0" MaxHeight="900" MaxWidth="1900" Width="1662"
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top"
-                      CanContentScroll="True" Height="610" >
+                      CanContentScroll="True" Height="850" >
 
-            <ItemsControl x:Name="mycontrol" MaxWidth="1500" >
+            <ItemsControl x:Name="mycontrol" MaxWidth="1500" Height="833" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />
@@ -97,10 +97,10 @@
                                     <LineBreak/>
                                     <Run Text="       至"/>
                                 </TextBlock>
-                                
+
                                 <TextBlock HorizontalAlignment="Left" Foreground="White" Height="20" Margin="0" TextWrapping="Wrap" Text="{Binding end}" FontSize="16"  
                                            VerticalAlignment="Top" Width="132" Canvas.Left="93" Canvas.Top="50"/>
-                        
+
                                 <TextBlock HorizontalAlignment="Left" Foreground="White" Height="20" Margin="0" TextWrapping="Wrap" Text="用药提醒：" FontSize="16"  
                                            VerticalAlignment="Top" Width="80" Canvas.Top="10"/>
                             </Canvas>
