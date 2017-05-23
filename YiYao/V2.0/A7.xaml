@@ -49,23 +49,23 @@
 
         <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="705,146.375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36"><Run Text="心血管"/><Run Text="风险评估"/></TextBlock>
 
-        <ScrollViewer x:Name="scrollviewer" Margin="452,282,413,216" MaxHeight="520" 
+        <ScrollViewer x:Name="scrollviewer" Margin="135,282,120,216" MaxHeight="520" 
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" >
                 
-            <ItemsControl x:Name="mycontrol" MaxWidth="1000"  >
+            <ItemsControl x:Name="mycontrol" MaxWidth="1500"  >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
-
+                
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Background="Transparent" Width="250" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid Background="Transparent" Width="350" Height="350" HorizontalAlignment="Center" VerticalAlignment="Center">
 
                             <Image Source="/YiYao;component/药物背景-圆.png"  />
 
-                            <TextBlock Background="Transparent" MaxWidth="110" Foreground="White" FontSize="16" TextAlignment="Center"
+                            <TextBlock Background="Transparent" MaxWidth="110" Foreground="White" FontSize="24" TextAlignment="Center"
                                    Text="{Binding}" TextWrapping="Wrap"  HorizontalAlignment="Center"
                                    VerticalAlignment="Center" Margin="73,90,71,93" Width="106" ></TextBlock>
                         </Grid>
