@@ -81,6 +81,12 @@ namespace YiYao
             String ristValueString = "";
             String riskImagePath = "";
 
+            username.Text = "用户名："+ reciveDTO.name;
+            usergender.Text = "性别："+reciveDTO.gender;
+            userbirthday.Text = "生日："+reciveDTO.birthday;
+            userage.Text = "年龄："+reciveDTO.age +" 岁";
+            useraddress.Text = "地址："+reciveDTO.location;
+
             switch (reciveDTO.risklevel)
             {
                 case 1:
@@ -125,7 +131,7 @@ namespace YiYao
                 textblock_weigh.Text = reciveDTO.measuredata.weight.ToString();
                 textblock_bmi.Text = reciveDTO.measuredata.BMI;
                 textblock_waist.Text = reciveDTO.measuredata.waist.ToString();
-
+                
                 List<string> chinaDiseaseData = new List<string>();
                 
                 if (reciveDTO.chinadisease.brain.Count()>0)
