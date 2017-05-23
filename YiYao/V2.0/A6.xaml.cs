@@ -90,6 +90,11 @@ namespace YiYao
                 isallergy.Text = resultValue;
 
             }
+            else
+            {
+                isallergy.Text = "\n\n     无过敏药物";
+            }
+
 
             mycontrol.ItemsSource = medCollectDTO.drugs;
             mycontrol.Items.Refresh();
