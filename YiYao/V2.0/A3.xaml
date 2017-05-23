@@ -243,29 +243,37 @@
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi4_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-4,-12"/>
                 <EasingPointKeyFrame KeyTime="0:0:4.9" Value="400,-12"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="862.7,-8.19999999999999"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xinxi4_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.4" Value="-4,50"/>
                 <EasingPointKeyFrame KeyTime="0:0:4.9" Value="400,50"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="862.7,27.4"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi5_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.7" Value="-6.00000000000003,-14.4999999999999"/>
                 <EasingPointKeyFrame KeyTime="0:0:5.2" Value="460.5,-15.9999999999999"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="608.346699353622,-3.60631883507219"/>
                 <EasingPointKeyFrame KeyTime="0:0:7.4" Value="598.5,-10.5"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xinxi5_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.7" Value="-6.00000000000003,32.5000000000001"/>
                 <EasingPointKeyFrame KeyTime="0:0:5.2" Value="460.5,31.0000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="603.5,25.1"/>
                 <EasingPointKeyFrame KeyTime="0:0:7.4" Value="600.5,30.5"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi6_png">
                 <EasingPointKeyFrame KeyTime="0:0:5" Value="-7.50000000000003,-16.9999999999999"/>
                 <EasingPointKeyFrame KeyTime="0:0:5.4" Value="448.5,-13"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="492.4,-11.4"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="579.908806978497,-4.99987192846609"/>
                 <EasingPointKeyFrame KeyTime="0:0:7.4" Value="566,-12"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xinxi6_png">
                 <EasingPointKeyFrame KeyTime="0:0:5" Value="-7.50000000000003,31.5000000000001"/>
                 <EasingPointKeyFrame KeyTime="0:0:5.4" Value="448.5,35.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="520.8,34.6"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="592,25.4000000000001"/>
                 <EasingPointKeyFrame KeyTime="0:0:7.4" Value="569,34"/>
             </PointAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="xianduan5_png">
@@ -367,11 +375,19 @@
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="textBlock2">
                 <EasingPointKeyFrame KeyTime="0:0:6.2" Value="-5.5,-12.333"/>
-                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="391,-2.83333333333335"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.5" Value="258.833333333333,-5.9998888888889"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="504.6,1.30000000000008"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.7" Value="648.6,-0.299999999999937"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="741.4,-1.89999999999996"/>
+                <EasingPointKeyFrame KeyTime="0:0:8" Value="839.500292055331,-3.46691606977115"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="textBlock2">
                 <EasingPointKeyFrame KeyTime="0:0:6.2" Value="-5.5,35.3330000000001"/>
-                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="370.333333333333,39.1666666666667"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.5" Value="245.055555555555,37.8887777777778"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="471,30.1"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.7" Value="626.2,31.7000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="711,30.1"/>
+                <EasingPointKeyFrame KeyTime="0:0:8" Value="842.2,25.3000000000001"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="textBlock1_Copy">
                 <SplinePointKeyFrame KeyTime="0:0:5.2" Value="-6.5,-7.5"/>
@@ -383,15 +399,15 @@
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="textBlock3">
                 <EasingPointKeyFrame KeyTime="0:0:5.6" Value="-5.5,-12.5"/>
-                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="342,-9.99999999999997"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="543.8,-9.1999999999999"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="textBlock3">
                 <EasingPointKeyFrame KeyTime="0:0:5.6" Value="-5.5,28.5"/>
-                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="303,35.0000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="545.4,32.4000000000001"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="textBlock3">
                 <EasingPointKeyFrame KeyTime="0:0:5.6" Value="-47.5,28.5"/>
-                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="-25,32.0000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="-20.6203794296623,33.9054528099274"/>
             </PointAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock3">
                 <EasingDoubleKeyFrame KeyTime="0:0:5.6" Value="0"/>
@@ -488,6 +504,42 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:4.8" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="textBlock3">
+                <EasingPointKeyFrame KeyTime="0:0:5.6" Value="-47.5,-12.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="-24.1999999999999,-2.79999999999996"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="xinxi6_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.4" Value="-64,-22.5"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="-13.1999999999999,-5.00000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="-36.8,-8.20000000000006"/>
+                <EasingPointKeyFrame KeyTime="0:0:7.4" Value="-64,-22.5"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="xinxi6_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.4" Value="-64,26"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.1" Value="-9.65011542117418,25.7530439505725"/>
+                <EasingPointKeyFrame KeyTime="0:0:7.4" Value="-64,26"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="textBlock2">
+                <EasingDoubleKeyFrame KeyTime="0:0:6.2" Value="838"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.5" Value="840"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:6.8" Value="838"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="textBlock2">
+                <EasingPointKeyFrame KeyTime="0:0:6.5" Value="-36.5,-12.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="-15.8,-5.09999999999994"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="-36.5,-12.333"/>
+                <EasingPointKeyFrame KeyTime="0:0:8" Value="-33,-5.09999999999992"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(LineSegment.Point)" Storyboard.TargetName="textBlock2">
+                <EasingPointKeyFrame KeyTime="0:0:6.5" Value="-36.5,35.3330000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="-14.2,31.7000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.8" Value="-36.5,35.3330000000001"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="xinxi5_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.2" Value="-55,-15"/>
+                <EasingPointKeyFrame KeyTime="0:0:6.6" Value="-53.3533006463778,-8.50631883507219"/>
+                <EasingPointKeyFrame KeyTime="0:0:7.4" Value="-55,-15"/>
+            </PointAnimationUsingKeyFrames>
         </Storyboard>
     </UserControl.Resources>
     <Grid>
@@ -844,8 +896,8 @@
                     </PathGeometry>
                 </TextBlock.Clip><Run FontFamily="/YiYao;component/Font/#ZHSRXT-GBK" Text="会员信息"/><LineBreak/><Run/></TextBlock>
         </Canvas>
-        <Canvas x:Name="canvas12" Margin="729,694,908.165,357">
-            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" Width="282.835" Foreground="White" FontSize="20" Text="会员卡号：873552904">
+        <Canvas x:Name="canvas12" Margin="729,694,700,357">
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" Width="542.2" Foreground="White" FontSize="20" Text="会员卡号：873552904">
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-47.5,-12.5">
