@@ -85,12 +85,13 @@ namespace YiYao
 
         void webSocketConnectClose()
         {
-            MessageBoxResult result;
-            result = MessageBox.Show("Server Connect Close....");
-            if (result == MessageBoxResult.OK)
-            {
-                websocketInstance.start();
-            }
+            //MessageBoxResult result;
+            //result = MessageBox.Show("Server Connect Close....");
+            //if (result == MessageBoxResult.OK)
+            //{
+            //    websocketInstance.start();
+            //}
+            websocketInstance.start();
         }
 
         void webSocketPageCommandEvents(MEMBERType sender, object deSerDataObject)
