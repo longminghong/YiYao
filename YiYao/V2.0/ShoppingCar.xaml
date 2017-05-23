@@ -51,11 +51,11 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <ScrollViewer Background="Transparent" x:Name="scrollviewer" Margin="182,273,0,0" MaxHeight="600" MaxWidth="1900" Width="1662"
+        <ScrollViewer Background="Transparent" x:Name="scrollviewer" Margin="220,160,38,0" MaxHeight="600" MaxWidth="1900" Width="1662"
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top"
-                      CanContentScroll="True" Height="648" >
-            
-            <ItemsControl Loaded="mycontrol_Loaded" x:Name="mycontrol" Width="1574" > 
+                      CanContentScroll="True" Height="850" >
+
+            <ItemsControl Loaded="mycontrol_Loaded" x:Name="mycontrol" Width="1574" Height="840" > 
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />
@@ -73,7 +73,7 @@
                                     </EasingDoubleKeyFrame>
                                     <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
                                 </DoubleAnimationUsingKeyFrames>
-                                
+
                                 <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="med_image">
                                     <EasingDoubleKeyFrame KeyTime="0" Value="0">
                                         <EasingDoubleKeyFrame.EasingFunction>
@@ -108,7 +108,7 @@
                             <TextBlock HorizontalAlignment="Left" Background="Transparent" Foreground="White" Height="20" Margin="185,30.3,0,0" TextWrapping="Wrap" FontSize="16"
                                 Text="{Binding name, Converter={StaticResource ShopCarMedNameConverter}}" 
                                 VerticalAlignment="Top" Width="250"/>
-                            
+
                             <TextBlock Background="Transparent" HorizontalAlignment="Left" Foreground="White" Height="20" Margin="185,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"  
                                        FontSize="16"
                                 Text="{Binding specification, Converter={StaticResource ShopCarMedSpecificationConverter}}"/>

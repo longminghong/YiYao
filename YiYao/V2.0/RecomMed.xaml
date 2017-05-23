@@ -47,21 +47,21 @@
         </Image>
         <Image Margin="528,112,544,837" Source="A4-top.png" Stretch="Fill"/>
 
-        <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="528,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="西药" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="46"  TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Foreground="#FF42918A" FontSize="36" Margin="163,290,0,0" FontWeight="Bold"><Run Text="西药"/><Run Text="推荐用药"/></TextBlock>
 
-        <Border x:Name="listview_west_med" Height="150" Margin="528,289.563,544,640.437" BorderBrush="White" BorderThickness="1" Background="{x:Null}"/>
+        <Border x:Name="listview_west_med" Height="150" Margin="528,290,145,640" BorderBrush="White" BorderThickness="1" Background="{x:Null}"/>
 
-        <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="528,494.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="中药" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="36.563" Margin="528,747.2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="保健品" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Foreground="#FF42918A" FontSize="36" Margin="163,536,0,0" ><Run Text="中药"/><Run Text="推荐用药"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="46" Margin="163,792,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Foreground="#FF42918A" FontSize="36" FontWeight="Bold"><Run Text="保健品"/><Run Text="推荐用药"/></TextBlock>
 
-        <Border x:Name="listview_med_Copy" Height="150" Margin="528,535.963,544,394.037" BorderBrush="White" BorderThickness="1"  Background="{x:Null}"/>
+        <Border x:Name="listview_med_Copy" Height="150" Margin="528,536,145,394" BorderBrush="White" BorderThickness="1"  Background="{x:Null}"/>
 
-        <Border x:Name="listview_med_Copy1" Height="150" Margin="528,788.763,544,141.237" BorderBrush="White" BorderThickness="1"   Background="{x:Null}"/>
+        <Border x:Name="listview_med_Copy1" Height="150" Margin="528,789,145,141" BorderBrush="White" BorderThickness="1"   Background="{x:Null}"/>
 
-        <ScrollViewer x:Name="xiyaoScrollView"  Background="Transparent" Margin="552,290,555,0" VerticalAlignment="Top"
+        <ScrollViewer x:Name="xiyaoScrollView"  Background="Transparent" Margin="552,290,185,0" VerticalAlignment="Top"
                       PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" VerticalScrollBarVisibility="Hidden" Height="150">
-            
-            <ItemsControl x:Name="xiyaoItemControl" Height="115" >
+
+            <ItemsControl x:Name="xiyaoItemControl" Height="115" Width="1192" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
@@ -79,7 +79,7 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <ScrollViewer x:Name="zhongyaoScrollView" Background="Transparent"   Height="147"  Margin="552,539,555,394" VerticalAlignment="Center"
+        <ScrollViewer x:Name="zhongyaoScrollView" Background="Transparent"   Height="147"  Margin="552,539,185,394" VerticalAlignment="Center"
                       PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
 
             <ItemsControl x:Name="zhongyaoItemControl" Height="117" >
@@ -101,7 +101,7 @@
         </ScrollViewer>
 
 
-        <ScrollViewer x:Name="baojianpinScrollView" Background="Transparent"   Height="147"  Margin="552,792,555,141" VerticalAlignment="Center"
+        <ScrollViewer x:Name="baojianpinScrollView" Background="Transparent"   Height="147"  Margin="552,792,185,141" VerticalAlignment="Center"
                       PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
 
             <ItemsControl x:Name="baojianpinItemControl" Height="117">
@@ -133,7 +133,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="90.6,114.637,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36" Text="推荐用药"/>
+        <TextBlock HorizontalAlignment="Left" Height="46" Margin="705,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36" Text="推荐用药"/>
         <!-- 点阵地图-->
     </Grid>
 </UserControl>
