@@ -47,10 +47,14 @@ namespace YiYao
         {
             if (null != args)
             {
-                mycontrol.ItemsSource = disDataList;
-                //customInfo = (MTMCustInfo)args;
-                // to do 数据绑定
+                diseDTO = (MTMDisDTO)args;
 
+                mycontrol.ItemsSource = disDataList;
+                
+                if (String.Equals("no", diseDTO.isfirst))
+                {
+                    
+                }
                 EventAggregator eventAggragator = ServiceLocator.Current.GetInstance<EventAggregator>();
                 eventAggragator.GetEvent<WebSocketEvent>().Subscribe(OnWebSocketEvent);
             }

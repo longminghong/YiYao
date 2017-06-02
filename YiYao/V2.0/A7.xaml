@@ -45,11 +45,11 @@
         <!-- 点阵地图-->
         <Image Margin="534.2,151.375,537.8,797.625" Source="A4-top.png" Stretch="None"/>
 
-        <Image Margin="592,868.8,629,164.2" Source="A4-bottom.png" Stretch="Fill"/>
+        <Image Margin="592,980,629,53" Source="A4-bottom.png" Stretch="Fill"/>
 
         <TextBlock HorizontalAlignment="Left" Height="45.625" Margin="705,146.375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF42918A" FontSize="36"><Run Text="心血管"/><Run Text="风险评估"/></TextBlock>
 
-        <ScrollViewer x:Name="scrollviewer" Margin="135,282,120,216" MaxHeight="520" 
+        <ScrollViewer x:Name="scrollviewer" Margin="130,151,125,105" MaxHeight="700" 
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" >
                 
             <ItemsControl x:Name="mycontrol" MaxWidth="1500"  >
