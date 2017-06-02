@@ -9,7 +9,7 @@ namespace WebService
     public class MTMQRDTO
     {
         public string operatetype { get; set; }
-
+        public string binded { get; set; }
         public string src { get; set; }
     }
 }

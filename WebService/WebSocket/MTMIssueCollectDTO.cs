@@ -11,6 +11,13 @@ namespace WebService
 {
     public class MTMIssueCollectDTO
     {
+        public string name { get; set; }
+        public string gender { get; set; }
+        public string birthday { get; set; }
+        public string age { get; set; }
+        public string phone { get; set; }
+        public string location { get; set; }
+        public string cardno { get; set; }
         public int risklevel { get; set; }
         public Icd10 icd10 { get; set; }
         public Code_Correspondence code_correspondence { get; set; }
@@ -21,15 +28,23 @@ namespace WebService
         public Nowdrug[] nowdrugs { get; set; }
         public string operatetype { get; set; }
     }
+
  
+
     public class Icd10
     {
+        public string[] _1 { get; set; }
         public string[] _2 { get; set; }
+        public string[] _3 { get; set; }
+        public string[] _4 { get; set; }
         public string[] _6 { get; set; }
         public string[] _7 { get; set; }
+        public string[] _8 { get; set; }
         public string[] _9 { get; set; }
         public string[] _10 { get; set; }
+        public string[] _11 { get; set; }
         public string[] _12 { get; set; }
+        public string[] _13 { get; set; }
         public string[] _15 { get; set; }
     }
 
@@ -264,7 +279,7 @@ namespace WebService
     public class Chinadisease
     {
         public string[] brain { get; set; }
-        public object[] eye { get; set; }
+        public string[] eye { get; set; }
         public string[] heart { get; set; }
         public string[] blood { get; set; }
         public string[] pancreas { get; set; }
@@ -283,10 +298,10 @@ namespace WebService
 
     public class Measuredata
     {
-        public int height { get; set; }
-        public int weight { get; set; }
+        public double height { get; set; }
+        public double weight { get; set; }
         public string BMI { get; set; }
-        public int waist { get; set; }
+        public double waist { get; set; }
     }
 
     public class Chart_Data
@@ -300,26 +315,26 @@ namespace WebService
     {
         public string unit { get; set; }
         public string[] x { get; set; }
-        public int[] systolicpressure { get; set; }
-        public int[] diastolicpressure { get; set; }
+        public double[] systolicpressure { get; set; }
+        public double[] diastolicpressure { get; set; }
     }
 
     public class Xuetang
     {
         public string unit { get; set; }
         public string[] x { get; set; }
-        public int[] fastBloodSugar { get; set; }
-        public int[] randomBloodSugar { get; set; }
+        public double[] fastBloodSugar { get; set; }
+        public double[] randomBloodSugar { get; set; }
     }
 
     public class Xuezhi
     {
         public string unit { get; set; }
         public string[] x { get; set; }
-        public int[] cholesteroly { get; set; }
-        public int[] triglyceridey { get; set; }
-        public int[] ldlcy { get; set; }
-        public int[] hdlcy { get; set; }
+        public double[] cholesteroly { get; set; }
+        public double[] triglyceridey { get; set; }
+        public double[] ldlcy { get; set; }
+        public double[] hdlcy { get; set; }
     }
 
     public class Nowdrug
@@ -334,23 +349,14 @@ namespace WebService
         public string from { get; set; }
         public string instructions { get; set; }
         public string regular { get; set; }
-        public Time time { get; set; }
         public string period { get; set; }
         public string commonname { get; set; }
         public string name { get; set; }
         public string drug_code { get; set; }
         public string[] drugstype { get; set; }
-        public int __v { get; set; }
+        public double __v { get; set; }
         public Allergic allergic { get; set; }
         public Method method { get; set; }
-    }
-
-    public class Time
-    {
-        public string _1 { get; set; }
-        public string _2 { get; set; }
-        public string _4 { get; set; }
-        public string _5 { get; set; }
     }
 
     public class Allergic
@@ -361,11 +367,10 @@ namespace WebService
 
     public class Method
     {
-        public int time { get; set; }
-        public int dosage { get; set; }
         public string unit { get; set; }
         public int day { get; set; }
     }
+
 
 
 }

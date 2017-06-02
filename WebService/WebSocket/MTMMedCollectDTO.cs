@@ -12,7 +12,7 @@ namespace WebService
         public string errormsg { get; set; }
         public string complete { get; set; }
         public string isallergy { get; set; }
-        
+        public string isfirst { get; set; }
         public Allergicdrug[] allergicdrug { get; set; }
         public string hypotensor { get; set; }
         public string systolicpressure { get; set; }

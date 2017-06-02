@@ -12,21 +12,7 @@ namespace WebService
     }
 
 
-    /*
-     *  
-     *  "upc_code": "67889",
-      "category": "buydrugs",
-      "day": "1",
-      "time": "2",
-      "dosage": "3",
-      "start": "2017-04-05",
-      "end": "2017-04-14",
-      "date": "2017-04-07",
-      "name": "G汤臣倍健维生素B族片（73616）",
-      "common_name": "",
-      "specification": "550mg*100片"
-      *
-     */
+  
     public class Plandrug
     {
         public string category { get; set; }

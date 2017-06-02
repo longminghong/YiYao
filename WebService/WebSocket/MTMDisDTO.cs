@@ -10,6 +10,7 @@ namespace WebService
     {
         public string operatetype { get; set; }
         public string errormsg { get; set; }
+        public string isfirst { get; set; }
         public string complete { get; set; }
         public Diseasedata diseasedata { get; set; }
     }
