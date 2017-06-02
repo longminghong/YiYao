@@ -16,8 +16,8 @@ namespace YiYao.DTO
         public string isallergy { get; set; }
         public Allergicdrug[] allergicdrug { get; set; }
         public string hypotensor { get; set; }
-        public int systolicpressure { get; set; }
-        public int diastolicpressure { get; set; }
+        public double systolicpressure { get; set; }
+        public double diastolicpressure { get; set; }
         public Drug[] drugs { get; set; }
     }
 
