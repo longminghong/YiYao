@@ -20,7 +20,7 @@ namespace WebService
         public string phone { get; set; }
         public string pattern { get; set; }
         public string phonenumber { get; set; }
-
+        public string isfirst { get; set; }
         public string phonezone { get; set; }
         public string extension { get; set; }
 

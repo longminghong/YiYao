@@ -6,6 +6,8 @@ using System.Text;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
+using System.IO;
+
 public enum MEMBERType
 {
     MEMBBASIC = 1,//新建会员时，采集基本信息
@@ -71,7 +73,8 @@ namespace WebService
         {
             DateFormatHandling = DateFormatHandling.IsoDateFormat,
             NullValueHandling = NullValueHandling.Ignore,
-            ContractResolver = s_defaultResolver
+            ContractResolver = s_defaultResolver,
+        
         };
 
         /**
@@ -136,7 +139,7 @@ namespace WebService
             }
             catch (Exception ex)
             {
-                Console.WriteLine("webSocket:" + ex.InnerException);
+                Console.WriteLine("webSocket:" + ex.Message);
             }
         }
         // 发布消息后的操作
@@ -159,6 +162,7 @@ namespace WebService
         const String oldTopic = "MTM_WEB_TEST/pypub";
         public void start()
         {
+
             Console.WriteLine("web socket run.");
 
             string enpoint = "mqf-bym08ztgwf.mqtt.aliyuncs.com";
@@ -289,15 +293,13 @@ namespace WebService
                     {//会员评估结果数据
                         //pageType = typeof(A8);
                         MTMIssueCollectDTO info = JsonConvert.DeserializeObject<MTMIssueCollectDTO>(jsonContent, s_settings);
-                        if (0 == info.risklevel)
+                        if (null != info.measuredata)
+                        {
+                            obj = info;
+                        }else if (0 == info.risklevel)
                         {
                             obj = null;
                         }
-                        else
-                        {
-                            obj = info;
-                        }
-                        
                     }
                     break;
                 case MEMBERType.MEMBRECOMM:
@@ -342,6 +344,29 @@ namespace WebService
                     break;
             }
             return obj;
+        }
+
+        public MTMIssueCollectDTO callForA8() {
+            
+            MTMIssueCollectDTO info = null;
+            try
+            {
+                string str = System.Environment.CurrentDirectory + "\\Json.txt";
+                // Open the text file using a stream reader.
+                using (StreamReader sr = new StreamReader(str))
+                {
+                    // Read the stream to a string, and write the string to the console.
+                    String line = sr.ReadToEnd();
+                    
+                    info = JsonConvert.DeserializeObject<MTMIssueCollectDTO>(line, s_settings);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+            return info;
         }
     }
 }
