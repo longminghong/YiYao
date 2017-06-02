@@ -48,7 +48,7 @@
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top"
                       CanContentScroll="True" Height="850" >
 
-            <ItemsControl x:Name="mycontrol" MaxWidth="1500" Height="833" >
+            <ItemsControl x:Name="mycontrol" MaxWidth="1500"  >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />
