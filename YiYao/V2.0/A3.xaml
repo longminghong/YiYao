@@ -850,8 +850,8 @@
         </Canvas>
         <Canvas x:Name="canvas" Height="36" Margin="892.999,210.666,776.001,0" VerticalAlignment="Top"/>
         <Canvas Margin="893,209,902,830">
-            <Canvas Height="41" Canvas.Left="138" Width="177" Canvas.Top="-8">
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="41" TextWrapping="Wrap" Text="新增会员" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.5,0.5" FontSize="36" Foreground="#FF00FFA8" Canvas.Left="-31.333" Canvas.Top="4.437" FontFamily="/YiYao;component/Font/#ZHSRXT-GBK">
+            <Canvas Height="41" Canvas.Left="138" Width="250" Canvas.Top="-8">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="41" TextWrapping="Wrap" Text="新增会员" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.5,0.5" FontSize="36" Foreground="#FF00FFA8" Canvas.Left="-31.333" Canvas.Top="4.437" FontFamily="/YiYao;component/Font/#ZHSRXT-GBK">
                     <TextBlock.Clip>
                         <PathGeometry>
                             <PathFigure IsClosed="True" StartPoint="-19.833,-5.833">

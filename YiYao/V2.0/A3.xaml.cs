@@ -29,6 +29,7 @@ namespace YiYao
     /// </summary>
     public partial class A3 : UserControl, INavigable
     {
+        private IDCardReader cardReader;
         private bool mIsChecking;
 
         private MTMCustInfo customInfo;
@@ -42,15 +43,24 @@ namespace YiYao
             {
                 var loadingAnimation = FindResource("A3Storyboard1") as Storyboard;
                 loadingAnimation.Begin();
+
+                cardReader = new IDCardReader();
+                cardReader.CardRead += CardReader_CardRead;
+                cardReader.Start();
             };
             this.Unloaded += (s, e) =>
             {
-                
-                
+                cardReader.CardRead -= CardReader_CardRead;
+                cardReader.Dispose();
             };
         }
 
-        
+        private async void CardReader_CardRead(object sender, EventArgs e)
+        {
+            AppData.CurrentIDCard = cardReader.CurrentCard;
+
+            postDataWithWebClient();
+        }
 
 
         public void Start(object args)
@@ -64,6 +74,14 @@ namespace YiYao
                 try
                 {
                     customInfo = (MTMCustInfo)args;
+
+                    if (String.Equals("no",customInfo.isfirst)) {
+                        textBlock.Text = "修改信息";
+
+                        textBlock4.Visibility = Visibility.Hidden;
+
+                        canvas14.Margin = new Thickness(729, 746.5, 853, 247.5);
+                    }
                 }
                 catch (Exception)
                 {
@@ -102,7 +120,9 @@ namespace YiYao
                 xinxi5_png.Text = "身份证 ：" + customInfo.ssn;
                 xinxi6_png.Text = "邮件 ：" + customInfo.email;
                 textBlock3.Text = "会员卡号 ：" + customInfo.cardno;
+                 
                 textBlock4.Text = "开卡时间 ：" + customInfo.carddate;
+
                 textBlock2.Text = "地址 ：" + customInfo.province + customInfo.city + customInfo.district + customInfo.detailaddress;
 
             }
