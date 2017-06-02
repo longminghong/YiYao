@@ -100,7 +100,7 @@ namespace YiYao
                 },
                 new DrugInfo
                 {
-                    DrugID = "",
+                    DrugID = "6921361255288",
                     DrugName = "钙尔奇D",
                     DrugImageSource = "3.维生素D是补钙的好帮手.jpg",
                     DrugProperties = new DrugProperty {
@@ -326,7 +326,7 @@ namespace YiYao
                 },
                 new DrugInfo
                 {
-                    DrugID = "",
+                    DrugID = "6910853819589",
                     DrugName = "瑞舒伐他汀钙片",
                     DrugImageSource = "5.高血脂的健康饮食习惯.jpg",
                     DrugProperties = new DrugProperty {
@@ -518,27 +518,6 @@ namespace YiYao
                 {
                     try
                     {
-                        
-
-                        String uriString;
-
-                        uriString = "pack://application:,,,/Images/ScanDrug/";
-                        uriString += selectedDrug.DrugID;
-                        uriString += ".png";
-
-                        if (!System.IO.File.Exists(uriString))
-                        {
-                            uriString = "pack://application:,,,/Images/ScanDrug/default_med.png";
-                        }
-
-                        BitmapImage bitmap = new BitmapImage();
-
-                        bitmap.BeginInit();
-
-                        bitmap.UriSource = new Uri(uriString, UriKind.Absolute);
-                        bitmap.EndInit();
-
-                        yao.Source = bitmap;
 
                         textBlock1.Text = selectedDrug.DrugProperties.DrugUnwell;
                         textBlock1_Copy.Text = "";
@@ -550,6 +529,27 @@ namespace YiYao
                         textBlock1_Copy2.Text = "";
 
                         textBlock4.Text = selectedDrug.DrugProperties.DrugStoreAdv;
+
+                        String uriString;
+
+                        uriString = "pack://application:,,,/Images/ScanDrug/";
+                        uriString += selectedDrug.DrugID;
+                        uriString += ".png";
+
+                        //if (!System.IO.File.Exists(uriString))
+                        //{
+                        //    uriString = "pack://application:,,,/Images/ScanDrug/default_med.png";
+                        //}
+
+                        BitmapImage bitmap = new BitmapImage();
+
+                        bitmap.BeginInit();
+
+                        bitmap.UriSource = new Uri(uriString, UriKind.Absolute);
+                        bitmap.EndInit();
+
+                        yao.Source = bitmap;
+
 
                         scan2.Stop();
                         scan3.Begin();
@@ -564,12 +564,20 @@ namespace YiYao
             drugId = string.Empty;
         }
 
+        //protected override void OnTouchDown(TouchEventArgs e)
+        //{
+        //    base.OnTouchDown(e);
+        //    PointerDown();
+        //}
         protected override void OnTouchDown(TouchEventArgs e)
         {
+            if (e.TouchDevice.Capture(this))
+            {
+                e.Handled = true;
+            }
             base.OnTouchDown(e);
             PointerDown();
         }
-
 
         protected override void OnMouseDown(MouseButtonEventArgs e)
         {
@@ -585,7 +593,6 @@ namespace YiYao
                 scan3.Begin();
                 state++;
             }
-
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)

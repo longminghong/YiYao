@@ -5297,7 +5297,7 @@
         <Image x:Name="reading" Visibility="Hidden"  Margin="811,916,853,35" MouseDown="Image_MouseDown" Source="相关阅读.png" Stretch="Fill"/>
 
 
-        <Canvas x:Name="pop" Visibility="Collapsed" Opacity="0" Width="1335" Height="777" Canvas.Top="170" Canvas.Left="300" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="pop" Visibility="Collapsed"  Opacity="1" Width="1335" Height="777" Canvas.Top="170" Canvas.Left="300" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform />
@@ -5306,11 +5306,12 @@
             </Canvas.RenderTransform>
             <Image x:Name="readingImage" Width="1335" Height="777"  >
             </Image>
-            <Button Canvas.Right="0"  Click="Button_Click" IsManipulationEnabled="True">
+            <Button Canvas.Right="0" Width="80" Height="80" Click="Button_Click" IsManipulationEnabled="True" >
                 <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-
-                        <TextBlock Foreground="White" Text="X" FontSize="40" Background="#11000000" Padding="10,10,50,50"/>
+                    <ControlTemplate TargetType="{x:Type Button}" >
+                        
+                        <!--<TextBlock Foreground="White" Text="S" FontSize="40" Background="#11000000" Padding="10,10,50,50"/>-->
+                        <TextBlock Foreground="White" Text="X" TextAlignment="Center" FontSize="40" Background="#11000000" Padding="15,0,70,70"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
