@@ -29,6 +29,8 @@ namespace YiYao
         MTMMedCollectDTO medCollectDTO;
 
         string drugId = "";
+
+        int drugCount = 0;
         public A6()
         {
             InitializeComponent();
@@ -46,10 +48,26 @@ namespace YiYao
         {
             if (null != args)
             {
-                //customInfo = (MTMCustInfo)args;
                 // to do 数据绑定
                 medCollectDTO = (MTMMedCollectDTO)args;
 
+                if (String.Equals("no", medCollectDTO.isfirst))
+                {
+                    if (medCollectDTO.drugs.Count() > 0)
+                    {
+                        // 只显示药物信息
+                        allergyCanvas.Visibility = Visibility.Hidden;
+
+                        bloodPressureCanvas.Visibility = Visibility.Hidden;
+
+                        usedrugCanvas.Margin = new Thickness(700, 246, 102, 106);
+
+                    } else if (medCollectDTO.drugs.Count() == 0) {
+
+                    }
+                }
+
+                drugCount = medCollectDTO.drugs.Count();
                 mycontrol.ItemsSource = medCollectDTO.drugs;
 
                 EventAggregator eventAggragator = ServiceLocator.Current.GetInstance<EventAggregator>();
@@ -85,7 +103,7 @@ namespace YiYao
                 {
 
                     resultValue += item.drugname;
-                    resultValue += "  ;";
+                    resultValue += "  ;\n";
                 }
                 isallergy.Text = resultValue;
 
@@ -95,10 +113,14 @@ namespace YiYao
                 isallergy.Text = "\n\n     无过敏药物";
             }
 
-
             mycontrol.ItemsSource = medCollectDTO.drugs;
             mycontrol.Items.Refresh();
 
+            if (drugCount<medCollectDTO.drugs.Count())
+            {
+                scrollviewer.ScrollToBottom();
+            }
+            drugCount = medCollectDTO.drugs.Count();
             //drugId = "6924147659034";
             //DoWork();
         }
