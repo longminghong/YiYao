@@ -5,7 +5,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:YiYao"
       xmlns:s="http://schemas.microsoft.com/surface/2008"
-      mc:Ignorable="d" 
+      xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts"
+             xmlns:multichartdemo="clr-namespace:MultiChartDemo"
+             mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300" Width="1920" Height="1080"
       >
     <UserControl.Resources>
@@ -194,7 +196,7 @@
                                TextWrapping="Wrap" VerticalAlignment="Top"   Text="{Binding}"
                                MaxWidth="350" Foreground="#FFF3FAFA" FontSize="24" 
                                        Margin="75,4,0,0" Width="350" Height="59" />
-                     
+
                         </Grid>
 
 
@@ -204,6 +206,7 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
+
 
         <Image x:Name="image" Margin="65.6,84,148.6,65" Source="/YiYao;component/圆角矩形-外框.png" Stretch="Fill" Grid.Column="1"/>
         <TextBlock x:Name="textBlock可控风险" HorizontalAlignment="Left" Height="36.563" Margin="109.4,126.812,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" Text="可控风险" FontWeight="Bold" Grid.Column="1"/>
@@ -222,17 +225,13 @@
         <!--<Image Margin="486.6,572.526,198.2,372.374" Source="/YiYao;component/血脂曲线图.png" Stretch="Fill" Grid.Column="1"/>
         <Image Margin="109.4,572.526,575.4,372.374" Source="/YiYao;component/血压曲线图.png" Stretch="Fill" Grid.Column="1"/>-->
 
-        <local:HealthIndexRight x:Name="dialogFrame" Margin="109.2,559,525,396" Canvas.Top="79.083" Grid.Column="1" />
-        <local:CustomChart x:Name="chartA" Canvas.Top="115.583" Canvas.Left="32.5" DotWidth="10" Margin="153.2,559,551,402" Grid.Column="1"/>
-        <local:HealthIndexRight x:Name="dialogFrame_Copy" Margin="467.2,559,198,396" Grid.Column="1" />
-        <local:CustomChart x:Name="chartB" Canvas.Top="115.583" Canvas.Left="32.5" DotWidth="10" Grid.Column="1" Margin="526.2,559,200,402"/>
 
-        <TextBlock x:Name="textBlock当前用药" HorizontalAlignment="Left" Height="36.563" Margin="109.4,748.037,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="24" FontWeight="Bold" Text="当前用药" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock当前用药" HorizontalAlignment="Left" Height="37" Margin="109.2,821,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" Foreground="#FFF3FAFA" FontSize="24" FontWeight="Bold" Text="当前用药" Grid.Column="1"/>
 
-        <ScrollViewer Background="Transparent" x:Name="yaoscrollviewer" Height="200" Margin="106,865,200,80" VerticalAlignment="Top"
+        <ScrollViewer Background="Transparent" x:Name="yaoscrollviewer" Height="131" Margin="109.2,863,197,0" VerticalAlignment="Top"
                       PanningMode="HorizontalOnly" HorizontalScrollBarVisibility ="Hidden"  CanContentScroll="True" Grid.Column="1" VerticalScrollBarVisibility="Hidden">
 
-            <ItemsControl x:Name="baojian" Height="180">
+            <ItemsControl x:Name="baojian" Height="121">
 
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -306,7 +305,61 @@
         <TextBlock x:Name="usergender" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Foreground="#FFF3FAFA" FontSize="24" Margin="645,168,0,0" Text="性别："/>
         <TextBlock x:Name="userbirthday" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Foreground="#FFF3FAFA" FontSize="24" Margin="347,221,0,0" Text="生日："/>
         <TextBlock x:Name="userage" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Foreground="#FFF3FAFA" FontSize="24" Margin="645,226,0,0" Text="年龄："/>
-        <TextBlock x:Name="useraddress" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" Foreground="#FFF3FAFA" FontSize="24" Margin="347,277,0,0" Text="地址："/>
+        <TextBlock x:Name="useraddress" HorizontalAlignment="Left" Height="73" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" Foreground="#FFF3FAFA" FontSize="24" Margin="347,277,0,0" Text="地址："/>
+        
+        
+        <multichartdemo:MultiChart Visibility="Visible"  x:Name="xueya_chart" Background="#1A717A"  AnimationEnabled="False" Margin="109.2,541,534,411" Grid.Column="1">
+                
+                <multichartdemo:MultiChart.Titles>
+                    <vc:Title Text="血压"></vc:Title>
+                </multichartdemo:MultiChart.Titles>
+                
+                <multichartdemo:MultiChart.SeriesTemplate>
+                    <DataTemplate>
+                        <vc:DataSeries RenderAs="Line" LegendText="{Binding SalesName}" DataSource="{Binding SalesTotals}">
+                            <vc:DataSeries.DataMappings>
+                                <vc:DataMapping MemberName="AxisXLabel" Path="Date"  ></vc:DataMapping>
+                                <vc:DataMapping MemberName="YValue" Path="SalesTotal"  ></vc:DataMapping>
+                            </vc:DataSeries.DataMappings>
+                        </vc:DataSeries>
+                    </DataTemplate>
+                </multichartdemo:MultiChart.SeriesTemplate>
+            </multichartdemo:MultiChart>
 
+        <multichartdemo:MultiChart Visibility="Visible"  x:Name="xuetang_chart" Background="#1A717A"  AnimationEnabled="False" Margin="460,541,180,411" Grid.Column="1">
+
+            <multichartdemo:MultiChart.Titles>
+                <vc:Title Text="血糖"></vc:Title>
+            </multichartdemo:MultiChart.Titles>
+
+            <multichartdemo:MultiChart.SeriesTemplate>
+                <DataTemplate>
+                    <vc:DataSeries RenderAs="Line" LegendText="{Binding SalesName}" DataSource="{Binding SalesTotals}">
+                        <vc:DataSeries.DataMappings>
+                            <vc:DataMapping MemberName="AxisXLabel" Path="Date"  ></vc:DataMapping>
+                            <vc:DataMapping MemberName="YValue" Path="SalesTotal"  ></vc:DataMapping>
+                        </vc:DataSeries.DataMappings>
+                    </vc:DataSeries>
+                </DataTemplate>
+            </multichartdemo:MultiChart.SeriesTemplate>
+        </multichartdemo:MultiChart>
+
+        <multichartdemo:MultiChart Visibility="Visible"  x:Name="xuezhi_chart" Background="#1A717A"  AnimationEnabled="False" Margin="109.2,675,534,260" Grid.Column="1">
+
+            <multichartdemo:MultiChart.Titles>
+                <vc:Title Text="血脂"></vc:Title>
+            </multichartdemo:MultiChart.Titles>
+
+            <multichartdemo:MultiChart.SeriesTemplate>
+                <DataTemplate>
+                    <vc:DataSeries RenderAs="Line" LegendText="{Binding SalesName}" DataSource="{Binding SalesTotals}">
+                        <vc:DataSeries.DataMappings>
+                            <vc:DataMapping MemberName="AxisXLabel" Path="Date"  ></vc:DataMapping>
+                            <vc:DataMapping MemberName="YValue" Path="SalesTotal"  ></vc:DataMapping>
+                        </vc:DataSeries.DataMappings>
+                    </vc:DataSeries>
+                </DataTemplate>
+            </multichartdemo:MultiChart.SeriesTemplate>
+        </multichartdemo:MultiChart>
     </Grid>
 </UserControl>

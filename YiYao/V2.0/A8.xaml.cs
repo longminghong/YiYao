@@ -18,6 +18,8 @@ using Prism.Events;
 using YiYao.Events;
 using System.Windows.Media.Animation;
 using System.Globalization;
+using System.Collections.ObjectModel;
+using MultiChartDemo;
 
 namespace YiYao
 {
@@ -28,6 +30,8 @@ namespace YiYao
     {
         MTMIssueCollectDTO reciveDTO;
 
+        //MainWindowViewModel data = new MainWindowViewModel();
+        
         public A8()
         {   
             InitializeComponent();
@@ -41,24 +45,27 @@ namespace YiYao
                 e.Handled = true;
             };
             
-
             yaoscrollviewer.ManipulationBoundaryFeedback += Yaoscrollviewer_ManipulationBoundaryFeedback;
-
         }
 
         private void Yaoscrollviewer_ManipulationBoundaryFeedback(object sender, ManipulationBoundaryFeedbackEventArgs e)
         {
             e.Handled = true;
         }
+        List<SalesPerformance> xueyaSalesData = new List<SalesPerformance>();
+        List<SalesPerformance> xuetangSalesData = new List<SalesPerformance>();
+        List<SalesPerformance> xuezhiSalesData = new List<SalesPerformance>();
 
         public void Start(object args)
-        {
+        {   
             if (null != args)
             {
                 reciveDTO = (MTMIssueCollectDTO)args;
 
                 EventAggregator eventAggragator = ServiceLocator.Current.GetInstance<EventAggregator>();
                 eventAggragator.GetEvent<WebSocketEvent>().Subscribe(OnWebSocketEvent);
+
+                drawChart();
             }
         }
 
@@ -86,7 +93,7 @@ namespace YiYao
             userbirthday.Text = "生日："+reciveDTO.birthday;
             userage.Text = "年龄："+reciveDTO.age +" 岁";
             useraddress.Text = "地址："+reciveDTO.location;
-
+            
             switch (reciveDTO.risklevel)
             {
                 case 1:
@@ -111,8 +118,9 @@ namespace YiYao
 
                     break;
             }
- 
-            
+
+            drawChart();
+
             try
             {
                 bool imageExist;
@@ -188,9 +196,113 @@ namespace YiYao
             {
                 
             }
-            
-            //int w = riskImage.PixelHeight;
         }
+
+        private void drawChart() {
+
+             xueyaSalesData.Clear();
+             xuetangSalesData.Clear();
+             xuezhiSalesData.Clear();
+            try
+            {
+                if (reciveDTO.chart_data.xueya.x.Count() > 0)
+                {
+
+                    SalesPerformance shousuoya = new SalesPerformance();
+                    shousuoya.SalesTotals = new List<SalesInfo>();
+                    shousuoya.SalesName = "收缩压";
+
+                    SalesPerformance shuzhangya = new SalesPerformance();
+                    shuzhangya.SalesTotals = new List<SalesInfo>();
+                    shuzhangya.SalesName = "舒张压";
+
+                    for (int i = 0; i < reciveDTO.chart_data.xueya.x.Count(); i++)
+                    {
+
+                        string timeString = reciveDTO.chart_data.xueya.x[i];
+
+                        shousuoya.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xueya.systolicpressure[i] });
+
+                        shuzhangya.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xueya.diastolicpressure[i] });
+                    }
+                    xueyaSalesData.Add(shousuoya);
+                    xueyaSalesData.Add(shuzhangya);
+                }
+
+                if (reciveDTO.chart_data.xuetang.x.Count() > 0)
+                {
+                    SalesPerformance kongfu = new SalesPerformance();
+                    kongfu.SalesTotals = new List<SalesInfo>();
+                    kongfu.SalesName = "空腹血糖";
+
+                    SalesPerformance suiji = new SalesPerformance();
+                    suiji.SalesTotals = new List<SalesInfo>();
+                    suiji.SalesName = "随机血糖";
+                    for (int i = 0; i < reciveDTO.chart_data.xuetang.x.Count(); i++)
+                    {
+
+                        string timeString = reciveDTO.chart_data.xuetang.x[i];
+
+                        kongfu.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuetang.fastBloodSugar[i] });
+
+                        suiji.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuetang.randomBloodSugar[i] });
+                    }
+                    xuetangSalesData.Add(kongfu);
+                    xuetangSalesData.Add(suiji);
+                }
+
+                if (reciveDTO.chart_data.xuezhi.x.Count() > 0)
+                {
+
+                    SalesPerformance cholesteroly = new SalesPerformance();
+                    cholesteroly.SalesTotals = new List<SalesInfo>();
+                    cholesteroly.SalesName = "胆固醇";
+
+                    SalesPerformance triglyceridey = new SalesPerformance();
+                    triglyceridey.SalesTotals = new List<SalesInfo>();
+                    triglyceridey.SalesName = "甘油三脂";
+
+                    SalesPerformance ldlcy = new SalesPerformance();
+                    ldlcy.SalesTotals = new List<SalesInfo>();
+                    ldlcy.SalesName = "ldlcy";
+
+                    SalesPerformance hdlcy = new SalesPerformance();
+                    hdlcy.SalesTotals = new List<SalesInfo>();
+                    hdlcy.SalesName = "hdlcy";
+
+
+                    for (int i = 0; i < reciveDTO.chart_data.xuezhi.x.Count(); i++)
+                    {
+
+                        string timeString = reciveDTO.chart_data.xuezhi.x[i];
+
+                        cholesteroly.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.cholesteroly[i] });
+
+                        triglyceridey.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.triglyceridey[i] });
+
+                        ldlcy.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.ldlcy[i] });
+
+                        hdlcy.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.hdlcy[i] });
+                    }
+                    xuezhiSalesData.Add(cholesteroly);
+                    xuezhiSalesData.Add(triglyceridey);
+
+                    xuezhiSalesData.Add(ldlcy);
+                    xuezhiSalesData.Add(hdlcy);
+                }
+                xueya_chart.SeriesSource = xueyaSalesData;
+                xuetang_chart.SeriesSource = xuetangSalesData;
+                xuezhi_chart.SeriesSource = xuezhiSalesData;
+            }
+            catch (Exception)
+            {
+
+        
+            }
+           
+        }
+
+
         private void jiantou1_png_MouseDown(object sender, MouseButtonEventArgs e)
         {
             (Parent as NavigationManager).GoToPage(typeof(ShoppingCar));
