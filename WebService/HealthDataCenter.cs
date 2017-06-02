@@ -27,19 +27,25 @@ namespace WebService
         public HealthDataService(EventAggregator eventAggregator)
         {
             mEventAggregator = eventAggregator;
-            var appid = "Bk_ByrUY";
-            var appkey = "c96b1296fdfc415024bebfcd2264b486";
+            //var appid = "Bk_ByrUY";
+            var appid = "SyccthZn";
+            //var appkey = "c96b1296fdfc415024bebfcd2264b486";
+            var appkey = "097e8751c3c183edf602f867a5326559";
+            
             mSdk = new MTMWebClient(appid, appkey);
         }
 
         public async Task<DataResult<MemberInfo>> GetMemberInfoBySsnAsync(string ssn)
         {
-            if (mCachedMemberInfo != null)
-                return mCachedMemberInfo;
+            //if (mCachedMemberInfo != null)
+            //    return mCachedMemberInfo;
             var data = await mSdk.GetMemberInfoBySsnAsync(ssn);
-            if(Check(data))
+            if (Check(data))
             {
                 mCachedMemberInfo = data;
+            }
+            else {
+                mCachedMemberInfo = null;
             }
             return data;
         }
