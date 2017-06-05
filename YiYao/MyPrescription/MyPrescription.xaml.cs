@@ -24,5 +24,18 @@ namespace YiYao
         {
             InitializeComponent();
         }
+
+        private void videoControlButton_Click(object sender, RoutedEventArgs e)
+        {
+            shiping_png.Play();
+        }
+
+        private void videoControlStopButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (shiping_png.CanPause)
+            {
+                shiping_png.Pause();
+            }
+        }
     }
 }

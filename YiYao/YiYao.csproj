@@ -109,7 +109,10 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="WPFVisifire.Charts, Version=3.6.3.0, Culture=neutral, PublicKeyToken=99d724542e4db593, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\WPFVisifire.Charts.dll</HintPath>
+      <HintPath>C:\Users\longm\Desktop\WPFVisifire.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFVisifire.Gauges">
+      <HintPath>C:\Users\longm\Desktop\WPFVisifire.Gauges.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +120,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Chart\DataTemplateSelector.cs" />
+    <Compile Include="Chart\MainWindowViewModel.cs" />
+    <Compile Include="Chart\MultiChart.cs" />
+    <Compile Include="Chart\SalesInfo.cs" />
+    <Compile Include="Chart\SalesPerformance.cs" />
+    <Compile Include="Chart\SeriesTemplateSelector.cs" />
+    <Compile Include="Chart\ViewModelBase.cs" />
     <Compile Include="DrugTimeCoverter.cs" />
     <Compile Include="DrugTypeConverter.cs" />
     <Compile Include="DrugUsedCoverter.cs" />
@@ -2072,6 +2082,35 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ScanDrug\default_med.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ScanDrug\6900233882296.png" />
+    <Resource Include="Images\ScanDrug\6902182330101.png" />
+    <Resource Include="Images\ScanDrug\6902182392109.png" />
+    <Resource Include="Images\ScanDrug\6902182393106.png" />
+    <Resource Include="Images\ScanDrug\6910853819589.png" />
+    <Resource Include="Images\ScanDrug\6921361255288.png" />
+    <Resource Include="Images\ScanDrug\6923878310122.png" />
+    <Resource Include="Images\ScanDrug\6923878310139.png" />
+    <Resource Include="Images\ScanDrug\6923878310320.png" />
+    <Resource Include="Images\ScanDrug\6924147651014.png" />
+    <Resource Include="Images\ScanDrug\6924147654015.png" />
+    <Resource Include="Images\ScanDrug\6931837200094.png" />
+    <Resource Include="Images\ScanDrug\6935014100078.png" />
+    <Resource Include="Images\ScanDrug\6939901400067.png" />
+    <Resource Include="Images\ScanDrug\6947544900059.png" />
+    <Resource Include="Images\ScanDrug\6950641900129.png" />
+    <Resource Include="Images\ScanDrug\6950641900143.png" />
+    <Resource Include="Images\ScanDrug\6951283550000.png" />
+    <Resource Include="Images\ScanDrug\6951283550307.png" />
+    <Resource Include="Images\ScanDrug\6951283550390.png" />
+    <Resource Include="Images\ScanDrug\6951283550420.png" />
+    <Resource Include="Images\ScanDrug\6958703500157.png" />
+    <Resource Include="Images\ScanDrug\6958703500515.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MyPrescription\play.png" />
+    <Resource Include="MyPrescription\stop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

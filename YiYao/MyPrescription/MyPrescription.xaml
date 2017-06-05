@@ -329,7 +329,7 @@
         </EventTrigger>
     </UserControl.Triggers>
     <Grid>
-
+        
         <Image x:Name="yuan1_png" HorizontalAlignment="Left" Height="29" Margin="588.5,371,0,0" Source="yuan1.png" Stretch="Fill" VerticalAlignment="Top" Width="29" Opacity="0"/>
         <Image x:Name="xian1_png" Margin="606.833,71.333,0,0" Source="xian1.png" Stretch="Fill" HorizontalAlignment="Left" Height="309" VerticalAlignment="Top" Width="284"/>
         <Image x:Name="yuan2_png" Height="48" Margin="877.333,40,0,0" Source="yuan2.png" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Width="48"/>
@@ -338,9 +338,33 @@
         <Image x:Name="xian3_png" Height="72" Source="xian3.png" Stretch="Fill" Width="152" HorizontalAlignment="Right" Margin="0,429.332,426.168,0" VerticalAlignment="Top" Visibility="Collapsed"/>
         <Image x:Name="xian4_png" Height="40" Source="xian4.png" Stretch="Fill" Width="90" HorizontalAlignment="Right" Margin="0,0,488.168,410.668" VerticalAlignment="Bottom" Visibility="Collapsed"/>
         <Image x:Name="shuomingshu_png" Height="269" Source="shuomingshu.png" Stretch="Fill" Width="420" HorizontalAlignment="Right" Margin="0,0,307.168,136.668" VerticalAlignment="Bottom" Visibility="Hidden"/>
+        
+        <!--<Image  Height="312" Source="shiping.png" Stretch="Fill" Width="551" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" Visibility="Hidden"/>-->
+        <!--<Image x:Name="shiping_png"  Source="shiping.png" Height="312" Width="551" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" Visibility="Hidden"/>-->
+        <MediaElement  x:Name="shiping_png" LoadedBehavior="Manual"  Height="312" Width="551" Source="pack://siteoforigin:,,,/Video/珍视明护眼旗舰店.wmv" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" >
+            <MediaElement.Triggers>
+                <EventTrigger RoutedEvent="MediaElement.Loaded">
+                    <!--<EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <MediaTimeline  Source="pack://siteoforigin:,,,/Video/珍视明护眼旗舰店.wmv"
+                                               Storyboard.TargetName="Storyboard1" 
+                                               RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>-->
+                </EventTrigger>
+            </MediaElement.Triggers>
+        </MediaElement>
+        <Button x:Name="videoControPlaylButton" Click="videoControlButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="0,441,736,0" VerticalAlignment="Top">
+            <Image Source="play.png" x:Name="videoControlplayIcon">
+            </Image>
+        </Button>
 
-        <Image  Height="312" Source="shiping.png" Stretch="Fill" Width="551" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <Image x:Name="shiping_png"  Source="shiping.png" Height="312" Width="551" HorizontalAlignment="Right" Margin="0,117.332,236.168,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Button x:Name="videoControlStopButton" Click="videoControlStopButton_Click" Height="50" Width="50" HorizontalAlignment="Right" Margin="0,441,644,0" VerticalAlignment="Top">
+            <Image Source="stop.png" x:Name="videoControlstopIcon">
+            </Image>
+        </Button>
         <Canvas Margin="899.168,55.5,42.832,54.5">
             <Image x:Name="xian2_png" Source="xian2.png" Stretch="Fill" Height="970" Width="978">
                 <Image.Clip>
