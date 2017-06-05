@@ -114,15 +114,18 @@ namespace WebService
 
                     if (String.Equals("open", jOperateToken.ToString()))
                     {
-                        Console.WriteLine("json finish" + jTypeToken.ToString());
+                        Console.WriteLine("json finish    " + jTypeToken.ToString());
 
                         MEMBERType pageType;
 
                         pageType = deserializeDataType(jTypeToken.ToString());
 
                         Console.WriteLine(jDataToken.ToString());
+
                         object obj;
-                        obj = invokeDataReciveCallBack(pageType, jDataToken.ToString());
+                        string stringRemoveNullValue = jDataToken.ToString().Replace("null", "");
+
+                        obj = invokeDataReciveCallBack(pageType, stringRemoveNullValue);
                         if (null == obj)
                         {
 

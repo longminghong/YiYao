@@ -221,9 +221,11 @@ namespace YiYao
 
                         string timeString = reciveDTO.chart_data.xueya.x[i];
 
-                        shousuoya.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xueya.systolicpressure[i] });
+                        shousuoya.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xueya.systolicpressure.Count()>0?(int)reciveDTO.chart_data.xueya.systolicpressure[i]:0 });
 
-                        shuzhangya.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xueya.diastolicpressure[i] });
+                        shuzhangya.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xueya.diastolicpressure.Count()>0?(int)reciveDTO.chart_data.xueya.diastolicpressure[i]:0 });
                     }
                     xueyaSalesData.Add(shousuoya);
                     xueyaSalesData.Add(shuzhangya);
@@ -243,9 +245,11 @@ namespace YiYao
 
                         string timeString = reciveDTO.chart_data.xuetang.x[i];
 
-                        kongfu.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuetang.fastBloodSugar[i] });
+                        kongfu.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xuetang.fastBloodSugar.Count()>0? (int)reciveDTO.chart_data.xuetang.fastBloodSugar[i]:0 });
 
-                        suiji.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuetang.randomBloodSugar[i] });
+                        suiji.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xuetang.randomBloodSugar.Count()>0?(int)reciveDTO.chart_data.xuetang.randomBloodSugar[i]:0 });
                     }
                     xuetangSalesData.Add(kongfu);
                     xuetangSalesData.Add(suiji);
@@ -276,13 +280,20 @@ namespace YiYao
 
                         string timeString = reciveDTO.chart_data.xuezhi.x[i];
 
-                        cholesteroly.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.cholesteroly[i] });
+                        cholesteroly.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xuezhi.cholesteroly.Count()>0?(int)reciveDTO.chart_data.xuezhi.cholesteroly[i]:0 });
 
-                        triglyceridey.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.triglyceridey[i] });
+                        triglyceridey.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xuezhi.triglyceridey.Count() > 0 ? (int)reciveDTO.chart_data.xuezhi.triglyceridey[i] : 0
+                        });
 
-                        ldlcy.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.ldlcy[i] });
+                        ldlcy.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xuezhi.ldlcy.Count() > 0 ? (int)reciveDTO.chart_data.xuezhi.ldlcy[i] : 0
+                        });
 
-                        hdlcy.SalesTotals.Add(new SalesInfo { Date = timeString, SalesTotal = (int)reciveDTO.chart_data.xuezhi.hdlcy[i] });
+                        hdlcy.SalesTotals.Add(new SalesInfo { Date = timeString,
+                            SalesTotal = reciveDTO.chart_data.xuezhi.hdlcy.Count() > 0 ? (int)reciveDTO.chart_data.xuezhi.hdlcy[i] : 0
+                        });
                     }
                     xuezhiSalesData.Add(cholesteroly);
                     xuezhiSalesData.Add(triglyceridey);
@@ -294,10 +305,9 @@ namespace YiYao
                 xuetang_chart.SeriesSource = xuetangSalesData;
                 xuezhi_chart.SeriesSource = xuezhiSalesData;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-        
+                Console.WriteLine("详情页：画图失败"+ex.Message);
             }
            
         }
