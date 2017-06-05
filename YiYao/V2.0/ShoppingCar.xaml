@@ -51,11 +51,11 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <ScrollViewer Background="Transparent" x:Name="scrollviewer" Margin="220,160,38,0" MaxHeight="600" MaxWidth="1900" Width="1662"
+        <ScrollViewer Background="Transparent" x:Name="scrollviewer" Margin="220,160,38,0" MaxHeight="900" MaxWidth="1900" Width="1662"
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Top"
                       CanContentScroll="True" Height="850" >
 
-            <ItemsControl Loaded="mycontrol_Loaded" x:Name="mycontrol" Width="1574" Height="840" > 
+            <ItemsControl Loaded="mycontrol_Loaded" x:Name="mycontrol" Width="1574"  > 
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel />

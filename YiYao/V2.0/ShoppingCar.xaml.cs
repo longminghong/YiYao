@@ -18,6 +18,8 @@ using Prism.Events;
 using YiYao.Events;
 using System.Windows.Media.Animation;
 using System.Globalization;
+using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace YiYao
 {
@@ -26,11 +28,16 @@ namespace YiYao
     /// </summary>
     public partial class ShoppingCar : UserControl, INavigable
     {
-
+        string drugId = "";
         MTMShopCarDTO reciveDTO;
         public ShoppingCar()
         {
             InitializeComponent();
+
+            this.Loaded += (s, e) =>
+            {
+                Window.GetWindow(this).TextInput += ScanDrug_TextInput;
+            };
 
             scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
             {
@@ -82,6 +89,69 @@ namespace YiYao
         private void med_detail_bg_image_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ScanDrug_TextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (e.Text == "\r")
+            {
+                DoWork();
+            }
+            else
+            {
+                drugId += e.Text;
+            }
+        }
+        private void DoWork()
+        {
+
+            if (drugId != null)
+            {
+                try
+                {
+                    DrugBarCode code = new DrugBarCode();
+                    string barcode = drugId;
+                    code.sid = "Vk7Tc-PJx";
+                    code.barcode = barcode;
+
+                    postDataWithWebClient(code);
+                }
+                catch (Exception)
+                {
+
+                }
+                finally
+                {
+
+                    drugId = string.Empty;
+                }
+            }
+        }
+        private void postDataWithWebClient(DrugBarCode code)
+        {
+            try
+            {
+                WebClient wc = new WebClient();
+                string requestUrl = "http://test.o4bs.com/api/members/drugbarcode";
+                
+                JObject carJson = JObject.FromObject(code);
+                string paramStr = carJson.ToString();
+
+                byte[] postData = Encoding.UTF8.GetBytes(paramStr);
+
+                wc.Headers.Add("Content-Type", "application/json");
+                wc.Headers.Add("appkey", "097e8751c3c183edf602f867a5326559");
+                wc.Headers.Add("appid", "SyccthZn");
+
+                byte[] responseData = wc.UploadData(requestUrl, "POST", postData); // 得到返回字符流
+                String resultValue = Encoding.UTF8.GetString(responseData);  // 解码
+
+                Console.WriteLine(resultValue);
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show("A6.xaml postDataWithWebClient Error happen"+e);
+            }
         }
     }
 
