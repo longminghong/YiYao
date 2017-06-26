@@ -36,8 +36,9 @@ namespace YiYao
 
             this.Loaded += (s, e) =>
             {
-                Window.GetWindow(this).TextInput += ScanDrug_TextInput;
+                Window.GetWindow(this).TextInput += ShopingCarScanDrug_TextInput;
             };
+ 
 
             scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
             {
@@ -91,9 +92,9 @@ namespace YiYao
 
         }
 
-        private void ScanDrug_TextInput(object sender, TextCompositionEventArgs e)
+        private void ShopingCarScanDrug_TextInput(object sender, TextCompositionEventArgs e)
         {
-            if (e.Text == "\r")
+             if (e.Text == "\r")
             {
                 DoWork();
             }
