@@ -50,6 +50,27 @@ namespace WebService
             return data;
         }
 
+        public string GetMemberMid()
+        {
+
+            string resultValue = "";
+            if (null != mCachedMemberInfo)
+            {
+                resultValue = mCachedMemberInfo.data.mid;
+            }
+            return resultValue;
+        }
+        public string GetMemberCardNo()
+        {
+
+            string resultValue = "";
+            if (null != mCachedMemberInfo)
+            {
+                resultValue = mCachedMemberInfo.data.card_no;
+            }
+            return resultValue;
+        }
+
         public async Task<DataResult<HealthData>> GetHealthDataAsync()
         {
             if (mHealthData != null)
@@ -90,6 +111,15 @@ namespace WebService
             return true;
 
         }
-        
+
+        public void SavePhoneNumber(string text)
+        {
+           
+            if (null != text)
+            {
+                mCachedMemberInfo.data.phone = text;
+            }
+         
+        }
     }
 }
