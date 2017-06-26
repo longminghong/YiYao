@@ -37,5 +37,12 @@ namespace YiYao
                 shiping_png.Pause();
             }
         }
+
+        private void shiping_png_Loaded(object sender, RoutedEventArgs e)
+        {
+            //shiping_png.Position = new TimeSpan(1000);
+            //shiping_png.Play();
+            //shiping_png.Pause();
+        }
     }
 }
