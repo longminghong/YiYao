@@ -27,12 +27,20 @@ namespace YiYao
 
             this.Loaded += (s, e) =>
              {
-                var loadingAnimation = FindResource("Storyboard1") as Storyboard;
-                 loadingAnimation.Completed += (ss, ee) =>
-                  {
-                      (Parent as NavigationManager).GoToPage(typeof(Dashboard));
-                  };
-                 loadingAnimation.Begin();
+                 try
+                 {
+                     var loadingAnimation = FindResource("Storyboard1") as Storyboard;
+                     loadingAnimation.Completed += (ss, ee) =>
+                     {
+                         (Parent as NavigationManager).GoToPage(typeof(Dashboard));
+                     };
+                     loadingAnimation.Begin();
+                 }
+                 catch (Exception)
+                 {
+        
+                 }
+                
              };
         }
 
