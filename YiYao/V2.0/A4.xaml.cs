@@ -82,6 +82,11 @@ namespace YiYao
                 Uri qrImagePath = new Uri(qrDTO.src);
                 BitmapImage qrImageSource = new BitmapImage(qrImagePath);
                 imageQR.Source = qrImageSource;
+
+                if (String.Equals("yes", qrDTO.binded))
+                {
+                    qr.Text = "恭喜您，微信绑定成功！";
+                }
             }
             catch (Exception)
             {

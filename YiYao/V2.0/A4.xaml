@@ -52,11 +52,11 @@
         <Image x:Name="imageQR" Margin="880.8,345.6,819.2,515.4" Stretch="Fill" Loaded="imageQR_Loaded" RenderTransformOrigin="0.5,0.5">
 
         </Image>
-        <Canvas Margin="515.5,767.9,439.734,257.6">
-            <Image x:Name="image" Source="/YiYao;component/会员信息注册成功，欢迎扫码注册使用公众账号.png" 
+        <Canvas Margin="516,768,370,258">
+            <Image x:Name="image" Visibility="Collapsed" Source="/YiYao;component/会员信息注册成功，欢迎扫码注册使用公众账号.png" 
                    Stretch="Fill" Height="54.5" Width="964.766">
             </Image>
-
+            <TextBlock TextAlignment="Center" x:Name="qr" Text="会员信息注册成功，欢迎扫码注册使用公众账号" Foreground="#FF98CFE2" FontSize="48" HorizontalAlignment="Center" Width="1000" VerticalAlignment="Center"></TextBlock>
         </Canvas>
 
         <!-- 这里放其他的详细内容 -->
