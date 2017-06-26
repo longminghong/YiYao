@@ -98,20 +98,21 @@ namespace CardReader
             Task.Factory.StartNew(() =>
             {
                 IDCard card = null;
-                while (card == null && mReading)
+                while (mReading)
                 {
                     card = Read();
-                }
-                if (card == null)
-                    return;
-                CurrentCard = card;
-                mThreadContext.Post(delegate
-                {
-                    if (CardRead != null)
+                    if (card == null)
+                        continue;
+                    CurrentCard = card;
+                    mThreadContext.Post(delegate
                     {
-                        CardRead.Invoke(this, EventArgs.Empty);
-                    }
-                }, null);
+                        if (CardRead != null)
+                        {
+                            CardRead.Invoke(this, EventArgs.Empty);
+                        }
+                    }, null);
+                }
+            
             });
         }
 
