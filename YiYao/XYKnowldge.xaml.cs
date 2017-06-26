@@ -157,7 +157,28 @@ namespace YiYao
             Storyboard.SetTargetProperty(d2, new PropertyPath("Visibility"));
             show.Begin();
         }
+        protected override void OnTouchDown(TouchEventArgs e)
+        {
+            base.OnTouchDown(e);
+            
+            Type touchObject = e.OriginalSource.GetType();
+            if (touchObject.Name == "TextBlock")
+            {
+                //if (e.TouchDevice.Target)
+                //{
 
+                //}
+
+            }
+            else if (touchObject.Name == "Button")
+            {
+                if (e.TouchDevice.Capture(this))
+                {
+                    e.Handled = true;
+                }
+            }
+
+        }
         protected override void OnManipulationStarting(ManipulationStartingEventArgs e)
         {
             base.OnManipulationStarting(e);
@@ -173,14 +194,25 @@ namespace YiYao
                 e.Cancel();
                 return;
             }
+            try
+            {
+                if (healthPop == pop)
+                {
+                    var transformGroup = healthPop.RenderTransform as TransformGroup;
+                    var translate = transformGroup.Children[1] as TranslateTransform;
+                    translate.X += e.DeltaManipulation.Translation.X;
+                    translate.Y += e.DeltaManipulation.Translation.Y;
+                    var scale = transformGroup.Children[0] as ScaleTransform;
+                    scale.ScaleX *= e.DeltaManipulation.Scale.X;
+                    scale.ScaleY *= e.DeltaManipulation.Scale.Y;
+                }
+            }
+            catch (Exception)
+            {
 
-            var transformGroup = healthPop.RenderTransform as TransformGroup;
-            var translate = transformGroup.Children[1] as TranslateTransform;
-            translate.X += e.DeltaManipulation.Translation.X;
-            translate.Y += e.DeltaManipulation.Translation.Y;
-            var scale = transformGroup.Children[0] as ScaleTransform;
-            scale.ScaleX *= e.DeltaManipulation.Scale.X;
-            scale.ScaleY *= e.DeltaManipulation.Scale.Y;
+              
+            }
+        
 
         }
     }

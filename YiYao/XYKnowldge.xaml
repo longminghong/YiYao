@@ -73,7 +73,7 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <Canvas x:Name="pop" Visibility="Collapsed" Opacity="0" Width="947" Height="531" Canvas.Top="370" Canvas.Left="915" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="pop" Background="Transparent" Visibility="Collapsed" Opacity="0" Width="947" Height="531" Canvas.Top="370" Canvas.Left="915" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform />
@@ -82,11 +82,12 @@
             </Canvas.RenderTransform>
             <Image x:Name="popimage" Source="/Images/Know/knowldge1.png" Width="947" Height="531"  >
             </Image>
-            <Button Canvas.Left="874.1"  Click="Button_Click" IsManipulationEnabled="True">
+            <Button Background="Transparent" Canvas.Right="0" Canvas.Top="0" Width="100" Height="100" 
+                    Click="Button_Click" IsManipulationEnabled="True" HorizontalContentAlignment="Right" VerticalContentAlignment="Top">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
-
-                        <TextBlock Foreground="White" Text="X" FontSize="40" Background="#11000000" Padding="10,10,50,50"/>
+                        <TextBlock TextAlignment="Right"  Foreground="White" IsEnabled="False"   Text="X" FontSize="40" Background="Transparent" Padding="30,20,60,60"/>
+                        <!--<TextBlock  Foreground="White" Text="X" FontSize="40" Background="#11000000" Padding="10,10,50,50"/>-->
                     </ControlTemplate>
                 </Button.Template>
             </Button>
