@@ -907,6 +907,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+
         <Image x:Name="tiao_png" Height="4" Margin="957,0,618,230" Source="/Images/Login/tiao.png" Stretch="Fill" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
@@ -1097,11 +1098,15 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="PC_Register" Height="100" Width="249.2" HorizontalAlignment="Right" Foreground="#FFF4ADAD" Margin="0,490" FontSize="24" Click="PC_Register_Click" >
+        <Button x:Name="PC_Register" Height="100" Visibility="Collapsed" Width="249.2" HorizontalAlignment="Right" Foreground="#FFF4ADAD" Margin="0,490" FontSize="24" Click="PC_Register_Click" >
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
             </Button.Background>
             药师PC注册用户展示
         </Button>
+
+        <TextBlock x:Name="userNotFound" Visibility="Collapsed" Width="200" FontSize="32" Foreground="White" TextAlignment="Center" Margin="844,806,876,222">
+            <Run Text="请联系药师"/>
+        </TextBlock>
     </Grid>
 </UserControl>
