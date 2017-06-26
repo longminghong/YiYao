@@ -177,7 +177,7 @@
             <TextBlock HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFF3FAFA" FontSize="22" Canvas.Left="49.841" Canvas.Top="0.657"><Run Text="风险"/><Run Text="等级"/><Run Text="："/></TextBlock>
             <TextBlock x:Name="textblock_risk" HorizontalAlignment="Left" Height="36.563" TextWrapping="Wrap" VerticalAlignment="Top" Width="117.6" Foreground="#FFE83737" FontSize="22"  FontWeight="Bold" Canvas.Left="172.441" Canvas.Top="0.657"/>
         </Canvas>
-        <ScrollViewer x:Name="scrollviewer" Margin="614,426,950,86" MaxHeight="550" 
+        <ScrollViewer x:Name="scrollviewer" Margin="585,426,927,86" MaxHeight="550" 
                       PanningMode="VerticalOnly" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Grid.ColumnSpan="2" >
 
             <ItemsControl Background="Transparent" x:Name="issueControl">
@@ -306,9 +306,9 @@
         <TextBlock x:Name="userbirthday" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Foreground="#FFF3FAFA" FontSize="24" Margin="347,221,0,0" Text="生日："/>
         <TextBlock x:Name="userage" HorizontalAlignment="Left" Height="37" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Foreground="#FFF3FAFA" FontSize="24" Margin="645,226,0,0" Text="年龄："/>
         <TextBlock x:Name="useraddress" HorizontalAlignment="Left" Height="73" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" Foreground="#FFF3FAFA" FontSize="24" Margin="347,277,0,0" Text="地址："/>
-        
-        
-        <multichartdemo:MultiChart Visibility="Visible"  x:Name="xueya_chart" Background="#1A717A"  AnimationEnabled="False" Margin="109.2,541,534,411" Grid.Column="1">
+
+
+        <multichartdemo:MultiChart SeriesSource="{Binding xueyaSalesData}"  Visibility="Visible"  x:Name="xueya_chart" Background="#1A717A"  AnimationEnabled="False" Margin="109.2,541,534,411" Grid.Column="1">
                 
                 <multichartdemo:MultiChart.Titles>
                     <vc:Title Text="血压"></vc:Title>
@@ -326,7 +326,7 @@
                 </multichartdemo:MultiChart.SeriesTemplate>
             </multichartdemo:MultiChart>
 
-        <multichartdemo:MultiChart Visibility="Visible"  x:Name="xuetang_chart" Background="#1A717A"  AnimationEnabled="False" Margin="460,541,180,411" Grid.Column="1">
+        <multichartdemo:MultiChart SeriesSource="{Binding xuetangSalesData}" Visibility="Visible"  x:Name="xuetang_chart" Background="#1A717A"  AnimationEnabled="False" Margin="460,541,180,411" Grid.Column="1">
 
             <multichartdemo:MultiChart.Titles>
                 <vc:Title Text="血糖"></vc:Title>
@@ -344,7 +344,7 @@
             </multichartdemo:MultiChart.SeriesTemplate>
         </multichartdemo:MultiChart>
 
-        <multichartdemo:MultiChart Visibility="Visible"  x:Name="xuezhi_chart" Background="#1A717A"  AnimationEnabled="False" Margin="109.2,675,534,260" Grid.Column="1">
+        <multichartdemo:MultiChart SeriesSource="{Binding xuezhiSalesData}" Visibility="Visible"  x:Name="xuezhi_chart" Background="#1A717A"  AnimationEnabled="False" Margin="109.2,675,534,260" Grid.Column="1">
 
             <multichartdemo:MultiChart.Titles>
                 <vc:Title Text="血脂"></vc:Title>
