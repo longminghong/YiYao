@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Microsoft.Practices.ServiceLocation;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WebService;
 
 namespace YiYao
 {
@@ -90,6 +95,64 @@ namespace YiYao
         private void savePhoneBtn_Click(object sender, RoutedEventArgs e)
         {
             EditingPhone = false;
+
+            postDataWithWebClient();
+        }
+
+        private void postDataWithWebClient()
+        {
+
+            try
+            {
+                WebClient wc = new WebClient();
+                string requestUrl = "http://test.o4bs.com/api/members/";
+                // 采取POST方式必须加的Header
+                var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
+                var mid = healthDataService.GetMemberMid();
+                var cardNo = healthDataService.GetMemberCardNo();
+                requestUrl += mid;
+
+
+                Dictionary<string,string> modifyDictionary = new Dictionary<string, string>();
+                modifyDictionary.Add("card_no", cardNo);
+                modifyDictionary.Add("phone", phone.Text);
+
+             
+                JObject carJson = JObject.FromObject(modifyDictionary);
+                string paramStr = carJson.ToString();
+
+                byte[] postData = Encoding.UTF8.GetBytes(paramStr);
+
+                wc.Headers.Add("Content-Type", "application/json");
+                wc.Headers.Add("appkey", "097e8751c3c183edf602f867a5326559");
+                wc.Headers.Add("appid", "SyccthZn");
+
+                byte[] responseData = wc.UploadData(requestUrl, "PUT", postData); 
+                String resultValue = Encoding.UTF8.GetString(responseData);
+                Debug.WriteLine(resultValue);
+                JObject jObject = JObject.Parse(resultValue);
+
+                JToken jErrorToken = jObject.GetValue("error");
+                JToken jDataToken = jObject.GetValue("data");
+
+                String errorCode = jErrorToken.First().First().ToString();
+
+                if (string.Equals(errorCode,"0"))
+                {
+                    // 保存成功
+                    healthDataService.SavePhoneNumber(phone.Text);
+                }
+
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                
+            }
+
         }
     }
 }
