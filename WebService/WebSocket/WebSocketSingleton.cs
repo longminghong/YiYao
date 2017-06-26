@@ -69,9 +69,12 @@ namespace WebService
             return instance;
         }
         private static CamelCasePropertyNamesContractResolver s_defaultResolver = new CamelCasePropertyNamesContractResolver();
+        
         private static JsonSerializerSettings s_settings = new JsonSerializerSettings()
-        {
-            DateFormatHandling = DateFormatHandling.IsoDateFormat,
+        {   
+            DateFormatHandling = DateFormatHandling.MicrosoftDateFormat,
+            DefaultValueHandling = DefaultValueHandling.Ignore,
+            PreserveReferencesHandling = PreserveReferencesHandling.None,
             NullValueHandling = NullValueHandling.Ignore,
             ContractResolver = s_defaultResolver,
         
@@ -93,17 +96,17 @@ namespace WebService
 
   
             byte[] messageContent = e.Message;
-      
-            responseContent = Encoding.UTF8.GetString(e.Message);
+            
+            responseContent = Encoding.UTF8.GetString(messageContent);
             Console.WriteLine("Received = " + Encoding.UTF8.GetString(e.Message) + " on topic " + e.Topic);
     
             try
             {
                 if (!string.IsNullOrWhiteSpace(responseContent))
                 {
-                    //JObject jObject = JObject.Parse("{'ID':'001','Mark':'Hello Word'}");
-
-                    JObject jObject = JObject.Parse(responseContent);
+                    
+                    var responseContentAfterReplaceString = responseContent.Replace("null", "\"\"");
+                    JObject jObject = JObject.Parse(responseContentAfterReplaceString);
 
                     JToken jTypeToken = jObject.GetValue("type");
                     JToken jDataToken = jObject.GetValue("data");
