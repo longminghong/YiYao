@@ -286,10 +286,12 @@
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi5_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.7" Value="-6.00000000000003,-14.4999999999999"/>
                 <EasingPointKeyFrame KeyTime="0:0:5.2" Value="460.5,-15.9999999999999"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.8" Value="523.500000000001,-13.1999999999999"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(LineSegment.Point)" Storyboard.TargetName="xinxi5_png">
                 <EasingPointKeyFrame KeyTime="0:0:4.7" Value="-6.00000000000003,32.5000000000001"/>
                 <EasingPointKeyFrame KeyTime="0:0:5.2" Value="460.5,31.0000000000001"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.8" Value="524.7,25.2"/>
             </PointAnimationUsingKeyFrames>
             <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(LineSegment.Point)" Storyboard.TargetName="xinxi6_png">
                 <EasingPointKeyFrame KeyTime="0:0:5" Value="-7.50000000000003,-16.9999999999999"/>
@@ -392,6 +394,10 @@
                 <EasingPointKeyFrame KeyTime="0:0:5.2" Value="401.333,-6.66500000000008"/>
                 <EasingPointKeyFrame KeyTime="0:0:6" Value="413.333,575.335"/>
             </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Clip).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="xinxi5_png">
+                <EasingPointKeyFrame KeyTime="0:0:5.2" Value="-55,-15"/>
+                <EasingPointKeyFrame KeyTime="0:0:5.8" Value="-53.8018837873306,-13.5710923689868"/>
+            </PointAnimationUsingKeyFrames>
 
         </Storyboard>
         <Storyboard x:Key="Storyboard2">
@@ -406,7 +412,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:8" Value="720"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-       
+
         <Style x:Key="KeypadInput" TargetType="{x:Type TextBox}">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
@@ -554,7 +560,7 @@
                 </TransformGroup>
             </Canvas.RenderTransform>
             <Image x:Name="headImage" Source="/Images/Register/zhaopian.png" Stretch="Fill"  Width="110">
-                
+
             </Image>
         </Canvas>
 
@@ -774,8 +780,8 @@
             </Image>
 
         </Canvas>
-        <Canvas HorizontalAlignment="Left" Margin="390,522.5,0,534.5" Width="443">
-            <TextBlock x:Name="xinxi5_png" FontSize="20" Foreground="White" Width="433" Height="23"   Canvas.Top="-2" FontStretch="Condensed"  ><Run Text="住址：    "/><Run x:Name="addressText" Text="上涤线 xxxxxxxxxx地" />
+        <Canvas HorizontalAlignment="Left" Margin="390,522.5,0,534.5" Width="500">
+            <TextBlock x:Name="xinxi5_png" FontSize="20" Foreground="White" Width="500" Height="23"   Canvas.Top="-2" FontStretch="Condensed"  ><Run Text="住址：    "/><Run x:Name="addressText" Text="上涤线 xxxxxxxxxx地" />
                 <TextBlock.Clip>
                     <PathGeometry>
                         <PathFigure IsClosed="True" StartPoint="-55,-15">
