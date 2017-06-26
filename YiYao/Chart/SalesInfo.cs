@@ -14,7 +14,7 @@ namespace MultiChartDemo
 {
     public class SalesInfo
     {
-        public int SalesTotal { get; set; }
+        public float SalesTotal { get; set; }
         public string Date { get; set; }
     }
 }
