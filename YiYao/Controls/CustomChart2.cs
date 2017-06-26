@@ -91,36 +91,45 @@ namespace YiYao
                 var yValue = FormatText($"{mMinY + mStepY * i}");
                 drawingContext.DrawText(yValue, new System.Windows.Point(-yValue.Width - marginRight, Height - cellHeight * i - yValue.Height/2));
             }
+
             //draw x label
+            
             for (int i = 0; i < mData.Length; i++)
             {
-                
-                var keyvalue = mData[0].ElementAt(i);
-                var xValue = keyvalue.Value;
-                var xLabel = FormatText(keyvalue.Key);
-                drawingContext.DrawText(xLabel, new System.Windows.Point(cellWidth * i - xLabel.Width/2, Height + mRows));
+                if (mData[0].Count>i)
+                {
+                    var keyvalue = mData[0].ElementAt(i);
+                    var xValue = keyvalue.Value;
+                    var xLabel = FormatText(keyvalue.Key);
+                    drawingContext.DrawText(xLabel, new System.Windows.Point(cellWidth * i - xLabel.Width / 2, Height + mRows));
+                }
             }
             //draw circle and lines
             List<Point> points = new List<Point>();
             for (int i = 0; i < mData.Length; i++)
             {
-
-                var keyvalue = mData[0].ElementAt(i);
-                var xValue = keyvalue.Value;
-               var percentage = (xValue - mMinY) /( mRows * mStepY);
-                var point =new Point(cellWidth * i, Height * (1 - percentage));
-                points.Add(point);
+                if (mData[0].Count>i)
+                {
+                    var keyvalue = mData[0].ElementAt(i);
+                    var xValue = keyvalue.Value;
+                    var percentage = (xValue - mMinY) / (mRows * mStepY);
+                    var point = new Point(cellWidth * i, Height * (1 - percentage));
+                    points.Add(point);
+                }
             }
             DrawData(drawingContext, points);
             points.Clear();
             for (int i = 0; i < mData.Length; i++)
             {
-
-                var keyvalue = mData[1].ElementAt(i);
-                var xValue = keyvalue.Value;
-                var percentage = (xValue - mMinY) / (mRows * mStepY);
-                var point = new Point(cellWidth * i, Height * (1 - percentage));
-                points.Add(point);
+                if (mData[1].Count()>i)
+                {
+                    var keyvalue = mData[1].ElementAt(i);
+                    var xValue = keyvalue.Value;
+                    var percentage = (xValue - mMinY) / (mRows * mStepY);
+                    var point = new Point(cellWidth * i, Height * (1 - percentage));
+                    points.Add(point);
+                }
+                
             }
             DrawData(drawingContext, points);
         }
