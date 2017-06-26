@@ -18,7 +18,8 @@ namespace YiYao
         private TranslateTransform mTranslateTransform;
         private bool mExpand;
         private DateTime mClickExpaired = DateTime.Now;
-        private int mClickThreshold = 300;
+        private int mClickThreshold = 80;
+        private int currentZIndex;
         public DrugPanel()
         {
             TransformGroup trans = new TransformGroup();
@@ -27,6 +28,7 @@ namespace YiYao
             trans.Children.Add(mScaleTransform);
             trans.Children.Add(mTranslateTransform);
             this.RenderTransform = trans;
+            currentZIndex = GetZIndex(this);
         }
 
         protected override void OnManipulationStarting(ManipulationStartingEventArgs e)
@@ -38,6 +40,7 @@ namespace YiYao
         protected override void OnManipulationDelta(ManipulationDeltaEventArgs e)
         {
             base.OnManipulationDelta(e);
+            
             var delta = e.DeltaManipulation.Translation;
             mTranslateTransform.X += delta.X;
             mTranslateTransform.Y += delta.Y;
@@ -47,12 +50,12 @@ namespace YiYao
         {
             base.OnTouchDown(e);
             mClickExpaired = DateTime.Now.AddMilliseconds(mClickThreshold);
-
         }
 
         protected override void OnTouchUp(TouchEventArgs e)
         {
             base.OnTouchUp(e);
+            
             if (DateTime.Now < mClickExpaired)
             {
                 mExpand = !mExpand;
@@ -94,6 +97,10 @@ namespace YiYao
                 mScaleTransform.ScaleY = scaley.To.Value;
             };
             sb.FillBehavior = FillBehavior.Stop;
+
+            var zindex = GetZIndex(this);
+
+            SetZIndex(this, 10);
             sb.Begin();
 
         }
@@ -130,6 +137,7 @@ namespace YiYao
                 mTranslateTransform.Y = 0;
             };
             sb.FillBehavior = FillBehavior.Stop;
+            SetZIndex(this, currentZIndex);
             sb.Begin();
 
         }
