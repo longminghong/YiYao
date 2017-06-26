@@ -99,24 +99,28 @@ namespace YiYao
 
                 textBlock12.Text = drink;
 
-                textBlock3.Text = "身高:" + healthDTO.height;
-                textBlock13.Text = "体重:" + healthDTO.weight;
-                textBlock14.Text = "腹围:" + healthDTO.waist;
+                textBlock3.Text = "身高：" + healthDTO.height + " CM";
+                textBlock13.Text = "体重：" + healthDTO.weight + " KG";
+                textBlock14.Text = "腹围：" + healthDTO.waist + " CM";
 
-                textBlock5.Text = "收缩压:" + healthDTO.systolicpressure;
-                textBlock15.Text = "舒张压:" + healthDTO.diastolicpressure;
+                textBlock5.Text = "收缩压：" + healthDTO.systolicpressure + " mmHg";
+                textBlock15.Text = "舒张压：" + healthDTO.diastolicpressure + " mmHg";
 
-                textBlock7.Text = "空腹血糖:" + healthDTO.fastsugar;
-                textBlock16.Text = "随机血糖:" + healthDTO.randomsugar;
-                textBlock17.Text = "糖化血红蛋白:" + healthDTO.HbA1c;
+                textBlock7.Text = "空腹血糖：" + healthDTO.fastsugar;
+                textBlock16.Text = "随机血糖：" + healthDTO.randomsugar;
+                textBlock17.Text = "糖化血红蛋白：" + healthDTO.HbA1c;
 
-                textBlock18.Text = "甘油三脂:" + healthDTO.triglyceride;
-                textBlock9.Text = "总胆固醇:" + healthDTO.cholesterol;
-                textBlock19.Text = "LDL-C:" + healthDTO.ldl;
-                textBlock10.Text = "HDL-C:" + healthDTO.hdl;
+                textBlock18.Text = "甘油三脂：" + healthDTO.triglyceride;
+                textBlock9.Text = "总胆固醇：" + healthDTO.cholesterol;
+                textBlock19.Text = "LDL-C：" + healthDTO.ldl;
+                textBlock10.Text = "HDL-C：" + healthDTO.hdl;
 
-                heartbeat.Text = "心率:" + healthDTO.heartrate;
+                heartbeat.Text = "心率：" + healthDTO.heartrate + " 次/分";
 
+                TCHighest.Text = "TC最高值： " + healthDTO.agobloodfat_tcmaxvalue;
+                LDLHeighest.Text = "LDL最高值： "+healthDTO.agobloodfat_ldlmaxvalue;
+                HDLLowest.Text = "HDL最低值： "+healthDTO.agobloodfat_hdlminvalue;
+                TGHighest.Text = "TG最高值："+ healthDTO.agobloodfat_tgmaxvalue;
             }
         }
 

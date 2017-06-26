@@ -74,9 +74,8 @@
             </TextBlock>
         </Canvas>
         <!--身高-->
-        <Canvas Margin="705,355,1036,681">
-            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="136.667" Foreground="White" FontSize="24">
-                 <Run Text="身高：187"/><LineBreak/><Run/><LineBreak/><Run/><Run Text="   "/></TextBlock>
+        <Canvas Margin="705,355,982.4,681">
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="232.6" Foreground="White" FontSize="24"><Run Text="身高：187"/><Run Text=" CM"/><LineBreak/><Run/><LineBreak/><Run/><Run Text="   "/><Run Text=" CM"/></TextBlock>
         </Canvas>
         <!--现场测量血压值-->
         <Canvas Margin="238,459,1233,575">
@@ -85,8 +84,8 @@
             </TextBlock>
         </Canvas>
         <!--收缩压-->
-        <Canvas Margin="705,461,1072,575">
-            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="146.333" Foreground="White" FontSize="24">
+        <Canvas Margin="705,461,939,575">
+            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Foreground="White" FontSize="24">
                  <Run Text="收缩压：133"/><LineBreak/><Run/></TextBlock>
         </Canvas>
         <!--现场测量血压值-->
@@ -96,8 +95,8 @@
             </TextBlock>
         </Canvas>
         <!--空腹血糖-->
-        <Canvas Margin="705,577,1036,459">
-            <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="177.667" Foreground="White" FontSize="24">
+        <Canvas Margin="705,577,982.4,459">
+            <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="222.6" Foreground="White" FontSize="24">
                 <Run Text="空腹血糖：8.2"/><Run Text=" "/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         </Canvas>
         <!--现场测量血脂值-->
@@ -107,13 +106,13 @@
             </TextBlock>
         </Canvas>
         <!--总胆固醇-->
-        <Canvas Margin="705,687,1009,349">
-            <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" Foreground="White" FontSize="24">
+        <Canvas x:Name="总胆固醇" Margin="705,687,962.6,349">
+            <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="242.4" Foreground="White" FontSize="24">
                  <Run Text="总胆固醇：6.9"/><Run Text="                  "/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
         </Canvas>
         <!--HDL-C-->
-        <Canvas Margin="1487,686,227,349">
-            <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" Text="HDL-C：4" VerticalAlignment="Top" Width="179" Foreground="White" FontSize="24">
+        <Canvas x:Name="HDL_C" Margin="1487,686,164.6,349">
+            <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" Text="HDL-C：4" VerticalAlignment="Top" Width="258.4" Foreground="White" FontSize="24">
 
             </TextBlock>
         </Canvas>
@@ -132,55 +131,71 @@
 
         </Canvas>
         <!--体重-->
-        <Canvas Margin="986,355,767,695">
-            <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="44.363"  Text="体重：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
-            </TextBlock>
+        <Canvas Margin="986,355,704,695">
+            <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" Foreground="White" FontSize="24"><Run Text="体重："/><Run Text="77 KG"/></TextBlock>
 
         </Canvas>
         <!--腹围-->
         <Canvas Margin="1245,355,467,693">
-            <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="44.363"  Text="腹围：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
-
-            </TextBlock>
+            <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="44.363" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" Foreground="White" FontSize="24"><Run Text="腹围："/><Run Text=" 80 CM"/></TextBlock>
 
         </Canvas>
         <!--舒张压-->
-        <Canvas Margin="986,460.788,778,583.712">
-            <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Height="44.363"  Text="舒张压：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
+        <Canvas Margin="986,461,704,584">
+            <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Height="44"  Text="舒张压：" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Foreground="White" FontSize="24">
 
             </TextBlock>
 
         </Canvas>
         <!--随机血糖-->
-        <Canvas Margin="986,577.012,767,469.988">
-            <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Height="44.363"  Text="随机血糖：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
+        <Canvas Margin="986,577.012,704,469.988">
+            <TextBlock x:Name="textBlock16" HorizontalAlignment="Left" Height="44.363"  Text="随机血糖：" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Foreground="White" FontSize="24">
 
             </TextBlock>
 
         </Canvas>
         <!--糖化血红蛋白-->
-        <Canvas Margin="1247,577,369,464">
-            <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Height="44"  Text="糖化血红蛋白：" TextWrapping="Wrap" VerticalAlignment="Top" Width="294" Foreground="White" FontSize="24">
+        <Canvas Margin="1247,577,317.8,464">
+            <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Height="44"  Text="糖化血红蛋白：" TextWrapping="Wrap" VerticalAlignment="Top" Width="345.2" Foreground="White" FontSize="24">
             </TextBlock>
 
         </Canvas>
         <!--甘油三脂-->
-        <Canvas Margin="986,687,704,363">
-            <TextBlock x:Name="textBlock18" HorizontalAlignment="Left" Height="30"  Text="甘油三脂：" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24">
+        <Canvas x:Name="甘油三脂" Margin="986,687,680,363">
+            <TextBlock x:Name="textBlock18" HorizontalAlignment="Left" Height="30"  Text="甘油三脂：" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Foreground="White" FontSize="24">
 
             </TextBlock>
 
         </Canvas>
         <!--LDL-C-->
-        <Canvas Margin="1245,687,447,363">
+        <Canvas x:Name="LDL_C" Margin="1245,687,447,363">
             <TextBlock x:Name="textBlock19" HorizontalAlignment="Left" Height="30"  Text="LDL-C：" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Foreground="White" FontSize="24">
 
             </TextBlock>
 
         </Canvas>
         <Canvas Margin="1487,355,225,693">
-            <TextBlock x:Name="heartbeat" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24"><Run Text="心率"/><Run Text="："/></TextBlock>
+            <TextBlock x:Name="heartbeat" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="24"><Run Text="心率"/><Run Text="："/><Run Text=" 88 次/分"/></TextBlock>
 
+        </Canvas>
+        
+        <!--过去血脂情况-->
+        
+        <Canvas Margin="238,797.4,1234,236.6">
+            <TextBlock x:Name="textBlock20" Visibility="Visible" HorizontalAlignment="Left" Height="45.625" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" Foreground="#FF94E9FF" FontSize="36"><Run Text="过去血脂情况"/><LineBreak/><Run/></TextBlock>
+        </Canvas>
+        <Canvas x:Name="总胆固醇_Copy" Visibility="Visible" Margin="705,797.4,962.6,238.6">
+            <TextBlock x:Name="TCHighest" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="242.4" Foreground="White" FontSize="24"><Run Text="TC 最高值"/><Run Text="：6.9"/><Run Text="                  "/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        </Canvas>
+        <Canvas x:Name="HDL_C_Copy" Visibility="Visible" Margin="1487,797,165,239">
+            <TextBlock x:Name="TGHighest" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Foreground="White" FontSize="24"><Run Text="TG最高值"/><Run Text="：4"/></TextBlock>
+        </Canvas>
+        <Canvas x:Name="甘油三脂_Copy" Visibility="Visible" Margin="986,797,680,239">
+            <TextBlock x:Name="LDLHeighest" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Foreground="White" FontSize="24" Canvas.Top="4"><Run Text="LDL最高值"/><Run Text="："/></TextBlock>
+
+        </Canvas>
+        <Canvas x:Name="LDL_C_Copy" Visibility="Visible" Margin="1245,797,447,239">
+            <TextBlock x:Name="HDLLowest" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" Foreground="White" FontSize="24" Canvas.Top="4"><Run Text="HDL最低值"/><Run Text="："/></TextBlock>
         </Canvas>
 
         <!-- 这里放其他的详细内容 -->
