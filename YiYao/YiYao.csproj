@@ -121,7 +121,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Chart\DataTemplateSelector.cs" />
-    <Compile Include="Chart\MainWindowViewModel.cs" />
+    <Compile Include="Chart\MultiChartDataModel.cs" />
     <Compile Include="Chart\MultiChart.cs" />
     <Compile Include="Chart\SalesInfo.cs" />
     <Compile Include="Chart\SalesPerformance.cs" />

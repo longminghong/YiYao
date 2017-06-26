@@ -20,6 +20,7 @@ using WebService.Event;
 using YiYao.Util;
 using WebService;
 using YiYao.Events;
+using System.Text.RegularExpressions;
 
 namespace YiYao
 {
@@ -32,15 +33,13 @@ namespace YiYao
 
         WebSocketSingleton websocketInstance;
 
-        MessageBox box;
-
-        public MainWindow(IEventAggregator eventAggregator)
+          public MainWindow(IEventAggregator eventAggregator)
         {
             websocketInstance = WebSocketSingleton.GetInstance();
             websocketInstance.start();
             websocketInstance.pageCommandHandle += new WebSocketSingleton.SocketPageCommandHandleEvent(webSocketPageCommandEvents);
             websocketInstance.connectCloseHandle += new WebSocketSingleton.SocketConnectCloseHandleEvent(webSocketConnectClose);
-
+            
             InitializeComponent();
             mEventAggregator = eventAggregator;
             ImageSourceConverter imageConveter = new ImageSourceConverter();
@@ -58,7 +57,7 @@ namespace YiYao
             bi3.BeginInit();
             bi3.UriSource = riskImageUri; 
             bi3.EndInit();
-             
+            
 
             try
             {
@@ -85,12 +84,7 @@ namespace YiYao
 
         void webSocketConnectClose()
         {
-            //MessageBoxResult result;
-            //result = MessageBox.Show("Server Connect Close....");
-            //if (result == MessageBoxResult.OK)
-            //{
-            //    websocketInstance.start();
-            //}
+
             websocketInstance.start();
         }
 
