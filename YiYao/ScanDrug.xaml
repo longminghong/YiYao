@@ -982,6 +982,21 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:19.6" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:19.9" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="scrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.7" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zhuyiScrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yongfascrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.8" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Scan2">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="saomiaozi_png">
@@ -1956,6 +1971,21 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0.015"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:19.6" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:19.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yongfascrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.8" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="scrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zhuyiScrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0:0:15.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:30.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:30.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Scan3">
@@ -2932,6 +2962,21 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:19.6" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:19.9" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zhuyiScrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="scrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yongfascrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.8" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Scan4">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="saomiaozi_png">
@@ -3906,6 +3951,21 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0.015"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:19.6" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:19.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zhuyiScrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="scrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yongfascrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.8" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Scan5">
@@ -4882,8 +4942,453 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:14.4" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:14.7" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="zhuyiScrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15.9" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="yongfascrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:14.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="scrollviewer">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:18.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:19.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
+        <Style x:Key="ScrollBarThumb"  
+           TargetType="{x:Type Thumb}">
+
+            <Setter Property="OverridesDefaultStyle"  
+                Value="true"/>
+
+            <Setter Property="IsTabStop"  
+                Value="false"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+
+                        <Grid>
+                            <Rectangle  
+                            Fill="White"  
+                            RadiusX="3"  
+                            RadiusY="3"/>
+                        </Grid>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
+        <Style x:Key="HorizontalScrollBarPageButton"  
+           TargetType="{x:Type RepeatButton}">
+
+            <Setter Property="OverridesDefaultStyle"  
+                Value="true"/>
+
+            <Setter Property="Background"  
+                Value="Transparent"/>
+
+            <Setter Property="Focusable"  
+                Value="false"/>
+
+            <Setter Property="IsTabStop"  
+                Value="false"/>
+
+            <Setter Property="Opacity"  
+                Value="0"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+
+                        <Rectangle Fill="{TemplateBinding Background}"  
+                               Width="{TemplateBinding Width}"  
+                               Height="{TemplateBinding Height}"/>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
+        <Style x:Key="VerticalScrollBarPageButton"  
+           TargetType="{x:Type RepeatButton}">
+
+            <Setter Property="OverridesDefaultStyle"  
+                Value="true"/>
+
+            <Setter Property="Background"  
+                Value="Transparent"/>
+
+            <Setter Property="Focusable"  
+                Value="false"/>
+
+            <Setter Property="IsTabStop"  
+                Value="false"/>
+
+            <Setter Property="Opacity"  
+                Value="0"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+
+                        <Rectangle Fill="{TemplateBinding Background}"  
+                               Width="{TemplateBinding Width}"  
+                               Height="{TemplateBinding Height}"/>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
+        <Style x:Key="for_scrollbar"
+           TargetType="{x:Type ScrollBar}">
+
+            <Setter Property="Stylus.IsPressAndHoldEnabled"  
+                Value="false"/>
+
+            <Setter Property="Stylus.IsFlicksEnabled"  
+                Value="false"/>
+
+            <Setter Property="Background"  
+                Value="Transparent"/>
+
+            <Setter Property="Margin"  
+                Value="0,1,1,6"/>
+
+            <Setter Property="Width"  
+                Value="5"/>
+
+            <Setter Property="MinWidth"  
+                Value="5"/>
+
+            <Setter Property="Opacity"  
+                Value="1"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+
+                        <Grid x:Name="Bg" SnapsToDevicePixels="true">
+
+                            <Track x:Name="PART_Track"  
+                               IsEnabled="{TemplateBinding IsMouseOver}"  
+                               IsDirectionReversed="true">
+
+                                <Track.DecreaseRepeatButton>
+
+                                    <RepeatButton  
+                                    Style="{StaticResource VerticalScrollBarPageButton}"  
+                                    Command="{x:Static ScrollBar.PageUpCommand}"/>
+
+                                </Track.DecreaseRepeatButton>
+
+                                <Track.IncreaseRepeatButton>
+
+                                    <RepeatButton  
+                                    Style="{StaticResource VerticalScrollBarPageButton}"  
+                                    Command="{x:Static ScrollBar.PageDownCommand}"/>
+
+                                </Track.IncreaseRepeatButton>
+
+                                <Track.Thumb>
+
+                                    <Thumb Style="{StaticResource ScrollBarThumb}"/>
+
+                                </Track.Thumb>
+
+                            </Track>
+
+                        </Grid>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+            <Style.Triggers>
+
+                <Trigger Property="Orientation"  
+                     Value="Horizontal">
+
+                    <Setter Property="Background"  
+                        Value="Transparent"/>
+
+                    <Setter Property="Margin"  
+                        Value="1,0,6,1"/>
+
+                    <Setter Property="Height"  
+                        Value="5"/>
+
+                    <Setter Property="MinHeight"  
+                        Value="5"/>
+
+                    <Setter Property="Width"  
+                        Value="Auto"/>
+
+                    <Setter Property="Opacity"  
+                        Value="0"/>
+
+                    <Setter Property="Template">
+
+                        <Setter.Value>
+
+                            <ControlTemplate TargetType="{x:Type ScrollBar}">
+
+                                <Grid x:Name="Bg" SnapsToDevicePixels="true">
+
+                                    <Track x:Name="PART_Track"  
+                                       IsEnabled="{TemplateBinding IsMouseOver}">
+
+                                        <Track.DecreaseRepeatButton>
+
+                                            <RepeatButton Style="{StaticResource HorizontalScrollBarPageButton}"  
+                                                      Command="{x:Static ScrollBar.PageLeftCommand}"/>
+
+                                        </Track.DecreaseRepeatButton>
+
+                                        <Track.IncreaseRepeatButton>
+
+                                            <RepeatButton Style="{StaticResource HorizontalScrollBarPageButton}"  
+                                                      Command="{x:Static ScrollBar.PageRightCommand}"/>
+
+                                        </Track.IncreaseRepeatButton>
+
+                                        <Track.Thumb>
+
+                                            <Thumb Style="{StaticResource ScrollBarThumb}"/>
+
+                                        </Track.Thumb>
+
+                                    </Track>
+
+                                </Grid>
+
+                            </ControlTemplate>
+
+                        </Setter.Value>
+
+                    </Setter>
+
+                </Trigger>
+
+            </Style.Triggers>
+
+        </Style>
+
+        <!-- ScrollViewer -->
+
+        <Style x:Key="styleForScrollViewer"  
+           TargetType="{x:Type ScrollViewer}">
+
+            <Setter Property="BorderBrush"  
+                Value="LightGray"/>
+
+            <Setter Property="BorderThickness"  
+                Value="0"/>
+
+            <Setter Property="HorizontalContentAlignment"  
+                Value="Left"/>
+
+            <Setter Property="HorizontalScrollBarVisibility"  
+                Value="Auto"/>
+
+            <Setter Property="VerticalContentAlignment"  
+                Value="Top"/>
+
+            <Setter Property="VerticalScrollBarVisibility"  
+                Value="Auto"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"  
+                            BorderThickness="{TemplateBinding BorderThickness}"  
+                            SnapsToDevicePixels="True">
+
+                            <Grid Background="{TemplateBinding Background}">
+
+                                <ScrollContentPresenter  
+                                Cursor="{TemplateBinding Cursor}"  
+                                Margin="{TemplateBinding Padding}"  
+                                ContentTemplate="{TemplateBinding ContentTemplate}"/>
+
+                                <ScrollBar x:Name="PART_VerticalScrollBar"  
+                                       HorizontalAlignment="Right"  
+                                       Maximum="{TemplateBinding ScrollableHeight}"  
+                                       Orientation="Vertical"  
+                                       Style="{StaticResource for_scrollbar}"  
+                                       ViewportSize="{TemplateBinding ViewportHeight}"  
+                                       Value="{TemplateBinding VerticalOffset}"  
+                                       Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+
+                                <ScrollBar x:Name="PART_HorizontalScrollBar"  
+                                       Maximum="{TemplateBinding ScrollableWidth}"  
+                                       Orientation="Horizontal"  
+                                       Style="{StaticResource for_scrollbar}"  
+                                       VerticalAlignment="Bottom"  
+                                       Value="{TemplateBinding HorizontalOffset}"  
+                                       ViewportSize="{TemplateBinding ViewportWidth}"  
+                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <EventTrigger RoutedEvent="ScrollChanged">
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_VerticalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="1"  
+                                        Duration="0:0:1"/>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_VerticalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="0"  
+                                        Duration="0:0:1"  
+                                        BeginTime="0:0:1"/>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_HorizontalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="1"  
+                                        Duration="0:0:1"/>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_HorizontalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="0"  
+                                        Duration="0:0:1"  
+                                        BeginTime="0:0:1"/>
+
+                                    </Storyboard>
+
+                                </BeginStoryboard>
+
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="MouseEnter"  
+                                      SourceName="PART_VerticalScrollBar">
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_VerticalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="1"  
+                                        Duration="0:0:1"/>
+
+                                    </Storyboard>
+
+                                </BeginStoryboard>
+
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="MouseLeave"  
+                                      SourceName="PART_VerticalScrollBar">
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_VerticalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="0"  
+                                        Duration="0:0:1"/>
+
+                                    </Storyboard>
+
+                                </BeginStoryboard>
+
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="MouseEnter"  
+                                      SourceName="PART_HorizontalScrollBar">
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_HorizontalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="1"  
+                                        Duration="0:0:1"/>
+
+                                    </Storyboard>
+
+                                </BeginStoryboard>
+
+                            </EventTrigger>
+
+                            <EventTrigger RoutedEvent="MouseLeave"  
+                                      SourceName="PART_HorizontalScrollBar">
+
+                                <BeginStoryboard>
+
+                                    <Storyboard>
+
+                                        <DoubleAnimation  
+                                        Storyboard.TargetName="PART_HorizontalScrollBar"  
+                                        Storyboard.TargetProperty="Opacity"  
+                                        To="0"  
+                                        Duration="0:0:1"/>
+
+                                    </Storyboard>
+
+                                </BeginStoryboard>
+
+                            </EventTrigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
     </UserControl.Resources>
+
     <Grid>
         <Canvas x:Name="canvas" HorizontalAlignment="Left" Margin="19.5,216.5,0,224.607" Width="756.5" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
@@ -5175,7 +5680,18 @@
             </Image>
             <Image x:Name="di1_png" HorizontalAlignment="Right" Source="/Images/ScanDrug/di1.png" Stretch="Fill" Width="561" Opacity="0" Height="496"/>
             <TextBlock x:Name="textBlock" TextWrapping="Wrap" FontSize="37.333" Foreground="White" Height="51.5" Canvas.Left="32" Canvas.Top="37.916" Width="163.5"><Run Text="不良反应"/><LineBreak/><Run/></TextBlock>
-            <TextBox BorderBrush="Transparent" BorderThickness="0" Background="Transparent" x:Name="textBlock1"  Height="340" TextWrapping="Wrap" Foreground="White" FontSize="29.333"  Canvas.Left="65.333" Canvas.Top="114.666" Width="414.333"> </TextBox>
+
+            <ScrollViewer  Background="Transparent" Width="500" Height="350" HorizontalAlignment="Left" x:Name="zhuyiScrollviewer" MaxHeight="350"
+                                      PanningMode="VerticalOnly"   CanContentScroll="True" Canvas.Left="32" Canvas.Top="120"
+                          Style="{StaticResource styleForScrollViewer}">
+                <ItemsControl>
+                    <TextBlock Background="Transparent" x:Name="textBlock1" TextWrapping="Wrap" Foreground="White" FontSize="29.333"  Canvas.Left="65.333" Canvas.Top="114.666" Width="414.333">
+
+                    </TextBlock>
+                </ItemsControl>
+            </ScrollViewer>
+
+
             <TextBox BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Visibility="Hidden" x:Name="textBlock1_Copy" TextWrapping="Wrap" Foreground="White" FontSize="29.333" Text="该药会使出血的风险增加，因此你需要留意自己是否有出血的表现。如果出现的话，请及时告诉您的医生，他们会帮助您进行分析判断，并决定是否要调整治疗方案。 " Height="271.333" Canvas.Left="65.333" Canvas.Top="205.374" Width="414.333"/>
             <Image x:Name="tubiao1_png" Source="/Images/ScanDrug/tubiao1.png" Stretch="Fill" RenderTransformOrigin="-0.02,-0.065" Height="107" Canvas.Left="195.5" Canvas.Top="7.666" Width="101"/>
         </local:DrugPanel>
@@ -5209,11 +5725,19 @@
                         </Image>
 
                     </Canvas>
-                    <Canvas x:Name="canvas1" Width="447.666" Height="438.791" Canvas.Left="32" Canvas.Top="20.916">
-                        <TextBlock x:Name="textBlock3" Height="51.5" TextWrapping="Wrap" Width="163.5" FontSize="37.333" Foreground="White" Text="储藏建议"/>
-                        <TextBox BorderBrush="Transparent" BorderThickness="0" IsReadOnly="True" x:Name="textBlock4" Background="Transparent" Height="106.833" TextWrapping="Wrap"  Width="414.333" Foreground="White" FontSize="29.333" Canvas.Left="33.333" Canvas.Top="96.056" />
-                        <Image x:Name="jinshi_png"  Source="/Images/ScanDrug/yaogui.png" Stretch="Fill" Width="96" Canvas.Left="168.5" Canvas.Top="-12.25"/>
 
+                    <Canvas Background="Transparent" x:Name="canvas1" Width="447.666" Height="438.791" Canvas.Left="32" Canvas.Top="20.916">
+
+                        <ScrollViewer  Background="Transparent" Width="500" Height="100" HorizontalAlignment="Left" x:Name="storeScrollviewer" MaxHeight="120"
+                                      PanningMode="VerticalOnly"   CanContentScroll="True" Canvas.Top="100" 
+                                      Style="{StaticResource styleForScrollViewer}">
+                            <ItemsControl>
+
+                                <TextBlock  Text=""  x:Name="textBlock4" Background="Transparent" Height="106.833" TextWrapping="Wrap"  Width="414.333" Foreground="White" FontSize="29.333" Canvas.Left="33.333" Canvas.Top="96.056" />
+                            </ItemsControl>
+                        </ScrollViewer>
+                        <TextBlock x:Name="textBlock3" Height="51.5" TextWrapping="Wrap" Width="163.5" FontSize="37.333" Foreground="White" Text="储藏建议"/>
+                        <Image x:Name="jinshi_png"  Source="/Images/ScanDrug/yaogui.png" Stretch="Fill" Width="96" Canvas.Left="168.5" Canvas.Top="-12.25"/>
                     </Canvas>
 
                 </Canvas>
@@ -5247,14 +5771,26 @@
                     </Image.Clip>
                 </Image>
             </Canvas>
-            <Image x:Name="di3_png" Source="/Images/ScanDrug/di3.png" Stretch="Fill" HorizontalAlignment="Left" Width="561" Opacity="0" Height="377"/>
-            <Canvas HorizontalAlignment="Left" Width="447.666" Height="438.791" VerticalAlignment="Bottom" Canvas.Left="25.5" Canvas.Top="34">
-                <TextBlock x:Name="textBlock2" Height="51.5" TextWrapping="Wrap" Width="163.5" FontSize="37.333" Foreground="White" Text="注意事项"/>
-                <!--注意事项-->
-                <TextBox BorderBrush="Transparent" BorderThickness="0" Background="Transparent" x:Name="textBlock5" Height="220" TextWrapping="Wrap" Width="414.333" Foreground="White" FontSize="29.333" Canvas.Left="33.333" Canvas.Top="76.75" Text="如果您近期要进行拔牙或手术，请告知医生正在服用该药； "/>
-                <TextBox BorderBrush="Transparent" BorderThickness="0" Background="Transparent"  Visibility="Hidden" x:Name="textBlock1_Copy2" TextWrapping="Wrap" Width="414.333" Foreground="White" FontSize="29.333" Text="服药时止血时间可能比平长。" Height="271.333" Canvas.Left="33.333" Canvas.Top="210.125"/>
+            <Image x:Name="di3_png" Source="/Images/ScanDrug/di3.png" Stretch="Fill" HorizontalAlignment="Left" Width="561" 
+                   Opacity="0" Height="377"/>
 
-            </Canvas>
+            <TextBlock x:Name="textBlock2" Height="51.5" TextWrapping="Wrap" Width="163.5" Canvas.Left="20" Canvas.Top="50" 
+                       FontSize="37.333" Foreground="White" Text="注意事项"/>
+
+            <ScrollViewer  Width="550" Height="438.791" HorizontalAlignment="Left" x:Name="scrollviewer" MaxHeight="250" 
+                          PanningMode="VerticalOnly" CanContentScroll="True" Canvas.Top="100"
+                          Style="{StaticResource styleForScrollViewer}">
+                <ItemsControl>
+                    <TextBlock Background="Transparent" x:Name="textBlock5" TextWrapping="Wrap" Width="414.333"
+                               Foreground="White" FontSize="29.333" Text=""/>
+                    <TextBox BorderBrush="Transparent" BorderThickness="0" Background="Transparent"  Visibility="Hidden" 
+                             x:Name="textBlock1_Copy2" TextWrapping="Wrap" Width="0" Foreground="White" FontSize="29.333" 
+                             Text="服药时止血时间可能比平长。" Height="120"/>
+                </ItemsControl>
+            </ScrollViewer>
+
+
+
             <Image x:Name="yaogui_png" HorizontalAlignment="Left" Source="/Images/ScanDrug/jinshi.png" Stretch="Fill" Width="96" Height="75" Opacity="0" Canvas.Left="195" Canvas.Top="16"/>
         </local:DrugPanel>
         <Image x:Name="quan4_png" Height="136" Margin="777.334,354.168,0,0" Source="/Images/ScanDrug/quan4.png" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Width="131" Opacity="0"/>
@@ -5281,12 +5817,21 @@
                     </Image.Clip>
                 </Image>
             </Canvas>
+
+
             <Canvas Height="281" Width="561">
                 <Image x:Name="di4_png" Source="/Images/ScanDrug/di4.png" Stretch="Fill" HorizontalAlignment="Left" Height="281" VerticalAlignment="Top" Width="561" Opacity="0"/>
                 <TextBlock x:Name="textBlock6" TextWrapping="Wrap" FontSize="37.333" Foreground="White" Height="51.5" Canvas.Left="25.5" Canvas.Top="50.209" Width="163.5"><Run Text="服用方法"/><LineBreak/><Run/></TextBlock>
-                <!--<TextBlock x:Name="textBlock7" TextWrapping="Wrap" Foreground="White" FontSize="29.333" Text="请于饭前用适量水送服，请注意整片吞下，不要掰开、研碎或咀嚼服用。" Height="119.333" Canvas.Left="58.833" Canvas.Top="126.959" Width="414.333"/>-->
 
-                <TextBox BorderBrush="Transparent" BorderThickness="0" Background="Transparent" x:Name="textBlock7" TextWrapping="Wrap" Foreground="White" FontSize="29.333" Text="请于饭前用适量水送服，请注意整片吞下，不要掰开、研碎或咀嚼服用。" Height="119.333" Canvas.Left="58.833" Canvas.Top="126.959" Width="414.333"/>
+                <ScrollViewer  Background="Transparent" Width="550" Height="150" HorizontalAlignment="Left" x:Name="yongfascrollviewer" MaxHeight="150
+                      " PanningMode="VerticalOnly"   CanContentScroll="True" Canvas.Top="120"
+                              Style="{StaticResource styleForScrollViewer}">
+                    <ItemsControl>
+
+                        <TextBlock Background="Transparent" x:Name="textBlock7" TextWrapping="Wrap" Width="414.333" Foreground="White" FontSize="29.333"
+                               Text=""/>
+                    </ItemsControl>
+                </ScrollViewer>
                 <Image x:Name="chiyao_png" HorizontalAlignment="Left" Height="104" Source="/Images/ScanDrug/chiyao.png" Stretch="Fill" VerticalAlignment="Top" Width="95" Opacity="0" Canvas.Left="194.5" Canvas.Top="13.333"/>
 
             </Canvas>
@@ -5297,7 +5842,7 @@
         <Image x:Name="reading" Visibility="Hidden"  Margin="811,916,853,35" MouseDown="Image_MouseDown" Source="相关阅读.png" Stretch="Fill"/>
 
 
-        <Canvas x:Name="pop" Visibility="Collapsed"  Opacity="1" Width="1335" Height="777" Canvas.Top="170" Canvas.Left="300" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="pop" Background="Yellow" Visibility="Collapsed"  Opacity="1" Width="1335" Height="777" Canvas.Top="170" Canvas.Left="300" IsManipulationEnabled="True" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform />
@@ -5306,15 +5851,16 @@
             </Canvas.RenderTransform>
             <Image x:Name="readingImage" Width="1335" Height="777"  >
             </Image>
-            <Button Canvas.Right="0" Width="80" Height="80" Click="Button_Click" IsManipulationEnabled="True" >
+            <Button Canvas.Right="20" Background="Red" Canvas.Top="20" Width="100" Height="80" Click="Button_Click" IsManipulationEnabled="True" >
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}" >
-                        
+
                         <!--<TextBlock Foreground="White" Text="S" FontSize="40" Background="#11000000" Padding="10,10,50,50"/>-->
-                        <TextBlock Foreground="White" Text="X" TextAlignment="Center" FontSize="40" Background="#11000000" Padding="15,0,70,70"/>
+                        <TextBlock Foreground="White" IsEnabled="False" Text="X" TextAlignment="Center" FontSize="40" Background="#11000000" Padding="15,0,70,70"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>
         </Canvas>
+
     </Grid>
 </UserControl>

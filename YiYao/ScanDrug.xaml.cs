@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,33 @@ namespace YiYao
         {
             drugInfo = new List<DrugInfo>
             {
+                
+                new DrugInfo
+                {
+                    DrugID = "6901028062008",
+                    DrugName = "小苏",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
+                    DrugProperties = new DrugProperty {
+                                DrugUseWay = "小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法小苏用法",
+                                DrugUnwell = "小苏不良小苏不良反应小苏不良反应小苏不良小苏不良反应小苏不良反应小苏不良小苏不良反应小苏不良反应小苏不良小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应小苏不良反应",
+                                DrugNotice = "小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项小苏注意事项",
+                                DrugStoreAdv = "小苏存储事项孩子接触不到的地方小苏存储事项孩子接触不到的地方小苏存储事项孩子接触不到的地方小苏存储事项孩子接触不到的地方小苏存储事项孩子接触不到的地方小苏存储事项孩子接触不到的地方小苏存储事项孩子接触不到的地方。",
+                     },
+                },
+
+                new DrugInfo
+                {
+                    DrugID = "6921168509256",
+                    DrugName = "测试矿泉水",
+                    DrugImageSource = "4.家庭自测血压注意事项.jpg",
+                    DrugProperties = new DrugProperty {
+                                DrugUseWay = "矿泉水用法",
+                                DrugUnwell = "矿泉水不良反应",
+                                DrugNotice = "矿泉水注意事项",
+                                DrugStoreAdv = "矿泉水存储事项孩子接触不到的地方。",
+                     },
+                },
+
                 new DrugInfo
                 {
                     DrugID = "6958703500010",
@@ -431,11 +459,9 @@ namespace YiYao
         public ScanDrug()
         {
             drugId = "";
-
-            InitializeComponent();
-
+            
             InitializingDrugInfo();
-
+            InitializeComponent();
             this.Loaded += (s, e) =>
             {
                 Window.GetWindow(this).TextInput += ScanDrug_TextInput;
@@ -446,6 +472,21 @@ namespace YiYao
             {
 
             };
+
+            scrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
+            zhuyiScrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
+            storeScrollviewer.ManipulationBoundaryFeedback += (s, e) =>
+            {
+                e.Handled = true;
+            };
+            
+            DoWork();
         }
 
 
@@ -510,36 +551,36 @@ namespace YiYao
         {
             if (state == Scan)
             {
-                //MessageBox.Show("scanDrug drugID : " + drugId);
+                selectedDrug = null;
 
                 var drug = drugInfo.FirstOrDefault(d => d.DrugID == drugId);
-                selectedDrug = (DrugInfo)drug;
+                
                 if (drug != null)
                 {
                     try
                     {
+                        selectedDrug = (DrugInfo)drug;
 
                         textBlock1.Text = selectedDrug.DrugProperties.DrugUnwell;
                         textBlock1_Copy.Text = "";
-
-
+                        
                         textBlock7.Text = selectedDrug.DrugProperties.DrugUseWay;
 
                         textBlock5.Text = selectedDrug.DrugProperties.DrugNotice;
                         textBlock1_Copy2.Text = "";
 
                         textBlock4.Text = selectedDrug.DrugProperties.DrugStoreAdv;
-
+                        
                         String uriString;
 
                         uriString = "pack://application:,,,/Images/ScanDrug/";
                         uriString += selectedDrug.DrugID;
                         uriString += ".png";
 
-                        //if (!System.IO.File.Exists(uriString))
-                        //{
-                        //    uriString = "pack://application:,,,/Images/ScanDrug/default_med.png";
-                        //}
+                        if (!System.IO.File.Exists(uriString))
+                        {
+                            uriString = "pack://application:,,,/Images/ScanDrug/default_med.png";
+                        }
 
                         BitmapImage bitmap = new BitmapImage();
 
@@ -571,12 +612,25 @@ namespace YiYao
         //}
         protected override void OnTouchDown(TouchEventArgs e)
         {
-            if (e.TouchDevice.Capture(this))
-            {
-                e.Handled = true;
-            }
             base.OnTouchDown(e);
             PointerDown();
+            Type touchObject = e.OriginalSource.GetType();
+            if (touchObject.Name == "TextBlock")
+            {
+                //if (e.TouchDevice.Target)
+                //{
+
+                //}
+
+            }
+            else if (touchObject.Name == "Button")
+            {
+                if (e.TouchDevice.Capture(this))
+                {
+                    e.Handled = true;
+                }
+            }
+            
         }
 
         protected override void OnMouseDown(MouseButtonEventArgs e)
@@ -587,12 +641,13 @@ namespace YiYao
 
         private void PointerDown()
         {
-            if (state == Scan)
-            {
-                scan2.Stop();
-                scan3.Begin();
-                state++;
-            }
+            Debug.WriteLine("PointDown");
+            //if (state == Scan)
+            //{
+            //    scan2.Stop();
+            //    scan3.Begin();
+            //    state++;
+            //}
         }
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
