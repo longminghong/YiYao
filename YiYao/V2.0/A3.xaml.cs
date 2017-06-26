@@ -21,6 +21,7 @@ using System.Windows.Media.Animation;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace YiYao
 {
@@ -115,8 +116,15 @@ namespace YiYao
 
                 if ("phone" == customInfo.pattern)
                     xinxi4_png.Text = "联系方式（手机）：" + customInfo.phone;
+                else if (String.IsNullOrEmpty(customInfo.phonenumber))
+                {   
+                    xinxi4_png.Text = "联系方式（座机）：" + customInfo.phone;
+                }
                 else
+                {
                     xinxi4_png.Text = "联系方式（座机）：" + customInfo.phonezone + customInfo.phonenumber + customInfo.extension;
+                }
+                    
                 xinxi5_png.Text = "身份证 ：" + customInfo.ssn;
                 xinxi6_png.Text = "邮件 ：" + customInfo.email;
                 textBlock3.Text = "会员卡号 ：" + customInfo.cardno;
@@ -215,6 +223,7 @@ namespace YiYao
             }
             catch (Exception e)
             {
+                Debug.WriteLine(e.Message);
             }
             finally {
                 mIsChecking = false;
