@@ -113,18 +113,31 @@ namespace YiYao
                 textBlock6.Text = "性别: " + customInfo.gender;
 
                 nationalityText.Text = "生日：" + customInfo.birthday;
-
-                if ("phone" == customInfo.pattern)
-                    xinxi4_png.Text = "联系方式（手机）：" + customInfo.phone;
-                else if (String.IsNullOrEmpty(customInfo.phonenumber))
-                {   
-                    xinxi4_png.Text = "联系方式（座机）：" + customInfo.phone;
-                }
-                else
+                
+                if (String.Equals("no", customInfo.isfirst))
                 {
-                    xinxi4_png.Text = "联系方式（座机）：" + customInfo.phonezone + customInfo.phonenumber + customInfo.extension;
+                    textBlock.Text = "修改信息";
+                    if (null != customInfo.phone)
+                    {
+                        xinxi4_png.Text = "联系方式 ：" + customInfo.phone;
+                    }
                 }
-                    
+                else {
+
+                    if ("phone" == customInfo.pattern)
+                    {
+                        xinxi4_png.Text = "联系方式（手机）：" + customInfo.phone;
+                    }
+                    else if (String.IsNullOrEmpty(customInfo.phonenumber))
+                    {
+                        xinxi4_png.Text = "联系方式（座机）：" + customInfo.phone;
+                    }
+                    else
+                    {
+                        xinxi4_png.Text = "联系方式（座机）：" + customInfo.phonezone + customInfo.phonenumber + customInfo.extension;
+                    }
+                }
+                  
                 xinxi5_png.Text = "身份证 ：" + customInfo.ssn;
                 xinxi6_png.Text = "邮件 ：" + customInfo.email;
                 textBlock3.Text = "会员卡号 ：" + customInfo.cardno;
