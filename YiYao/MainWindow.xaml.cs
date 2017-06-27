@@ -1,26 +1,16 @@
 ﻿using CardReader;
 using Prism.Events;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WebService.Event;
 using YiYao.Util;
 using WebService;
 using YiYao.Events;
-using System.Text.RegularExpressions;
+
 
 namespace YiYao
 {
@@ -33,7 +23,8 @@ namespace YiYao
 
         WebSocketSingleton websocketInstance;
 
-          public MainWindow(IEventAggregator eventAggregator)
+        
+        public MainWindow(IEventAggregator eventAggregator)
         {
             websocketInstance = WebSocketSingleton.GetInstance();
             websocketInstance.start();
@@ -58,7 +49,6 @@ namespace YiYao
             bi3.UriSource = riskImageUri; 
             bi3.EndInit();
             
-
             try
             {
                 AppData.CurrentIDCard = new IDCard
@@ -80,11 +70,11 @@ namespace YiYao
             
             this.Loaded += MainWindow_Loaded;
             mEventAggregator.GetEvent<WebErrorEvent>().Subscribe(OnWebError);
+            
         }
 
         void webSocketConnectClose()
         {
-
             websocketInstance.start();
         }
 
@@ -178,20 +168,23 @@ namespace YiYao
         }
 
         private void ShowMessage(string message)
-        {
-            // messageText.Text = message;
+        {   
+            messageText.Text = message;
+
             Storyboard storyboard = new Storyboard();
             DoubleAnimationUsingKeyFrames d1 = new DoubleAnimationUsingKeyFrames();
             EasingDoubleKeyFrame k1 = new EasingDoubleKeyFrame();
             k1.KeyTime = TimeSpan.FromMilliseconds(300);
             k1.Value = 1;
             d1.KeyFrames.Add(k1);
+
             EasingDoubleKeyFrame k2 = new EasingDoubleKeyFrame();
-            k2.KeyTime = TimeSpan.FromMilliseconds(600);
+            k2.KeyTime = TimeSpan.FromMilliseconds(1600);
             k2.Value = 1;
             d1.KeyFrames.Add(k2);
+
             EasingDoubleKeyFrame k3 = new EasingDoubleKeyFrame();
-            k3.KeyTime = TimeSpan.FromMilliseconds(900);
+            k3.KeyTime = TimeSpan.FromMilliseconds(2900);
             k3.Value = 0;
             d1.KeyFrames.Add(k3);
 
@@ -203,7 +196,7 @@ namespace YiYao
             });
             d2.KeyFrames.Add(new DiscreteObjectKeyFrame
             {
-                KeyTime = TimeSpan.FromMilliseconds(900),
+                KeyTime = TimeSpan.FromMilliseconds(2900),
                 Value = Visibility.Collapsed
             });
 
@@ -220,7 +213,7 @@ namespace YiYao
 
 
         protected override void OnKeyDown(KeyEventArgs e)
-        {
+        {   
             base.OnKeyDown(e);
             bool shift = (Keyboard.Modifiers & ModifierKeys.Shift) == ModifierKeys.Shift;
             int speed = shift ? 5 : 1;
