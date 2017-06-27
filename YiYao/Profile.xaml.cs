@@ -42,24 +42,48 @@ namespace YiYao
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private async void RequireProfile() {
+
+            var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
+
+            var member = await healthDataService.GetMemberInfoBySsnAsync(AppData.CurrentIDCard.IDNumber);
+
+            if (member != null)
+            {
+
+                AppData.CurrentIDCard.Name = member.data.name;
+                
+                AppData.CurrentIDCard.BirthDay = member.data.birthday;
+                AppData.CurrentIDCard.Sex = member.data.gender;
+                AppData.CurrentIDCard.Phone = member.data.phone;
+
+                UpdateProfile();
+            }
+        }
+
         public Profile()
         {
             InitializeComponent();
+            RequireProfile();
             this.Loaded += (s, e) =>
              {
-                 var card = AppData.CurrentIDCard;
-                 nameText.Text = card.Name;
-                 sexText.Text = card.Sex;
-                 nationalityText.Text = card.Nationality;
-                 birthdayText.Text = card.BirthDay;
-                 addressText.Text = card.Address;
-                 idNumberText.Text = card.IDNumber;
-                 headImage.Source = card.HeadImage;
-                 phone.Text = card.Phone;
+                 UpdateProfile();
                  this.DataContext = this;
                  keyboard.AddHandler(Button.ClickEvent, new RoutedEventHandler(onKeypadClick));
-
              };
+        }
+
+        private void UpdateProfile()
+        {
+            var card = AppData.CurrentIDCard;
+            nameText.Text = card.Name;
+            sexText.Text = card.Sex;
+            nationalityText.Text = card.Nationality;
+            birthdayText.Text = card.BirthDay;
+            addressText.Text = card.Address;
+            idNumberText.Text = card.IDNumber;
+            headImage.Source = card.HeadImage;
+            phone.Text = card.Phone;
         }
 
         private void onKeypadClick(object sender, RoutedEventArgs args)
