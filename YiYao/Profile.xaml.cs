@@ -14,6 +14,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -122,7 +123,49 @@ namespace YiYao
 
             postDataWithWebClient();
         }
+        private void ShowMessage(string message)
+        {
+            messageText.Text = message;
 
+            Storyboard storyboard = new Storyboard();
+            DoubleAnimationUsingKeyFrames d1 = new DoubleAnimationUsingKeyFrames();
+            EasingDoubleKeyFrame k1 = new EasingDoubleKeyFrame();
+            k1.KeyTime = TimeSpan.FromMilliseconds(300);
+            k1.Value = 1;
+            d1.KeyFrames.Add(k1);
+
+            EasingDoubleKeyFrame k2 = new EasingDoubleKeyFrame();
+            k2.KeyTime = TimeSpan.FromMilliseconds(1600);
+            k2.Value = 1;
+            d1.KeyFrames.Add(k2);
+
+            EasingDoubleKeyFrame k3 = new EasingDoubleKeyFrame();
+            k3.KeyTime = TimeSpan.FromMilliseconds(2900);
+            k3.Value = 0;
+            d1.KeyFrames.Add(k3);
+
+            ObjectAnimationUsingKeyFrames d2 = new ObjectAnimationUsingKeyFrames();
+            d2.KeyFrames.Add(new DiscreteObjectKeyFrame
+            {
+                KeyTime = TimeSpan.FromMilliseconds(0),
+                Value = Visibility.Visible
+            });
+            d2.KeyFrames.Add(new DiscreteObjectKeyFrame
+            {
+                KeyTime = TimeSpan.FromMilliseconds(2900),
+                Value = Visibility.Collapsed
+            });
+
+
+
+            storyboard.Children.Add(d1);
+            storyboard.Children.Add(d2);
+            Storyboard.SetTarget(d1, messageText);
+            Storyboard.SetTarget(d2, messageText);
+            Storyboard.SetTargetProperty(d1, new PropertyPath("Opacity"));
+            Storyboard.SetTargetProperty(d2, new PropertyPath("Visibility"));
+            storyboard.Begin();
+        }
         private void postDataWithWebClient()
         {
 
@@ -165,12 +208,16 @@ namespace YiYao
                 {
                     // 保存成功
                     healthDataService.SavePhoneNumber(phone.Text);
+
+                    ShowMessage("保存成功");
                 }
 
             }
             catch (Exception e)
             {
                 Debug.WriteLine(e.Message);
+
+                ShowMessage("保存失败");
             }
             finally
             {
