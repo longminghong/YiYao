@@ -129,7 +129,23 @@
             <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
         </EventTrigger>
     </UserControl.Triggers>
+    
     <Grid>
+        <Viewbox Stretch="Fill" Panel.ZIndex="1000">
+            <Canvas Width="1920" Height="1080" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                <local:NavigationManager  Width="1920" Height="1080" x:Name="root">
+                    <TextBlock x:Name="debug" FontSize="18" Foreground="Red" Canvas.Left="100" Canvas.Top="100"  />
+
+                </local:NavigationManager>
+
+                <TextBox Background="BurlyWood" x:Name="messageText" Foreground="White" Width="1920" FontSize="20" Height="100"
+                       TextAlignment="Center" Padding="0,40,0,0" IsHitTestVisible="False" Canvas.Left="0" 
+                       VerticalAlignment="Center" 
+                        Visibility="Collapsed">
+                </TextBox>
+            </Canvas>
+        </Viewbox>
         <Canvas x:Name="canvas" HorizontalAlignment="Left" Margin="16.667,36.333,0,380" Width="724.833" RenderTransformOrigin="0.5,0.5">
             <Canvas.RenderTransform>
                 <TransformGroup>
