@@ -228,9 +228,12 @@ namespace YiYao
                 //birthdayText.Text = card.BirthDay;
                 //addressText.Text = card.Address;
                 //idNumberText.Text = card.IDNumber;
+
+                headImage.Source = AppData.GetAvatar();
+
                 string sex = card.Sex == "男" ? "先生" : "女士";
                 huiyuanming_png.Text = $"会员：{card.Name}{sex}";
-                headImage.Source = card.HeadImage;
+                
             }
             catch (Exception)
             {
