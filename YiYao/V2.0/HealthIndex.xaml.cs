@@ -85,7 +85,11 @@ namespace YiYao
                 leftPart.Children.Remove(mb);
             }
         }
-
+        /// <summary>
+        /// 历史用药曲线图
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onLiCiClick(object sender, RoutedEventArgs e)
         {
             var lici = leftPart.Children.OfType<LiCiHealthIndex>().FirstOrDefault();
@@ -120,7 +124,11 @@ namespace YiYao
                 leftPart.Children.Remove(shangci);
             }
         }
-
+        /// <summary>
+        /// 血糖曲线图
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onXTClick(object sender, RoutedEventArgs e)
         {
 
@@ -138,7 +146,11 @@ namespace YiYao
                 rightPart.Children.Remove(xz);
             }
         }
-
+        /// <summary>
+        /// 血脂曲线图
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onXZClick(object sender, RoutedEventArgs e)
         {
 
@@ -156,7 +168,11 @@ namespace YiYao
                 rightPart.Children.Remove(xz);
             }
         }
-
+        /// <summary>
+        /// 血压曲线图
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onXYClick(object sender, RoutedEventArgs e)
         {
             var xy = rightPart.Children.OfType<XYHealthIndex>().FirstOrDefault();
@@ -173,7 +189,11 @@ namespace YiYao
                 rightPart.Children.Remove(xy);
             }
         }
-
+        /// <summary>
+        /// 心率曲线图
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void onXLClick(object sender, RoutedEventArgs e)
         {
             var xl = rightPart.Children.OfType<XLHealthIndex>().FirstOrDefault();
