@@ -577,11 +577,11 @@ namespace YiYao
                         uriString += selectedDrug.DrugID;
                         uriString += ".png";
 
-                        if (!System.IO.File.Exists(uriString))
+                        if (selectedDrug.DrugID.Length<=0)
                         {
                             uriString = "pack://application:,,,/Images/ScanDrug/default_med.png";
                         }
-
+                        
                         BitmapImage bitmap = new BitmapImage();
 
                         bitmap.BeginInit();
@@ -590,8 +590,7 @@ namespace YiYao
                         bitmap.EndInit();
 
                         yao.Source = bitmap;
-
-
+                        
                         scan2.Stop();
                         scan3.Begin();
                         state++;
