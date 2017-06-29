@@ -49,7 +49,28 @@ namespace YiYao
             birthdayText.Text = card.BirthDay;
             addressText.Text = card.Address;
             idNumberText.Text = card.IDNumber;
-            headImage.Source = card.HeadImage;
+
+            headImage.Source = AppData.GetAvatar();
+
+            //if (null == card.HeadImage)
+            //{
+
+            //    string userDefaultHeadImage = card.Sex == "男" ? "/man.png" : "/woman.png";
+            //    Uri riskImageUri = null;
+            //    String riskImagePath = Environment.CurrentDirectory + userDefaultHeadImage;
+            //    //String riskImagePath =  userDefaultHeadImage;
+            //    bool imageExist;
+            //    imageExist = System.IO.File.Exists(riskImagePath);
+            //    riskImageUri = new Uri(riskImagePath, UriKind.Absolute);
+            //    BitmapImage bi3 = new BitmapImage();
+            //    bi3.BeginInit();
+            //    bi3.UriSource = riskImageUri;
+            //    bi3.EndInit();
+            //    card.HeadImage = bi3;
+            //    headImage.Source = bi3;
+            //}
+            //else
+            //    headImage.Source = card.HeadImage;
         }
 
         public void Stop()
