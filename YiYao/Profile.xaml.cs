@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.ServiceLocation;
+﻿using LogService;
+using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,8 @@ namespace YiYao
     public partial class Profile : UserControl, INotifyPropertyChanged
     {
         private bool mEditingPhone;
+        private static readonly IBizLogger logger = ServerLogFactory.GetLogger(typeof(Profile));
+
         public bool EditingPhone
         {
             get { return mEditingPhone; }
@@ -155,9 +158,7 @@ namespace YiYao
                 KeyTime = TimeSpan.FromMilliseconds(2900),
                 Value = Visibility.Collapsed
             });
-
-
-
+            
             storyboard.Children.Add(d1);
             storyboard.Children.Add(d2);
             Storyboard.SetTarget(d1, messageText);
@@ -178,13 +179,11 @@ namespace YiYao
                 var mid = healthDataService.GetMemberMid();
                 var cardNo = healthDataService.GetMemberCardNo();
                 requestUrl += mid;
-
-
+                
                 Dictionary<string,string> modifyDictionary = new Dictionary<string, string>();
                 modifyDictionary.Add("card_no", cardNo);
                 modifyDictionary.Add("phone", phone.Text);
-
-             
+                
                 JObject carJson = JObject.FromObject(modifyDictionary);
                 string paramStr = carJson.ToString();
 
@@ -224,6 +223,17 @@ namespace YiYao
                 
             }
 
+        }
+
+        private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            logger.Error("Profile Page: CurrentDomain_UnhandledException" + e.ExceptionObject.ToString());
+        }
+
+        private void Current_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
+            logger.Error("Profile Page: Current_DispatcherUnhandledException", e.Exception);
         }
     }
 }
