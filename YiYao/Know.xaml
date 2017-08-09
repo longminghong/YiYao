@@ -131,17 +131,17 @@
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xzbutton">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.3" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="szbutton">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.3" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:4" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="xgbutton">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:4.2" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:4.6" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.6" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.9" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="dian_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
@@ -150,43 +150,43 @@
             </DoubleAnimationUsingKeyFrames>
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="danao_png">
                 <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:3.5" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.4" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:3.1" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="danao_png">
-                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xzbutton">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="szbutton">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xgbutton">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="xinzang_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="quanshenxueguan_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.7" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="shenzang_png">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
 
         </Storyboard>
@@ -367,7 +367,7 @@
                 </Image>
             </Canvas>
         </Canvas>
-        <Image x:Name="dnxian" Height="119" Source="/Images/Know/xian3.png" Opacity="0" Stretch="Fill" Width="273" RenderTransformOrigin="0.5,0.5" Canvas.Left="1213.333" Canvas.Top="200.5">
+        <Image  x:Name="dnxian" Height="119" Source="/Images/Know/xian3.png" Opacity="0" Stretch="Fill" Width="273" RenderTransformOrigin="0.5,0.5" Canvas.Left="1213.333" Canvas.Top="200.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -377,7 +377,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="xzxian" Height="66" Source="/Images/Know/xzxian.png" Opacity="0" Stretch="Fill" Width="277" RenderTransformOrigin="0.5,0.5" Canvas.Left="1198.333" Canvas.Top="283.333">
+        <Image  x:Name="xzxian" Height="66" Source="/Images/Know/xzxian.png" Opacity="0" Stretch="Fill" Width="277" RenderTransformOrigin="0.5,0.5" Canvas.Left="1198.333" Canvas.Top="283.333">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -387,7 +387,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="szxian" Width="262" Height="158" Opacity="0" Source="/Images/Know/szxian.png" Stretch="Fill"  RenderTransformOrigin="0.5,0.5" Canvas.Left="1213.333" Canvas.Top="291.684">
+        <Image  x:Name="szxian" Width="262" Height="158" Opacity="0" Source="/Images/Know/szxian.png" Stretch="Fill"  RenderTransformOrigin="0.5,0.5" Canvas.Left="1213.333" Canvas.Top="291.684">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -398,7 +398,7 @@
             </Image.RenderTransform>
         </Image>
 
-        <Image x:Name="xgxian" Width="245" Height="306" Opacity="0" Source="/Images/Know/xgxian.png" Stretch="Fill"  RenderTransformOrigin="0.5,0.5" Canvas.Left="1217.333" Canvas.Top="291.684">
+        <Image  x:Name="xgxian" Width="245" Height="306" Opacity="0" Source="/Images/Know/xgxian.png" Stretch="Fill"  RenderTransformOrigin="0.5,0.5" Canvas.Left="1217.333" Canvas.Top="291.684">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

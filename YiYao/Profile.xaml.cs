@@ -120,11 +120,26 @@ namespace YiYao
             EditingPhone = true;
         }
 
+        private bool IsHandset(string str_handset)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(str_handset, @"^[1]+[3,8]+\d{9}");
+        }
+
         private void savePhoneBtn_Click(object sender, RoutedEventArgs e)
         {
             EditingPhone = false;
+            //postDataWithWebClient();
+            //return;
+            if (IsHandset(phone.Text))
+                {
+                postDataWithWebClient();
+            }
+            else
+            {
+                ShowMessage("保存失败，手机号码输入有误");
+            }
 
-            postDataWithWebClient();
+            
         }
         private void ShowMessage(string message)
         {
@@ -201,7 +216,10 @@ namespace YiYao
                 JToken jErrorToken = jObject.GetValue("error");
                 JToken jDataToken = jObject.GetValue("data");
 
-                String errorCode = jErrorToken.First().First().ToString();
+                JToken firstToken = jErrorToken.First();
+                
+                JToken anotherFirstToken = firstToken.First();
+                String errorCode = anotherFirstToken.ToString();
 
                 if (string.Equals(errorCode,"0"))
                 {
@@ -210,7 +228,11 @@ namespace YiYao
 
                     ShowMessage("保存成功");
                 }
-
+                else
+                {
+                    string message = jErrorToken["message"].ToString(); 
+                    ShowMessage(message);
+                }
             }
             catch (Exception e)
             {

@@ -42,6 +42,7 @@ namespace YiYao
                 var story = FindResource("Storyboard1") as Storyboard;
                 mShowCircle = FindResource("ShowCircle") as Storyboard;
                 mShowCircle.BeginTime = TimeSpan.FromSeconds(3);
+                mShowCircle.Completed += MShowCircle_Completed;
                 mShowCircle.Begin();
 
                 mRotate1 = FindResource("Rotate1") as Storyboard;
@@ -65,7 +66,10 @@ namespace YiYao
 
         }
 
-
+        private void MShowCircle_Completed(object sender, EventArgs e)
+        {
+            SetButtonsEnableState(true);
+        }
 
         private void SelectCircle(CircelButton button)
         {
@@ -116,9 +120,12 @@ namespace YiYao
             var animation = TranslateBoard(target, health);
             animation.Completed += (ss, ee) =>
              {
+                 SetButtonsEnableState(false);
                  var hide = FindResource("HideCircle") as Storyboard;
                  hide.Begin();
              };
+
+
             animation.Begin();
             (FindResource("UnScaleBoard") as Storyboard).Begin();
 
@@ -148,6 +155,7 @@ namespace YiYao
             var animation = TranslateBoard(target, scan);
             animation.Completed += (ss, ee) =>
             {
+                SetButtonsEnableState(false);
                 var hide = FindResource("HideCircle") as Storyboard;
                 hide.Begin();
             };
@@ -155,6 +163,11 @@ namespace YiYao
             (FindResource("UnScaleBoard") as Storyboard).Begin();
             mHideHead.Begin();
 
+        }
+
+        private void Hide_Completed(object sender, EventArgs e)
+        {
+            SetButtonsEnableState(false);
         }
 
         private void MyPrescription(object sender, RoutedEventArgs e)
@@ -222,13 +235,7 @@ namespace YiYao
             try
             {
                 var card = AppData.CurrentIDCard;
-                //nameText.Text = card.Name;
-                //sexText.Text = card.Sex;
-                //nationalityText.Text = card.Nationality;
-                //birthdayText.Text = card.BirthDay;
-                //addressText.Text = card.Address;
-                //idNumberText.Text = card.IDNumber;
-
+                
                 headImage.Source = AppData.GetAvatar();
 
                 string sex = card.Sex == "男" ? "先生" : "女士";
@@ -260,7 +267,7 @@ namespace YiYao
             backButton.Visibility = Visibility.Collapsed;
             circleContainer.Children.Clear();
             mShowCircle.BeginTime = TimeSpan.FromSeconds(0);
-            
+            mShowCircle.Completed += MShowCircle_Completed;
             mShowCircle.Begin();
             foreach (var circle in mcircle)
             {
@@ -288,6 +295,17 @@ namespace YiYao
                 (FindResource("UnScaleBoard") as Storyboard).Begin();
             }
         }
+
+        private void SetButtonsEnableState(bool flag) {
+
+            _1_png.IsEnabled = flag;
+            _2_png.IsEnabled = flag;
+            _3_png.IsEnabled = flag;
+            _4_png.IsEnabled = flag;
+            _5_png.IsEnabled = flag;
+            _6_png.IsEnabled = flag;
+        }
+        
     }
 }
 

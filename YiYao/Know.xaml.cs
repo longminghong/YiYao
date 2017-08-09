@@ -32,6 +32,11 @@ namespace YiYao
             InitializeComponent();
             this.Loaded += (s, e) =>
             {
+                dnxian.Visibility = Visibility.Hidden;
+                xzxian.Visibility = Visibility.Hidden;
+                szxian.Visibility = Visibility.Hidden;
+                xgxian.Visibility = Visibility.Hidden;
+
                 FindStoryboard();
 
                 var xyknow = new XYKnowldge();
@@ -54,6 +59,11 @@ namespace YiYao
                 xyknow.LoadDiasses(currentDisease);
                 pop.Children.Add(xyknow);
                 s2.Duration = TimeSpan.FromMilliseconds(0);
+
+                dnxian.Visibility = Visibility.Visible;
+                xzxian.Visibility = Visibility.Visible;
+                szxian.Visibility = Visibility.Visible;
+                xgxian.Visibility = Visibility.Visible;
             };
 
             s1.Duration = TimeSpan.FromSeconds(8.700);

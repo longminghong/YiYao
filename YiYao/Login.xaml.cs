@@ -52,6 +52,7 @@ namespace YiYao
         {
             AppData.CurrentIDCard = cardReader.CurrentCard;
             CheckMemberAsync();
+
         }
 
         private List<IDCard> cards = new List<IDCard>() {
@@ -92,6 +93,15 @@ namespace YiYao
                 BirthDay = "20000109"
             }
         };
+
+        private IDCard GetRandomCard() {
+
+            Random random = new Random();
+            int randomValue = random.Next(0, (cards.Count() - 1));
+            IDCard c = cards[randomValue];
+            return c;
+        }
+
         private async void CheckMemberAsync()
         {
             if (mIsChecking)
@@ -101,17 +111,24 @@ namespace YiYao
             {
 
                 IDCard c = new IDCard();
-                c.Name = "大力神ABC";
+                c.Name = "龙明宏";
                 c.Sex = "男";
-                //c.IDNumber = "450981198701052135";
-                c.IDNumber = "4509812000010100013";
+                c.IDNumber = "450981198701052135";
+                //c.IDNumber = "4509812000010100013";
                 c.Address = "北京市中关村大街道200";
                 c.BirthDay = "20000101";
+                //Uri riskImageUri = null;
+                //String riskImagePath = "pack://application:,,,/屈乐.bmp";
+                //bool imageExist;
+                //imageExist = System.IO.File.Exists(riskImagePath);
+                //riskImageUri = new Uri(riskImagePath);
+                //BitmapImage bi3 = new BitmapImage();
+                //bi3.BeginInit();
+                //bi3.UriSource = riskImageUri;
+                //bi3.EndInit();
 
-                //Random random = new Random();
-                //int randomValue = random.Next(0, (cards.Count()-1));
-                //IDCard c = cards[randomValue];
                 AppData.CurrentIDCard = c;
+                c.HeadImage = AppData.GetAvatar();
 
                 var healthDataService = ServiceLocator.Current.GetInstance<HealthDataService>();
 
@@ -135,6 +152,10 @@ namespace YiYao
                         //(Parent as NavigationManager).GoToPage(typeof(Register));
                         
                     }
+                }
+                else
+                {
+                    (Parent as NavigationManager).GoToPage(typeof(LoginSuccess));
                 }
             }
             catch (Exception)
@@ -184,12 +205,8 @@ namespace YiYao
         protected override void OnMouseDown(MouseButtonEventArgs e)
         {
             base.OnMouseDown(e);
-            //WebSocketSingleton websocketInstance = WebSocketSingleton.GetInstance();
-            //MTMIssueCollectDTO reciveDTO;
-            //reciveDTO = websocketInstance.callForA8();
 
-            //(Parent as NavigationManager).GoToPageWithArgs(typeof(A8), reciveDTO);
-            //CheckMemberAsync();
+            CheckMemberAsync();
         }
 
         private void PC_Register_Click(object sender, RoutedEventArgs e)

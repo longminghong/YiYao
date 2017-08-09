@@ -51,17 +51,17 @@ namespace YiYao
             
             try
             {
-                AppData.CurrentIDCard = new IDCard
-                {
-                    Name = "屈乐",
-                    Sex = "男",
-                    Nationality = "汉",
-                    Address = "江苏省无锡市新区长江路111号",
-                    BirthDay = "19891014",
-                    IDNumber = "120103196007222159",
-                    Phone = "15895326302",
-                    HeadImage = bi3//(BitmapSource)imageConveter.ConvertFrom("屈乐.bmp")
-                };
+                //AppData.CurrentIDCard = new IDCard
+                //{
+                //    Name = "屈乐",
+                //    Sex = "男",
+                //    Nationality = "汉",
+                //    Address = "江苏省无锡市新区长江路111号",
+                //    BirthDay = "19891014",
+                //    IDNumber = "120103196007222159",
+                //    Phone = "15895326302",
+                //    HeadImage = bi3//(BitmapSource)imageConveter.ConvertFrom("屈乐.bmp")
+                //};
             }
             catch (Exception)
             {
